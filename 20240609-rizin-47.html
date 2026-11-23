@@ -243,6 +243,32 @@
       .hidden-typo{display:none !important;}
       tr.sec-row td{background:var(--bg);font-weight:700;font-size:14px;color:var(--sub);}
 </style>
+<style>
+/* --- design revision 2026-11-23 --- */
+header.site nav.main a{font-size:12px;letter-spacing:.02em;padding:6px 7px;}
+header.site .header-in{gap:12px;}
+.nav-search{display:inline-flex;align-items:center;}
+.nav-search svg{width:15px;height:15px;fill:#1D1D1F;}
+.seg{display:inline-flex;background:#E8E8ED;border-radius:980px;padding:4px;gap:2px;flex-wrap:wrap;}
+.seg-btn{border:0;background:transparent;padding:8px 14px;border-radius:980px;font-size:13.5px;font-family:inherit;color:#1D1D1F;cursor:pointer;line-height:1.2;}
+.seg-btn.is-active{background:#1D1D1F;color:#FFFFFF;font-weight:600;}
+.search-row{margin:16px 0 4px;display:flex;align-items:center;gap:8px;background:#F5F5F7;border:1px solid #E8E8ED;border-radius:980px;padding:10px 18px;max-width:560px;}
+.search-row svg{width:16px;height:16px;fill:#6E6E73;flex:none;}
+.search-row input{border:0;background:transparent;font-size:15px;font-family:inherit;width:100%;outline:none;color:#1D1D1F;}
+.chev-link{color:#0066CC;text-decoration:none;font-size:15px;display:inline-flex;align-items:center;gap:2px;}
+.chev-link:hover{text-decoration:underline;}
+.merch-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 16px;-webkit-overflow-scrolling:touch;}
+.merch-card{flex:0 0 300px;scroll-snap-align:start;background:#FFFFFF;border:1px solid #E8E8ED;border-radius:18px;padding:20px;box-sizing:border-box;}
+.merch-card .merch-art{background:#F5F5F7;border-radius:12px;padding:8px;margin-bottom:14px;}
+.merch-card .color-dots{display:flex;gap:8px;margin:0 0 12px;}
+.merch-card .color-dot{width:22px;height:22px;border-radius:50%;border:1px solid #D2D2D7;cursor:pointer;padding:0;}
+.merch-card .color-dot[aria-pressed="true"]{outline:2px solid #0071E3;outline-offset:2px;}
+.merch-card .merch-name{font-weight:700;font-size:16px;margin:0 0 6px;}
+.merch-card .merch-desc{font-size:13.5px;color:#6E6E73;margin:0 0 10px;line-height:1.6;}
+.merch-card .merch-price{font-size:14px;margin:0 0 14px;}
+.merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
+.merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+</style>
 </head>
 <body>
 <header class="site">
@@ -261,11 +287,11 @@
           <a href="#">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
-        </nav>
+        <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
       </div>
     </header>
 <main class="wrap">
-<p style="margin:0 0 32px;"><a class="btn-secondary" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border:1px solid var(--btn);border-radius:980px;text-decoration:none;font-size:15px;" href="index.html">‹ 大会一覧へ戻る</a></p>
+<p style="margin:0 0 32px;"><a class="chev-link" href="index.html">‹ 大会一覧へ戻る</a></p>
 <article class="result-block" id="detail-ev64">
   <h3>RIZIN.47</h3>
   <div class="result-overview"><dl>
@@ -292,7 +318,7 @@
     </tbody>
   </table>
 </article>
-<p style="margin:0 0 32px;"><a class="btn-secondary" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border:1px solid var(--btn);border-radius:980px;text-decoration:none;font-size:15px;" href="index.html">‹ 大会一覧へ戻る</a></p>
+<p style="margin:0 0 32px;"><a class="chev-link" href="index.html">‹ 大会一覧へ戻る</a></p>
 </main>
 <footer class="site">
       <div class="wrap">

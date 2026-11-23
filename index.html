@@ -243,6 +243,32 @@
       .hidden-typo{display:none !important;}
       tr.sec-row td{background:var(--bg);font-weight:700;font-size:14px;color:var(--sub);}
 </style>
+<style>
+/* --- design revision 2026-11-23 --- */
+header.site nav.main a{font-size:12px;letter-spacing:.02em;padding:6px 7px;}
+header.site .header-in{gap:12px;}
+.nav-search{display:inline-flex;align-items:center;}
+.nav-search svg{width:15px;height:15px;fill:#1D1D1F;}
+.seg{display:inline-flex;background:#E8E8ED;border-radius:980px;padding:4px;gap:2px;flex-wrap:wrap;}
+.seg-btn{border:0;background:transparent;padding:8px 14px;border-radius:980px;font-size:13.5px;font-family:inherit;color:#1D1D1F;cursor:pointer;line-height:1.2;}
+.seg-btn.is-active{background:#1D1D1F;color:#FFFFFF;font-weight:600;}
+.search-row{margin:16px 0 4px;display:flex;align-items:center;gap:8px;background:#F5F5F7;border:1px solid #E8E8ED;border-radius:980px;padding:10px 18px;max-width:560px;}
+.search-row svg{width:16px;height:16px;fill:#6E6E73;flex:none;}
+.search-row input{border:0;background:transparent;font-size:15px;font-family:inherit;width:100%;outline:none;color:#1D1D1F;}
+.chev-link{color:#0066CC;text-decoration:none;font-size:15px;display:inline-flex;align-items:center;gap:2px;}
+.chev-link:hover{text-decoration:underline;}
+.merch-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 16px;-webkit-overflow-scrolling:touch;}
+.merch-card{flex:0 0 300px;scroll-snap-align:start;background:#FFFFFF;border:1px solid #E8E8ED;border-radius:18px;padding:20px;box-sizing:border-box;}
+.merch-card .merch-art{background:#F5F5F7;border-radius:12px;padding:8px;margin-bottom:14px;}
+.merch-card .color-dots{display:flex;gap:8px;margin:0 0 12px;}
+.merch-card .color-dot{width:22px;height:22px;border-radius:50%;border:1px solid #D2D2D7;cursor:pointer;padding:0;}
+.merch-card .color-dot[aria-pressed="true"]{outline:2px solid #0071E3;outline-offset:2px;}
+.merch-card .merch-name{font-weight:700;font-size:16px;margin:0 0 6px;}
+.merch-card .merch-desc{font-size:13.5px;color:#6E6E73;margin:0 0 10px;line-height:1.6;}
+.merch-card .merch-price{font-size:14px;margin:0 0 14px;}
+.merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
+.merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+</style>
 </head>
 <body>
 <header class="site">
@@ -261,7 +287,7 @@
           <a href="#">カレンダー</a>
           <a href="#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
-        </nav>
+        <a href="#searchBox" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
       </div>
     </header>
 <main class="wrap">
@@ -273,17 +299,20 @@
       </div>
 
       <section class="filter-sec" aria-label="大会の絞り込み">
-        <p class="filter-label">シリーズで絞り込む</p>
-        <div class="filter-row" role="group" aria-label="絞り込みボタン">
-          <button type="button" class="btn btn-primary filter-btn" data-filter="all" aria-pressed="true">すべて</button>
-          <button type="button" class="btn btn-secondary filter-btn" data-filter="number" aria-pressed="false">ナンバーシリーズ</button>
-          <button type="button" class="btn btn-secondary filter-btn" data-filter="landmark" aria-pressed="false">LANDMARK</button>
-          <button type="button" class="btn btn-secondary filter-btn" data-filter="super" aria-pressed="false">超RIZIN</button>
-          <button type="button" class="btn btn-secondary filter-btn" data-filter="trigger" aria-pressed="false">TRIGGER</button>
-          <button type="button" class="btn btn-secondary filter-btn" data-filter="other" aria-pressed="false">その他</button>
-        </div>
-        <p class="filter-count" id="filterCount" aria-live="polite">全86大会を表示しています。</p>
-      </section>
+<div class="seg" role="group" aria-label="シリーズで絞り込み">
+<button type="button" class="seg-btn is-active" data-filter="all" aria-pressed="true">すべて</button>
+<button type="button" class="seg-btn" data-filter="number" aria-pressed="false">ナンバーシリーズ</button>
+<button type="button" class="seg-btn" data-filter="landmark" aria-pressed="false">LANDMARK</button>
+<button type="button" class="seg-btn" data-filter="super" aria-pressed="false">超RIZIN</button>
+<button type="button" class="seg-btn" data-filter="trigger" aria-pressed="false">TRIGGER</button>
+<button type="button" class="seg-btn" data-filter="other" aria-pressed="false">その他</button>
+</div>
+<div class="search-row" id="searchBox">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
+<input type="search" id="panelSearch" placeholder="選手名・大会名・会場で検索" aria-label="選手名・大会名・会場で検索" />
+</div>
+<p class="note" id="filterCount" role="status">全86大会を表示しています。</p>
+</section>
 <section class="top-gallery" id="top-gallery" aria-label="全大会一覧">
 <div class="typo-grid" id="typoGrid">
 <a class="typo-item" data-category="number" href="20261108-rizin-55.html">
@@ -2357,34 +2386,56 @@
 </div>
 </section>
 <section class="merch-sec" id="merch" aria-label="グッズ">
-        <h2>グッズ</h2>
-        <p class="note" style="margin:0 0 24px;">大会タイポグラフィを使ったグッズの試作です（SUZURIでの販売を想定）。商品はボタンで切り替え、色はドットをタップして切り替えます。自動では切り替わりません。販売ページと価格は準備中です。</p>
-        <div class="merch-view">
-          <div class="merch-art" aria-live="polite">
-            <svg id="merchSvg" viewBox="0 0 340 300" role="img" aria-label="グッズのデザイン画像">
-              <g id="merchGarment"></g>
-              <text id="merchSvgTitle" x="170" y="140" text-anchor="middle" font-family="Meiryo,sans-serif" font-size="26" font-weight="700">RIZIN.55</text>
-              <text id="merchSvgSub" x="170" y="168" text-anchor="middle" font-family="Meiryo,sans-serif" font-size="12">2026.11.08 LaLa arena TOKYO-BAY</text>
-              <text x="170" y="282" text-anchor="middle" font-family="Meiryo,sans-serif" font-size="11" fill="#86868B">no contest data design</text>
-            </svg>
-          </div>
-          <div>
-            <p class="merch-name" id="merchName">RIZIN.55 タイポグラフィ Tシャツ</p>
-            <p class="merch-desc" id="merchDesc">RIZIN.55の大会概要と勝敗を文字で構成したデザインを、Tシャツの前面に配置した試作です。</p>
-            <p class="color-label">カラー：<strong id="colorName">ホワイト</strong></p>
-            <div class="color-dots" role="group" aria-label="カラーを選ぶ">
-              <button type="button" class="color-dot" data-color="white" style="background:#FFFFFF;" aria-pressed="true" aria-label="ホワイト"></button>
-              <button type="button" class="color-dot" data-color="black" style="background:#1D1D1F;" aria-pressed="false" aria-label="ブラック"></button>
-              <button type="button" class="color-dot" data-color="gray" style="background:#D2D2D7;" aria-pressed="false" aria-label="ヘザーグレー"></button>
-            </div>
-            <div class="merch-nav">
-              <button type="button" class="btn btn-secondary" id="merchPrev">‹ 前の商品</button>
-              <button type="button" class="btn btn-primary" id="merchNext">次の商品 ›</button>
-              <span class="merch-count" id="merchCount" aria-live="polite">1 / 3</span>
-            </div>
-          </div>
-        </div>
-      </section>
+<h2>グッズ</h2>
+<p class="note" style="margin:0 0 24px;">大会タイポグラフィを使ったグッズの試作です（SUZURIでの販売を想定）。色はドットをタップして切り替えます。自動では切り替わりません。販売ページと価格は準備中です。</p>
+<div class="merch-track">
+<article class="merch-card">
+<div class="merch-art">
+<svg viewBox="0 0 340 300" role="img" aria-label="RIZIN.55 タイポグラフィ Tシャツのデザイン画像" style="width:100%;height:auto;display:block;">
+<g class="garment"><path d="M110 60 L55 92 L82 138 L110 124 L110 252 L230 252 L230 124 L258 138 L285 92 L230 60 Q170 88 110 60 Z" fill="#FFFFFF" stroke="#1D1D1F" stroke-width="3" stroke-linejoin="round"/></g>
+<text class="m-title" x="170" y="140" text-anchor="middle" font-family="Meiryo,sans-serif" font-size="26" font-weight="700" fill="#1D1D1F">RIZIN.55</text>
+<text class="m-sub" x="170" y="168" text-anchor="middle" font-family="Meiryo,sans-serif" font-size="12" fill="#1D1D1F">2026.11.08 LaLa arena TOKYO-BAY</text>
+<text x="170" y="282" text-anchor="middle" font-family="Meiryo,sans-serif" font-size="11" fill="#86868B">no contest data design</text>
+</svg>
+</div>
+<div class="color-dots" role="group" aria-label="カラーを選ぶ"><button type="button" class="color-dot" data-color="white" data-fill="#FFFFFF" data-stroke="#1D1D1F" data-text="#1D1D1F" style="background:#FFFFFF;" aria-pressed="true" aria-label="ホワイト"></button><button type="button" class="color-dot" data-color="black" data-fill="#1D1D1F" data-stroke="#1D1D1F" data-text="#FFFFFF" style="background:#1D1D1F;" aria-pressed="false" aria-label="ブラック"></button><button type="button" class="color-dot" data-color="gray" data-fill="#D2D2D7" data-stroke="#1D1D1F" data-text="#1D1D1F" style="background:#D2D2D7;" aria-pressed="false" aria-label="ヘザーグレー"></button></div>
+<p class="merch-name">RIZIN.55 タイポグラフィ Tシャツ</p>
+<p class="merch-desc">RIZIN.55の大会概要と勝敗を文字で構成したデザインを、Tシャツの前面に配置した試作です。</p>
+<p class="merch-price">価格：販売準備中</p>
+<button type="button" class="merch-buy" disabled>販売準備中</button>
+</article>
+<article class="merch-card">
+<div class="merch-art">
+<svg viewBox="0 0 340 300" role="img" aria-label="超RIZIN.5 タイポグラフィ パーカーのデザイン画像" style="width:100%;height:auto;display:block;">
+<g class="garment"><path d="M120 78 Q170 34 220 78 L262 104 L282 190 L244 198 L244 256 L96 256 L96 198 L58 190 L78 104 Z" fill="#FFFFFF" stroke="#1D1D1F" stroke-width="3" stroke-linejoin="round"/><path d="M132 82 Q170 112 208 82" fill="none" stroke="#1D1D1F" stroke-width="3"/></g>
+<text class="m-title" x="170" y="140" text-anchor="middle" font-family="Meiryo,sans-serif" font-size="26" font-weight="700" fill="#1D1D1F">超RIZIN.5</text>
+<text class="m-sub" x="170" y="168" text-anchor="middle" font-family="Meiryo,sans-serif" font-size="12" fill="#1D1D1F">2026.09.10 京セラドーム大阪</text>
+<text x="170" y="282" text-anchor="middle" font-family="Meiryo,sans-serif" font-size="11" fill="#86868B">no contest data design</text>
+</svg>
+</div>
+<div class="color-dots" role="group" aria-label="カラーを選ぶ"><button type="button" class="color-dot" data-color="white" data-fill="#FFFFFF" data-stroke="#1D1D1F" data-text="#1D1D1F" style="background:#FFFFFF;" aria-pressed="true" aria-label="ホワイト"></button><button type="button" class="color-dot" data-color="black" data-fill="#1D1D1F" data-stroke="#1D1D1F" data-text="#FFFFFF" style="background:#1D1D1F;" aria-pressed="false" aria-label="ブラック"></button><button type="button" class="color-dot" data-color="gray" data-fill="#D2D2D7" data-stroke="#1D1D1F" data-text="#1D1D1F" style="background:#D2D2D7;" aria-pressed="false" aria-label="ヘザーグレー"></button></div>
+<p class="merch-name">超RIZIN.5 タイポグラフィ パーカー</p>
+<p class="merch-desc">超RIZIN.5 浪速の超復活祭りの大会概要と勝敗を文字で構成したデザインを、パーカーの前面に配置した試作です。</p>
+<p class="merch-price">価格：販売準備中</p>
+<button type="button" class="merch-buy" disabled>販売準備中</button>
+</article>
+<article class="merch-card">
+<div class="merch-art">
+<svg viewBox="0 0 340 300" role="img" aria-label="RIZIN.54 タイポグラフィ トートバッグのデザイン画像" style="width:100%;height:auto;display:block;">
+<g class="garment"><path d="M96 108 L244 108 L256 256 L84 256 Z" fill="#FFFFFF" stroke="#1D1D1F" stroke-width="3" stroke-linejoin="round"/><path d="M126 108 Q126 62 170 62 Q214 62 214 108" fill="none" stroke="#1D1D1F" stroke-width="5"/></g>
+<text class="m-title" x="170" y="140" text-anchor="middle" font-family="Meiryo,sans-serif" font-size="26" font-weight="700" fill="#1D1D1F">RIZIN.54</text>
+<text class="m-sub" x="170" y="168" text-anchor="middle" font-family="Meiryo,sans-serif" font-size="12" fill="#1D1D1F">2026.08.11 TOYOTA ARENA TOKYO</text>
+<text x="170" y="282" text-anchor="middle" font-family="Meiryo,sans-serif" font-size="11" fill="#86868B">no contest data design</text>
+</svg>
+</div>
+<div class="color-dots" role="group" aria-label="カラーを選ぶ"><button type="button" class="color-dot" data-color="white" data-fill="#FFFFFF" data-stroke="#1D1D1F" data-text="#1D1D1F" style="background:#FFFFFF;" aria-pressed="true" aria-label="ホワイト"></button><button type="button" class="color-dot" data-color="black" data-fill="#1D1D1F" data-stroke="#1D1D1F" data-text="#FFFFFF" style="background:#1D1D1F;" aria-pressed="false" aria-label="ブラック"></button><button type="button" class="color-dot" data-color="gray" data-fill="#D2D2D7" data-stroke="#1D1D1F" data-text="#1D1D1F" style="background:#D2D2D7;" aria-pressed="false" aria-label="ヘザーグレー"></button></div>
+<p class="merch-name">RIZIN.54 タイポグラフィ トートバッグ</p>
+<p class="merch-desc">RIZIN.54の大会概要と勝敗を文字で構成したデザインを、トートバッグの前面に配置した試作です。</p>
+<p class="merch-price">価格：販売準備中</p>
+<button type="button" class="merch-buy" disabled>販売準備中</button>
+</article>
+</div>
+</section>
 </main>
 <footer class="site">
       <div class="wrap">
@@ -2396,84 +2447,63 @@
       </div>
     </footer>
 <script>
-      (function(){
-        var buttons = Array.prototype.slice.call(document.querySelectorAll('.filter-btn'));
-        var typos = Array.prototype.slice.call(document.querySelectorAll('#typoGrid .typo-item'));
-        var countEl = document.getElementById('filterCount');
-        var labelNames = { number:'ナンバーシリーズ', landmark:'LANDMARK', super:'超RIZIN', trigger:'TRIGGER', other:'その他' };
-        function applyFilter(key){
-          var shown = 0;
-          typos.forEach(function(item){
-            var match = (key === 'all' || item.getAttribute('data-category') === key);
-            item.classList.toggle('hidden-typo', !match);
-            if(match) shown++;
-          });
-          buttons.forEach(function(btn){
-            var active = btn.getAttribute('data-filter') === key;
-            btn.classList.toggle('btn-primary', active);
-            btn.classList.toggle('btn-secondary', !active);
-            btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-          });
-          countEl.textContent = (key === 'all' ? '全86大会' : (labelNames[key] + ' ' + shown + '大会')) + 'を表示しています。';
-        }
-        buttons.forEach(function(btn){
-          btn.addEventListener('click', function(){ applyFilter(btn.getAttribute('data-filter')); });
+(function(){
+  var items = Array.prototype.slice.call(document.querySelectorAll('#typoGrid .typo-item'));
+  var segBtns = Array.prototype.slice.call(document.querySelectorAll('.seg-btn'));
+  var countEl = document.getElementById('filterCount');
+  var searchEl = document.getElementById('panelSearch');
+  var labelNames = { number:'ナンバーシリーズ', landmark:'LANDMARK', super:'超RIZIN', trigger:'TRIGGER', other:'その他' };
+  var cat = 'all', q = '';
+  function apply(){
+    var shown = 0;
+    items.forEach(function(item){
+      var okCat = (cat === 'all' || item.getAttribute('data-category') === cat);
+      var okQ = (!q || item.textContent.indexOf(q) !== -1);
+      var match = okCat && okQ;
+      item.style.display = match ? '' : 'none';
+      if(match) shown++;
+    });
+    segBtns.forEach(function(btn){
+      var active = btn.getAttribute('data-filter') === cat;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    if(q){
+      countEl.textContent = '「' + q + '」で ' + shown + '大会が見つかりました。';
+    } else {
+      countEl.textContent = (cat === 'all' ? '全86大会' : labelNames[cat] + ' ' + shown + '大会') + 'を表示しています。';
+    }
+  }
+  segBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){ cat = btn.getAttribute('data-filter'); apply(); });
+  });
+  searchEl.addEventListener('input', function(){ q = searchEl.value.trim(); apply(); });
+  var navSearch = document.querySelector('.nav-search');
+  if(navSearch){
+    navSearch.addEventListener('click', function(e){
+      e.preventDefault();
+      document.getElementById('searchBox').scrollIntoView({behavior:'smooth', block:'center'});
+      setTimeout(function(){ searchEl.focus({preventScroll:true}); }, 350);
+    });
+  }
+  document.querySelectorAll('.merch-card').forEach(function(card){
+    var garmentPaths = card.querySelectorAll('.garment path');
+    var titleEl = card.querySelector('.m-title');
+    var subEl = card.querySelector('.m-sub');
+    card.querySelectorAll('.color-dot').forEach(function(dot){
+      dot.addEventListener('click', function(){
+        garmentPaths.forEach(function(p){
+          if(p.getAttribute('fill') !== 'none'){ p.setAttribute('fill', dot.getAttribute('data-fill')); }
+          p.setAttribute('stroke', dot.getAttribute('data-stroke'));
         });
-        var links = document.querySelectorAll('[data-scroll]');
-        links.forEach(function(link){
-          link.addEventListener('click', function(e){
-            var id = link.getAttribute('data-scroll');
-            var target = document.getElementById(id);
-            if(!target) return;
-            e.preventDefault();
-            target.scrollIntoView({ behavior:'smooth', block:'start' });
-            target.classList.remove('highlight');
-            void target.offsetWidth;
-            target.classList.add('highlight');
-            setTimeout(function(){ target.classList.remove('highlight'); }, 2400);
-            try{ history.replaceState(null,'','#'+id); }catch(err){}
-          });
-        });
-// Merch carousel: manual only (no auto-advance). Color dots switch colorway.
-        var products = [
-          { kind:'tee', name:'RIZIN.55 タイポグラフィ Tシャツ', desc:'RIZIN.55の大会概要と勝敗を文字で構成したデザインを、Tシャツの前面に配置した試作です。', title:'RIZIN.55', sub:'2026.11.08 LaLa arena TOKYO-BAY' },
-          { kind:'hoodie', name:'超RIZIN.5 タイポグラフィ パーカー', desc:'超RIZIN.5 浪速の超復活祭りの大会概要と勝敗を文字で構成したデザインを、パーカーの前面に配置した試作です。', title:'超RIZIN.5', sub:'2026.09.10 京セラドーム大阪' },
-          { kind:'tote', name:'RIZIN.54 タイポグラフィ トートバッグ', desc:'RIZIN.54の大会概要と勝敗を文字で構成したデザインを、トートバッグの前面に配置した試作です。', title:'RIZIN.54', sub:'2026.08.11 TOYOTA ARENA TOKYO' }
-        ];
-        var colors = {
-          white:{ label:'ホワイト', fill:'#FFFFFF', stroke:'#1D1D1F', text:'#1D1D1F' },
-          black:{ label:'ブラック', fill:'#1D1D1F', stroke:'#1D1D1F', text:'#FFFFFF' },
-          gray:{ label:'ヘザーグレー', fill:'#D2D2D7', stroke:'#1D1D1F', text:'#1D1D1F' }
-        };
-        var garments = {
-          tee:'<path d="M110 60 L55 92 L82 138 L110 124 L110 252 L230 252 L230 124 L258 138 L285 92 L230 60 Q170 88 110 60 Z" fill="GARMENTFILL" stroke="GARMENTSTROKE" stroke-width="3" stroke-linejoin="round"/>',
-          hoodie:'<path d="M120 78 Q170 34 220 78 L262 104 L282 190 L244 198 L244 256 L96 256 L96 198 L58 190 L78 104 Z" fill="GARMENTFILL" stroke="GARMENTSTROKE" stroke-width="3" stroke-linejoin="round"/><path d="M132 82 Q170 112 208 82" fill="none" stroke="GARMENTSTROKE" stroke-width="3"/>',
-          tote:'<path d="M96 108 L244 108 L256 256 L84 256 Z" fill="GARMENTFILL" stroke="GARMENTSTROKE" stroke-width="3" stroke-linejoin="round"/><path d="M126 108 Q126 62 170 62 Q214 62 214 108" fill="none" stroke="GARMENTSTROKE" stroke-width="5"/>'
-        };
-        var idx = 0, curColor = 'white';
-        var gEl = document.getElementById('merchGarment');
-        var nameEl = document.getElementById('merchName');
-        var descEl = document.getElementById('merchDesc');
-        var titleEl = document.getElementById('merchSvgTitle');
-        var subEl = document.getElementById('merchSvgSub');
-        var countMerch = document.getElementById('merchCount');
-        var colorNameEl = document.getElementById('colorName');
-        var dots = Array.prototype.slice.call(document.querySelectorAll('.color-dot'));
-        function renderMerch(){
-          var p = products[idx], c = colors[curColor];
-          gEl.innerHTML = garments[p.kind].split('GARMENTFILL').join(c.fill).split('GARMENTSTROKE').join(c.stroke);
-          titleEl.textContent = p.title; titleEl.setAttribute('fill', c.text);
-          subEl.textContent = p.sub; subEl.setAttribute('fill', c.text);
-          nameEl.textContent = p.name; descEl.textContent = p.desc;
-          colorNameEl.textContent = c.label;
-          countMerch.textContent = (idx + 1) + ' / ' + products.length;
-          dots.forEach(function(d){ d.setAttribute('aria-pressed', d.getAttribute('data-color') === curColor ? 'true' : 'false'); });
-        }
-        document.getElementById('merchPrev').addEventListener('click', function(){ idx = (idx - 1 + products.length) % products.length; renderMerch(); });
-        document.getElementById('merchNext').addEventListener('click', function(){ idx = (idx + 1) % products.length; renderMerch(); });
-        dots.forEach(function(d){ d.addEventListener('click', function(){ curColor = d.getAttribute('data-color'); renderMerch(); }); });
-        renderMerch();
-          })();
-    </script>
+        titleEl.setAttribute('fill', dot.getAttribute('data-text'));
+        subEl.setAttribute('fill', dot.getAttribute('data-text'));
+        card.querySelectorAll('.color-dot').forEach(function(d){ d.setAttribute('aria-pressed', d === dot ? 'true' : 'false'); });
+      });
+    });
+  });
+})();
+</script>
+
 </body>
 </html>

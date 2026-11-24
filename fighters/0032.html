@@ -315,6 +315,38 @@ table.history a:hover{text-decoration:underline;}
 .back-link{display:inline-block;margin:0 0 14px;color:#0066CC;text-decoration:none;font-size:14px;}
 .back-link:hover{text-decoration:underline;}
 .def-note{font-size:12.5px;color:#6E6E73;line-height:1.7;}
+
+/* --- mobile: no horizontal scroll, stacked history rows --- */
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible;margin:0;padding:0;}
+  table.history thead{display:none;}
+  table.history tr{display:block;padding:9px 2px;border-bottom:1px solid #D2D2D7;}
+  table.history td{display:block;padding:1px 2px;border-bottom:none;}
+  table.history td.num{font-size:12px;color:#6E6E73;font-weight:600;}
+  table.history td.opp{font-weight:700;font-size:15px;}
+  .rate-t{font-size:12px;}
+  .rate-t th,.rate-t td{padding:6px 5px;}
+  table.index3 td.name{white-space:normal;}
+  .profile-t th{width:84px;}
+  .donut-card{flex-direction:column;align-items:flex-start;gap:8px;}
+  .stat-card .v{font-size:21px;}
+}
+
+table.lb{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;}
+table.lb th{text-align:left;font-size:12px;color:#6E6E73;font-weight:600;padding:6px 6px;border-bottom:1px solid #D2D2D7;}
+table.lb td{padding:7px 6px;border-bottom:1px solid #E8E8ED;vertical-align:top;}
+table.lb td.num,table.lb th.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.lb td.name{font-weight:600;}
+.sortpills{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px;}
+.sortpills .pill{appearance:none;border:1px solid #D2D2D7;background:#fff;color:#1D1D1F;border-radius:980px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit;}
+.sortpills .pill.is-active{background:#1D1D1F;color:#fff;border-color:#1D1D1F;}
+.seg-panel{display:none;}
+.seg-panel.is-active{display:block;}
+.board-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+.board-link{display:block;background:#F5F5F7;border-radius:14px;padding:16px 18px;color:#1D1D1F;text-decoration:none;}
+.board-link:hover{background:#ECECF0;}
+.board-link .t{font-weight:700;font-size:15px;}
+.board-link .d{font-size:12.5px;color:#6E6E73;margin-top:3px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -365,17 +397,17 @@ table.history a:hover{text-decoration:underline;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2026.10.03</td><td><a href="../20261003-rizin-landmark-16.html">RIZIN LANDMARK 16</a></td><td><a href="0040.html">堀江圭功</a></td><td><span class="res-w">負け</span></td><td>2R 3:37 TKO（パウンド） カード変更 カード変更は以下の通り。 マック・パパリイ vs. アルブリー・ンジャイ→ンジャイは血液検査の結果、数値に変調があり、ドクターストップにより欠場。赤沢幸典が代役出場。 マック・パパリイ vs. 赤沢幸典→ 赤沢が計量前夜に膝を負傷。メディカルチェックによってドクターストップで試合中止。 <a href="https://youtu.be/Qql3041SmF0?si=J4ZKg9hOJMhkY2v9" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2026.05.10</td><td><a href="../20260510-rizin-53.html">RIZIN.53</a></td><td><a href="0124.html">雑賀“ヤン坊”達也</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:38 TKO（左フック→サッカーボールキック） <a href="https://youtu.be/T6NPK3GNlUo?si=UiDMp44nm6As5SdI" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2025.11.03</td><td><a href="../20251103-rizin-landmark-12-in-kobe.html">RIZIN LANDMARK 12 in KOBE</a></td><td><a href="0150.html">桜庭大世</a></td><td><span class="res-w">負け</span></td><td>3R 1:33 膝十字固め <a href="https://youtu.be/za1zVLBxGIg?si=co4cXiXgjHZFR1fz" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2025.05.31</td><td><a href="../20250531-rizin-world-series-in-korea.html">RIZIN WORLD SERIES in KOREA</a></td><td><a href="0412.html">キム・シウォン</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定0-3</td></tr>
-<tr><td class="num">2024.12.31</td><td><a href="../20241231-rizin-decade-rizin-49.html">RIZIN DECADE RIZIN.49</a><span class="rule-tag">キック</span></td><td><a href="0327.html">細川一颯</a></td><td><span class="res-w">勝ち</span></td><td>2R 2:59 KO（左ボディブロー） <a href="https://youtu.be/hxRQejVqnJ8?si=efzDtJcnA06t3nLD" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.09.29</td><td><a href="../20240929-rizin-48.html">RIZIN.48</a></td><td><a href="0002.html">矢地祐介</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2024.06.09</td><td><a href="../20240609-rizin-47.html">RIZIN.47</a></td><td><a href="0303.html">徳留一樹</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:29 TKO（右フック→パウンド） <a href="https://youtu.be/TYkeKX5-jOo?si=zXZdvnBRW63nYmam" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2023.09.24</td><td><a href="../20230924-rizin-44.html">RIZIN.44</a><span class="rule-tag">キック</span></td><td><a href="0113.html">安保瑠輝也</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0 (29-26、29-27、29-26)[2]</td></tr>
-<tr><td class="num">2023.04.01</td><td><a href="../20230401-rizin-41.html">RIZIN.41</a></td><td><a href="0099.html">キム・ギョンピョ</a></td><td><span class="res-w">負け</span></td><td>1R 3:33 リアネイキッドチョーク <a href="https://youtu.be/QUldhgp5oC8?si=_pfuh2jTrtlwNDWW" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2022.12.31</td><td><a href="../20221231-rizin-40.html">RIZIN.40</a></td><td><a href="0042.html">“ブラックパンサー”ベイノア</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:45 KO（スタンドパンチ） <a href="https://youtu.be/dwsLYGJdQus?si=3bNOPSmP1ooBX-QF" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2022.10.23</td><td><a href="../20221023-rizin-39.html">RIZIN.39</a></td><td><a href="0186.html">佐々木信治</a></td><td><span class="res-w">勝ち</span></td><td>3R 2:33 TKO（パウンドアウト） <a href="https://youtu.be/0zmzYM4gDYI?si=xJe-MyDk1aQd3Gjy" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2026.10.03</td><td><a href="../20261003-rizin-landmark-16.html">RIZIN LANDMARK 16</a></td><td class="opp"><a href="0040.html">堀江圭功</a></td><td><span class="res-w">負け</span></td><td>2R 3:37 TKO（パウンド） カード変更 カード変更は以下の通り。 マック・パパリイ vs. アルブリー・ンジャイ→ンジャイは血液検査の結果、数値に変調があり、ドクターストップにより欠場。赤沢幸典が代役出場。 マック・パパリイ vs. 赤沢幸典→ 赤沢が計量前夜に膝を負傷。メディカルチェックによってドクターストップで試合中止。 <a href="https://youtu.be/Qql3041SmF0?si=J4ZKg9hOJMhkY2v9" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2026.05.10</td><td><a href="../20260510-rizin-53.html">RIZIN.53</a></td><td class="opp"><a href="0124.html">雑賀“ヤン坊”達也</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:38 TKO（左フック→サッカーボールキック） <a href="https://youtu.be/T6NPK3GNlUo?si=UiDMp44nm6As5SdI" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2025.11.03</td><td><a href="../20251103-rizin-landmark-12-in-kobe.html">RIZIN LANDMARK 12 in KOBE</a></td><td class="opp"><a href="0150.html">桜庭大世</a></td><td><span class="res-w">負け</span></td><td>3R 1:33 膝十字固め <a href="https://youtu.be/za1zVLBxGIg?si=co4cXiXgjHZFR1fz" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2025.05.31</td><td><a href="../20250531-rizin-world-series-in-korea.html">RIZIN WORLD SERIES in KOREA</a></td><td class="opp"><a href="0412.html">キム・シウォン</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定0-3</td></tr>
+<tr><td class="num">2024.12.31</td><td><a href="../20241231-rizin-decade-rizin-49.html">RIZIN DECADE RIZIN.49</a><span class="rule-tag">キック</span></td><td class="opp"><a href="0327.html">細川一颯</a></td><td><span class="res-w">勝ち</span></td><td>2R 2:59 KO（左ボディブロー） <a href="https://youtu.be/hxRQejVqnJ8?si=efzDtJcnA06t3nLD" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.09.29</td><td><a href="../20240929-rizin-48.html">RIZIN.48</a></td><td class="opp"><a href="0002.html">矢地祐介</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2024.06.09</td><td><a href="../20240609-rizin-47.html">RIZIN.47</a></td><td class="opp"><a href="0303.html">徳留一樹</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:29 TKO（右フック→パウンド） <a href="https://youtu.be/TYkeKX5-jOo?si=zXZdvnBRW63nYmam" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2023.09.24</td><td><a href="../20230924-rizin-44.html">RIZIN.44</a><span class="rule-tag">キック</span></td><td class="opp"><a href="0113.html">安保瑠輝也</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0 (29-26、29-27、29-26)[2]</td></tr>
+<tr><td class="num">2023.04.01</td><td><a href="../20230401-rizin-41.html">RIZIN.41</a></td><td class="opp"><a href="0099.html">キム・ギョンピョ</a></td><td><span class="res-w">負け</span></td><td>1R 3:33 リアネイキッドチョーク <a href="https://youtu.be/QUldhgp5oC8?si=_pfuh2jTrtlwNDWW" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.12.31</td><td><a href="../20221231-rizin-40.html">RIZIN.40</a></td><td class="opp"><a href="0042.html">“ブラックパンサー”ベイノア</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:45 KO（スタンドパンチ） <a href="https://youtu.be/dwsLYGJdQus?si=3bNOPSmP1ooBX-QF" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.10.23</td><td><a href="../20221023-rizin-39.html">RIZIN.39</a></td><td class="opp"><a href="0186.html">佐々木信治</a></td><td><span class="res-w">勝ち</span></td><td>3R 2:33 TKO（パウンドアウト） <a href="https://youtu.be/0zmzYM4gDYI?si=xJe-MyDk1aQd3Gjy" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
 </tbody>
 </table>
 </div>

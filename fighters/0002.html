@@ -315,6 +315,38 @@ table.history a:hover{text-decoration:underline;}
 .back-link{display:inline-block;margin:0 0 14px;color:#0066CC;text-decoration:none;font-size:14px;}
 .back-link:hover{text-decoration:underline;}
 .def-note{font-size:12.5px;color:#6E6E73;line-height:1.7;}
+
+/* --- mobile: no horizontal scroll, stacked history rows --- */
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible;margin:0;padding:0;}
+  table.history thead{display:none;}
+  table.history tr{display:block;padding:9px 2px;border-bottom:1px solid #D2D2D7;}
+  table.history td{display:block;padding:1px 2px;border-bottom:none;}
+  table.history td.num{font-size:12px;color:#6E6E73;font-weight:600;}
+  table.history td.opp{font-weight:700;font-size:15px;}
+  .rate-t{font-size:12px;}
+  .rate-t th,.rate-t td{padding:6px 5px;}
+  table.index3 td.name{white-space:normal;}
+  .profile-t th{width:84px;}
+  .donut-card{flex-direction:column;align-items:flex-start;gap:8px;}
+  .stat-card .v{font-size:21px;}
+}
+
+table.lb{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;}
+table.lb th{text-align:left;font-size:12px;color:#6E6E73;font-weight:600;padding:6px 6px;border-bottom:1px solid #D2D2D7;}
+table.lb td{padding:7px 6px;border-bottom:1px solid #E8E8ED;vertical-align:top;}
+table.lb td.num,table.lb th.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.lb td.name{font-weight:600;}
+.sortpills{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px;}
+.sortpills .pill{appearance:none;border:1px solid #D2D2D7;background:#fff;color:#1D1D1F;border-radius:980px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit;}
+.sortpills .pill.is-active{background:#1D1D1F;color:#fff;border-color:#1D1D1F;}
+.seg-panel{display:none;}
+.seg-panel.is-active{display:block;}
+.board-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+.board-link{display:block;background:#F5F5F7;border-radius:14px;padding:16px 18px;color:#1D1D1F;text-decoration:none;}
+.board-link:hover{background:#ECECF0;}
+.board-link .t{font-weight:700;font-size:15px;}
+.board-link .d{font-size:12.5px;color:#6E6E73;margin-top:3px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -365,29 +397,29 @@ table.history a:hover{text-decoration:underline;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2026.06.06</td><td><a href="../20260606-rizin-landmark-14.html">RIZIN LANDMARK 14</a></td><td><a href="0351.html">ISAO</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 (29-28、29-28、29-28)</td></tr>
-<tr><td class="num">2026.03.07</td><td><a href="../20260307-rizin-52.html">RIZIN.52</a></td><td><a href="0099.html">キム・ギョンピョ</a></td><td><span class="res-w">負け</span></td><td>2R 4:25 TKO（ドクターストップ：カットでの出血）</td></tr>
-<tr><td class="num">2025.09.28</td><td><a href="../20250928-rizin-51.html">RIZIN.51</a></td><td><a href="0329.html">芳賀ビラル海</a></td><td><span class="res-w">勝ち</span></td><td>2R 2:09 リアネイキッドチョーク <a href="https://youtu.be/hrHcGhE4H6c?si=Cj7qig6BV5KWO7dh" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.12.31</td><td><a href="../20241231-rizin-decade-rizin-49.html">RIZIN DECADE RIZIN.49</a></td><td><a href="0150.html">桜庭大世</a></td><td><span class="res-w">負け</span></td><td>1R 0:26 TKO（左フック→パウンド） <a href="https://youtu.be/O5jTEtSaCl0?si=w9y8bgMgr9Qv-9q5" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.09.29</td><td><a href="../20240929-rizin-48.html">RIZIN.48</a></td><td><a href="0032.html">宇佐美正パトリック</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2024.02.24</td><td><a href="../20240224-rizin-landmark-8.html">RIZIN LANDMARK 8</a></td><td><a href="0090.html">白川陸斗</a></td><td><span class="res-w">勝ち</span></td><td>2R 5:00 リアネイキッドチョーク <a href="https://youtu.be/Df-04r1TrfA?si=kQ7Q4_IKcWuS6726" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2023.06.24</td><td><a href="../20230624-rizin-43.html">RIZIN.43</a></td><td><a href="0232.html">ザック・ゼイン</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:50 リアネイキッドチョーク <a href="https://youtu.be/Azzv_0TvkO4?si=oGgDcBGz9KR249uh" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2022.10.23</td><td><a href="../20221023-rizin-39.html">RIZIN.39</a></td><td><a href="0254.html">ボイド・アレン</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2022.04.16</td><td><a href="../20220416-rizin-trigger-3rd.html">RIZIN TRIGGER 3rd</a></td><td><a href="0025.html">ルイス・グスタボ</a></td><td><span class="res-w">負け</span></td><td>2R 3:14 TKO（グラウンドパンチ）</td></tr>
-<tr><td class="num">2021.12.31</td><td><a href="../20211231-rizin-33.html">RIZIN.33</a></td><td><a href="0005.html">ホベルト・サトシ・ソウザ</a></td><td><span class="res-w">負け</span></td><td>2R 3:30 腕ひしぎ三角固め <a href="https://youtu.be/3vxaotnoKOg?si=pXAkptaxIknXHh7t" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.09.19</td><td><a href="../20210919-rizin-30.html">RIZIN.30</a></td><td><a href="0010.html">武田光司</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/FXrs_1L6K8A?si=lKtfQ7T74j1G8dML" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.06.27</td><td><a href="../20210627-rizin-29.html">RIZIN.29</a></td><td><a href="0651.html">川名TENCHO雄生</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定 3-0 <a href="https://youtu.be/tl7sFJCKUhU?si=Ypi33pnCUyFH3Ggy" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.09.27</td><td><a href="../20200927-rizin-24.html">RIZIN.24</a></td><td><a href="0111.html">大原樹理</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定1-2 <a href="https://youtu.be/uMKz8n8ucrA?si=cinRWdszXQ9uedsB" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.08.09</td><td><a href="../20200809-rizin-22-starting-over.html">RIZIN.22 - STARTING OVER -</a></td><td><a href="0005.html">ホベルト・サトシ・ソウザ</a></td><td><span class="res-w">負け</span></td><td>1R 1:52 TKO（パウンド） <a href="https://youtu.be/pg-cBTqYt8o?si=r1X0n_ztZasq9ucW" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2019.12.29</td><td><a href="../20191229-bellator-japan.html">BELLATOR JAPAN</a></td><td><a href="0184.html">上迫博仁</a></td><td><span class="res-w">勝ち</span></td><td>3R 4:33 TKO（サッカーボールキック） <a href="https://youtu.be/U5UihDEbuFs?si=JJkgSfkAq5SqK1Cl" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2019.07.28</td><td><a href="../20190728-rizin-17.html">RIZIN.17</a></td><td><a href="0004.html">朝倉未来</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/LRutpBKZsAA?si=cMGsnJs5sRbOIUCC" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2018.12.31</td><td><a href="../20181231-rizin-14.html">RIZIN.14</a></td><td><a href="0036.html">ジョニー・ケース</a></td><td><span class="res-w">負け</span></td><td>2R 4:47 TKO（レフェリーストップ） <a href="https://youtu.be/FR4SVYhenw8?si=jU-tDRI9UEnYMbDo" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2018.08.12</td><td><a href="../20180812-rizin-12.html">RIZIN.12</a></td><td><a href="0025.html">ルイス・グスタボ</a></td><td><span class="res-w">負け</span></td><td>2R 2:32 KO (右フック) <a href="https://youtu.be/swsByn1HNf0?si=nxynSLYBxzlG6kB9" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2018.05.06</td><td><a href="../20180506-rizin-10.html">RIZIN.10</a></td><td><a href="0487.html">ディエゴ・ヌエス</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定1-2</td></tr>
-<tr><td class="num">2017.12.31</td><td><a href="../20171231-rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a></td><td><a href="0140.html">五味隆典</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:36 三角絞め <a href="https://youtu.be/O2oss4fJrio?si=E8pO6QPGsPYsy9P1" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2017.07.30</td><td><a href="../20170730-rizin-6-rizin-fighting-world-grand-prix-2017-1st-round.html">RIZIN.6 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント 1st ROUND -夏の陣-</a></td><td><a href="0054.html">北岡悟</a></td><td><span class="res-w">勝ち</span></td><td>2R 4:48 TKO（レフェリーストップ）</td></tr>
-<tr><td class="num">2017.04.16</td><td><a href="../20170416-rizin-5-rizin-2017-in-yokohama-sakura.html">RIZIN.5 RIZIN 2017 in YOKOHAMA -SAKURA-</a></td><td><a href="0037.html">ダロン・クルックシャンク</a></td><td><span class="res-w">勝ち</span></td><td>1R 5:12 KO（右フック） <a href="https://youtu.be/9zZbo2q_2kM?si=tFfBUA0y4S2BnNnU" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2016.12.29</td><td><a href="../20161229-rizin-3-rizin-fighting-world-grand-prix-2016-2nd-round.html">RIZIN.3 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント 2nd ROUND</a></td><td><a href="0538.html">マリオ・シスムンド</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:19 KO（左跳び膝蹴り→パウンド）</td></tr>
+<tr><td class="num">2026.06.06</td><td><a href="../20260606-rizin-landmark-14.html">RIZIN LANDMARK 14</a></td><td class="opp"><a href="0351.html">ISAO</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 (29-28、29-28、29-28)</td></tr>
+<tr><td class="num">2026.03.07</td><td><a href="../20260307-rizin-52.html">RIZIN.52</a></td><td class="opp"><a href="0099.html">キム・ギョンピョ</a></td><td><span class="res-w">負け</span></td><td>2R 4:25 TKO（ドクターストップ：カットでの出血）</td></tr>
+<tr><td class="num">2025.09.28</td><td><a href="../20250928-rizin-51.html">RIZIN.51</a></td><td class="opp"><a href="0329.html">芳賀ビラル海</a></td><td><span class="res-w">勝ち</span></td><td>2R 2:09 リアネイキッドチョーク <a href="https://youtu.be/hrHcGhE4H6c?si=Cj7qig6BV5KWO7dh" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.12.31</td><td><a href="../20241231-rizin-decade-rizin-49.html">RIZIN DECADE RIZIN.49</a></td><td class="opp"><a href="0150.html">桜庭大世</a></td><td><span class="res-w">負け</span></td><td>1R 0:26 TKO（左フック→パウンド） <a href="https://youtu.be/O5jTEtSaCl0?si=w9y8bgMgr9Qv-9q5" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.09.29</td><td><a href="../20240929-rizin-48.html">RIZIN.48</a></td><td class="opp"><a href="0032.html">宇佐美正パトリック</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2024.02.24</td><td><a href="../20240224-rizin-landmark-8.html">RIZIN LANDMARK 8</a></td><td class="opp"><a href="0090.html">白川陸斗</a></td><td><span class="res-w">勝ち</span></td><td>2R 5:00 リアネイキッドチョーク <a href="https://youtu.be/Df-04r1TrfA?si=kQ7Q4_IKcWuS6726" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2023.06.24</td><td><a href="../20230624-rizin-43.html">RIZIN.43</a></td><td class="opp"><a href="0232.html">ザック・ゼイン</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:50 リアネイキッドチョーク <a href="https://youtu.be/Azzv_0TvkO4?si=oGgDcBGz9KR249uh" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.10.23</td><td><a href="../20221023-rizin-39.html">RIZIN.39</a></td><td class="opp"><a href="0254.html">ボイド・アレン</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2022.04.16</td><td><a href="../20220416-rizin-trigger-3rd.html">RIZIN TRIGGER 3rd</a></td><td class="opp"><a href="0025.html">ルイス・グスタボ</a></td><td><span class="res-w">負け</span></td><td>2R 3:14 TKO（グラウンドパンチ）</td></tr>
+<tr><td class="num">2021.12.31</td><td><a href="../20211231-rizin-33.html">RIZIN.33</a></td><td class="opp"><a href="0005.html">ホベルト・サトシ・ソウザ</a></td><td><span class="res-w">負け</span></td><td>2R 3:30 腕ひしぎ三角固め <a href="https://youtu.be/3vxaotnoKOg?si=pXAkptaxIknXHh7t" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.09.19</td><td><a href="../20210919-rizin-30.html">RIZIN.30</a></td><td class="opp"><a href="0010.html">武田光司</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/FXrs_1L6K8A?si=lKtfQ7T74j1G8dML" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.06.27</td><td><a href="../20210627-rizin-29.html">RIZIN.29</a></td><td class="opp"><a href="0651.html">川名TENCHO雄生</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定 3-0 <a href="https://youtu.be/tl7sFJCKUhU?si=Ypi33pnCUyFH3Ggy" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.09.27</td><td><a href="../20200927-rizin-24.html">RIZIN.24</a></td><td class="opp"><a href="0111.html">大原樹理</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定1-2 <a href="https://youtu.be/uMKz8n8ucrA?si=cinRWdszXQ9uedsB" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.08.09</td><td><a href="../20200809-rizin-22-starting-over.html">RIZIN.22 - STARTING OVER -</a></td><td class="opp"><a href="0005.html">ホベルト・サトシ・ソウザ</a></td><td><span class="res-w">負け</span></td><td>1R 1:52 TKO（パウンド） <a href="https://youtu.be/pg-cBTqYt8o?si=r1X0n_ztZasq9ucW" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2019.12.29</td><td><a href="../20191229-bellator-japan.html">BELLATOR JAPAN</a></td><td class="opp"><a href="0184.html">上迫博仁</a></td><td><span class="res-w">勝ち</span></td><td>3R 4:33 TKO（サッカーボールキック） <a href="https://youtu.be/U5UihDEbuFs?si=JJkgSfkAq5SqK1Cl" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2019.07.28</td><td><a href="../20190728-rizin-17.html">RIZIN.17</a></td><td class="opp"><a href="0004.html">朝倉未来</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/LRutpBKZsAA?si=cMGsnJs5sRbOIUCC" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2018.12.31</td><td><a href="../20181231-rizin-14.html">RIZIN.14</a></td><td class="opp"><a href="0036.html">ジョニー・ケース</a></td><td><span class="res-w">負け</span></td><td>2R 4:47 TKO（レフェリーストップ） <a href="https://youtu.be/FR4SVYhenw8?si=jU-tDRI9UEnYMbDo" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2018.08.12</td><td><a href="../20180812-rizin-12.html">RIZIN.12</a></td><td class="opp"><a href="0025.html">ルイス・グスタボ</a></td><td><span class="res-w">負け</span></td><td>2R 2:32 KO (右フック) <a href="https://youtu.be/swsByn1HNf0?si=nxynSLYBxzlG6kB9" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2018.05.06</td><td><a href="../20180506-rizin-10.html">RIZIN.10</a></td><td class="opp"><a href="0487.html">ディエゴ・ヌエス</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定1-2</td></tr>
+<tr><td class="num">2017.12.31</td><td><a href="../20171231-rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a></td><td class="opp"><a href="0140.html">五味隆典</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:36 三角絞め <a href="https://youtu.be/O2oss4fJrio?si=E8pO6QPGsPYsy9P1" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2017.07.30</td><td><a href="../20170730-rizin-6-rizin-fighting-world-grand-prix-2017-1st-round.html">RIZIN.6 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント 1st ROUND -夏の陣-</a></td><td class="opp"><a href="0054.html">北岡悟</a></td><td><span class="res-w">勝ち</span></td><td>2R 4:48 TKO（レフェリーストップ）</td></tr>
+<tr><td class="num">2017.04.16</td><td><a href="../20170416-rizin-5-rizin-2017-in-yokohama-sakura.html">RIZIN.5 RIZIN 2017 in YOKOHAMA -SAKURA-</a></td><td class="opp"><a href="0037.html">ダロン・クルックシャンク</a></td><td><span class="res-w">勝ち</span></td><td>1R 5:12 KO（右フック） <a href="https://youtu.be/9zZbo2q_2kM?si=tFfBUA0y4S2BnNnU" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2016.12.29</td><td><a href="../20161229-rizin-3-rizin-fighting-world-grand-prix-2016-2nd-round.html">RIZIN.3 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント 2nd ROUND</a></td><td class="opp"><a href="0538.html">マリオ・シスムンド</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:19 KO（左跳び膝蹴り→パウンド）</td></tr>
 </tbody>
 </table>
 </div>

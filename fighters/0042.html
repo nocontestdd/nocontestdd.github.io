@@ -315,6 +315,38 @@ table.history a:hover{text-decoration:underline;}
 .back-link{display:inline-block;margin:0 0 14px;color:#0066CC;text-decoration:none;font-size:14px;}
 .back-link:hover{text-decoration:underline;}
 .def-note{font-size:12.5px;color:#6E6E73;line-height:1.7;}
+
+/* --- mobile: no horizontal scroll, stacked history rows --- */
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible;margin:0;padding:0;}
+  table.history thead{display:none;}
+  table.history tr{display:block;padding:9px 2px;border-bottom:1px solid #D2D2D7;}
+  table.history td{display:block;padding:1px 2px;border-bottom:none;}
+  table.history td.num{font-size:12px;color:#6E6E73;font-weight:600;}
+  table.history td.opp{font-weight:700;font-size:15px;}
+  .rate-t{font-size:12px;}
+  .rate-t th,.rate-t td{padding:6px 5px;}
+  table.index3 td.name{white-space:normal;}
+  .profile-t th{width:84px;}
+  .donut-card{flex-direction:column;align-items:flex-start;gap:8px;}
+  .stat-card .v{font-size:21px;}
+}
+
+table.lb{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;}
+table.lb th{text-align:left;font-size:12px;color:#6E6E73;font-weight:600;padding:6px 6px;border-bottom:1px solid #D2D2D7;}
+table.lb td{padding:7px 6px;border-bottom:1px solid #E8E8ED;vertical-align:top;}
+table.lb td.num,table.lb th.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.lb td.name{font-weight:600;}
+.sortpills{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px;}
+.sortpills .pill{appearance:none;border:1px solid #D2D2D7;background:#fff;color:#1D1D1F;border-radius:980px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit;}
+.sortpills .pill.is-active{background:#1D1D1F;color:#fff;border-color:#1D1D1F;}
+.seg-panel{display:none;}
+.seg-panel.is-active{display:block;}
+.board-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+.board-link{display:block;background:#F5F5F7;border-radius:14px;padding:16px 18px;color:#1D1D1F;text-decoration:none;}
+.board-link:hover{background:#ECECF0;}
+.board-link .t{font-weight:700;font-size:15px;}
+.board-link .d{font-size:12.5px;color:#6E6E73;margin-top:3px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -365,15 +397,15 @@ table.history a:hover{text-decoration:underline;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2026.09.10</td><td><a href="../20260910-super-rizin-5-super.html">超RIZIN.5 浪速の超復活祭り</a><span class="rule-tag">キック</span></td><td><a href="0292.html">宇佐美秀メイソン</a></td><td><span class="res-w">負け</span></td><td>判定 0-3（30-25、30-25、30-25）／ キックボクシング 71.0kg</td></tr>
-<tr><td class="num">2026.06.06</td><td><a href="../20260606-rizin-landmark-14.html">RIZIN LANDMARK 14</a></td><td><a href="0329.html">芳賀ビラル海</a></td><td><span class="res-w">勝ち</span></td><td>2R 0:10 KO（左ハイキック） <a href="https://youtu.be/BjfFrl1p3b0?si=obQlLwq414Z5brjd" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2025.12.31</td><td><a href="../20251231-rizin-super.html">RIZIN 師走の超強者祭り</a></td><td><a href="0124.html">雑賀“ヤン坊”達也</a></td><td><span class="res-w">負け</span></td><td>2R 0:32 KO（左ハイキック） <a href="https://youtu.be/VQjfyeXrkBQ?si=vK_q1skAMRhR05rK" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.06.09</td><td><a href="../20240609-rizin-47.html">RIZIN.47</a></td><td><a href="0036.html">ジョニー・ケース</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定0-3</td></tr>
-<tr><td class="num">2024.04.29</td><td><a href="../20240429-rizin-46.html">RIZIN.46</a></td><td><a href="0270.html">井上雄策</a></td><td><span class="res-w">勝ち</span></td><td>5分3R終了 判定3-0 <a href="https://youtu.be/95DGLc4tX54?si=UX1WM0LQsrSI8PBJ" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2022.12.31</td><td><a href="../20221231-rizin-40.html">RIZIN.40</a></td><td><a href="0032.html">宇佐美正パトリック</a></td><td><span class="res-w">負け</span></td><td>1R 0:45 KO（スタンドパンチ） <a href="https://youtu.be/dwsLYGJdQus?si=3bNOPSmP1ooBX-QF" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.12.31</td><td><a href="../20211231-rizin-33.html">RIZIN.33</a></td><td><a href="0010.html">武田光司</a></td><td><span class="res-w">負け</span></td><td>2R 4:12 腕ひしぎ十字固め <a href="https://youtu.be/7ROx3_P4bfA?si=5PlLG1KzCUC_y3fF" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.11.20</td><td><a href="../20211120-rizin-32.html">RIZIN.32</a></td><td><a href="0182.html">ロクク・ダリ</a></td><td><span class="res-w">勝ち</span></td><td>3R 1:09 KO（スタンドパンチ） <a href="https://youtu.be/0OYVz3jpZuw?si=sYAZoa4pRH1zAKkv" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.06.13</td><td><a href="../20210613-rizin-28.html">RIZIN.28</a></td><td><a href="0115.html">弥益ドミネーター聡志</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定 2-1 <a href="https://youtu.be/xCl6tHr2cS0?si=Qf2OPYOzKCSMbFi3" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2026.09.10</td><td><a href="../20260910-super-rizin-5-super.html">超RIZIN.5 浪速の超復活祭り</a><span class="rule-tag">キック</span></td><td class="opp"><a href="0292.html">宇佐美秀メイソン</a></td><td><span class="res-w">負け</span></td><td>判定 0-3（30-25、30-25、30-25）／ キックボクシング 71.0kg</td></tr>
+<tr><td class="num">2026.06.06</td><td><a href="../20260606-rizin-landmark-14.html">RIZIN LANDMARK 14</a></td><td class="opp"><a href="0329.html">芳賀ビラル海</a></td><td><span class="res-w">勝ち</span></td><td>2R 0:10 KO（左ハイキック） <a href="https://youtu.be/BjfFrl1p3b0?si=obQlLwq414Z5brjd" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2025.12.31</td><td><a href="../20251231-rizin-super.html">RIZIN 師走の超強者祭り</a></td><td class="opp"><a href="0124.html">雑賀“ヤン坊”達也</a></td><td><span class="res-w">負け</span></td><td>2R 0:32 KO（左ハイキック） <a href="https://youtu.be/VQjfyeXrkBQ?si=vK_q1skAMRhR05rK" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.06.09</td><td><a href="../20240609-rizin-47.html">RIZIN.47</a></td><td class="opp"><a href="0036.html">ジョニー・ケース</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定0-3</td></tr>
+<tr><td class="num">2024.04.29</td><td><a href="../20240429-rizin-46.html">RIZIN.46</a></td><td class="opp"><a href="0270.html">井上雄策</a></td><td><span class="res-w">勝ち</span></td><td>5分3R終了 判定3-0 <a href="https://youtu.be/95DGLc4tX54?si=UX1WM0LQsrSI8PBJ" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.12.31</td><td><a href="../20221231-rizin-40.html">RIZIN.40</a></td><td class="opp"><a href="0032.html">宇佐美正パトリック</a></td><td><span class="res-w">負け</span></td><td>1R 0:45 KO（スタンドパンチ） <a href="https://youtu.be/dwsLYGJdQus?si=3bNOPSmP1ooBX-QF" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.12.31</td><td><a href="../20211231-rizin-33.html">RIZIN.33</a></td><td class="opp"><a href="0010.html">武田光司</a></td><td><span class="res-w">負け</span></td><td>2R 4:12 腕ひしぎ十字固め <a href="https://youtu.be/7ROx3_P4bfA?si=5PlLG1KzCUC_y3fF" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.11.20</td><td><a href="../20211120-rizin-32.html">RIZIN.32</a></td><td class="opp"><a href="0182.html">ロクク・ダリ</a></td><td><span class="res-w">勝ち</span></td><td>3R 1:09 KO（スタンドパンチ） <a href="https://youtu.be/0OYVz3jpZuw?si=sYAZoa4pRH1zAKkv" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.06.13</td><td><a href="../20210613-rizin-28.html">RIZIN.28</a></td><td class="opp"><a href="0115.html">弥益ドミネーター聡志</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定 2-1 <a href="https://youtu.be/xCl6tHr2cS0?si=Qf2OPYOzKCSMbFi3" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
 </tbody>
 </table>
 </div>

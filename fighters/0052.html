@@ -315,6 +315,38 @@ table.history a:hover{text-decoration:underline;}
 .back-link{display:inline-block;margin:0 0 14px;color:#0066CC;text-decoration:none;font-size:14px;}
 .back-link:hover{text-decoration:underline;}
 .def-note{font-size:12.5px;color:#6E6E73;line-height:1.7;}
+
+/* --- mobile: no horizontal scroll, stacked history rows --- */
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible;margin:0;padding:0;}
+  table.history thead{display:none;}
+  table.history tr{display:block;padding:9px 2px;border-bottom:1px solid #D2D2D7;}
+  table.history td{display:block;padding:1px 2px;border-bottom:none;}
+  table.history td.num{font-size:12px;color:#6E6E73;font-weight:600;}
+  table.history td.opp{font-weight:700;font-size:15px;}
+  .rate-t{font-size:12px;}
+  .rate-t th,.rate-t td{padding:6px 5px;}
+  table.index3 td.name{white-space:normal;}
+  .profile-t th{width:84px;}
+  .donut-card{flex-direction:column;align-items:flex-start;gap:8px;}
+  .stat-card .v{font-size:21px;}
+}
+
+table.lb{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;}
+table.lb th{text-align:left;font-size:12px;color:#6E6E73;font-weight:600;padding:6px 6px;border-bottom:1px solid #D2D2D7;}
+table.lb td{padding:7px 6px;border-bottom:1px solid #E8E8ED;vertical-align:top;}
+table.lb td.num,table.lb th.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.lb td.name{font-weight:600;}
+.sortpills{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px;}
+.sortpills .pill{appearance:none;border:1px solid #D2D2D7;background:#fff;color:#1D1D1F;border-radius:980px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit;}
+.sortpills .pill.is-active{background:#1D1D1F;color:#fff;border-color:#1D1D1F;}
+.seg-panel{display:none;}
+.seg-panel.is-active{display:block;}
+.board-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+.board-link{display:block;background:#F5F5F7;border-radius:14px;padding:16px 18px;color:#1D1D1F;text-decoration:none;}
+.board-link:hover{background:#ECECF0;}
+.board-link .t{font-weight:700;font-size:15px;}
+.board-link .d{font-size:12.5px;color:#6E6E73;margin-top:3px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -365,14 +397,14 @@ table.history a:hover{text-decoration:underline;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2026.09.10</td><td><a href="../20260910-super-rizin-5-super.html">超RIZIN.5 浪速の超復活祭り</a></td><td><a href="0212.html">AJ・マッキー</a></td><td><span class="res-w">勝ち</span></td><td>判定 3-0（30-27、30-27、30-27）／ RIZINフェザー級タイトルマッチ／PFL世界フェザー級王座決定戦 <a href="https://youtu.be/hR6WVIFazho?si=4WraMSEhGsdgT3pI" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2026.04.12</td><td><a href="../20260412-rizin-landmark-13.html">RIZIN LANDMARK 13</a></td><td><a href="0039.html">久保優太</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:13 TKO（パウンド） <a href="https://youtu.be/Aijo5bLVhfk?si=g6W4LtRHKuiaKltf" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2025.12.31</td><td><a href="../20251231-rizin-super.html">RIZIN 師走の超強者祭り</a></td><td><a href="0004.html">朝倉未来</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:54 TKO（パウンド） <a href="https://youtu.be/_-JceHLCwKw?si=eye-lw5dkovCU2M8" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2025.09.28</td><td><a href="../20250928-rizin-51.html">RIZIN.51</a></td><td><a href="0064.html">ビクター・コレスニック</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:33 TKO（右ストレート→パウンド） <a href="https://youtu.be/LBzMuZUFNq8?si=neKoLeB164pvmXjb" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2025.05.04</td><td><a href="../20250504-rizin.html">RIZIN男祭り</a></td><td><a href="0012.html">クレベル・コイケ</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:02 KO（右フック→パウンド） <a href="https://youtu.be/2fxHSUlKlHQ?si=A2oKmsUQGmHyE4-S" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.12.31</td><td><a href="../20241231-rizin-decade-rizin-49.html">RIZIN DECADE RIZIN.49</a></td><td><a href="0039.html">久保優太</a></td><td><span class="res-w">勝ち</span></td><td>2R 2:30 TKO（グラウンドパンチ） <a href="https://youtu.be/l6WmmfPNpQ0?si=VReaKL1mAc9wJKHh" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.09.29</td><td><a href="../20240929-rizin-48.html">RIZIN.48</a></td><td><a href="0078.html">フアン・アーチュレッタ</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:10 腕ひしぎ十字固め <a href="https://youtu.be/p4ceSkmNo8s?si=Eyk6_lL3yj_K7Kfm" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.06.09</td><td><a href="../20240609-rizin-47.html">RIZIN.47</a></td><td><a href="0010.html">武田光司</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:38 リアネイキッドチョーク <a href="https://youtu.be/H-9cEynW5ow?si=MqQX7bmi4-nMROmv" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2026.09.10</td><td><a href="../20260910-super-rizin-5-super.html">超RIZIN.5 浪速の超復活祭り</a></td><td class="opp"><a href="0212.html">AJ・マッキー</a></td><td><span class="res-w">勝ち</span></td><td>判定 3-0（30-27、30-27、30-27）／ RIZINフェザー級タイトルマッチ／PFL世界フェザー級王座決定戦 <a href="https://youtu.be/hR6WVIFazho?si=4WraMSEhGsdgT3pI" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2026.04.12</td><td><a href="../20260412-rizin-landmark-13.html">RIZIN LANDMARK 13</a></td><td class="opp"><a href="0039.html">久保優太</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:13 TKO（パウンド） <a href="https://youtu.be/Aijo5bLVhfk?si=g6W4LtRHKuiaKltf" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2025.12.31</td><td><a href="../20251231-rizin-super.html">RIZIN 師走の超強者祭り</a></td><td class="opp"><a href="0004.html">朝倉未来</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:54 TKO（パウンド） <a href="https://youtu.be/_-JceHLCwKw?si=eye-lw5dkovCU2M8" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2025.09.28</td><td><a href="../20250928-rizin-51.html">RIZIN.51</a></td><td class="opp"><a href="0064.html">ビクター・コレスニック</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:33 TKO（右ストレート→パウンド） <a href="https://youtu.be/LBzMuZUFNq8?si=neKoLeB164pvmXjb" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2025.05.04</td><td><a href="../20250504-rizin.html">RIZIN男祭り</a></td><td class="opp"><a href="0012.html">クレベル・コイケ</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:02 KO（右フック→パウンド） <a href="https://youtu.be/2fxHSUlKlHQ?si=A2oKmsUQGmHyE4-S" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.12.31</td><td><a href="../20241231-rizin-decade-rizin-49.html">RIZIN DECADE RIZIN.49</a></td><td class="opp"><a href="0039.html">久保優太</a></td><td><span class="res-w">勝ち</span></td><td>2R 2:30 TKO（グラウンドパンチ） <a href="https://youtu.be/l6WmmfPNpQ0?si=VReaKL1mAc9wJKHh" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.09.29</td><td><a href="../20240929-rizin-48.html">RIZIN.48</a></td><td class="opp"><a href="0078.html">フアン・アーチュレッタ</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:10 腕ひしぎ十字固め <a href="https://youtu.be/p4ceSkmNo8s?si=Eyk6_lL3yj_K7Kfm" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.06.09</td><td><a href="../20240609-rizin-47.html">RIZIN.47</a></td><td class="opp"><a href="0010.html">武田光司</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:38 リアネイキッドチョーク <a href="https://youtu.be/H-9cEynW5ow?si=MqQX7bmi4-nMROmv" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
 </tbody>
 </table>
 </div>

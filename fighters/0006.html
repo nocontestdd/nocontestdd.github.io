@@ -315,6 +315,38 @@ table.history a:hover{text-decoration:underline;}
 .back-link{display:inline-block;margin:0 0 14px;color:#0066CC;text-decoration:none;font-size:14px;}
 .back-link:hover{text-decoration:underline;}
 .def-note{font-size:12.5px;color:#6E6E73;line-height:1.7;}
+
+/* --- mobile: no horizontal scroll, stacked history rows --- */
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible;margin:0;padding:0;}
+  table.history thead{display:none;}
+  table.history tr{display:block;padding:9px 2px;border-bottom:1px solid #D2D2D7;}
+  table.history td{display:block;padding:1px 2px;border-bottom:none;}
+  table.history td.num{font-size:12px;color:#6E6E73;font-weight:600;}
+  table.history td.opp{font-weight:700;font-size:15px;}
+  .rate-t{font-size:12px;}
+  .rate-t th,.rate-t td{padding:6px 5px;}
+  table.index3 td.name{white-space:normal;}
+  .profile-t th{width:84px;}
+  .donut-card{flex-direction:column;align-items:flex-start;gap:8px;}
+  .stat-card .v{font-size:21px;}
+}
+
+table.lb{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;}
+table.lb th{text-align:left;font-size:12px;color:#6E6E73;font-weight:600;padding:6px 6px;border-bottom:1px solid #D2D2D7;}
+table.lb td{padding:7px 6px;border-bottom:1px solid #E8E8ED;vertical-align:top;}
+table.lb td.num,table.lb th.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.lb td.name{font-weight:600;}
+.sortpills{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px;}
+.sortpills .pill{appearance:none;border:1px solid #D2D2D7;background:#fff;color:#1D1D1F;border-radius:980px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit;}
+.sortpills .pill.is-active{background:#1D1D1F;color:#fff;border-color:#1D1D1F;}
+.seg-panel{display:none;}
+.seg-panel.is-active{display:block;}
+.board-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+.board-link{display:block;background:#F5F5F7;border-radius:14px;padding:16px 18px;color:#1D1D1F;text-decoration:none;}
+.board-link:hover{background:#ECECF0;}
+.board-link .t{font-weight:700;font-size:15px;}
+.board-link .d{font-size:12.5px;color:#6E6E73;margin-top:3px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -365,25 +397,25 @@ table.history a:hover{text-decoration:underline;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2024.09.29</td><td><a href="../20240929-rizin-48.html">RIZIN.48</a></td><td><a href="0028.html">伊澤星花</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/cnxrVXqpL_k?si=GGqaopgpuwo0qQs4" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2023.04.29</td><td><a href="../20230429-rizin-landmark-5.html">RIZIN LANDMARK 5</a></td><td><a href="0369.html">V.V Mei</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2022.07.31</td><td><a href="../20220731-rizin-37.html">RIZIN.37</a></td><td><a href="0107.html">パク・シウ</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/IhbgMZxz0-o?si=jbVCYbPwpQRWZ-Tc" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2022.04.17</td><td><a href="../20220417-rizin-35.html">RIZIN.35</a></td><td><a href="0217.html">SARAMI</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2021.10.24</td><td><a href="../20211024-rizin-31.html">RIZIN.31</a></td><td><a href="0068.html">大島沙緒里</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定1-2 <a href="https://youtu.be/UM689osiBoI?si=pXoown2Lscf3A8hE" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.03.21</td><td><a href="../20210321-rizin-27.html">RIZIN.27</a></td><td><a href="0014.html">浜崎朱加</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定2-1 <a href="https://youtu.be/Lh7Z1Euxdg8?si=-Qk5dgpFS04mOx22" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.12.31</td><td><a href="../20201231-rizin-26.html">RIZIN.26</a></td><td><a href="0127.html">あい</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/uCo2S6CHDEk?si=HMUKrs3_-Gjm0C5T" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.08.09</td><td><a href="../20200809-rizin-22-starting-over.html">RIZIN.22 - STARTING OVER -</a></td><td><a href="0609.html">古瀬美月</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:35 TKO（パウンド） <a href="https://youtu.be/QpIjY8SBMuM?si=GSfGGTswXkISEq59" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2019.12.29</td><td><a href="../20191229-bellator-japan.html">BELLATOR JAPAN</a></td><td><a href="0450.html">ジェイミー・ヒンショー</a></td><td><span class="res-w">勝ち</span></td><td>3R 3:33 キムラロック</td></tr>
-<tr><td class="num">2019.08.18</td><td><a href="../20190818-rizin-18.html">RIZIN.18</a></td><td><a href="0385.html">アリーシャ・ザペテラ</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定2-1</td></tr>
-<tr><td class="num">2019.06.02</td><td><a href="../20190602-rizin-16.html">RIZIN.16</a></td><td><a href="0020.html">山本美憂</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/CrXqN-FvJiM?si=eBGB196ZOn3Y9r8w" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2018.12.31</td><td><a href="../20181231-rizin-14.html">RIZIN.14</a></td><td><a href="0014.html">浜崎朱加</a></td><td><span class="res-w">負け</span></td><td>2R 4:34 腕ひしぎ十字固め <a href="https://youtu.be/oCE3BZPVCOk?si=a_Ds2W4ir08vTNA5" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2018.07.29</td><td><a href="../20180729-rizin-11.html">RIZIN.11</a></td><td><a href="0003.html">RENA</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2018.05.06</td><td><a href="../20180506-rizin-10.html">RIZIN.10</a></td><td><a href="0544.html">メリッサ・カラジャニス</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2017.12.31</td><td><a href="../20171231-rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a></td><td><a href="0257.html">マリア・オリベイラ</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:40 腕ひしぎ十字固め</td></tr>
-<tr><td class="num">2017.12.31</td><td><a href="../20171231-rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a></td><td><a href="0003.html">RENA</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:34 チョークスリーパー <a href="https://youtu.be/8hIiyfC2S5U?si=saafAZ4ElNUJ5deM" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2017.10.15</td><td><a href="../20171015-rizin-7-rizin-fighting-world-grand-prix-2017-1st-round.html">RIZIN.7 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント＆女子スーパーアトム級トーナメント 1st ROUND -秋の陣-</a></td><td><a href="0441.html">シルビア・ユスケビッチ</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2017.04.16</td><td><a href="../20170416-rizin-5-rizin-2017-in-yokohama-sakura.html">RIZIN.5 RIZIN 2017 in YOKOHAMA -SAKURA-</a></td><td><a href="0388.html">アレクサンドラ・トンシェバ</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2016.12.29</td><td><a href="../20161229-rizin-3-rizin-fighting-world-grand-prix-2016-2nd-round.html">RIZIN.3 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント 2nd ROUND</a></td><td><a href="0160.html">アリーシャ・ガルシア</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3</td></tr>
+<tr><td class="num">2024.09.29</td><td><a href="../20240929-rizin-48.html">RIZIN.48</a></td><td class="opp"><a href="0028.html">伊澤星花</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/cnxrVXqpL_k?si=GGqaopgpuwo0qQs4" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2023.04.29</td><td><a href="../20230429-rizin-landmark-5.html">RIZIN LANDMARK 5</a></td><td class="opp"><a href="0369.html">V.V Mei</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2022.07.31</td><td><a href="../20220731-rizin-37.html">RIZIN.37</a></td><td class="opp"><a href="0107.html">パク・シウ</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/IhbgMZxz0-o?si=jbVCYbPwpQRWZ-Tc" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.04.17</td><td><a href="../20220417-rizin-35.html">RIZIN.35</a></td><td class="opp"><a href="0217.html">SARAMI</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2021.10.24</td><td><a href="../20211024-rizin-31.html">RIZIN.31</a></td><td class="opp"><a href="0068.html">大島沙緒里</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定1-2 <a href="https://youtu.be/UM689osiBoI?si=pXoown2Lscf3A8hE" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.03.21</td><td><a href="../20210321-rizin-27.html">RIZIN.27</a></td><td class="opp"><a href="0014.html">浜崎朱加</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定2-1 <a href="https://youtu.be/Lh7Z1Euxdg8?si=-Qk5dgpFS04mOx22" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.12.31</td><td><a href="../20201231-rizin-26.html">RIZIN.26</a></td><td class="opp"><a href="0127.html">あい</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/uCo2S6CHDEk?si=HMUKrs3_-Gjm0C5T" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.08.09</td><td><a href="../20200809-rizin-22-starting-over.html">RIZIN.22 - STARTING OVER -</a></td><td class="opp"><a href="0609.html">古瀬美月</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:35 TKO（パウンド） <a href="https://youtu.be/QpIjY8SBMuM?si=GSfGGTswXkISEq59" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2019.12.29</td><td><a href="../20191229-bellator-japan.html">BELLATOR JAPAN</a></td><td class="opp"><a href="0450.html">ジェイミー・ヒンショー</a></td><td><span class="res-w">勝ち</span></td><td>3R 3:33 キムラロック</td></tr>
+<tr><td class="num">2019.08.18</td><td><a href="../20190818-rizin-18.html">RIZIN.18</a></td><td class="opp"><a href="0385.html">アリーシャ・ザペテラ</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定2-1</td></tr>
+<tr><td class="num">2019.06.02</td><td><a href="../20190602-rizin-16.html">RIZIN.16</a></td><td class="opp"><a href="0020.html">山本美憂</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/CrXqN-FvJiM?si=eBGB196ZOn3Y9r8w" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2018.12.31</td><td><a href="../20181231-rizin-14.html">RIZIN.14</a></td><td class="opp"><a href="0014.html">浜崎朱加</a></td><td><span class="res-w">負け</span></td><td>2R 4:34 腕ひしぎ十字固め <a href="https://youtu.be/oCE3BZPVCOk?si=a_Ds2W4ir08vTNA5" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2018.07.29</td><td><a href="../20180729-rizin-11.html">RIZIN.11</a></td><td class="opp"><a href="0003.html">RENA</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2018.05.06</td><td><a href="../20180506-rizin-10.html">RIZIN.10</a></td><td class="opp"><a href="0544.html">メリッサ・カラジャニス</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2017.12.31</td><td><a href="../20171231-rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a></td><td class="opp"><a href="0257.html">マリア・オリベイラ</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:40 腕ひしぎ十字固め</td></tr>
+<tr><td class="num">2017.12.31</td><td><a href="../20171231-rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a></td><td class="opp"><a href="0003.html">RENA</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:34 チョークスリーパー <a href="https://youtu.be/8hIiyfC2S5U?si=saafAZ4ElNUJ5deM" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2017.10.15</td><td><a href="../20171015-rizin-7-rizin-fighting-world-grand-prix-2017-1st-round.html">RIZIN.7 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント＆女子スーパーアトム級トーナメント 1st ROUND -秋の陣-</a></td><td class="opp"><a href="0441.html">シルビア・ユスケビッチ</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2017.04.16</td><td><a href="../20170416-rizin-5-rizin-2017-in-yokohama-sakura.html">RIZIN.5 RIZIN 2017 in YOKOHAMA -SAKURA-</a></td><td class="opp"><a href="0388.html">アレクサンドラ・トンシェバ</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2016.12.29</td><td><a href="../20161229-rizin-3-rizin-fighting-world-grand-prix-2016-2nd-round.html">RIZIN.3 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント 2nd ROUND</a></td><td class="opp"><a href="0160.html">アリーシャ・ガルシア</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3</td></tr>
 </tbody>
 </table>
 </div>

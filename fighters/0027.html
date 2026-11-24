@@ -315,6 +315,38 @@ table.history a:hover{text-decoration:underline;}
 .back-link{display:inline-block;margin:0 0 14px;color:#0066CC;text-decoration:none;font-size:14px;}
 .back-link:hover{text-decoration:underline;}
 .def-note{font-size:12.5px;color:#6E6E73;line-height:1.7;}
+
+/* --- mobile: no horizontal scroll, stacked history rows --- */
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible;margin:0;padding:0;}
+  table.history thead{display:none;}
+  table.history tr{display:block;padding:9px 2px;border-bottom:1px solid #D2D2D7;}
+  table.history td{display:block;padding:1px 2px;border-bottom:none;}
+  table.history td.num{font-size:12px;color:#6E6E73;font-weight:600;}
+  table.history td.opp{font-weight:700;font-size:15px;}
+  .rate-t{font-size:12px;}
+  .rate-t th,.rate-t td{padding:6px 5px;}
+  table.index3 td.name{white-space:normal;}
+  .profile-t th{width:84px;}
+  .donut-card{flex-direction:column;align-items:flex-start;gap:8px;}
+  .stat-card .v{font-size:21px;}
+}
+
+table.lb{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;}
+table.lb th{text-align:left;font-size:12px;color:#6E6E73;font-weight:600;padding:6px 6px;border-bottom:1px solid #D2D2D7;}
+table.lb td{padding:7px 6px;border-bottom:1px solid #E8E8ED;vertical-align:top;}
+table.lb td.num,table.lb th.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.lb td.name{font-weight:600;}
+.sortpills{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px;}
+.sortpills .pill{appearance:none;border:1px solid #D2D2D7;background:#fff;color:#1D1D1F;border-radius:980px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit;}
+.sortpills .pill.is-active{background:#1D1D1F;color:#fff;border-color:#1D1D1F;}
+.seg-panel{display:none;}
+.seg-panel.is-active{display:block;}
+.board-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+.board-link{display:block;background:#F5F5F7;border-radius:14px;padding:16px 18px;color:#1D1D1F;text-decoration:none;}
+.board-link:hover{background:#ECECF0;}
+.board-link .t{font-weight:700;font-size:15px;}
+.board-link .d{font-size:12.5px;color:#6E6E73;margin-top:3px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -365,19 +397,19 @@ table.history a:hover{text-decoration:underline;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2026.11.08</td><td><a href="../20261108-rizin-55.html">RIZIN.55</a></td><td><a href="0397.html">イリスベク・ティレノフ</a></td><td><span class="res-w">負け</span></td><td>判定 0-3（27-30、27-30、28-29）／ バンタム級王座次期挑戦者決定戦</td></tr>
-<tr><td class="num">2025.07.27</td><td><a href="../20250727-super-rizin-4.html">超RIZIN.4 真夏の喧嘩祭り</a></td><td><a href="0092.html">福田龍彌</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/58RCtf-diXw?si=fm7HVeRXANYOlHGE" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2025.03.30</td><td><a href="../20250330-rizin-50.html">RIZIN.50</a></td><td><a href="0001.html">元谷友貴</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定2-1 <a href="https://youtu.be/Zy6td0irN8U?si=xWV7AU1yWqdQp9zA" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.09.29</td><td><a href="../20240929-rizin-48.html">RIZIN.48</a></td><td><a href="0075.html">キム・スーチョル</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:55 TKO（スタンドパンチ連打） <a href="https://youtu.be/WXFaOlc2gvw?si=NDqIIPlfbrLYC9HI" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.03.23</td><td><a href="../20240323-rizin-landmark-9.html">RIZIN LANDMARK 9</a></td><td><a href="0066.html">佐藤将光</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/AYC1BSPj6Dg?si=1lpKPlHAqj7OmVBb" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2023.05.06</td><td><a href="../20230506-rizin-42.html">RIZIN.42</a></td><td><a href="0078.html">フアン・アーチュレッタ</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/tZ4zk3QS1V4?si=bxmoceaSKLEmaVjI" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2022.12.31</td><td><a href="../20221231-rizin-40.html">RIZIN.40</a></td><td><a href="0047.html">瀧澤謙太</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:53 アームバー <a href="https://youtu.be/PqI66BfwOQ0?si=r4i6WYi9FIlflafr" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.12.31</td><td><a href="../20211231-rizin-33.html">RIZIN.33</a></td><td><a href="0009.html">扇久保博正</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/aeLExc6sQaw?si=Q-hGZpsi-NJle96x" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.09.19</td><td><a href="../20210919-rizin-30.html">RIZIN.30</a></td><td><a href="0030.html">金太郎</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/a7RakJQTxgM?si=zKWP9agQK3hHwxSZ" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.06.13</td><td><a href="../20210613-rizin-28.html">RIZIN.28</a></td><td><a href="0072.html">石渡伸太郎</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:58 TKO（サッカーボールキック） <a href="https://youtu.be/r8Bw4paU1QI?si=WxJ1TKf-y_j7Lg1e" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.12.31</td><td><a href="../20201231-rizin-26.html">RIZIN.26</a></td><td><a href="0001.html">元谷友貴</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:00 リアネイキッドチョーク <a href="https://youtu.be/W30q6oDCcJU?si=Vspl9eL4jAVcOC27" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.08.09</td><td><a href="../20200809-rizin-22-starting-over.html">RIZIN.22 - STARTING OVER -</a></td><td><a href="0117.html">渡部修斗</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:40 リアネイキッドチョーク <a href="https://youtu.be/uA9yptNLC24?si=GOLdsXjjkxBiNbdP" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.02.22</td><td><a href="../20200222-rizin-21.html">RIZIN.21</a></td><td><a href="0134.html">トレント・ガーダム</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/XdBCwmY29TM?si=U06PidsqcF4Oknyc" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2026.11.08</td><td><a href="../20261108-rizin-55.html">RIZIN.55</a></td><td class="opp"><a href="0397.html">イリスベク・ティレノフ</a></td><td><span class="res-w">負け</span></td><td>判定 0-3（27-30、27-30、28-29）／ バンタム級王座次期挑戦者決定戦</td></tr>
+<tr><td class="num">2025.07.27</td><td><a href="../20250727-super-rizin-4.html">超RIZIN.4 真夏の喧嘩祭り</a></td><td class="opp"><a href="0092.html">福田龍彌</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/58RCtf-diXw?si=fm7HVeRXANYOlHGE" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2025.03.30</td><td><a href="../20250330-rizin-50.html">RIZIN.50</a></td><td class="opp"><a href="0001.html">元谷友貴</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定2-1 <a href="https://youtu.be/Zy6td0irN8U?si=xWV7AU1yWqdQp9zA" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.09.29</td><td><a href="../20240929-rizin-48.html">RIZIN.48</a></td><td class="opp"><a href="0075.html">キム・スーチョル</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:55 TKO（スタンドパンチ連打） <a href="https://youtu.be/WXFaOlc2gvw?si=NDqIIPlfbrLYC9HI" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.03.23</td><td><a href="../20240323-rizin-landmark-9.html">RIZIN LANDMARK 9</a></td><td class="opp"><a href="0066.html">佐藤将光</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/AYC1BSPj6Dg?si=1lpKPlHAqj7OmVBb" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2023.05.06</td><td><a href="../20230506-rizin-42.html">RIZIN.42</a></td><td class="opp"><a href="0078.html">フアン・アーチュレッタ</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/tZ4zk3QS1V4?si=bxmoceaSKLEmaVjI" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.12.31</td><td><a href="../20221231-rizin-40.html">RIZIN.40</a></td><td class="opp"><a href="0047.html">瀧澤謙太</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:53 アームバー <a href="https://youtu.be/PqI66BfwOQ0?si=r4i6WYi9FIlflafr" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.12.31</td><td><a href="../20211231-rizin-33.html">RIZIN.33</a></td><td class="opp"><a href="0009.html">扇久保博正</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/aeLExc6sQaw?si=Q-hGZpsi-NJle96x" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.09.19</td><td><a href="../20210919-rizin-30.html">RIZIN.30</a></td><td class="opp"><a href="0030.html">金太郎</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/a7RakJQTxgM?si=zKWP9agQK3hHwxSZ" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.06.13</td><td><a href="../20210613-rizin-28.html">RIZIN.28</a></td><td class="opp"><a href="0072.html">石渡伸太郎</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:58 TKO（サッカーボールキック） <a href="https://youtu.be/r8Bw4paU1QI?si=WxJ1TKf-y_j7Lg1e" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.12.31</td><td><a href="../20201231-rizin-26.html">RIZIN.26</a></td><td class="opp"><a href="0001.html">元谷友貴</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:00 リアネイキッドチョーク <a href="https://youtu.be/W30q6oDCcJU?si=Vspl9eL4jAVcOC27" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.08.09</td><td><a href="../20200809-rizin-22-starting-over.html">RIZIN.22 - STARTING OVER -</a></td><td class="opp"><a href="0117.html">渡部修斗</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:40 リアネイキッドチョーク <a href="https://youtu.be/uA9yptNLC24?si=GOLdsXjjkxBiNbdP" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.02.22</td><td><a href="../20200222-rizin-21.html">RIZIN.21</a></td><td class="opp"><a href="0134.html">トレント・ガーダム</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/XdBCwmY29TM?si=U06PidsqcF4Oknyc" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
 </tbody>
 </table>
 </div>

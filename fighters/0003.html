@@ -315,6 +315,38 @@ table.history a:hover{text-decoration:underline;}
 .back-link{display:inline-block;margin:0 0 14px;color:#0066CC;text-decoration:none;font-size:14px;}
 .back-link:hover{text-decoration:underline;}
 .def-note{font-size:12.5px;color:#6E6E73;line-height:1.7;}
+
+/* --- mobile: no horizontal scroll, stacked history rows --- */
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible;margin:0;padding:0;}
+  table.history thead{display:none;}
+  table.history tr{display:block;padding:9px 2px;border-bottom:1px solid #D2D2D7;}
+  table.history td{display:block;padding:1px 2px;border-bottom:none;}
+  table.history td.num{font-size:12px;color:#6E6E73;font-weight:600;}
+  table.history td.opp{font-weight:700;font-size:15px;}
+  .rate-t{font-size:12px;}
+  .rate-t th,.rate-t td{padding:6px 5px;}
+  table.index3 td.name{white-space:normal;}
+  .profile-t th{width:84px;}
+  .donut-card{flex-direction:column;align-items:flex-start;gap:8px;}
+  .stat-card .v{font-size:21px;}
+}
+
+table.lb{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;}
+table.lb th{text-align:left;font-size:12px;color:#6E6E73;font-weight:600;padding:6px 6px;border-bottom:1px solid #D2D2D7;}
+table.lb td{padding:7px 6px;border-bottom:1px solid #E8E8ED;vertical-align:top;}
+table.lb td.num,table.lb th.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.lb td.name{font-weight:600;}
+.sortpills{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px;}
+.sortpills .pill{appearance:none;border:1px solid #D2D2D7;background:#fff;color:#1D1D1F;border-radius:980px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit;}
+.sortpills .pill.is-active{background:#1D1D1F;color:#fff;border-color:#1D1D1F;}
+.seg-panel{display:none;}
+.seg-panel.is-active{display:block;}
+.board-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+.board-link{display:block;background:#F5F5F7;border-radius:14px;padding:16px 18px;color:#1D1D1F;text-decoration:none;}
+.board-link:hover{background:#ECECF0;}
+.board-link .t{font-weight:700;font-size:15px;}
+.board-link .d{font-size:12.5px;color:#6E6E73;margin-top:3px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -365,27 +397,27 @@ table.history a:hover{text-decoration:underline;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2026.09.10</td><td><a href="../20260910-super-rizin-5-super.html">超RIZIN.5 浪速の超復活祭り</a></td><td><a href="0244.html">ナターシャ・クジュティナ</a></td><td><span class="res-w">負け</span></td><td>2R 3:14 ギロチンチョーク ／ 49.0kg</td></tr>
-<tr><td class="num">2025.12.31</td><td><a href="../20251231-rizin-super.html">RIZIN 師走の超強者祭り</a></td><td><a href="0028.html">伊澤星花</a></td><td><span class="res-w">負け</span></td><td>2R 1:58 ギロチンチョーク <a href="https://youtu.be/lZ6r7WZWT28?si=fPuncw81xaqKEf4-" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.07.28</td><td><a href="../20240728-super-rizin-3.html">超RIZIN.3</a></td><td><a href="0077.html">ケイト・ロータス</a></td><td><span class="res-w">勝ち</span></td><td>2R 4:18 TKO（スタンドパンチ連打）</td></tr>
-<tr><td class="num">2024.03.23</td><td><a href="../20240323-rizin-landmark-9.html">RIZIN LANDMARK 9</a></td><td><a href="0170.html">シン・ユリ</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/O0dqgSAw_J8?si=K3nBDT1BFah0ct9P" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2023.04.29</td><td><a href="../20230429-rizin-landmark-5.html">RIZIN LANDMARK 5</a></td><td><a href="0167.html">クレア・ロペス</a></td><td><span class="res-w">負け</span></td><td>3R 4:21 膝十字固め <a href="https://youtu.be/k7uQA_6U64c?si=c0-MnsnHU-esfB55" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2022.07.31</td><td><a href="../20220731-rizin-37.html">RIZIN.37</a></td><td><a href="0158.html">アナスタシア・スヴェッキスカ</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2021.12.31</td><td><a href="../20211231-rizin-33.html">RIZIN.33</a></td><td><a href="0107.html">パク・シウ</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/cJmd8hDDjYM?si=BzWrcLNvfqSM-bua" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.11.20</td><td><a href="../20211120-rizin-32.html">RIZIN.32</a></td><td><a href="0020.html">山本美憂</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:35 TKO（右膝蹴り→パウンド） <a href="https://youtu.be/qCJnWcmbbSU?si=Npc9k8btc-CKR6YU" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.09.27</td><td><a href="../20200927-rizin-24.html">RIZIN.24</a></td><td><a href="0634.html">富松恵美</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/ntst3cwDKGA?si=7n2sXNm9BiBJBI-8" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2019.12.31</td><td><a href="../20191231-rizin-20.html">RIZIN.20</a></td><td><a href="0552.html">リンジー・ヴァンザント</a></td><td><span class="res-w">勝ち</span></td><td>3R 4:42 TKO（コーナーストップ：グラウンドパンチ）</td></tr>
-<tr><td class="num">2019.10.12</td><td><a href="../20191012-rizin-19.html">RIZIN.19</a></td><td><a href="0387.html">アレキサンドラ・アルヴァーレ</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:20 KO（スタンドパンチ）</td></tr>
-<tr><td class="num">2019.04.21</td><td><a href="../20190421-rizin-15.html">RIZIN.15</a></td><td><a href="0434.html">サマンサ・ジャン=フランソワ</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2018.07.29</td><td><a href="../20180729-rizin-11.html">RIZIN.11</a></td><td><a href="0006.html">浅倉カンナ</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2017.12.31</td><td><a href="../20171231-rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a></td><td><a href="0220.html">アイリーン・リベラ</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:39 TKO（レフェリーストップ）</td></tr>
-<tr><td class="num">2017.12.31</td><td><a href="../20171231-rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a></td><td><a href="0006.html">浅倉カンナ</a></td><td><span class="res-w">負け</span></td><td>1R 4:34 チョークスリーパー <a href="https://youtu.be/8hIiyfC2S5U?si=saafAZ4ElNUJ5deM" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2017.10.15</td><td><a href="../20171015-rizin-7-rizin-fighting-world-grand-prix-2017-1st-round.html">RIZIN.7 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント＆女子スーパーアトム級トーナメント 1st ROUND -秋の陣-</a></td><td><a href="0130.html">アンディ・ウィン</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:05 TKO（レフェリーストップ）</td></tr>
-<tr><td class="num">2017.04.16</td><td><a href="../20170416-rizin-5-rizin-2017-in-yokohama-sakura.html">RIZIN.5 RIZIN 2017 in YOKOHAMA -SAKURA-</a></td><td><a href="0495.html">ドーラ・ペリエシュ</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:49 KO（左ボディフック）</td></tr>
-<tr><td class="num">2016.12.31</td><td><a href="../20161231-rizin-4-rizin-fighting-world-grand-prix-2016-final-round.html">RIZIN.4 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント FINAL ROUND</a></td><td><a href="0502.html">ハンナ・タイソン</a></td><td><span class="res-w">勝ち</span></td><td>3R 2:47 KO（左三日月蹴り）</td></tr>
-<tr><td class="num">2016.09.25</td><td><a href="../20160925-rizin-2-rizin-fighting-world-grand-prix-2016.html">RIZIN.2 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント 開幕戦</a></td><td><a href="0020.html">山本美憂</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:50 アームトライアングルチョーク 公式発表では「アームトライアングルチョーク」だが実際はニンジャチョークである[1]。 <a href="https://youtu.be/i69-gsNhsHk?si=BmYAKwvx9Qhhremw" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2016.04.17</td><td><a href="../20160417-rizin-1.html">RIZIN.1</a><span class="rule-tag">キック</span></td><td><a href="0442.html">シンディ・アルベス</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0（30-28、30-27、30-26）</td></tr>
-<tr><td class="num">2015.12.31</td><td><a href="../20151231-rizin-fighting-world-grand-prix-2015-iza.html">RIZIN FIGHTING WORLD GRAND-PRIX 2015 IZAの舞</a></td><td><a href="0396.html">イリアーナ・ヴァレンティーノ</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:31 アームバー</td></tr>
+<tr><td class="num">2026.09.10</td><td><a href="../20260910-super-rizin-5-super.html">超RIZIN.5 浪速の超復活祭り</a></td><td class="opp"><a href="0244.html">ナターシャ・クジュティナ</a></td><td><span class="res-w">負け</span></td><td>2R 3:14 ギロチンチョーク ／ 49.0kg</td></tr>
+<tr><td class="num">2025.12.31</td><td><a href="../20251231-rizin-super.html">RIZIN 師走の超強者祭り</a></td><td class="opp"><a href="0028.html">伊澤星花</a></td><td><span class="res-w">負け</span></td><td>2R 1:58 ギロチンチョーク <a href="https://youtu.be/lZ6r7WZWT28?si=fPuncw81xaqKEf4-" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.07.28</td><td><a href="../20240728-super-rizin-3.html">超RIZIN.3</a></td><td class="opp"><a href="0077.html">ケイト・ロータス</a></td><td><span class="res-w">勝ち</span></td><td>2R 4:18 TKO（スタンドパンチ連打）</td></tr>
+<tr><td class="num">2024.03.23</td><td><a href="../20240323-rizin-landmark-9.html">RIZIN LANDMARK 9</a></td><td class="opp"><a href="0170.html">シン・ユリ</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/O0dqgSAw_J8?si=K3nBDT1BFah0ct9P" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2023.04.29</td><td><a href="../20230429-rizin-landmark-5.html">RIZIN LANDMARK 5</a></td><td class="opp"><a href="0167.html">クレア・ロペス</a></td><td><span class="res-w">負け</span></td><td>3R 4:21 膝十字固め <a href="https://youtu.be/k7uQA_6U64c?si=c0-MnsnHU-esfB55" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.07.31</td><td><a href="../20220731-rizin-37.html">RIZIN.37</a></td><td class="opp"><a href="0158.html">アナスタシア・スヴェッキスカ</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2021.12.31</td><td><a href="../20211231-rizin-33.html">RIZIN.33</a></td><td class="opp"><a href="0107.html">パク・シウ</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3 <a href="https://youtu.be/cJmd8hDDjYM?si=BzWrcLNvfqSM-bua" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.11.20</td><td><a href="../20211120-rizin-32.html">RIZIN.32</a></td><td class="opp"><a href="0020.html">山本美憂</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:35 TKO（右膝蹴り→パウンド） <a href="https://youtu.be/qCJnWcmbbSU?si=Npc9k8btc-CKR6YU" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.09.27</td><td><a href="../20200927-rizin-24.html">RIZIN.24</a></td><td class="opp"><a href="0634.html">富松恵美</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/ntst3cwDKGA?si=7n2sXNm9BiBJBI-8" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2019.12.31</td><td><a href="../20191231-rizin-20.html">RIZIN.20</a></td><td class="opp"><a href="0552.html">リンジー・ヴァンザント</a></td><td><span class="res-w">勝ち</span></td><td>3R 4:42 TKO（コーナーストップ：グラウンドパンチ）</td></tr>
+<tr><td class="num">2019.10.12</td><td><a href="../20191012-rizin-19.html">RIZIN.19</a></td><td class="opp"><a href="0387.html">アレキサンドラ・アルヴァーレ</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:20 KO（スタンドパンチ）</td></tr>
+<tr><td class="num">2019.04.21</td><td><a href="../20190421-rizin-15.html">RIZIN.15</a></td><td class="opp"><a href="0434.html">サマンサ・ジャン=フランソワ</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2018.07.29</td><td><a href="../20180729-rizin-11.html">RIZIN.11</a></td><td class="opp"><a href="0006.html">浅倉カンナ</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2017.12.31</td><td><a href="../20171231-rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a></td><td class="opp"><a href="0220.html">アイリーン・リベラ</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:39 TKO（レフェリーストップ）</td></tr>
+<tr><td class="num">2017.12.31</td><td><a href="../20171231-rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a></td><td class="opp"><a href="0006.html">浅倉カンナ</a></td><td><span class="res-w">負け</span></td><td>1R 4:34 チョークスリーパー <a href="https://youtu.be/8hIiyfC2S5U?si=saafAZ4ElNUJ5deM" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2017.10.15</td><td><a href="../20171015-rizin-7-rizin-fighting-world-grand-prix-2017-1st-round.html">RIZIN.7 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント＆女子スーパーアトム級トーナメント 1st ROUND -秋の陣-</a></td><td class="opp"><a href="0130.html">アンディ・ウィン</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:05 TKO（レフェリーストップ）</td></tr>
+<tr><td class="num">2017.04.16</td><td><a href="../20170416-rizin-5-rizin-2017-in-yokohama-sakura.html">RIZIN.5 RIZIN 2017 in YOKOHAMA -SAKURA-</a></td><td class="opp"><a href="0495.html">ドーラ・ペリエシュ</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:49 KO（左ボディフック）</td></tr>
+<tr><td class="num">2016.12.31</td><td><a href="../20161231-rizin-4-rizin-fighting-world-grand-prix-2016-final-round.html">RIZIN.4 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント FINAL ROUND</a></td><td class="opp"><a href="0502.html">ハンナ・タイソン</a></td><td><span class="res-w">勝ち</span></td><td>3R 2:47 KO（左三日月蹴り）</td></tr>
+<tr><td class="num">2016.09.25</td><td><a href="../20160925-rizin-2-rizin-fighting-world-grand-prix-2016.html">RIZIN.2 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント 開幕戦</a></td><td class="opp"><a href="0020.html">山本美憂</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:50 アームトライアングルチョーク 公式発表では「アームトライアングルチョーク」だが実際はニンジャチョークである[1]。 <a href="https://youtu.be/i69-gsNhsHk?si=BmYAKwvx9Qhhremw" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2016.04.17</td><td><a href="../20160417-rizin-1.html">RIZIN.1</a><span class="rule-tag">キック</span></td><td class="opp"><a href="0442.html">シンディ・アルベス</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0（30-28、30-27、30-26）</td></tr>
+<tr><td class="num">2015.12.31</td><td><a href="../20151231-rizin-fighting-world-grand-prix-2015-iza.html">RIZIN FIGHTING WORLD GRAND-PRIX 2015 IZAの舞</a></td><td class="opp"><a href="0396.html">イリアーナ・ヴァレンティーノ</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:31 アームバー</td></tr>
 </tbody>
 </table>
 </div>

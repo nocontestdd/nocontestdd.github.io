@@ -315,6 +315,38 @@ table.history a:hover{text-decoration:underline;}
 .back-link{display:inline-block;margin:0 0 14px;color:#0066CC;text-decoration:none;font-size:14px;}
 .back-link:hover{text-decoration:underline;}
 .def-note{font-size:12.5px;color:#6E6E73;line-height:1.7;}
+
+/* --- mobile: no horizontal scroll, stacked history rows --- */
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible;margin:0;padding:0;}
+  table.history thead{display:none;}
+  table.history tr{display:block;padding:9px 2px;border-bottom:1px solid #D2D2D7;}
+  table.history td{display:block;padding:1px 2px;border-bottom:none;}
+  table.history td.num{font-size:12px;color:#6E6E73;font-weight:600;}
+  table.history td.opp{font-weight:700;font-size:15px;}
+  .rate-t{font-size:12px;}
+  .rate-t th,.rate-t td{padding:6px 5px;}
+  table.index3 td.name{white-space:normal;}
+  .profile-t th{width:84px;}
+  .donut-card{flex-direction:column;align-items:flex-start;gap:8px;}
+  .stat-card .v{font-size:21px;}
+}
+
+table.lb{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;}
+table.lb th{text-align:left;font-size:12px;color:#6E6E73;font-weight:600;padding:6px 6px;border-bottom:1px solid #D2D2D7;}
+table.lb td{padding:7px 6px;border-bottom:1px solid #E8E8ED;vertical-align:top;}
+table.lb td.num,table.lb th.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.lb td.name{font-weight:600;}
+.sortpills{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px;}
+.sortpills .pill{appearance:none;border:1px solid #D2D2D7;background:#fff;color:#1D1D1F;border-radius:980px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit;}
+.sortpills .pill.is-active{background:#1D1D1F;color:#fff;border-color:#1D1D1F;}
+.seg-panel{display:none;}
+.seg-panel.is-active{display:block;}
+.board-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+.board-link{display:block;background:#F5F5F7;border-radius:14px;padding:16px 18px;color:#1D1D1F;text-decoration:none;}
+.board-link:hover{background:#ECECF0;}
+.board-link .t{font-weight:700;font-size:15px;}
+.board-link .d{font-size:12.5px;color:#6E6E73;margin-top:3px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -365,25 +397,25 @@ table.history a:hover{text-decoration:underline;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2026.09.10</td><td><a href="../20260910-super-rizin-5-super.html">超RIZIN.5 浪速の超復活祭り</a></td><td><a href="0209.html">野村駿太</a></td><td><span class="res-w">勝ち</span></td><td>判定 3-0（29-28、29-28、29-28）／ 71.0kg</td></tr>
-<tr><td class="num">2025.12.31</td><td><a href="../20251231-rizin-super.html">RIZIN 師走の超強者祭り</a></td><td><a href="0096.html">イルホム・ノジモフ</a></td><td><span class="res-w">負け</span></td><td>1R 0:13 KO（顔面への右膝蹴り） <a href="https://youtu.be/Q1ekA86W7r8?si=-DMnr5IIbxayN9Ts" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2025.09.28</td><td><a href="../20250928-rizin-51.html">RIZIN.51</a></td><td><a href="0040.html">堀江圭功</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:40 リアネイキッドチョーク <a href="https://youtu.be/20gdtF-BryI?si=RScW2rXqhL9coTG9" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2025.05.31</td><td><a href="../20250531-rizin-world-series-in-korea.html">RIZIN WORLD SERIES in KOREA</a></td><td><a href="0229.html">キ・ウォンビン</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:50 リアネイキッドチョーク <a href="https://youtu.be/tWixgfRvjLo?si=VzpePYRWVPtKQNao" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.12.31</td><td><a href="../20241231-rizin-decade-rizin-49.html">RIZIN DECADE RIZIN.49</a></td><td><a href="0026.html">ヴガール・ケラモフ</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:45 三角絞め <a href="https://youtu.be/5lqjYZ-452s?si=S79_ofcP9vh7pKML" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.09.29</td><td><a href="../20240929-rizin-48.html">RIZIN.48</a></td><td><a href="0025.html">ルイス・グスタボ</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:21 TKO（左ストレート→パウンド） <a href="https://youtu.be/ypWLbk1Fw9I?si=9kEJBJMuL-tvcbIF" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.03.23</td><td><a href="../20240323-rizin-landmark-9.html">RIZIN LANDMARK 9</a></td><td><a href="0138.html">中村K太郎</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:43 TKO（スタンドパンチ連打） <a href="https://youtu.be/H2qAgx6_Wfo?si=ER2Qq7xeEJrr-Fzc" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2023.07.30</td><td><a href="../20230730-super-rizin-2.html">超RIZIN.2</a></td><td><a href="0108.html">パトリッキー・ピットブル</a></td><td><span class="res-w">負け</span></td><td>Bellatorライト級ワールドグランプリ1回戦 ○ ブラジル パトリッキー・ピットブル vs. ブラジル ホベルト・サトシ・ソウザ × 3R 0:49 TKO（カーフキック→パウンド） RIZINパート</td></tr>
-<tr><td class="num">2023.05.06</td><td><a href="../20230506-rizin-42.html">RIZIN.42</a></td><td><a href="0103.html">スパイク・カーライル</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/3Pef6VzkyBk?si=aaeEhB8BYp195mSC" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2022.12.31</td><td><a href="../20221231-rizin-40.html">RIZIN.40</a></td><td><a href="0212.html">AJ・マッキー</a></td><td><span class="res-w">負け</span></td><td>RIZIN×BELLATOR全面対抗戦 大将戦 × ブラジル ホベルト・サトシ・ソウザ vs. アメリカ合衆国 AJ・マッキー ○ 3R終了 判定0-3 <a href="https://youtu.be/Vydvza-q9qM?si=ssTZymjE-9-24_CV" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2022.04.17</td><td><a href="../20220417-rizin-35.html">RIZIN.35</a></td><td><a href="0036.html">ジョニー・ケース</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:32 腕ひしぎ三角固め <a href="https://youtu.be/bXmziXLTAn0?si=yYVaQhWxnZ5vZa3t" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.12.31</td><td><a href="../20211231-rizin-33.html">RIZIN.33</a></td><td><a href="0002.html">矢地祐介</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:30 腕ひしぎ三角固め <a href="https://youtu.be/3vxaotnoKOg?si=pXAkptaxIknXHh7t" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.06.13</td><td><a href="../20210613-rizin-28.html">RIZIN.28</a></td><td><a href="0051.html">トフィック・ムサエフ</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:12 三角絞め <a href="https://youtu.be/0AENIzjFwNo?si=jb7Cp9Y5BOB6h1Z0" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.03.21</td><td><a href="../20210321-rizin-27.html">RIZIN.27</a></td><td><a href="0303.html">徳留一樹</a></td><td><span class="res-w">勝ち</span></td><td>2R 1:44 三角絞め <a href="https://youtu.be/FfZdWHUbc8s?si=2vxM6MxMFz6fnR67" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.08.09</td><td><a href="../20200809-rizin-22-starting-over.html">RIZIN.22 - STARTING OVER -</a></td><td><a href="0002.html">矢地祐介</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:52 TKO（パウンド） <a href="https://youtu.be/pg-cBTqYt8o?si=r1X0n_ztZasq9ucW" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.02.22</td><td><a href="../20200222-rizin-21.html">RIZIN.21</a><span class="rule-tag">エキシビジョン</span></td><td><a href="0484.html">チーム中井</a></td><td><span class="res-w">勝ち</span></td><td>8:04（10分の試合時間内にソウザがチーム中井の五人から1本取れるかという特別ルール）</td></tr>
-<tr><td class="num">2019.10.12</td><td><a href="../20191012-rizin-19.html">RIZIN.19</a></td><td><a href="0036.html">ジョニー・ケース</a></td><td><span class="res-w">負け</span></td><td>1R 1:15 TKO（レフェリーストップ） <a href="https://youtu.be/hoYgv_KGwug?si=4nNx2fS3p-odExYa" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2019.07.28</td><td><a href="../20190728-rizin-17.html">RIZIN.17</a></td><td><a href="0661.html">廣田瑞人</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:05 TKO（グラウンドパンチ） <a href="https://youtu.be/C6EKMwUxe4Q?si=atatU13JyYRqfMaO" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2019.04.21</td><td><a href="../20190421-rizin-15.html">RIZIN.15</a></td><td><a href="0054.html">北岡悟</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:56 TKO（グラウンドパンチ） <a href="https://youtu.be/0BXMbjCaVDg?si=1z9qzzPd4hJjp-x1" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2026.09.10</td><td><a href="../20260910-super-rizin-5-super.html">超RIZIN.5 浪速の超復活祭り</a></td><td class="opp"><a href="0209.html">野村駿太</a></td><td><span class="res-w">勝ち</span></td><td>判定 3-0（29-28、29-28、29-28）／ 71.0kg</td></tr>
+<tr><td class="num">2025.12.31</td><td><a href="../20251231-rizin-super.html">RIZIN 師走の超強者祭り</a></td><td class="opp"><a href="0096.html">イルホム・ノジモフ</a></td><td><span class="res-w">負け</span></td><td>1R 0:13 KO（顔面への右膝蹴り） <a href="https://youtu.be/Q1ekA86W7r8?si=-DMnr5IIbxayN9Ts" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2025.09.28</td><td><a href="../20250928-rizin-51.html">RIZIN.51</a></td><td class="opp"><a href="0040.html">堀江圭功</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:40 リアネイキッドチョーク <a href="https://youtu.be/20gdtF-BryI?si=RScW2rXqhL9coTG9" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2025.05.31</td><td><a href="../20250531-rizin-world-series-in-korea.html">RIZIN WORLD SERIES in KOREA</a></td><td class="opp"><a href="0229.html">キ・ウォンビン</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:50 リアネイキッドチョーク <a href="https://youtu.be/tWixgfRvjLo?si=VzpePYRWVPtKQNao" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.12.31</td><td><a href="../20241231-rizin-decade-rizin-49.html">RIZIN DECADE RIZIN.49</a></td><td class="opp"><a href="0026.html">ヴガール・ケラモフ</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:45 三角絞め <a href="https://youtu.be/5lqjYZ-452s?si=S79_ofcP9vh7pKML" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.09.29</td><td><a href="../20240929-rizin-48.html">RIZIN.48</a></td><td class="opp"><a href="0025.html">ルイス・グスタボ</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:21 TKO（左ストレート→パウンド） <a href="https://youtu.be/ypWLbk1Fw9I?si=9kEJBJMuL-tvcbIF" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.03.23</td><td><a href="../20240323-rizin-landmark-9.html">RIZIN LANDMARK 9</a></td><td class="opp"><a href="0138.html">中村K太郎</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:43 TKO（スタンドパンチ連打） <a href="https://youtu.be/H2qAgx6_Wfo?si=ER2Qq7xeEJrr-Fzc" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2023.07.30</td><td><a href="../20230730-super-rizin-2.html">超RIZIN.2</a></td><td class="opp"><a href="0108.html">パトリッキー・ピットブル</a></td><td><span class="res-w">負け</span></td><td>Bellatorライト級ワールドグランプリ1回戦 ○ ブラジル パトリッキー・ピットブル vs. ブラジル ホベルト・サトシ・ソウザ × 3R 0:49 TKO（カーフキック→パウンド） RIZINパート</td></tr>
+<tr><td class="num">2023.05.06</td><td><a href="../20230506-rizin-42.html">RIZIN.42</a></td><td class="opp"><a href="0103.html">スパイク・カーライル</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/3Pef6VzkyBk?si=aaeEhB8BYp195mSC" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.12.31</td><td><a href="../20221231-rizin-40.html">RIZIN.40</a></td><td class="opp"><a href="0212.html">AJ・マッキー</a></td><td><span class="res-w">負け</span></td><td>RIZIN×BELLATOR全面対抗戦 大将戦 × ブラジル ホベルト・サトシ・ソウザ vs. アメリカ合衆国 AJ・マッキー ○ 3R終了 判定0-3 <a href="https://youtu.be/Vydvza-q9qM?si=ssTZymjE-9-24_CV" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.04.17</td><td><a href="../20220417-rizin-35.html">RIZIN.35</a></td><td class="opp"><a href="0036.html">ジョニー・ケース</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:32 腕ひしぎ三角固め <a href="https://youtu.be/bXmziXLTAn0?si=yYVaQhWxnZ5vZa3t" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.12.31</td><td><a href="../20211231-rizin-33.html">RIZIN.33</a></td><td class="opp"><a href="0002.html">矢地祐介</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:30 腕ひしぎ三角固め <a href="https://youtu.be/3vxaotnoKOg?si=pXAkptaxIknXHh7t" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.06.13</td><td><a href="../20210613-rizin-28.html">RIZIN.28</a></td><td class="opp"><a href="0051.html">トフィック・ムサエフ</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:12 三角絞め <a href="https://youtu.be/0AENIzjFwNo?si=jb7Cp9Y5BOB6h1Z0" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.03.21</td><td><a href="../20210321-rizin-27.html">RIZIN.27</a></td><td class="opp"><a href="0303.html">徳留一樹</a></td><td><span class="res-w">勝ち</span></td><td>2R 1:44 三角絞め <a href="https://youtu.be/FfZdWHUbc8s?si=2vxM6MxMFz6fnR67" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.08.09</td><td><a href="../20200809-rizin-22-starting-over.html">RIZIN.22 - STARTING OVER -</a></td><td class="opp"><a href="0002.html">矢地祐介</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:52 TKO（パウンド） <a href="https://youtu.be/pg-cBTqYt8o?si=r1X0n_ztZasq9ucW" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.02.22</td><td><a href="../20200222-rizin-21.html">RIZIN.21</a><span class="rule-tag">エキシビジョン</span></td><td class="opp"><a href="0484.html">チーム中井</a></td><td><span class="res-w">勝ち</span></td><td>8:04（10分の試合時間内にソウザがチーム中井の五人から1本取れるかという特別ルール）</td></tr>
+<tr><td class="num">2019.10.12</td><td><a href="../20191012-rizin-19.html">RIZIN.19</a></td><td class="opp"><a href="0036.html">ジョニー・ケース</a></td><td><span class="res-w">負け</span></td><td>1R 1:15 TKO（レフェリーストップ） <a href="https://youtu.be/hoYgv_KGwug?si=4nNx2fS3p-odExYa" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2019.07.28</td><td><a href="../20190728-rizin-17.html">RIZIN.17</a></td><td class="opp"><a href="0661.html">廣田瑞人</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:05 TKO（グラウンドパンチ） <a href="https://youtu.be/C6EKMwUxe4Q?si=atatU13JyYRqfMaO" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2019.04.21</td><td><a href="../20190421-rizin-15.html">RIZIN.15</a></td><td class="opp"><a href="0054.html">北岡悟</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:56 TKO（グラウンドパンチ） <a href="https://youtu.be/0BXMbjCaVDg?si=1z9qzzPd4hJjp-x1" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
 </tbody>
 </table>
 </div>

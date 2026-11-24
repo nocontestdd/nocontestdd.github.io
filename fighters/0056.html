@@ -315,6 +315,38 @@ table.history a:hover{text-decoration:underline;}
 .back-link{display:inline-block;margin:0 0 14px;color:#0066CC;text-decoration:none;font-size:14px;}
 .back-link:hover{text-decoration:underline;}
 .def-note{font-size:12.5px;color:#6E6E73;line-height:1.7;}
+
+/* --- mobile: no horizontal scroll, stacked history rows --- */
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible;margin:0;padding:0;}
+  table.history thead{display:none;}
+  table.history tr{display:block;padding:9px 2px;border-bottom:1px solid #D2D2D7;}
+  table.history td{display:block;padding:1px 2px;border-bottom:none;}
+  table.history td.num{font-size:12px;color:#6E6E73;font-weight:600;}
+  table.history td.opp{font-weight:700;font-size:15px;}
+  .rate-t{font-size:12px;}
+  .rate-t th,.rate-t td{padding:6px 5px;}
+  table.index3 td.name{white-space:normal;}
+  .profile-t th{width:84px;}
+  .donut-card{flex-direction:column;align-items:flex-start;gap:8px;}
+  .stat-card .v{font-size:21px;}
+}
+
+table.lb{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;}
+table.lb th{text-align:left;font-size:12px;color:#6E6E73;font-weight:600;padding:6px 6px;border-bottom:1px solid #D2D2D7;}
+table.lb td{padding:7px 6px;border-bottom:1px solid #E8E8ED;vertical-align:top;}
+table.lb td.num,table.lb th.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.lb td.name{font-weight:600;}
+.sortpills{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px;}
+.sortpills .pill{appearance:none;border:1px solid #D2D2D7;background:#fff;color:#1D1D1F;border-radius:980px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit;}
+.sortpills .pill.is-active{background:#1D1D1F;color:#fff;border-color:#1D1D1F;}
+.seg-panel{display:none;}
+.seg-panel.is-active{display:block;}
+.board-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+.board-link{display:block;background:#F5F5F7;border-radius:14px;padding:16px 18px;color:#1D1D1F;text-decoration:none;}
+.board-link:hover{background:#ECECF0;}
+.board-link .t{font-weight:700;font-size:15px;}
+.board-link .d{font-size:12.5px;color:#6E6E73;margin-top:3px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -365,14 +397,14 @@ table.history a:hover{text-decoration:underline;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2025.12.31</td><td><a href="../20251231-rizin-super.html">RIZIN 師走の超強者祭り</a></td><td><a href="0048.html">秋元強真</a></td><td><span class="res-w">負け</span></td><td>1R 3:51 TKO（ボディへの左膝蹴り） <a href="https://youtu.be/A6rMvBo3t8g?si=yo7g8qh4qamisgks" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2025.06.14</td><td><a href="../20250614-rizin-landmark-11-in-sappro.html">RIZIN LANDMARK 11 in SAPPRO</a></td><td><a href="0096.html">イルホム・ノジモフ</a></td><td><span class="res-w">負け</span></td><td>1R 2:09 KO（スタンドキック） <a href="https://youtu.be/1eik4LZIA5E?si=rbi-mwFVn8Bxlf1g" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.12.31</td><td><a href="../20241231-rizin-decade-rizin-49.html">RIZIN DECADE RIZIN.49</a></td><td><a href="0010.html">武田光司</a></td><td><span class="res-w">負け</span></td><td>3R 4:07 テクニカル判定3-0</td></tr>
-<tr><td class="num">2024.07.28</td><td><a href="../20240728-super-rizin-3.html">超RIZIN.3</a></td><td><a href="0034.html">摩嶋一整</a></td><td><span class="res-w">負け</span></td><td>2R 3:11 リアネイキッドチョーク <a href="https://youtu.be/5hJAOibdFfk?si=Bpyr5ECA3rRL59LZ" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2023.12.31</td><td><a href="../20231231-rizin-45.html">RIZIN.45</a></td><td><a href="0115.html">弥益ドミネーター聡志</a></td><td><span class="res-w">勝ち</span></td><td>2R 1:03 KO（右ストレート） <a href="https://youtu.be/Im6EyX1EMOQ?si=M-mio0urJmJvnjMf" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2023.06.24</td><td><a href="../20230624-rizin-43.html">RIZIN.43</a></td><td><a href="0792.html">飯田健夫</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:32 KO（右ストレート）</td></tr>
-<tr><td class="num">2022.02.23</td><td><a href="../20220223-rizin-trigger-2nd.html">RIZIN TRIGGER 2nd</a></td><td><a href="0055.html">山本空良</a></td><td><span class="res-w">負け</span></td><td>1R 0:35 TKO（グラウンドパンチ）</td></tr>
-<tr><td class="num">2021.10.24</td><td><a href="../20211024-rizin-31.html">RIZIN.31</a></td><td><a href="0139.html">中村大介</a></td><td><span class="res-w">負け</span></td><td>1R 2:16 腕ひしぎ十字固め <a href="https://youtu.be/LVYpX9fqLdA?si=H6kJ08DJDn1Jf-l0" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2025.12.31</td><td><a href="../20251231-rizin-super.html">RIZIN 師走の超強者祭り</a></td><td class="opp"><a href="0048.html">秋元強真</a></td><td><span class="res-w">負け</span></td><td>1R 3:51 TKO（ボディへの左膝蹴り） <a href="https://youtu.be/A6rMvBo3t8g?si=yo7g8qh4qamisgks" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2025.06.14</td><td><a href="../20250614-rizin-landmark-11-in-sappro.html">RIZIN LANDMARK 11 in SAPPRO</a></td><td class="opp"><a href="0096.html">イルホム・ノジモフ</a></td><td><span class="res-w">負け</span></td><td>1R 2:09 KO（スタンドキック） <a href="https://youtu.be/1eik4LZIA5E?si=rbi-mwFVn8Bxlf1g" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.12.31</td><td><a href="../20241231-rizin-decade-rizin-49.html">RIZIN DECADE RIZIN.49</a></td><td class="opp"><a href="0010.html">武田光司</a></td><td><span class="res-w">負け</span></td><td>3R 4:07 テクニカル判定3-0</td></tr>
+<tr><td class="num">2024.07.28</td><td><a href="../20240728-super-rizin-3.html">超RIZIN.3</a></td><td class="opp"><a href="0034.html">摩嶋一整</a></td><td><span class="res-w">負け</span></td><td>2R 3:11 リアネイキッドチョーク <a href="https://youtu.be/5hJAOibdFfk?si=Bpyr5ECA3rRL59LZ" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2023.12.31</td><td><a href="../20231231-rizin-45.html">RIZIN.45</a></td><td class="opp"><a href="0115.html">弥益ドミネーター聡志</a></td><td><span class="res-w">勝ち</span></td><td>2R 1:03 KO（右ストレート） <a href="https://youtu.be/Im6EyX1EMOQ?si=M-mio0urJmJvnjMf" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2023.06.24</td><td><a href="../20230624-rizin-43.html">RIZIN.43</a></td><td class="opp"><a href="0792.html">飯田健夫</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:32 KO（右ストレート）</td></tr>
+<tr><td class="num">2022.02.23</td><td><a href="../20220223-rizin-trigger-2nd.html">RIZIN TRIGGER 2nd</a></td><td class="opp"><a href="0055.html">山本空良</a></td><td><span class="res-w">負け</span></td><td>1R 0:35 TKO（グラウンドパンチ）</td></tr>
+<tr><td class="num">2021.10.24</td><td><a href="../20211024-rizin-31.html">RIZIN.31</a></td><td class="opp"><a href="0139.html">中村大介</a></td><td><span class="res-w">負け</span></td><td>1R 2:16 腕ひしぎ十字固め <a href="https://youtu.be/LVYpX9fqLdA?si=H6kJ08DJDn1Jf-l0" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
 </tbody>
 </table>
 </div>

@@ -315,6 +315,38 @@ table.history a:hover{text-decoration:underline;}
 .back-link{display:inline-block;margin:0 0 14px;color:#0066CC;text-decoration:none;font-size:14px;}
 .back-link:hover{text-decoration:underline;}
 .def-note{font-size:12.5px;color:#6E6E73;line-height:1.7;}
+
+/* --- mobile: no horizontal scroll, stacked history rows --- */
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible;margin:0;padding:0;}
+  table.history thead{display:none;}
+  table.history tr{display:block;padding:9px 2px;border-bottom:1px solid #D2D2D7;}
+  table.history td{display:block;padding:1px 2px;border-bottom:none;}
+  table.history td.num{font-size:12px;color:#6E6E73;font-weight:600;}
+  table.history td.opp{font-weight:700;font-size:15px;}
+  .rate-t{font-size:12px;}
+  .rate-t th,.rate-t td{padding:6px 5px;}
+  table.index3 td.name{white-space:normal;}
+  .profile-t th{width:84px;}
+  .donut-card{flex-direction:column;align-items:flex-start;gap:8px;}
+  .stat-card .v{font-size:21px;}
+}
+
+table.lb{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;}
+table.lb th{text-align:left;font-size:12px;color:#6E6E73;font-weight:600;padding:6px 6px;border-bottom:1px solid #D2D2D7;}
+table.lb td{padding:7px 6px;border-bottom:1px solid #E8E8ED;vertical-align:top;}
+table.lb td.num,table.lb th.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.lb td.name{font-weight:600;}
+.sortpills{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px;}
+.sortpills .pill{appearance:none;border:1px solid #D2D2D7;background:#fff;color:#1D1D1F;border-radius:980px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit;}
+.sortpills .pill.is-active{background:#1D1D1F;color:#fff;border-color:#1D1D1F;}
+.seg-panel{display:none;}
+.seg-panel.is-active{display:block;}
+.board-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+.board-link{display:block;background:#F5F5F7;border-radius:14px;padding:16px 18px;color:#1D1D1F;text-decoration:none;}
+.board-link:hover{background:#ECECF0;}
+.board-link .t{font-weight:700;font-size:15px;}
+.board-link .d{font-size:12.5px;color:#6E6E73;margin-top:3px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -365,20 +397,20 @@ table.history a:hover{text-decoration:underline;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2026.08.11</td><td><a href="../20260811-rizin-54.html">RIZIN.54</a></td><td><a href="0155.html">酒井リョウ</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:26 TKO（右ストレート→サッカーボールキック）／ RIZIN JAPAN GP 2026 ヘビー級トーナメント 1回戦</td></tr>
-<tr><td class="num">2025.05.04</td><td><a href="../20250504-rizin.html">RIZIN男祭り</a></td><td><a href="0238.html">ジョゼ・アウグスト</a></td><td><span class="res-w">負け</span></td><td>RIZIN WORLD GP 2025 ヘビー級トーナメント 1回戦 × 日本 スダリオ剛 vs. ブラジル ジョゼ・アウグスト ○ 3R終了 判定0-3</td></tr>
-<tr><td class="num">2024.11.17</td><td><a href="../20241117-rizin-landmark-10.html">RIZIN LANDMARK 10</a></td><td><a href="0279.html">加藤久輝</a></td><td><span class="res-w">勝ち</span></td><td>3R 1:12 TKO（ドクターストップ:カットによる出血）</td></tr>
-<tr><td class="num">2023.12.31</td><td><a href="../20231231-rizin-45.html">RIZIN.45</a></td><td><a href="0053.html">上田幹雄</a></td><td><span class="res-w">負け</span></td><td>2R 0:55 TKO（グラウンドパンチ） <a href="https://youtu.be/_DmxnVoXryo?si=VmjySIfykYz-rj-Q" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2023.10.01</td><td><a href="../20231001-rizin-landmark-6.html">RIZIN LANDMARK 6</a></td><td><a href="0394.html">イム・ドンファン</a></td><td><span class="res-w">勝ち</span></td><td>3R 2:10 TKO（スタンドパンチ）</td></tr>
-<tr><td class="num">2023.04.29</td><td><a href="../20230429-rizin-landmark-5.html">RIZIN LANDMARK 5</a></td><td><a href="0080.html">ロッキー・マルティネス</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2022.12.31</td><td><a href="../20221231-rizin-40.html">RIZIN.40</a></td><td><a href="0460.html">ジュニア・タファ</a></td><td><span class="res-w">負け</span></td><td>1R 1:38 TKO（スタンドパンチ）</td></tr>
-<tr><td class="num">2022.10.23</td><td><a href="../20221023-rizin-39.html">RIZIN.39</a></td><td><a href="0259.html">ヤノス・チューカス</a></td><td><span class="res-w">勝ち</span></td><td>2R 0:30 TKO（グラウンドでの膝蹴り）</td></tr>
-<tr><td class="num">2022.07.31</td><td><a href="../20220731-rizin-37.html">RIZIN.37</a></td><td><a href="0123.html">関根“シュレック”秀樹</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:53 TKO（左フック→パウンド） <a href="https://youtu.be/oyFp0qid1k0?si=2m8dQgVF819ZbJyg" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.10.24</td><td><a href="../20211024-rizin-31.html">RIZIN.31</a></td><td><a href="0362.html">SAINT</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:51 KO（スタンドパンチ） <a href="https://youtu.be/UPdcOcprEiQ?si=o90XsButGisglQL0" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.06.13</td><td><a href="../20210613-rizin-28.html">RIZIN.28</a></td><td><a href="0043.html">シビサイ頌真</a></td><td><span class="res-w">負け</span></td><td>3R 1:38 リアネイキッドチョーク <a href="https://youtu.be/vNmZllzxnb4?si=TK_oE3XcESvUNpMD" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.03.21</td><td><a href="../20210321-rizin-27.html">RIZIN.27</a></td><td><a href="0633.html">宮本和志</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:08 KO（スタンドパンチ） <a href="https://youtu.be/LCjThNVkTbw?si=qzQZHLZFnDXvcM51" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.12.31</td><td><a href="../20201231-rizin-26.html">RIZIN.26</a></td><td><a href="0541.html">ミノワマン</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:19 TKO（右カーフキック→パウンド) <a href="https://youtu.be/VGRBmmgVYR8?si=awbbZTImFVQTxM3X" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.09.27</td><td><a href="../20200927-rizin-24.html">RIZIN.24</a></td><td><a href="0489.html">ディラン・ジェイムス</a></td><td><span class="res-w">勝ち</span></td><td>1R（終了時）TKO（ドクターストップ） <a href="https://youtu.be/M-9KRSOnqLk?si=HA42fASYAcqY_SpU" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2026.08.11</td><td><a href="../20260811-rizin-54.html">RIZIN.54</a></td><td class="opp"><a href="0155.html">酒井リョウ</a></td><td><span class="res-w">勝ち</span></td><td>1R 4:26 TKO（右ストレート→サッカーボールキック）／ RIZIN JAPAN GP 2026 ヘビー級トーナメント 1回戦</td></tr>
+<tr><td class="num">2025.05.04</td><td><a href="../20250504-rizin.html">RIZIN男祭り</a></td><td class="opp"><a href="0238.html">ジョゼ・アウグスト</a></td><td><span class="res-w">負け</span></td><td>RIZIN WORLD GP 2025 ヘビー級トーナメント 1回戦 × 日本 スダリオ剛 vs. ブラジル ジョゼ・アウグスト ○ 3R終了 判定0-3</td></tr>
+<tr><td class="num">2024.11.17</td><td><a href="../20241117-rizin-landmark-10.html">RIZIN LANDMARK 10</a></td><td class="opp"><a href="0279.html">加藤久輝</a></td><td><span class="res-w">勝ち</span></td><td>3R 1:12 TKO（ドクターストップ:カットによる出血）</td></tr>
+<tr><td class="num">2023.12.31</td><td><a href="../20231231-rizin-45.html">RIZIN.45</a></td><td class="opp"><a href="0053.html">上田幹雄</a></td><td><span class="res-w">負け</span></td><td>2R 0:55 TKO（グラウンドパンチ） <a href="https://youtu.be/_DmxnVoXryo?si=VmjySIfykYz-rj-Q" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2023.10.01</td><td><a href="../20231001-rizin-landmark-6.html">RIZIN LANDMARK 6</a></td><td class="opp"><a href="0394.html">イム・ドンファン</a></td><td><span class="res-w">勝ち</span></td><td>3R 2:10 TKO（スタンドパンチ）</td></tr>
+<tr><td class="num">2023.04.29</td><td><a href="../20230429-rizin-landmark-5.html">RIZIN LANDMARK 5</a></td><td class="opp"><a href="0080.html">ロッキー・マルティネス</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2022.12.31</td><td><a href="../20221231-rizin-40.html">RIZIN.40</a></td><td class="opp"><a href="0460.html">ジュニア・タファ</a></td><td><span class="res-w">負け</span></td><td>1R 1:38 TKO（スタンドパンチ）</td></tr>
+<tr><td class="num">2022.10.23</td><td><a href="../20221023-rizin-39.html">RIZIN.39</a></td><td class="opp"><a href="0259.html">ヤノス・チューカス</a></td><td><span class="res-w">勝ち</span></td><td>2R 0:30 TKO（グラウンドでの膝蹴り）</td></tr>
+<tr><td class="num">2022.07.31</td><td><a href="../20220731-rizin-37.html">RIZIN.37</a></td><td class="opp"><a href="0123.html">関根“シュレック”秀樹</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:53 TKO（左フック→パウンド） <a href="https://youtu.be/oyFp0qid1k0?si=2m8dQgVF819ZbJyg" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.10.24</td><td><a href="../20211024-rizin-31.html">RIZIN.31</a></td><td class="opp"><a href="0362.html">SAINT</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:51 KO（スタンドパンチ） <a href="https://youtu.be/UPdcOcprEiQ?si=o90XsButGisglQL0" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.06.13</td><td><a href="../20210613-rizin-28.html">RIZIN.28</a></td><td class="opp"><a href="0043.html">シビサイ頌真</a></td><td><span class="res-w">負け</span></td><td>3R 1:38 リアネイキッドチョーク <a href="https://youtu.be/vNmZllzxnb4?si=TK_oE3XcESvUNpMD" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.03.21</td><td><a href="../20210321-rizin-27.html">RIZIN.27</a></td><td class="opp"><a href="0633.html">宮本和志</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:08 KO（スタンドパンチ） <a href="https://youtu.be/LCjThNVkTbw?si=qzQZHLZFnDXvcM51" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.12.31</td><td><a href="../20201231-rizin-26.html">RIZIN.26</a></td><td class="opp"><a href="0541.html">ミノワマン</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:19 TKO（右カーフキック→パウンド) <a href="https://youtu.be/VGRBmmgVYR8?si=awbbZTImFVQTxM3X" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.09.27</td><td><a href="../20200927-rizin-24.html">RIZIN.24</a></td><td class="opp"><a href="0489.html">ディラン・ジェイムス</a></td><td><span class="res-w">勝ち</span></td><td>1R（終了時）TKO（ドクターストップ） <a href="https://youtu.be/M-9KRSOnqLk?si=HA42fASYAcqY_SpU" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
 </tbody>
 </table>
 </div>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<title>RIZIN LANDMARK 16 | no contest data design</title>
+<link rel="icon" type="image/png" href="favicon.png" />
+<style>
+      :root{
+        --white:#FFFFFF;
+        --ink:#1D1D1F;
+        --bg:#F5F5F7;
+        --sub:#6E6E73;
+        --tertiary:#86868B;
+        --line:#D2D2D7;
+        --line-weak:#E8E8ED;
+        --link:#0066CC;
+        --btn:#0066CC;
+        --btn-hover:#0055AA;
+        --accent:#0066CC;
+      }
+      *{box-sizing:border-box;}
+      html{scroll-behavior:smooth;}
+      body{
+        margin:0;
+        font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,"メイリオ",sans-serif;
+        color:var(--ink);
+        background:var(--white);
+        font-size:17px;
+        line-height:1.6;
+        -webkit-font-smoothing:antialiased;
+      }
+      a{color:var(--link);}
+      a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--btn);outline-offset:2px;}
+      .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+      @media (max-width:640px){.wrap{padding:0 16px;}}
+
+      /* Header */
+      header.site{
+        background:var(--white);
+        border-bottom:1px solid var(--line);
+        position:sticky;top:0;z-index:20;
+      }
+      .header-in{
+        display:flex;align-items:center;justify-content:space-between;gap:24px;
+        min-height:64px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap;
+      }
+      .brand{display:flex;flex-direction:column;line-height:1.3;gap:2px;}
+      .brand a{display:inline-flex;text-decoration:none;}
+      .brand-logo{display:block;height:44px;width:auto;max-width:180px;object-fit:contain;}
+      @media (max-width:640px){.brand-logo{height:36px;max-width:148px;}}
+      .brand-sub{font-size:13px;color:var(--sub);}
+      nav.main{display:flex;gap:2px;flex-wrap:wrap;align-items:center;}
+      nav.main a{
+        display:inline-flex;align-items:center;min-height:36px;padding:6px 12px;
+        color:var(--ink);text-decoration:none;font-size:14px;border-radius:980px;white-space:nowrap;
+      }
+      nav.main a:hover{background:var(--bg);text-decoration:none;}
+      nav.main a.current{color:var(--link);font-weight:700;}
+      nav.main a.next-event{border:1px solid var(--btn);color:var(--btn);font-weight:600;margin-left:6px;}
+      nav.main a.next-event:hover{background:var(--btn);color:var(--white);}
+      @media (max-width:640px){
+        .header-in{gap:8px;}
+        nav.main a{padding:6px 9px;font-size:13px;min-height:34px;}
+      }
+
+      main{padding:32px 0 48px;}
+      h1{font-size:32px;font-weight:600;line-height:1.25;margin:0 0 16px;}
+      h2{font-size:24px;font-weight:600;line-height:1.3;margin:0 0 24px;}
+      h3{font-size:18px;font-weight:600;line-height:1.35;margin:0;}
+      .note{font-size:13px;color:var(--tertiary);line-height:1.5;}
+      .lead-note{
+        background:var(--bg);border-radius:12px;padding:16px 24px;margin:0 0 32px;
+      }
+      .lead-note p{margin:0 0 8px;font-size:13px;color:var(--ink);}
+      .lead-note p:last-child{margin-bottom:0;color:var(--tertiary);}
+
+      /* Filter */
+      .filter-sec{margin-bottom:32px;}
+      .filter-label{font-size:13px;color:var(--sub);margin:0 0 8px;}
+      .filter-row{display:flex;gap:8px;flex-wrap:wrap;}
+      button{font-family:inherit;cursor:pointer;}
+      .btn{
+        display:inline-flex;align-items:center;justify-content:center;gap:6px;
+        min-height:44px;padding:10px 24px;border-radius:980px;font-size:17px;line-height:1.2;
+        border:1.5px solid var(--btn);background:var(--white);color:var(--btn);
+        text-decoration:none;font-weight:600;
+        box-shadow:0 1px 2px rgba(0,0,0,.08);
+        transition:background .15s ease,color .15s ease,transform .1s ease;
+      }
+      .btn:active{transform:scale(.98);}
+      .btn .chev{font-weight:400;font-size:19px;line-height:1;}
+      .btn-primary{background:var(--btn);color:var(--white);border-color:var(--btn);box-shadow:0 2px 8px rgba(0,102,204,.28);}
+      .btn-primary:hover{background:var(--btn-hover);border-color:var(--btn-hover);}
+      .btn-secondary{background:var(--white);color:var(--btn);border-color:var(--btn);}
+      .btn-secondary:hover{background:#EAF3FC;text-decoration:none;}
+      .btn[disabled]{
+        background:var(--bg);color:var(--tertiary);border-color:var(--line);cursor:not-allowed;font-weight:400;
+      }
+      .btn[disabled]:hover{text-decoration:none;}
+      .filter-count{font-size:13px;color:var(--tertiary);margin:16px 0 0;}
+
+      /* Event cards */
+      .cards{
+        display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:48px;
+      }
+      @media (max-width:760px){.cards{grid-template-columns:1fr;}}
+      .card{
+        background:var(--white);border:1px solid var(--line);border-radius:12px;
+        padding:24px;display:flex;flex-direction:column;gap:16px;
+      }
+      .card-head{display:flex;flex-direction:column;gap:8px;}
+      .card-head h3 a{color:var(--ink);text-decoration:none;}
+      .card-head h3 a:hover{color:var(--link);text-decoration:underline;}
+
+      /* Top typography gallery */
+      .top-gallery{margin:0 0 40px;}
+      .top-gallery-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:8px;}
+      .top-gallery-head h2{margin:0;}
+      .top-gallery .note{margin:0 0 20px;}
+      .typo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+      @media (max-width:900px){.typo-grid{grid-template-columns:repeat(2,1fr);}}
+      @media (max-width:520px){.typo-grid{grid-template-columns:1fr;}}
+      .typo-item{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--white);}
+      .typo-item img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;background:var(--white);}
+      .typo-cap{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 16px;border-top:1px solid var(--line-weak);font-size:15px;font-weight:600;}
+      .typo-cap .go{color:var(--link);font-weight:600;white-space:nowrap;font-size:14px;}
+      .typo-item:hover{border-color:var(--btn);}
+      .typo-item:hover .typo-cap .go{text-decoration:underline;}
+      .hidden-typo{display:none !important;}
+
+      /* Merch carousel */
+      .merch-sec{border-top:1px solid var(--line);padding-top:32px;margin-top:48px;}
+      .merch-view{background:var(--bg);border-radius:12px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;}
+      @media (max-width:760px){.merch-view{grid-template-columns:1fr;}}
+      .merch-art{background:var(--white);border:1px solid var(--line-weak);border-radius:12px;padding:16px;text-align:center;}
+      .merch-art svg{width:100%;max-width:340px;height:auto;display:block;margin:0 auto;}
+      .merch-name{font-size:20px;font-weight:600;margin:0 0 8px;}
+      .merch-desc{font-size:15px;color:var(--sub);margin:0 0 16px;}
+      .color-label{font-size:15px;margin:0 0 8px;}
+      .color-dots{display:flex;gap:12px;align-items:center;margin:0 0 20px;}
+      .color-dot{width:36px;height:36px;border-radius:50%;border:2px solid var(--line);padding:0;cursor:pointer;}
+      .color-dot[aria-pressed="true"]{border-color:var(--btn);outline:2px solid var(--btn);outline-offset:2px;}
+      .merch-nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+      .merch-count{font-size:13px;color:var(--tertiary);margin-left:4px;}
+      dl.meta{margin:0;display:grid;grid-template-columns:88px 1fr;row-gap:8px;column-gap:16px;}
+      dl.meta dt{font-size:13px;color:var(--sub);padding-top:2px;}
+      dl.meta dd{margin:0;font-size:17px;}
+      .num{text-align:right;font-variant-numeric:tabular-nums;}
+      .main-event{
+        background:var(--bg);border-radius:12px;padding:16px;font-size:17px;margin:0;
+      }
+      .main-event .me-label{font-size:13px;color:var(--sub);display:block;margin-bottom:8px;}
+      .card-foot{margin-top:auto;display:flex;flex-direction:column;gap:8px;align-items:flex-start;border-top:1px solid var(--line-weak);padding-top:16px;}
+      .prep-note{font-size:13px;color:var(--tertiary);margin:0;}
+
+      /* Results */
+      .results-sec{border-top:1px solid var(--line);padding-top:32px;}
+      .result-block{margin-bottom:48px;}
+      .result-block:last-child{margin-bottom:0;}
+      .result-overview{
+        background:var(--bg);border-radius:12px;padding:24px;margin:16px 0 24px;
+      }
+      .result-overview dl{margin:0;display:grid;grid-template-columns:88px 1fr;row-gap:8px;column-gap:16px;}
+      .result-overview dt{font-size:13px;color:var(--sub);padding-top:2px;}
+      .result-overview dd{margin:0;font-size:17px;}
+      .highlight{outline:2px solid var(--btn);outline-offset:4px;border-radius:12px;}
+
+      table.bouts{width:100%;border-collapse:collapse;font-size:17px;}
+      table.bouts caption{text-align:left;font-size:13px;color:var(--tertiary);padding:0 0 8px;}
+      table.bouts th, table.bouts td{
+        border-bottom:1px solid var(--line);padding:12px 8px;vertical-align:top;text-align:left;
+      }
+      table.bouts thead th{background:var(--bg);font-weight:600;border-top:1px solid var(--line);}
+      table.bouts th.no, table.bouts td.no{width:40px;text-align:right;color:var(--sub);}
+      .winner{font-weight:700;color:var(--ink);}
+      .loser{font-weight:400;color:var(--sub);}
+      .vs{color:var(--sub);font-size:13px;padding:0 4px;}
+      .finish{font-size:16px;}
+      .bout-note{display:block;font-size:13px;color:var(--tertiary);margin-top:4px;}
+      @media (max-width:640px){
+        table.bouts{font-size:15px;}
+        table.bouts th, table.bouts td{padding:10px 6px;}
+        .finish{font-size:14px;}
+        table.bouts th.no, table.bouts td.no{width:28px;}
+      }
+
+      footer.site{
+        background:var(--bg);border-top:1px solid var(--line);padding:32px 0 48px;margin-top:48px;
+      }
+      footer.site p{font-size:13px;color:var(--tertiary);margin:0 0 8px;line-height:1.7;}
+      footer.site p strong{color:var(--ink);}
+      .hidden-card{display:none !important;}
+    
+      /* Top typography gallery — all 86 events */
+      .top-gallery{margin:0 0 40px;}
+      .typo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;align-items:start;}
+      @media (max-width:820px){.typo-grid{grid-template-columns:1fr;}}
+      .typo-item{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--white);}
+      .typo-item:hover{border-color:var(--btn);}
+      .tp-art{display:block;padding:20px 20px 16px;}
+      .tp-roof{display:block;}
+      .tp-roof svg{width:100%;height:44px;display:block;}
+      .tp-venue{display:block;text-align:center;font-size:11px;letter-spacing:2px;color:var(--sub);margin:6px 0 10px;text-transform:uppercase;}
+      .tp-name{display:block;font-size:21px;font-weight:700;line-height:1.35;margin:0 0 6px;overflow-wrap:anywhere;}
+      .tp-meta{display:block;font-size:13px;color:var(--sub);line-height:1.55;}
+      .tp-rule{display:block;border-top:2px solid var(--line);margin:12px 0 10px;}
+      .tp-sec{display:block;font-size:12px;font-weight:700;letter-spacing:1px;color:var(--sub);margin:10px 0 4px;}
+      .tp-bout{display:block;font-size:13.5px;line-height:1.6;padding:3px 0;border-bottom:1px solid var(--line-weak);}
+      .tp-no{color:var(--sub);font-variant-numeric:tabular-nums;}
+      .tp-bout .bw{font-weight:700;}
+      .tp-fin{color:var(--sub);font-size:12.5px;}
+      .tp-foot{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:var(--tertiary);margin-top:12px;flex-wrap:wrap;}
+      .typo-cap{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 16px;border-top:1px solid var(--line-weak);font-size:15px;font-weight:600;}
+      .typo-cap .go{color:var(--link);font-weight:600;white-space:nowrap;font-size:14px;}
+      .typo-item:hover .typo-cap .go{text-decoration:underline;}
+      .hidden-typo{display:none !important;}
+      tr.sec-row td{background:var(--bg);font-weight:700;font-size:14px;color:var(--sub);}
+
+      /* Top typography gallery — all 86 events */
+      .top-gallery{margin:0 0 40px;}
+      .typo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;align-items:start;}
+      @media (max-width:820px){.typo-grid{grid-template-columns:1fr;}}
+      .typo-item{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--white);}
+      .typo-item:hover{border-color:var(--btn);}
+      .tp-art{display:block;padding:20px 20px 16px;}
+      .tp-roof{display:block;}
+      .tp-roof svg{width:100%;height:44px;display:block;}
+      .tp-venue{display:block;text-align:center;font-size:11px;letter-spacing:2px;color:var(--sub);margin:6px 0 10px;text-transform:uppercase;}
+      .tp-name{display:block;font-size:21px;font-weight:700;line-height:1.35;margin:0 0 6px;overflow-wrap:anywhere;}
+      .tp-meta{display:block;font-size:13px;color:var(--sub);line-height:1.55;}
+      .tp-rule{display:block;border-top:2px solid var(--line);margin:12px 0 10px;}
+      .tp-sec{display:block;font-size:12px;font-weight:700;letter-spacing:1px;color:var(--sub);margin:10px 0 4px;}
+      .tp-bout{display:block;font-size:13.5px;line-height:1.6;padding:3px 0;border-bottom:1px solid var(--line-weak);}
+      .tp-no{color:var(--sub);font-variant-numeric:tabular-nums;}
+      .tp-bout .bw{font-weight:700;}
+      .tp-fin{color:var(--sub);font-size:12.5px;}
+      .tp-foot{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:var(--tertiary);margin-top:12px;flex-wrap:wrap;}
+      .typo-cap{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 16px;border-top:1px solid var(--line-weak);font-size:15px;font-weight:600;}
+      .typo-cap .go{color:var(--link);font-weight:600;white-space:nowrap;font-size:14px;}
+      .typo-item:hover .typo-cap .go{text-decoration:underline;}
+      .hidden-typo{display:none !important;}
+      tr.sec-row td{background:var(--bg);font-weight:700;font-size:14px;color:var(--sub);}
+</style>
+<style>
+/* --- design revision 2026-11-23 --- */
+header.site nav.main a{font-size:12px;letter-spacing:.02em;padding:6px 7px;}
+header.site .header-in{gap:12px;}
+.nav-search{display:inline-flex;align-items:center;}
+.nav-search svg{width:15px;height:15px;fill:#1D1D1F;}
+.seg{display:inline-flex;background:#E8E8ED;border-radius:980px;padding:4px;gap:2px;flex-wrap:wrap;}
+.seg-btn{border:0;background:transparent;padding:8px 14px;border-radius:980px;font-size:13.5px;font-family:inherit;color:#1D1D1F;cursor:pointer;line-height:1.2;}
+.seg-btn.is-active{background:#1D1D1F;color:#FFFFFF;font-weight:600;}
+.search-row{margin:16px 0 4px;display:flex;align-items:center;gap:8px;background:#F5F5F7;border:1px solid #E8E8ED;border-radius:980px;padding:10px 18px;max-width:560px;}
+.search-row svg{width:16px;height:16px;fill:#6E6E73;flex:none;}
+.search-row input{border:0;background:transparent;font-size:15px;font-family:inherit;width:100%;outline:none;color:#1D1D1F;}
+.chev-link{color:#0066CC;text-decoration:none;font-size:15px;display:inline-flex;align-items:center;gap:2px;}
+.chev-link:hover{text-decoration:underline;}
+.merch-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 16px;-webkit-overflow-scrolling:touch;}
+.merch-card{flex:0 0 300px;scroll-snap-align:start;background:#FFFFFF;border:1px solid #E8E8ED;border-radius:18px;padding:20px;box-sizing:border-box;}
+.merch-card .merch-art{background:#F5F5F7;border-radius:12px;padding:8px;margin-bottom:14px;}
+.merch-card .color-dots{display:flex;gap:8px;margin:0 0 12px;}
+.merch-card .color-dot{width:22px;height:22px;border-radius:50%;border:1px solid #D2D2D7;cursor:pointer;padding:0;}
+.merch-card .color-dot[aria-pressed="true"]{outline:2px solid #0071E3;outline-offset:2px;}
+.merch-card .merch-name{font-weight:700;font-size:16px;margin:0 0 6px;}
+.merch-card .merch-desc{font-size:13.5px;color:#6E6E73;margin:0 0 10px;line-height:1.6;}
+.merch-card .merch-price{font-size:14px;margin:0 0 14px;}
+.merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
+.merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+</style>
+</head>
+<body>
+<header class="site">
+      <div class="wrap header-in">
+        <div class="brand">
+          <a href="index.html" aria-label="no contest data design">
+            <img class="brand-logo" src="logo.png" alt="no contest data design" width="1188" height="419" />
+          </a>
+          <span class="brand-sub">RIZINデータベース（非公式）</span>
+        </div>
+        <nav class="main" aria-label="メインナビゲーション">
+          <a href="index.html">大会一覧</a>
+          <a href="#">会場</a>
+          <a href="fighters.html">選手</a>
+          <a href="rankings.html">ランキング</a>
+          <a href="#">カレンダー</a>
+          <a href="index.html#merch">グッズ</a>
+          <a href="#" class="next-event">次回大会</a>
+        <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
+      </div>
+    </header>
+<main class="wrap">
+<p style="margin:0 0 32px;"><a class="chev-link" href="index.html">‹ 大会一覧へ戻る</a></p>
+<article class="result-block" id="detail-ev84">
+  <h3>RIZIN LANDMARK 16</h3>
+  <div class="result-overview"><dl>
+    <dt>開催日</dt><dd>2026年10月3日（土）</dd>
+    <dt>開催地</dt><dd>長崎県長崎市</dd>
+    <dt>会場</dt><dd>長崎スタジアムシティ HAPPINESS ARENA</dd>
+    <dt>開始時刻</dt><dd>14:00</dd>
+    <dt>試合数</dt><dd>全13試合</dd>
+    <dt>入場者数</dt><dd>5,887人</dd>
+  </dl></div>
+  <table class="bouts">
+    <caption>RIZIN LANDMARK 16 勝敗表（試合順）</caption>
+    <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
+    <tbody>
+<tr class="sec-row"><td colspan="4">オープニングファイト</td></tr>
+<tr><td class="no">1</td><td><span class="winner">歩叶</span><span class="vs">vs</span><span class="loser">KAKERU</span></td><td class="winner">歩叶</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 65.0kg契約ワンマッチ 3分3R ／ ※KAKERUが前日計量で規定体重を0.95kgオーバーしたため、歩叶が勝利した場合のみ公式記録となり、KAKERUに減点2が与えられた状態から試合が実施された。</span></td></tr>
+<tr><td class="no">2</td><td><span class="winner">今村流星</span><span class="vs">vs</span><span class="loser">上村玲音</span></td><td class="winner">今村流星</td><td class="finish">1R 1:39 TKO（パンチ連打）<span class="bout-note">キックボクシングルール 57.0kg契約ワンマッチ 3分3R</span></td></tr>
+<tr><td class="no">3</td><td><span class="winner">森孝太郎</span><span class="vs">vs</span><span class="loser">勇気</span></td><td class="winner">森孝太郎</td><td class="finish">2R 1:49 KO（右ストレート）<span class="bout-note">キックボクシングルール 100.0kg契約ワンマッチ 3分3R</span></td></tr>
+<tr><td class="no">4</td><td><span class="winner">大木良太</span><span class="vs">vs</span><span class="loser">ハント・レンジャーズ</span></td><td class="winner">大木良太</td><td class="finish">1R 4:47 TKO（左フック→サッカーボールキック）<span class="bout-note">MMA特別ルール 71.0kg契約ワンマッチ 5分2R</span></td></tr>
+<tr class="sec-row"><td colspan="4">本戦</td></tr>
+<tr><td class="no">1</td><td><span class="winner">杉山廣平</span><span class="vs">vs</span><span class="loser">小田魁斗</span></td><td class="winner">杉山廣平</td><td class="finish">3R終了 判定2-1（29-28、29-28、28-28（マスト：小田））<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
+<tr><td class="no">2</td><td><span class="winner">アラン“ヒロ”ヤマニハ</span><span class="vs">vs</span><span class="loser">山本聖悟</span></td><td class="winner">アラン“ヒロ”ヤマニハ</td><td class="finish">1R 3:00 膝十字固め<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R ／ ※山本が前日計量で規定体重を0.1kgオーバーしたため、ヤマニハが勝利した場合のみ公式記録となり、山本に減点1が与えられた状態から試合が実施された。</span></td></tr>
+<tr><td class="no">3</td><td><span class="winner">荒東&quot;怪獣キラー&quot;英貴</span><span class="vs">vs</span><span class="loser">長谷川賢</span></td><td class="winner">荒東&quot;怪獣キラー&quot;英貴</td><td class="finish">3R終了 判定3-0（30-25、30-25、30-25）<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R</span></td></tr>
+<tr><td class="no">4</td><td><span class="winner">井上聖矢</span><span class="vs">vs</span><span class="loser">芦澤竜誠</span></td><td class="winner">井上聖矢</td><td class="finish">1R 4:56 TKO（左フック→パウンド）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
+<tr><td class="no">5</td><td><span class="winner">火の鳥</span><span class="vs">vs</span><span class="loser">上田将年</span></td><td class="winner">火の鳥</td><td class="finish">1R 3:26 TKO（パウンド）<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
+<tr><td class="no">6</td><td><span class="winner">ケイト・ロータス</span><span class="vs">vs</span><span class="loser">NOEL</span></td><td class="winner">ケイト・ロータス</td><td class="finish">3R終了 判定2-1（30-27、29-28、28-29）<span class="bout-note">MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
+<tr><td class="no">7</td><td><span class="winner">安井飛馬</span><span class="vs">vs</span><span class="loser">ライアン・カファロ</span></td><td class="winner">安井飛馬</td><td class="finish">3R終了 判定0-3（27-30、27-30、27-30）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+<tr><td class="no">8</td><td><span class="winner">ビクター・コレスニック</span><span class="vs">vs</span><span class="loser">松嶋こよみ</span></td><td class="winner">ビクター・コレスニック</td><td class="finish">2R 0:20 TKO（サッカーボールキック）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+<tr><td class="no">9</td><td><span class="winner">堀江圭功</span><span class="vs">vs</span><span class="loser">宇佐美正パトリック</span></td><td class="winner">堀江圭功</td><td class="finish">2R 3:37 TKO（パウンド） カード変更 カード変更は以下の通り。 マック・パパリイ vs. アルブリー・ンジャイ→ンジャイは血液検査の結果、数値に変調があり、ドクターストップにより欠場。赤沢幸典が代役出場。 マック・パパリイ vs. 赤沢幸典→ 赤沢が計量前夜に膝を負傷。メディカルチェックによってドクターストップで試合中止。<span class="bout-note">MMAルール 72.65kg 契約ワンマッチ 5分3R</span></td></tr>
+    </tbody>
+  </table>
+</article>
+<p style="margin:0 0 32px;"><a class="chev-link" href="index.html">‹ 大会一覧へ戻る</a></p>
+</main>
+<footer class="site">
+      <div class="wrap">
+        <p><strong>no contest data design — RIZINデータベース（非公式）</strong></p>
+        <p>© 2026 no contest data design. All Rights Reserved.</p>
+        <p>本サイトは非公式ファンデータベースです。RIZIN FF等の公式団体とは関係ありません。選手写真・公式ロゴ・公式映像は使用していません。</p>
+        <p>データ出典：Wikipedia等の公開情報を基に作成したユーザーのデータベース（Google Sheets「RIZIN興行一覧」）。入場者数は主催者発表の数値です。</p>
+        <p>未発表情報は掲載していません。掲載内容は公開済みの大会情報・試合結果のみです。</p>
+      </div>
+    </footer>
+</body>
+</html>

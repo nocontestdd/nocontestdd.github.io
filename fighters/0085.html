@@ -315,6 +315,38 @@ table.history a:hover{text-decoration:underline;}
 .back-link{display:inline-block;margin:0 0 14px;color:#0066CC;text-decoration:none;font-size:14px;}
 .back-link:hover{text-decoration:underline;}
 .def-note{font-size:12.5px;color:#6E6E73;line-height:1.7;}
+
+/* --- mobile: no horizontal scroll, stacked history rows --- */
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible;margin:0;padding:0;}
+  table.history thead{display:none;}
+  table.history tr{display:block;padding:9px 2px;border-bottom:1px solid #D2D2D7;}
+  table.history td{display:block;padding:1px 2px;border-bottom:none;}
+  table.history td.num{font-size:12px;color:#6E6E73;font-weight:600;}
+  table.history td.opp{font-weight:700;font-size:15px;}
+  .rate-t{font-size:12px;}
+  .rate-t th,.rate-t td{padding:6px 5px;}
+  table.index3 td.name{white-space:normal;}
+  .profile-t th{width:84px;}
+  .donut-card{flex-direction:column;align-items:flex-start;gap:8px;}
+  .stat-card .v{font-size:21px;}
+}
+
+table.lb{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;}
+table.lb th{text-align:left;font-size:12px;color:#6E6E73;font-weight:600;padding:6px 6px;border-bottom:1px solid #D2D2D7;}
+table.lb td{padding:7px 6px;border-bottom:1px solid #E8E8ED;vertical-align:top;}
+table.lb td.num,table.lb th.num{text-align:right;font-variant-numeric:tabular-nums;}
+table.lb td.name{font-weight:600;}
+.sortpills{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 18px;}
+.sortpills .pill{appearance:none;border:1px solid #D2D2D7;background:#fff;color:#1D1D1F;border-radius:980px;padding:6px 14px;font-size:13px;cursor:pointer;font-family:inherit;}
+.sortpills .pill.is-active{background:#1D1D1F;color:#fff;border-color:#1D1D1F;}
+.seg-panel{display:none;}
+.seg-panel.is-active{display:block;}
+.board-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+.board-link{display:block;background:#F5F5F7;border-radius:14px;padding:16px 18px;color:#1D1D1F;text-decoration:none;}
+.board-link:hover{background:#ECECF0;}
+.board-link .t{font-weight:700;font-size:15px;}
+.board-link .d{font-size:12.5px;color:#6E6E73;margin-top:3px;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -361,12 +393,12 @@ table.history a:hover{text-decoration:underline;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2022.09.25</td><td><a href="../20220925-super-rizin.html">超RIZIN</a><span class="rule-tag">キック</span></td><td><a href="0503.html">バンダサック・ソー・トラクンペット</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:24 TKO (レフェリーストップ) <a href="https://youtu.be/v19iTPQIZnI?si=ETFBBqMMFzssS0Db" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2022.03.06</td><td><a href="../20220306-rizin-landmark-vol-2.html">RIZIN LANDMARK vol.2</a><span class="rule-tag">キック</span></td><td><a href="0729.html">白幡裕星</a></td><td><span class="res-w">勝ち</span></td><td>2R 1:02 TKO（左ストレート）</td></tr>
-<tr><td class="num">2021.10.24</td><td><a href="../20211024-rizin-31.html">RIZIN.31</a><span class="rule-tag">キック</span></td><td><a href="0734.html">石川直樹</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:30 TKO（3ノックダウン） <a href="https://youtu.be/2xSNn0r-ooI?si=4X_fb567nih5uX2c" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.06.27</td><td><a href="../20210627-rizin-29.html">RIZIN.29</a><span class="rule-tag">キック</span></td><td><a href="0769.html">誓</a></td><td><span class="res-w">勝ち</span></td><td>1R終了時 TKO ドクターストップ（鼻骨折の疑い） <a href="https://youtu.be/ULs8_6L6bOM?si=sHQr6jgS-Oa99mJx" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.12.31</td><td><a href="../20201231-rizin-26.html">RIZIN.26</a><span class="rule-tag">キック</span></td><td><a href="0528.html">ペットマライ・ペットジャルーンウィット</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:20 TKO（3ノックダウン） <a href="https://youtu.be/uSfp13wwLYY?si=0kowV17fBrC0v9Ni" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.08.09</td><td><a href="../20200809-rizin-22-starting-over.html">RIZIN.22 - STARTING OVER -</a><span class="rule-tag">キック</span></td><td><a href="0588.html">優心</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:08 TKO（左ヒジ） <a href="https://youtu.be/CUp5JKazoSY?si=xA2qbYGgSPsdUcl-" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.09.25</td><td><a href="../20220925-super-rizin.html">超RIZIN</a><span class="rule-tag">キック</span></td><td class="opp"><a href="0503.html">バンダサック・ソー・トラクンペット</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:24 TKO (レフェリーストップ) <a href="https://youtu.be/v19iTPQIZnI?si=ETFBBqMMFzssS0Db" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.03.06</td><td><a href="../20220306-rizin-landmark-vol-2.html">RIZIN LANDMARK vol.2</a><span class="rule-tag">キック</span></td><td class="opp"><a href="0729.html">白幡裕星</a></td><td><span class="res-w">勝ち</span></td><td>2R 1:02 TKO（左ストレート）</td></tr>
+<tr><td class="num">2021.10.24</td><td><a href="../20211024-rizin-31.html">RIZIN.31</a><span class="rule-tag">キック</span></td><td class="opp"><a href="0734.html">石川直樹</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:30 TKO（3ノックダウン） <a href="https://youtu.be/2xSNn0r-ooI?si=4X_fb567nih5uX2c" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.06.27</td><td><a href="../20210627-rizin-29.html">RIZIN.29</a><span class="rule-tag">キック</span></td><td class="opp"><a href="0769.html">誓</a></td><td><span class="res-w">勝ち</span></td><td>1R終了時 TKO ドクターストップ（鼻骨折の疑い） <a href="https://youtu.be/ULs8_6L6bOM?si=sHQr6jgS-Oa99mJx" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.12.31</td><td><a href="../20201231-rizin-26.html">RIZIN.26</a><span class="rule-tag">キック</span></td><td class="opp"><a href="0528.html">ペットマライ・ペットジャルーンウィット</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:20 TKO（3ノックダウン） <a href="https://youtu.be/uSfp13wwLYY?si=0kowV17fBrC0v9Ni" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.08.09</td><td><a href="../20200809-rizin-22-starting-over.html">RIZIN.22 - STARTING OVER -</a><span class="rule-tag">キック</span></td><td class="opp"><a href="0588.html">優心</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:08 TKO（左ヒジ） <a href="https://youtu.be/CUp5JKazoSY?si=xA2qbYGgSPsdUcl-" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
 </tbody>
 </table>
 </div>

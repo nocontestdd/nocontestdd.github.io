@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2018年9月30日（日）</dd>
     <dt>開催地</dt><dd>埼玉県さいたま市</dd>
-    <dt>会場</dt><dd>さいたまスーパーアリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/saitama-super-arena.html">さいたまスーパーアリーナ</a></dd>
     <dt>開始時刻</dt><dd>15:00</dd>
     <dt>試合数</dt><dd>全13試合</dd>
     <dt>入場者数</dt><dd>27,208人</dd>
@@ -306,18 +317,18 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.13 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">13</td><td><span class="winner">イリー・プロハースカ</span><span class="vs">vs</span><span class="loser">ジェイク・ヒューン</span></td><td class="winner">イリー・プロハースカ</td><td class="finish">1R 4:29 TKO（レフェリーストップ：スタンドパンチ）<span class="bout-note">MMAルール 93.0㎏契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">12</td><td><span class="winner">朝倉未来</span><span class="vs">vs</span><span class="loser">カルシャガ・ダウトベック</span></td><td class="winner">朝倉未来</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 66.0㎏契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">ダロン・クルックシャンク</span><span class="vs">vs</span><span class="loser">ディエゴ・ブランダオン</span></td><td class="winner">ダロン・クルックシャンク</td><td class="finish">2R 0:17 TKO （レフェリーストップ：グラウンドパンチ）<span class="bout-note">MMAルール 70.0㎏契約ワンマッチ（肘あり） 5分3R</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">那須川天心</span><span class="vs">vs</span><span class="loser">堀口恭司</span></td><td class="winner">那須川天心</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシング特別ルール 58.0㎏契約ワンマッチ 3分3R 延長1R[3]</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">山本美憂</span><span class="vs">vs</span><span class="loser">アンディ・ウィン</span></td><td class="winner">山本美憂</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 49.0㎏契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">ミルコ・クロコップ</span><span class="vs">vs</span><span class="loser">ロッキー・マルティネス</span></td><td class="winner">ミルコ・クロコップ</td><td class="finish">1R 4:56 TKO（レフェリーストップ：負傷）<span class="bout-note">MMAルール 110.0㎏契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">ボブ・サップ</span><span class="vs">vs</span><span class="loser">大砂嵐</span></td><td class="winner">ボブ・サップ</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMA特別ルール 無差別級ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">越智晴雄</span><span class="vs">vs</span><span class="loser">砂辺光久</span></td><td class="winner">越智晴雄</td><td class="finish">3R 2:52 KO（グラウンドキック）<span class="bout-note">MMAルール 53.0㎏契約ワンマッチ（肘あり） 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">朝倉海</span><span class="vs">vs</span><span class="loser">トップノイ・タイガームエタイ</span></td><td class="winner">朝倉海</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 59.0㎏契約ワンマッチ（肘あり） 5分3R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">浜崎朱加</span><span class="vs">vs</span><span class="loser">黒部三奈</span></td><td class="winner">浜崎朱加</td><td class="finish">1R 4:45 TS（アームロック）<span class="bout-note">女子MMAルール 49.0㎏契約ワンマッチ（肘あり） 5分3R</span></td></tr>
-              <tr><td class="no">2</td><td>大雅<span class="vs">vs</span>原口健飛</td><td>ドロー</td><td class="finish">3R終了 判定0-1 ドロー<span class="bout-note">キックボクシングルール 59.0㎏契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">マネル・ケイプ</span><span class="vs">vs</span><span class="loser">中村優作</span></td><td class="winner">マネル・ケイプ</td><td class="finish">3R 4:27 TS（リアネイキッドチョーク）<span class="bout-note">MMAルール 57.0㎏契約ワンマッチ（肘あり） 5分3R</span></td></tr>
+              <tr><td class="no">13</td><td><span class="winner"><a href="fighters/prochazka-jiri.html">イリー・プロハースカ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/heun-jake.html">ジェイク・ヒューン</a></span></td><td class="winner">イリー・プロハースカ</td><td class="finish">1R 4:29 TKO（レフェリーストップ：スタンドパンチ）<span class="bout-note">MMAルール 93.0㎏契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/asakura-mikuru.html">朝倉未来</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/dautbek-karshyga.html">カルシャガ・ダウトベック</a></span></td><td class="winner">朝倉未来</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 66.0㎏契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/cruickshank-daron.html">ダロン・クルックシャンク</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/brandao-diego.html">ディエゴ・ブランダオン</a></span></td><td class="winner">ダロン・クルックシャンク</td><td class="finish">2R 0:17 TKO （レフェリーストップ：グラウンドパンチ）<span class="bout-note">MMAルール 70.0㎏契約ワンマッチ（肘あり） 5分3R</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/nasukawa-tenshin.html">那須川天心</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/horiguchi-kyoji.html">堀口恭司</a></span></td><td class="winner">那須川天心</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシング特別ルール 58.0㎏契約ワンマッチ 3分3R 延長1R[3]</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/yamamoto-miyuu.html">山本美憂</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/nguyen-andy.html">アンディ・ウィン</a></span></td><td class="winner">山本美憂</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 49.0㎏契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/cop-mirko-cro.html">ミルコ・クロコップ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/martinez-roque.html">ロッキー・マルティネス</a></span></td><td class="winner">ミルコ・クロコップ</td><td class="finish">1R 4:56 TKO（レフェリーストップ：負傷）<span class="bout-note">MMAルール 110.0㎏契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/sapp-bob.html">ボブ・サップ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/osunaarashi.html">大砂嵐</a></span></td><td class="winner">ボブ・サップ</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMA特別ルール 無差別級ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/ochi-haruo.html">越智晴雄</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sunabe-mitsuhisa.html">砂辺光久</a></span></td><td class="winner">越智晴雄</td><td class="finish">3R 2:52 KO（グラウンドキック）<span class="bout-note">MMAルール 53.0㎏契約ワンマッチ（肘あり） 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/asakura-kai.html">朝倉海</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/taigaamuetai-toppunoi.html">トップノイ・タイガームエタイ</a></span></td><td class="winner">朝倉海</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 59.0㎏契約ワンマッチ（肘あり） 5分3R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/hamasaki-ayaka.html">浜崎朱加</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kurobe-mina.html">黒部三奈</a></span></td><td class="winner">浜崎朱加</td><td class="finish">1R 4:45 TS（アームロック）<span class="bout-note">女子MMAルール 49.0㎏契約ワンマッチ（肘あり） 5分3R</span></td></tr>
+              <tr><td class="no">2</td><td><a href="fighters/taiga.html">大雅</a><span class="vs">vs</span><a href="fighters/haraguchi-kento.html">原口健飛</a></td><td>ドロー</td><td class="finish">3R終了 判定0-1 ドロー<span class="bout-note">キックボクシングルール 59.0㎏契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/kape-manel.html">マネル・ケイプ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/nakamura-yusaku.html">中村優作</a></span></td><td class="winner">マネル・ケイプ</td><td class="finish">3R 4:27 TS（リアネイキッドチョーク）<span class="bout-note">MMAルール 57.0㎏契約ワンマッチ（肘あり） 5分3R</span></td></tr>
             </tbody>
   </table>
 </article>

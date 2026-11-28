@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2021年12月31日（金）</dd>
     <dt>開催地</dt><dd>埼玉県さいたま市</dd>
-    <dt>会場</dt><dd>さいたまスーパーアリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/saitama-super-arena.html">さいたまスーパーアリーナ</a></dd>
     <dt>開始時刻</dt><dd>13:30</dd>
     <dt>試合数</dt><dd>全16試合</dd>
     <dt>入場者数</dt><dd>22,499人（主催者発表）</dd>
@@ -306,21 +317,21 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.33 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">16</td><td><span class="winner">扇久保博正</span><span class="vs">vs</span><span class="loser">朝倉海</span></td><td class="winner">扇久保博正</td><td class="finish">3R終了 判定0-3<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 バンタム級トーナメント 決勝 5分3R ／ ※扇久保がトーナメント優勝。</span></td></tr>
-              <tr><td class="no">15</td><td><span class="winner">ホベルト・サトシ・ソウザ</span><span class="vs">vs</span><span class="loser">矢地祐介</span></td><td class="winner">ホベルト・サトシ・ソウザ</td><td class="finish">2R 3:30 腕ひしぎ三角固め<span class="bout-note">RIZINライト級タイトルマッチ ／ MMAルール 71.0kg契約 5分3R ／ ※ソウザが王座の初防衛に成功。</span></td></tr>
-              <tr><td class="no">14</td><td><span class="winner">朝倉未来</span><span class="vs">vs</span><span class="loser">斎藤裕</span></td><td class="winner">朝倉未来</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 66.0kg契約 5分3R</span></td></tr>
-              <tr><td class="no">13</td><td>那須川天心<span class="vs">vs</span>五味隆典</td><td>ドロー</td><td class="finish">2R終了 判定ドロー<span class="bout-note">スタンディングバウト特別ルール 3分2R</span></td></tr>
-              <tr><td class="no">12</td><td><span class="winner">パク・シウ</span><span class="vs">vs</span><span class="loser">RENA</span></td><td class="winner">パク・シウ</td><td class="finish">3R終了 判定0-3<span class="bout-note">女子MMAルール 50.0kg契約 5分3R</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">伊澤星花</span><span class="vs">vs</span><span class="loser">浜崎朱加</span></td><td class="winner">伊澤星花</td><td class="finish">2R 2:50 TKO（パウンド）<span class="bout-note">女子MMAルール 49.0kg契約 5分3R</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">武田光司</span><span class="vs">vs</span><span class="loser">“ブラックパンサー”ベイノア</span></td><td class="winner">武田光司</td><td class="finish">2R 4:12 腕ひしぎ十字固め<span class="bout-note">MMAルール 71.0kg契約 5分3R</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">関根“シュレック”秀樹</span><span class="vs">vs</span><span class="loser">シビサイ頌真</span></td><td class="winner">関根“シュレック”秀樹</td><td class="finish">2R 2:09 TKO（パウンド）<span class="bout-note">MMAルール 120.0kg契約 5分3R</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">萩原京平</span><span class="vs">vs</span><span class="loser">鈴木博昭</span></td><td class="winner">萩原京平</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 66.0kg契約 5分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">YA-MAN</span><span class="vs">vs</span><span class="loser">皇治</span></td><td class="winner">YA-MAN</td><td class="finish">3R終了 判定0-2<span class="bout-note">キックボクシングルール 62.0kg契約 3分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">シバター</span><span class="vs">vs</span><span class="loser">久保優太</span></td><td class="winner">シバター</td><td class="finish">1R 1:35 腕ひしぎ十字固め<span class="bout-note">MMAルール 90.0kg契約 3分2R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">太田忍</span><span class="vs">vs</span><span class="loser">祖根寿麻</span></td><td class="winner">太田忍</td><td class="finish">2R 3:55 TKO（サッカーボールキック）<span class="bout-note">MMAルール 61.0kg契約 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">元谷友貴</span><span class="vs">vs</span><span class="loser">金太郎</span></td><td class="winner">元谷友貴</td><td class="finish">3R終了 判定3-0<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 バンタム級トーナメント リザーブマッチ 5分3R ／ ※元谷がリザーブ権獲得に成功。</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">扇久保博正</span><span class="vs">vs</span><span class="loser">井上直樹</span></td><td class="winner">扇久保博正</td><td class="finish">3R終了 判定3-0<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 バンタム級トーナメント 準決勝 5分3R ／ ※扇久保がトーナメント決勝進出。</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">朝倉海</span><span class="vs">vs</span><span class="loser">瀧澤謙太</span></td><td class="winner">朝倉海</td><td class="finish">3R終了 判定3-0<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 バンタム級トーナメント 準決勝 5分3R ／ ※朝倉がトーナメント決勝進出。</span></td></tr>
+              <tr><td class="no">16</td><td><span class="winner"><a href="fighters/ougikubo-hiromasa.html">扇久保博正</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/asakura-kai.html">朝倉海</a></span></td><td class="winner">扇久保博正</td><td class="finish">3R終了 判定0-3<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 バンタム級トーナメント 決勝 5分3R ／ ※扇久保がトーナメント優勝。</span></td></tr>
+              <tr><td class="no">15</td><td><span class="winner"><a href="fighters/souza-roberto-satoshi.html">ホベルト・サトシ・ソウザ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yachi-yusuke.html">矢地祐介</a></span></td><td class="winner">ホベルト・サトシ・ソウザ</td><td class="finish">2R 3:30 腕ひしぎ三角固め<span class="bout-note">RIZINライト級タイトルマッチ ／ MMAルール 71.0kg契約 5分3R ／ ※ソウザが王座の初防衛に成功。</span></td></tr>
+              <tr><td class="no">14</td><td><span class="winner"><a href="fighters/asakura-mikuru.html">朝倉未来</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/saito-yutaka.html">斎藤裕</a></span></td><td class="winner">朝倉未来</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 66.0kg契約 5分3R</span></td></tr>
+              <tr><td class="no">13</td><td><a href="fighters/nasukawa-tenshin.html">那須川天心</a><span class="vs">vs</span><a href="fighters/gomi-takanori.html">五味隆典</a></td><td>ドロー</td><td class="finish">2R終了 判定ドロー<span class="bout-note">スタンディングバウト特別ルール 3分2R</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/park-si-woo.html">パク・シウ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/rena.html">RENA</a></span></td><td class="winner">パク・シウ</td><td class="finish">3R終了 判定0-3<span class="bout-note">女子MMAルール 50.0kg契約 5分3R</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/izawa-seika.html">伊澤星花</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/hamasaki-ayaka.html">浜崎朱加</a></span></td><td class="winner">伊澤星花</td><td class="finish">2R 2:50 TKO（パウンド）<span class="bout-note">女子MMAルール 49.0kg契約 5分3R</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/takeda-koji.html">武田光司</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/blackpantherbeynoah.html">“ブラックパンサー”ベイノア</a></span></td><td class="winner">武田光司</td><td class="finish">2R 4:12 腕ひしぎ十字固め<span class="bout-note">MMAルール 71.0kg契約 5分3R</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/sekine-hideki-shrek.html">関根“シュレック”秀樹</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/shibisai-shoma.html">シビサイ頌真</a></span></td><td class="winner">関根“シュレック”秀樹</td><td class="finish">2R 2:09 TKO（パウンド）<span class="bout-note">MMAルール 120.0kg契約 5分3R</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/hagiwara-kyohei.html">萩原京平</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/suzuki-hiroaki.html">鈴木博昭</a></span></td><td class="winner">萩原京平</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 66.0kg契約 5分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/man-ya.html">YA-MAN</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kouzi.html">皇治</a></span></td><td class="winner">YA-MAN</td><td class="finish">3R終了 判定0-2<span class="bout-note">キックボクシングルール 62.0kg契約 3分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/shibatar.html">シバター</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kubo-yuta.html">久保優太</a></span></td><td class="winner">シバター</td><td class="finish">1R 1:35 腕ひしぎ十字固め<span class="bout-note">MMAルール 90.0kg契約 3分2R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/ota-shinobu.html">太田忍</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sone-kazuma.html">祖根寿麻</a></span></td><td class="winner">太田忍</td><td class="finish">2R 3:55 TKO（サッカーボールキック）<span class="bout-note">MMAルール 61.0kg契約 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/motoya-yuki.html">元谷友貴</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kintaro.html">金太郎</a></span></td><td class="winner">元谷友貴</td><td class="finish">3R終了 判定3-0<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 バンタム級トーナメント リザーブマッチ 5分3R ／ ※元谷がリザーブ権獲得に成功。</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/ougikubo-hiromasa.html">扇久保博正</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/inoue-naoki.html">井上直樹</a></span></td><td class="winner">扇久保博正</td><td class="finish">3R終了 判定3-0<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 バンタム級トーナメント 準決勝 5分3R ／ ※扇久保がトーナメント決勝進出。</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/asakura-kai.html">朝倉海</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/takizawa-kenta.html">瀧澤謙太</a></span></td><td class="winner">朝倉海</td><td class="finish">3R終了 判定3-0<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 バンタム級トーナメント 準決勝 5分3R ／ ※朝倉がトーナメント決勝進出。</span></td></tr>
               <tr><td class="no">1</td><td></td><td>—</td><td class="finish">○ 日本 三浦孝太vs. 日本 YUSHI × 1R 3:00 TKO（サッカーボールキック）<span class="bout-note">MMAチャレンジルール 66.0kg契約 3分3R</span></td></tr>
             </tbody>
   </table>

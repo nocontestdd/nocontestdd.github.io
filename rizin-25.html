@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2020年11月21日（土）</dd>
     <dt>開催地</dt><dd>大阪府大阪市</dd>
-    <dt>会場</dt><dd>大阪城ホール</dd>
+    <dt>会場</dt><dd><a href="venues/osaka-jo-hall.html">大阪城ホール</a></dd>
     <dt>開始時刻</dt><dd>14:00</dd>
     <dt>試合数</dt><dd>全10試合</dd>
     <dt>入場者数</dt><dd>5,487人（主催者発表）</dd>
@@ -306,16 +317,16 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.25 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">10</td><td><span class="winner">斎藤裕</span><span class="vs">vs</span><span class="loser">朝倉未来</span></td><td class="winner">斎藤裕</td><td class="finish">3R終了 判定0-3<span class="bout-note">RIZINフェザー級タイトルマッチ（初代王者決定戦） ／ MMAルール 66.0kg契約 5分3R 肘あり ／ ※斎藤が王座獲得に成功。初代フェザー級王者となった。</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">扇久保博正</span><span class="vs">vs</span><span class="loser">瀧澤謙太</span></td><td class="winner">扇久保博正</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">住村竜市朗</span><span class="vs">vs</span><span class="loser">レッツ豪太</span></td><td class="winner">住村竜市朗</td><td class="finish">3R終了 判定2-1<span class="bout-note">MMAルール 77.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">竿本樹生</span><span class="vs">vs</span><span class="loser">北方大地</span></td><td class="winner">竿本樹生</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">萩原京平</span><span class="vs">vs</span><span class="loser">内村洋次郎</span></td><td class="winner">萩原京平</td><td class="finish">1R 0:22 KO（右ストレート） 柔術デモンストレーション ブラジル ホベルト・サトシ・ソウザ、ブラジル クレベル・コイケ、日本 坂本ハリ、日本 秋田美咲<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">大雅</span><span class="vs">vs</span><span class="loser">山畑雄摩</span></td><td class="winner">大雅</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 60.5kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">佐野勇海</span><span class="vs">vs</span><span class="loser">江畑秀範</span></td><td class="winner">佐野勇海</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 83.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">白川陸斗</span><span class="vs">vs</span><span class="loser">朴光哲</span></td><td class="winner">白川陸斗</td><td class="finish">3R 4:19 TKO（サッカーボールキック）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">政所仁</span><span class="vs">vs</span><span class="loser">佐藤執斗</span></td><td class="winner">政所仁</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 53.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">麻原将平</span><span class="vs">vs</span><span class="loser">山口侑馬</span></td><td class="winner">麻原将平</td><td class="finish">3R 2:59 TKO（レフェリーストップ）<span class="bout-note">キックボクシングルール 63.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/saito-yutaka.html">斎藤裕</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/asakura-mikuru.html">朝倉未来</a></span></td><td class="winner">斎藤裕</td><td class="finish">3R終了 判定0-3<span class="bout-note">RIZINフェザー級タイトルマッチ（初代王者決定戦） ／ MMAルール 66.0kg契約 5分3R 肘あり ／ ※斎藤が王座獲得に成功。初代フェザー級王者となった。</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/ougikubo-hiromasa.html">扇久保博正</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/takizawa-kenta.html">瀧澤謙太</a></span></td><td class="winner">扇久保博正</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/sumimura-ryuichiro.html">住村竜市朗</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/gota-lets.html">レッツ豪太</a></span></td><td class="winner">住村竜市朗</td><td class="finish">3R終了 判定2-1<span class="bout-note">MMAルール 77.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/saomoto-tatsuki.html">竿本樹生</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kitakata-daichi.html">北方大地</a></span></td><td class="winner">竿本樹生</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/hagiwara-kyohei.html">萩原京平</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/uchimura-yojiro.html">内村洋次郎</a></span></td><td class="winner">萩原京平</td><td class="finish">1R 0:22 KO（右ストレート） 柔術デモンストレーション ブラジル ホベルト・サトシ・ソウザ、ブラジル クレベル・コイケ、日本 坂本ハリ、日本 秋田美咲<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/taiga.html">大雅</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yamahata-yuma.html">山畑雄摩</a></span></td><td class="winner">大雅</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 60.5kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/sano-isami.html">佐野勇海</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/ebata-hidenori.html">江畑秀範</a></span></td><td class="winner">佐野勇海</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 83.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/shirakawa-rikuto.html">白川陸斗</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/boku-kotetsu.html">朴光哲</a></span></td><td class="winner">白川陸斗</td><td class="finish">3R 4:19 TKO（サッカーボールキック）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/mandokoro-jin.html">政所仁</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sato-syuto.html">佐藤執斗</a></span></td><td class="winner">政所仁</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 53.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/asahara-shohei.html">麻原将平</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yamaguchi-yuma.html">山口侑馬</a></span></td><td class="winner">麻原将平</td><td class="finish">3R 2:59 TKO（レフェリーストップ）<span class="bout-note">キックボクシングルール 63.0kg契約ワンマッチ 3分3R</span></td></tr>
             </tbody>
   </table>
 </article>

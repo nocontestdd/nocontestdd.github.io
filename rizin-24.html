@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2020年9月27日（日）</dd>
     <dt>開催地</dt><dd>埼玉県さいたま市</dd>
-    <dt>会場</dt><dd>さいたまスーパーアリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/saitama-super-arena.html">さいたまスーパーアリーナ</a></dd>
     <dt>開始時刻</dt><dd>15:30</dd>
     <dt>試合数</dt><dd>全11試合</dd>
     <dt>入場者数</dt><dd>5,000人（主催者発表）</dd>
@@ -306,17 +317,17 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.24 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">11</td><td><span class="winner">那須川天心</span><span class="vs">vs</span><span class="loser">皇治</span></td><td class="winner">那須川天心</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 58.5kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">朝倉海</span><span class="vs">vs</span><span class="loser">昇侍</span></td><td class="winner">朝倉海</td><td class="finish">1R 2:37 TKO（サッカーボールキック）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">武田光司</span><span class="vs">vs</span><span class="loser">川名雄生</span></td><td class="winner">武田光司</td><td class="finish">3R終了 判定2-1<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">久米鷹介</span><span class="vs">vs</span><span class="loser">北岡悟</span></td><td class="winner">久米鷹介</td><td class="finish">3R終了 判定2-1<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">平塚大士</span><span class="vs">vs</span><span class="loser">北川裕紀</span></td><td class="winner">平塚大士</td><td class="finish">2R 0:27 KO（左フック）<span class="bout-note">キックボクシングルール 60.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">瀧澤謙太</span><span class="vs">vs</span><span class="loser">金太郎</span></td><td class="winner">瀧澤謙太</td><td class="finish">3R終了 判定1-2<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">RENA</span><span class="vs">vs</span><span class="loser">富松恵美</span></td><td class="winner">RENA</td><td class="finish">3R終了 判定3-0<span class="bout-note">女子MMAルール 53.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">芦田崇宏</span><span class="vs">vs</span><span class="loser">萩原京平</span></td><td class="winner">芦田崇宏</td><td class="finish">2R 4:25 アームロック<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">スダリオ剛</span><span class="vs">vs</span><span class="loser">ディラン・ジェイムス</span></td><td class="winner">スダリオ剛</td><td class="finish">1R（終了時）TKO（ドクターストップ）<span class="bout-note">MMA特別ルール 120.0kg契約ワンマッチ 3分3R 肘あり</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">江幡睦</span><span class="vs">vs</span><span class="loser">良星</span></td><td class="winner">江幡睦</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 55.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">大原樹理</span><span class="vs">vs</span><span class="loser">矢地祐介</span></td><td class="winner">大原樹理</td><td class="finish">3R終了 判定1-2<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/nasukawa-tenshin.html">那須川天心</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kouzi.html">皇治</a></span></td><td class="winner">那須川天心</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 58.5kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/asakura-kai.html">朝倉海</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/shoji.html">昇侍</a></span></td><td class="winner">朝倉海</td><td class="finish">1R 2:37 TKO（サッカーボールキック）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/takeda-koji.html">武田光司</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kawana-yusei.html">川名雄生</a></span></td><td class="winner">武田光司</td><td class="finish">3R終了 判定2-1<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/kume-takasuke.html">久米鷹介</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kitaoka-satoru.html">北岡悟</a></span></td><td class="winner">久米鷹介</td><td class="finish">3R終了 判定2-1<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/hiratsuka-taishi.html">平塚大士</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kitagawa-yuuki.html">北川裕紀</a></span></td><td class="winner">平塚大士</td><td class="finish">2R 0:27 KO（左フック）<span class="bout-note">キックボクシングルール 60.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/takizawa-kenta.html">瀧澤謙太</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kintaro.html">金太郎</a></span></td><td class="winner">瀧澤謙太</td><td class="finish">3R終了 判定1-2<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/rena.html">RENA</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/tomimatsu-emi.html">富松恵美</a></span></td><td class="winner">RENA</td><td class="finish">3R終了 判定3-0<span class="bout-note">女子MMAルール 53.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/ashida-takahiro.html">芦田崇宏</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/hagiwara-kyohei.html">萩原京平</a></span></td><td class="winner">芦田崇宏</td><td class="finish">2R 4:25 アームロック<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/sudario-tsuyoshi.html">スダリオ剛</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/dylanjames.html">ディラン・ジェイムス</a></span></td><td class="winner">スダリオ剛</td><td class="finish">1R（終了時）TKO（ドクターストップ）<span class="bout-note">MMA特別ルール 120.0kg契約ワンマッチ 3分3R 肘あり</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/ebata-mutsuki.html">江幡睦</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/rasta.html">良星</a></span></td><td class="winner">江幡睦</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 55.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/ohara-juri.html">大原樹理</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yachi-yusuke.html">矢地祐介</a></span></td><td class="winner">大原樹理</td><td class="finish">3R終了 判定1-2<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
             </tbody>
   </table>
 </article>

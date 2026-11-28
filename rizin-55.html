@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
           <div class="result-overview">
             <dl>
               <dt>開催日</dt><dd>2026年11月8日（日）</dd>
-              <dt>会場</dt><dd>LaLa arena TOKYO-BAY（千葉県船橋市）</dd>
+              <dt>会場</dt><dd><a href="venues/lala-arena-tokyo-bay.html">LaLa arena TOKYO-BAY（千葉県船橋市）</a></dd>
               <dt>入場者数</dt><dd>10,947人（主催者発表）</dd>
               <dt>試合数</dt><dd>本戦13試合</dd>
             </dl>
@@ -306,19 +317,19 @@ header.site .header-in{gap:12px;}
             <caption>RIZIN.55 勝敗表（試合順）</caption>
             <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
             <tbody>
-              <tr><td class="no">13</td><td><span class="winner">トニー・ララミー</span><span class="vs">vs</span><span class="loser">神龍誠</span></td><td class="winner">トニー・ララミー</td><td class="finish">判定 1-2（28-29、28-29、29-28）／ RIZINフライ級タイトルマッチ<span class="bout-note">※勝者はララミー、第4代王座獲得</span></td></tr>
-              <tr><td class="no">12</td><td><span class="winner">イリスベク・ティレノフ</span><span class="vs">vs</span><span class="loser">井上直樹</span></td><td class="winner">イリスベク・ティレノフ</td><td class="finish">判定 0-3（27-30、27-30、28-29）／ バンタム級王座次期挑戦者決定戦<span class="bout-note">※勝者はティレノフ</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">福田龍彌</span><span class="vs">vs</span><span class="loser">キム・スーチョル</span></td><td class="winner">福田龍彌</td><td class="finish">判定 3-0（30-27、30-27、30-27）／ 61.0kg</td></tr>
-              <tr><td class="no">10</td><td><span class="winner">鹿志村仁之介</span><span class="vs">vs</span><span class="loser">太田忍</span></td><td class="winner">鹿志村仁之介</td><td class="finish">3R 1:51 エゼキエルチョーク ／ 61.0kg</td></tr>
-              <tr><td class="no">9</td><td>アバイジャ・カレオ・メヘウラ<span class="vs">vs</span>相本宗輝</td><td>勝者なし</td><td class="finish">2R 4:58 ノーコンテスト（体重超過）／ 66.0kg</td></tr>
-              <tr><td class="no">8</td><td><span class="winner">牛久絢太郎</span><span class="vs">vs</span><span class="loser">リー・カイウェン</span></td><td class="winner">牛久絢太郎</td><td class="finish">判定 3-0（30-26、29-27、29-27）／ 66.0kg</td></tr>
-              <tr><td class="no">7</td><td><span class="winner">ヌルハン・ズマガジー</span><span class="vs">vs</span><span class="loser">キム・ギョンピョ</span></td><td class="winner">ヌルハン・ズマガジー</td><td class="finish">1R 3:34 TKO（パウンド）／ 71.0kg</td></tr>
+              <tr><td class="no">13</td><td><span class="winner"><a href="fighters/laramie-tony.html">トニー・ララミー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/shinryu-makoto.html">神龍誠</a></span></td><td class="winner">トニー・ララミー</td><td class="finish">判定 1-2（28-29、28-29、29-28）／ RIZINフライ級タイトルマッチ<span class="bout-note">※勝者はララミー、第4代王座獲得</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/tilenov-yrysbek.html">イリスベク・ティレノフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/inoue-naoki.html">井上直樹</a></span></td><td class="winner">イリスベク・ティレノフ</td><td class="finish">判定 0-3（27-30、27-30、28-29）／ バンタム級王座次期挑戦者決定戦<span class="bout-note">※勝者はティレノフ</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/fukuda-ryuya.html">福田龍彌</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kim-soo-chul.html">キム・スーチョル</a></span></td><td class="winner">福田龍彌</td><td class="finish">判定 3-0（30-27、30-27、30-27）／ 61.0kg</td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/kashimura-jinnosuke.html">鹿志村仁之介</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/ota-shinobu.html">太田忍</a></span></td><td class="winner">鹿志村仁之介</td><td class="finish">3R 1:51 エゼキエルチョーク ／ 61.0kg</td></tr>
+              <tr><td class="no">9</td><td><a href="fighters/meheula-abijah-kaleo.html">アバイジャ・カレオ・メヘウラ</a><span class="vs">vs</span>相本宗輝</td><td>勝者なし</td><td class="finish">2R 4:58 ノーコンテスト（体重超過）／ 66.0kg</td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/ushiku-juntaro.html">牛久絢太郎</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/li-kaiwen.html">リー・カイウェン</a></span></td><td class="winner">牛久絢太郎</td><td class="finish">判定 3-0（30-26、29-27、29-27）／ 66.0kg</td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/zhumagazy-nurkhan.html">ヌルハン・ズマガジー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kim-kyung-pyo.html">キム・ギョンピョ</a></span></td><td class="winner">ヌルハン・ズマガジー</td><td class="finish">1R 3:34 TKO（パウンド）／ 71.0kg</td></tr>
               <tr><td class="no">6</td><td><span class="winner">マック・パパリイ</span><span class="vs">vs</span><span class="loser">赤沢幸典</span></td><td class="winner">マック・パパリイ</td><td class="finish">2R 2:15 TKO（右フック→パウンド）／ 120.0kg</td></tr>
-              <tr><td class="no">5</td><td><span class="winner">千春</span><span class="vs">vs</span><span class="loser">鈴木博昭</span></td><td class="winner">千春</td><td class="finish">2R 4:41 TKO（グラウンドの肘打ち連打）／ 66.0kg</td></tr>
-              <tr><td class="no">4</td><td><span class="winner">溝口司</span><span class="vs">vs</span><span class="loser">中島太一</span></td><td class="winner">溝口司</td><td class="finish">1R 0:22 リアネイキドチョーク ／ 61.0kg</td></tr>
-              <tr><td class="no">3</td><td><span class="winner">雑賀“ヤン坊”達也</span><span class="vs">vs</span><span class="loser">倉本大悟</span></td><td class="winner">雑賀“ヤン坊”達也</td><td class="finish">1R 1:38 TKO（左フック→パウンド）／ 71.0kg</td></tr>
-              <tr><td class="no">2</td><td><span class="winner">濱田巧</span><span class="vs">vs</span><span class="loser">関原翔</span></td><td class="winner">濱田巧</td><td class="finish">3R 4:56 TKO（パウンド）／ 57.0kg</td></tr>
-              <tr><td class="no">1</td><td><span class="winner">力也</span><span class="vs">vs</span><span class="loser">木村琉音</span></td><td class="winner">力也</td><td class="finish">判定 3-0（30-27、30-27、30-27）／ 57.0kg</td></tr>
+              <tr><td class="no">5</td><td><span class="winner">千春</span><span class="vs">vs</span><span class="loser"><a href="fighters/suzuki-hiroaki.html">鈴木博昭</a></span></td><td class="winner">千春</td><td class="finish">2R 4:41 TKO（グラウンドの肘打ち連打）／ 66.0kg</td></tr>
+              <tr><td class="no">4</td><td><span class="winner">溝口司</span><span class="vs">vs</span><span class="loser"><a href="fighters/nakajima-taichi.html">中島太一</a></span></td><td class="winner">溝口司</td><td class="finish">1R 0:22 リアネイキドチョーク ／ 61.0kg</td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/tatsuyayanbosaika.html">雑賀“ヤン坊”達也</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kuramot-daigo.html">倉本大悟</a></span></td><td class="winner">雑賀“ヤン坊”達也</td><td class="finish">1R 1:38 TKO（左フック→パウンド）／ 71.0kg</td></tr>
+              <tr><td class="no">2</td><td><span class="winner">濱田巧</span><span class="vs">vs</span><span class="loser"><a href="fighters/sekihara-sho.html">関原翔</a></span></td><td class="winner">濱田巧</td><td class="finish">3R 4:56 TKO（パウンド）／ 57.0kg</td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/rikiya.html">力也</a></span><span class="vs">vs</span><span class="loser">木村琉音</span></td><td class="winner">力也</td><td class="finish">判定 3-0（30-27、30-27、30-27）／ 57.0kg</td></tr>
             </tbody>
           </table>
         </article>

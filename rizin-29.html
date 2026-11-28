@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2021年6月27日（日）</dd>
     <dt>開催地</dt><dd>大阪府大阪市</dd>
-    <dt>会場</dt><dd>大阪市中央体育館（丸善インテックアリーナ大阪）</dd>
+    <dt>会場</dt><dd><a href="venues/maruzen-intec-arena-osaka.html">大阪市中央体育館（丸善インテックアリーナ大阪）</a></dd>
     <dt>開始時刻</dt><dd>13:30</dd>
     <dt>試合数</dt><dd>全12試合</dd>
     <dt>入場者数</dt><dd>4,796人（主催者発表）</dd>
@@ -306,18 +317,18 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.29 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">12</td><td><span class="winner">白鳥大珠</span><span class="vs">vs</span><span class="loser">皇治</span></td><td class="winner">白鳥大珠</td><td class="finish">3R終了　判定0-3<span class="bout-note">RIZIN KICK ONE NIGHT TOUNAMENT 決勝戦 ／ ※白鳥がワンナイトトーナメント優勝。</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">金太郎</span><span class="vs">vs</span><span class="loser">伊藤空也</span></td><td class="winner">金太郎</td><td class="finish">3R終了 判定 3-0<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 BANTAM WEIGHT TOUNAMENT 1回戦 5分3R ／ ※金太郎がバンタム級トーナメント2回戦進出。</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">大塚隆史</span><span class="vs">vs</span><span class="loser">獅庵</span></td><td class="winner">大塚隆史</td><td class="finish">3R終了 判定 3-0<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 BANTAM WEIGHT TOUNAMENT 1回戦 5分3R ／ ※大塚がバンタム級トーナメント2回戦進出。</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">瀧澤謙太</span><span class="vs">vs</span><span class="loser">今成正和</span></td><td class="winner">瀧澤謙太</td><td class="finish">3R終了 判定 3-0<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 BANTAM WEIGHT TOUNAMENT 1回戦 5分3R ／ ※瀧澤がバンタム級トーナメント2回戦進出。</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">アラン“ヒロ”ヤマニハ</span><span class="vs">vs</span><span class="loser">倉本一真</span></td><td class="winner">アラン“ヒロ”ヤマニハ</td><td class="finish">3R終了 判定 0-3<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 BANTAM WEIGHT TOUNAMENT 1回戦 5分3R ／ ※ヤマニハがバンタム級トーナメント2回戦進出。</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">矢地祐介</span><span class="vs">vs</span><span class="loser">川名TENCHO雄生</span></td><td class="winner">矢地祐介</td><td class="finish">3R終了 判定 3-0<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">白川陸斗</span><span class="vs">vs</span><span class="loser">青井人</span></td><td class="winner">白川陸斗</td><td class="finish">3R終了 判定 3-0<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">白鳥大珠</span><span class="vs">vs</span><span class="loser">高橋亮</span></td><td class="winner">白鳥大珠</td><td class="finish">1R 1:38 KO（スタンドパンチ）<span class="bout-note">RIZIN KICK ONE NIGHT TOUNAMENT 1回戦 3分3R ／ ※白鳥がワンナイトトーナメント決勝進出。</span></td></tr>
-              <tr><td class="no">4</td><td>皇治<span class="vs">vs</span>梅野源治</td><td>勝者なし</td><td class="finish">1R 0:43 ノーコンテスト（偶発性のバッティングにより梅野が負傷）<span class="bout-note">RIZIN KICK ONE NIGHT TOUNAMENT 1回戦 3分3R ／ ※皇治がワンナイトトーナメント決勝進出。</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">吉成名高</span><span class="vs">vs</span><span class="loser">誓</span></td><td class="winner">吉成名高</td><td class="finish">1R終了時 TKO ドクターストップ（鼻骨折の疑い）<span class="bout-note">キックボクシングルール 52.0kg契約ワンマッチ 3分3R 肘あり</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">植山征紀</span><span class="vs">vs</span><span class="loser">泉丈成</span></td><td class="winner">植山征紀</td><td class="finish">2R 0:55 TKO（3ノックダウン）<span class="bout-note">キックボクシングルール 56.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">1</td><td>山畑雄摩<span class="vs">vs</span>高橋聖人</td><td>ドロー</td><td class="finish">3R終了 判定0-1（ドロー）<span class="bout-note">キックボクシングルール 63.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/shiratori-taiju.html">白鳥大珠</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kouzi.html">皇治</a></span></td><td class="winner">白鳥大珠</td><td class="finish">3R終了　判定0-3<span class="bout-note">RIZIN KICK ONE NIGHT TOUNAMENT 決勝戦 ／ ※白鳥がワンナイトトーナメント優勝。</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/kintaro.html">金太郎</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/ito-kuya.html">伊藤空也</a></span></td><td class="winner">金太郎</td><td class="finish">3R終了 判定 3-0<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 BANTAM WEIGHT TOUNAMENT 1回戦 5分3R ／ ※金太郎がバンタム級トーナメント2回戦進出。</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/otsuka-takafumi.html">大塚隆史</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/shian.html">獅庵</a></span></td><td class="winner">大塚隆史</td><td class="finish">3R終了 判定 3-0<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 BANTAM WEIGHT TOUNAMENT 1回戦 5分3R ／ ※大塚がバンタム級トーナメント2回戦進出。</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/takizawa-kenta.html">瀧澤謙太</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/imanari-masakazu.html">今成正和</a></span></td><td class="winner">瀧澤謙太</td><td class="finish">3R終了 判定 3-0<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 BANTAM WEIGHT TOUNAMENT 1回戦 5分3R ／ ※瀧澤がバンタム級トーナメント2回戦進出。</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/alanhiroyamaniha.html">アラン“ヒロ”ヤマニハ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kuramoto-kazuma.html">倉本一真</a></span></td><td class="winner">アラン“ヒロ”ヤマニハ</td><td class="finish">3R終了 判定 0-3<span class="bout-note">RIZIN FIGHTING JAPAN GP 2021 BANTAM WEIGHT TOUNAMENT 1回戦 5分3R ／ ※ヤマニハがバンタム級トーナメント2回戦進出。</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/yachi-yusuke.html">矢地祐介</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kawana-yuki-tencho.html">川名TENCHO雄生</a></span></td><td class="winner">矢地祐介</td><td class="finish">3R終了 判定 3-0<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/shirakawa-rikuto.html">白川陸斗</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/aoi-jin.html">青井人</a></span></td><td class="winner">白川陸斗</td><td class="finish">3R終了 判定 3-0<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/shiratori-taiju.html">白鳥大珠</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/takahashi-ryo-2.html">高橋亮</a></span></td><td class="winner">白鳥大珠</td><td class="finish">1R 1:38 KO（スタンドパンチ）<span class="bout-note">RIZIN KICK ONE NIGHT TOUNAMENT 1回戦 3分3R ／ ※白鳥がワンナイトトーナメント決勝進出。</span></td></tr>
+              <tr><td class="no">4</td><td><a href="fighters/kouzi.html">皇治</a><span class="vs">vs</span><a href="fighters/umeno-genji.html">梅野源治</a></td><td>勝者なし</td><td class="finish">1R 0:43 ノーコンテスト（偶発性のバッティングにより梅野が負傷）<span class="bout-note">RIZIN KICK ONE NIGHT TOUNAMENT 1回戦 3分3R ／ ※皇治がワンナイトトーナメント決勝進出。</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/yoshinari-nadaka.html">吉成名高</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/chikai.html">誓</a></span></td><td class="winner">吉成名高</td><td class="finish">1R終了時 TKO ドクターストップ（鼻骨折の疑い）<span class="bout-note">キックボクシングルール 52.0kg契約ワンマッチ 3分3R 肘あり</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/ueyama-seiki.html">植山征紀</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/izumi-jyosei.html">泉丈成</a></span></td><td class="winner">植山征紀</td><td class="finish">2R 0:55 TKO（3ノックダウン）<span class="bout-note">キックボクシングルール 56.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">1</td><td><a href="fighters/yamahata-yuma.html">山畑雄摩</a><span class="vs">vs</span><a href="fighters/takahashi-kiyoto.html">高橋聖人</a></td><td>ドロー</td><td class="finish">3R終了 判定0-1（ドロー）<span class="bout-note">キックボクシングルール 63.0kg契約ワンマッチ 3分3R</span></td></tr>
             </tbody>
   </table>
 </article>

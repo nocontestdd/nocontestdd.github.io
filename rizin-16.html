@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2019年6月2日（日）</dd>
     <dt>開催地</dt><dd>兵庫県神戸市</dd>
-    <dt>会場</dt><dd>神戸ワールド記念ホール</dd>
+    <dt>会場</dt><dd><a href="venues/kobe-world-hall.html">神戸ワールド記念ホール</a></dd>
     <dt>開始時刻</dt><dd>14:00</dd>
     <dt>試合数</dt><dd>全14試合</dd>
     <dt>入場者数</dt><dd>8,107人（主催者発表）</dd>
@@ -306,20 +317,20 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.16 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">14</td><td><span class="winner">那須川天心</span><span class="vs">vs</span><span class="loser">マーティン・ブランコ</span></td><td class="winner">那須川天心</td><td class="finish">2R 2:19 KO（左膝蹴り）<span class="bout-note">ISKAユニファイドルール世界フェザー級タイトルマッチ（57.0㎏契約） 3分5R ／ ※那須川が王座獲得に成功。ISKA世界フェザー級王者となった。</span></td></tr>
-              <tr><td class="no">13</td><td><span class="winner">浜崎朱加</span><span class="vs">vs</span><span class="loser">ジン・ユ・フレイ</span></td><td class="winner">浜崎朱加</td><td class="finish">3R終了 判定3-0<span class="bout-note">女子MMAルール RIZIN女子スーパーアトム級タイトルマッチ（49.0kg契約） 5分3R 肘あり ／ ※浜崎が王座初防衛に成功。</span></td></tr>
-              <tr><td class="no">12</td><td><span class="winner">山本美憂</span><span class="vs">vs</span><span class="loser">浅倉カンナ</span></td><td class="winner">山本美憂</td><td class="finish">3R終了 判定0-3<span class="bout-note">女子MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">ジェイク・ヒューン</span><span class="vs">vs</span><span class="loser">ロッキー・マルティネス</span></td><td class="winner">ジェイク・ヒューン</td><td class="finish">3R終了 判定1-2<span class="bout-note">MMAルール 120kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">中村優作</span><span class="vs">vs</span><span class="loser">トップノイ・タイガームエタイ</span></td><td class="winner">中村優作</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 59.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">トフィック・ムサエフ</span><span class="vs">vs</span><span class="loser">ダロン・クルックシャンク</span></td><td class="winner">トフィック・ムサエフ</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">魚井フルスイング</span><span class="vs">vs</span><span class="loser">カナ・ハイアット</span></td><td class="winner">魚井フルスイング</td><td class="finish">3R 4:32 TKO（スタンドパンチ連打）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">堀尾竜司</span><span class="vs">vs</span><span class="loser">国崇</span></td><td class="winner">堀尾竜司</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 59.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">山本アーセン</span><span class="vs">vs</span><span class="loser">ティム・エスクトゥルース</span></td><td class="winner">山本アーセン</td><td class="finish">1R 2:04 KO（右肘）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">白鳥大珠</span><span class="vs">vs</span><span class="loser">山口裕人</span></td><td class="winner">白鳥大珠</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 63.0㎏契約ワンマッチ 3分3R[1]</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">征矢貴</span><span class="vs">vs</span><span class="loser">川原波輝</span></td><td class="winner">征矢貴</td><td class="finish">1R 4:05 KO（右フック）<span class="bout-note">MMAルール 59.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">中村寛</span><span class="vs">vs</span><span class="loser">一刀</span></td><td class="winner">中村寛</td><td class="finish">2R 0:18 KO（左ハイキック）<span class="bout-note">キックボクシングルール 60.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">植山征紀</span><span class="vs">vs</span><span class="loser">拳剛</span></td><td class="winner">植山征紀</td><td class="finish">1R 2:42 TKO（3ノックダウン）<span class="bout-note">オープニングマッチ キックボクシングルール 56.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">憂也</span><span class="vs">vs</span><span class="loser">田中STRIKE雄基</span></td><td class="winner">憂也</td><td class="finish">1R 2:45 TKO（3ノックダウン）<span class="bout-note">オープニングマッチ キックボクシングルール 69.0㎏契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">14</td><td><span class="winner"><a href="fighters/nasukawa-tenshin.html">那須川天心</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/blanco-martin.html">マーティン・ブランコ</a></span></td><td class="winner">那須川天心</td><td class="finish">2R 2:19 KO（左膝蹴り）<span class="bout-note">ISKAユニファイドルール世界フェザー級タイトルマッチ（57.0㎏契約） 3分5R ／ ※那須川が王座獲得に成功。ISKA世界フェザー級王者となった。</span></td></tr>
+              <tr><td class="no">13</td><td><span class="winner"><a href="fighters/hamasaki-ayaka.html">浜崎朱加</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/frey-jinh-yu.html">ジン・ユ・フレイ</a></span></td><td class="winner">浜崎朱加</td><td class="finish">3R終了 判定3-0<span class="bout-note">女子MMAルール RIZIN女子スーパーアトム級タイトルマッチ（49.0kg契約） 5分3R 肘あり ／ ※浜崎が王座初防衛に成功。</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/yamamoto-miyuu.html">山本美憂</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/asakura-kanna.html">浅倉カンナ</a></span></td><td class="winner">山本美憂</td><td class="finish">3R終了 判定0-3<span class="bout-note">女子MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/heun-jake.html">ジェイク・ヒューン</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/martinez-roque.html">ロッキー・マルティネス</a></span></td><td class="winner">ジェイク・ヒューン</td><td class="finish">3R終了 判定1-2<span class="bout-note">MMAルール 120kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/nakamura-yusaku.html">中村優作</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/taigaamuetai-toppunoi.html">トップノイ・タイガームエタイ</a></span></td><td class="winner">中村優作</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 59.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/musayev-tofiq.html">トフィック・ムサエフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/cruickshank-daron.html">ダロン・クルックシャンク</a></span></td><td class="winner">トフィック・ムサエフ</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/fullswing-uoi.html">魚井フルスイング</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/haiatto-kana.html">カナ・ハイアット</a></span></td><td class="winner">魚井フルスイング</td><td class="finish">3R 4:32 TKO（スタンドパンチ連打）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/horio-ryuji.html">堀尾竜司</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kunitaka.html">国崇</a></span></td><td class="winner">堀尾竜司</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 59.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/yamamoto-erson.html">山本アーセン</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/eschtruth-tim.html">ティム・エスクトゥルース</a></span></td><td class="winner">山本アーセン</td><td class="finish">1R 2:04 KO（右肘）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/shiratori-taiju.html">白鳥大珠</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yamaguchi-hiroto.html">山口裕人</a></span></td><td class="winner">白鳥大珠</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 63.0㎏契約ワンマッチ 3分3R[1]</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/soya-takaki.html">征矢貴</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kawahara-namiki.html">川原波輝</a></span></td><td class="winner">征矢貴</td><td class="finish">1R 4:05 KO（右フック）<span class="bout-note">MMAルール 59.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/nakamura-kan.html">中村寛</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/itto.html">一刀</a></span></td><td class="winner">中村寛</td><td class="finish">2R 0:18 KO（左ハイキック）<span class="bout-note">キックボクシングルール 60.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/ueyama-seiki.html">植山征紀</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kengo.html">拳剛</a></span></td><td class="winner">植山征紀</td><td class="finish">1R 2:42 TKO（3ノックダウン）<span class="bout-note">オープニングマッチ キックボクシングルール 56.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/yuya.html">憂也</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yuki-tanaka-strike.html">田中STRIKE雄基</a></span></td><td class="winner">憂也</td><td class="finish">1R 2:45 TKO（3ノックダウン）<span class="bout-note">オープニングマッチ キックボクシングルール 69.0㎏契約ワンマッチ 3分3R</span></td></tr>
             </tbody>
   </table>
 </article>

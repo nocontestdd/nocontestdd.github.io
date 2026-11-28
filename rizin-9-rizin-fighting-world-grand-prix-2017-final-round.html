@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2017年12月31日（日）</dd>
     <dt>開催地</dt><dd>埼玉県さいたま市</dd>
-    <dt>会場</dt><dd>さいたまスーパーアリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/saitama-super-arena.html">さいたまスーパーアリーナ</a></dd>
     <dt>開始時刻</dt><dd>15:00</dd>
     <dt>試合数</dt><dd>全12試合</dd>
     <dt>入場者数</dt><dd>18,316人</dd>
@@ -306,18 +317,18 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">12</td><td><span class="winner">堀口恭司</span><span class="vs">vs</span><span class="loser">石渡伸太郎</span></td><td class="winner">堀口恭司</td><td class="finish">2R 0:14 KO（右フック）<span class="bout-note">バンタム級トーナメント 決勝 5分3R ／ ※堀口がバンタム級トーナメント優勝</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">浅倉カンナ</span><span class="vs">vs</span><span class="loser">RENA</span></td><td class="winner">浅倉カンナ</td><td class="finish">1R 4:34 チョークスリーパー<span class="bout-note">女子スーパーアトム級トーナメント 決勝 5分3R ／ ※浅倉が女子スーパーアトム級トーナメント優勝</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">那須川天心</span><span class="vs">vs</span><span class="loser">藤田大和</span></td><td class="winner">那須川天心</td><td class="finish">1R 1:27 TKO（3ノックダウン）<span class="bout-note">KICK ワンナイトトーナメント 決勝 57.0kg契約 3分3R ／ ※那須川がワンナイトトーナメント優勝</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">ミルコ・クロコップ</span><span class="vs">vs</span><span class="loser">高阪剛</span></td><td class="winner">ミルコ・クロコップ</td><td class="finish">1R 1:02 TKO（レフェリーストップ）<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">真珠・野沢オークレア</span><span class="vs">vs</span><span class="loser">チェルシー・ラグラース</span></td><td class="winner">真珠・野沢オークレア</td><td class="finish">1R 4:47 腕ひしぎ十字固め<span class="bout-note">女子MMAルール 57.0kg契約ワンマッチ（肘あり） 5分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">矢地祐介</span><span class="vs">vs</span><span class="loser">五味隆典</span></td><td class="winner">矢地祐介</td><td class="finish">1R 2:36 三角絞め<span class="bout-note">MMA特別ルール 72.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">浅倉カンナ</span><span class="vs">vs</span><span class="loser">マリア・オリベイラ</span></td><td class="winner">浅倉カンナ</td><td class="finish">2R 3:40 腕ひしぎ十字固め<span class="bout-note">女子スーパーアトム級トーナメント 準決勝 ／ ※浅倉が女子スーパーアトム級トーナメント決勝進出</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">RENA</span><span class="vs">vs</span><span class="loser">アイリーン・リベラ</span></td><td class="winner">RENA</td><td class="finish">1R 4:39 TKO（レフェリーストップ）<span class="bout-note">女子スーパーアトム級トーナメント 準決勝 ／ ※RENAが女子スーパーアトム級トーナメント決勝進出</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">藤田大和</span><span class="vs">vs</span><span class="loser">砂辺光久</span></td><td class="winner">藤田大和</td><td class="finish">3R 0:50 KO（左フック）<span class="bout-note">KICK ワンナイトトーナメント 準決勝 57.0kg契約 3分3R ／ ※藤田がワンナイトトーナメント決勝進出</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">那須川天心</span><span class="vs">vs</span><span class="loser">浜本&quot;キャット&quot;雄大</span></td><td class="winner">那須川天心</td><td class="finish">2R 1:58 KO（飛び膝蹴り）<span class="bout-note">KICK ワンナイトトーナメント 準決勝 57.0kg契約 3分3R ／ ※那須川がワンナイトトーナメント決勝進出</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">石渡伸太郎</span><span class="vs">vs</span><span class="loser">大塚隆史</span></td><td class="winner">石渡伸太郎</td><td class="finish">3R終了 判定0-3<span class="bout-note">バンタム級トーナメント 準決勝 5分3R ／ ※石渡がバンタム級トーナメント決勝進出</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">堀口恭司</span><span class="vs">vs</span><span class="loser">マネル・ケイプ</span></td><td class="winner">堀口恭司</td><td class="finish">3R 4:27 肩固め<span class="bout-note">バンタム級トーナメント 準決勝 5分3R ／ ※堀口がバンタム級トーナメント決勝進出</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/horiguchi-kyoji.html">堀口恭司</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/ishiwatari-shintaro.html">石渡伸太郎</a></span></td><td class="winner">堀口恭司</td><td class="finish">2R 0:14 KO（右フック）<span class="bout-note">バンタム級トーナメント 決勝 5分3R ／ ※堀口がバンタム級トーナメント優勝</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/asakura-kanna.html">浅倉カンナ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/rena.html">RENA</a></span></td><td class="winner">浅倉カンナ</td><td class="finish">1R 4:34 チョークスリーパー<span class="bout-note">女子スーパーアトム級トーナメント 決勝 5分3R ／ ※浅倉が女子スーパーアトム級トーナメント優勝</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/nasukawa-tenshin.html">那須川天心</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/fujita-yamato.html">藤田大和</a></span></td><td class="winner">那須川天心</td><td class="finish">1R 1:27 TKO（3ノックダウン）<span class="bout-note">KICK ワンナイトトーナメント 決勝 57.0kg契約 3分3R ／ ※那須川がワンナイトトーナメント優勝</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/cop-mirko-cro.html">ミルコ・クロコップ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kosaka-tsuyoshi.html">高阪剛</a></span></td><td class="winner">ミルコ・クロコップ</td><td class="finish">1R 1:02 TKO（レフェリーストップ）<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/auclair-shinju-nozawa.html">真珠・野沢オークレア</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/lagrasse-chelsea.html">チェルシー・ラグラース</a></span></td><td class="winner">真珠・野沢オークレア</td><td class="finish">1R 4:47 腕ひしぎ十字固め<span class="bout-note">女子MMAルール 57.0kg契約ワンマッチ（肘あり） 5分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/yachi-yusuke.html">矢地祐介</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/gomi-takanori.html">五味隆典</a></span></td><td class="winner">矢地祐介</td><td class="finish">1R 2:36 三角絞め<span class="bout-note">MMA特別ルール 72.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/asakura-kanna.html">浅倉カンナ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/mota-maria-oliveira.html">マリア・オリベイラ</a></span></td><td class="winner">浅倉カンナ</td><td class="finish">2R 3:40 腕ひしぎ十字固め<span class="bout-note">女子スーパーアトム級トーナメント 準決勝 ／ ※浅倉が女子スーパーアトム級トーナメント決勝進出</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/rena.html">RENA</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/rivera-irene.html">アイリーン・リベラ</a></span></td><td class="winner">RENA</td><td class="finish">1R 4:39 TKO（レフェリーストップ）<span class="bout-note">女子スーパーアトム級トーナメント 準決勝 ／ ※RENAが女子スーパーアトム級トーナメント決勝進出</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/fujita-yamato.html">藤田大和</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sunabe-mitsuhisa.html">砂辺光久</a></span></td><td class="winner">藤田大和</td><td class="finish">3R 0:50 KO（左フック）<span class="bout-note">KICK ワンナイトトーナメント 準決勝 57.0kg契約 3分3R ／ ※藤田がワンナイトトーナメント決勝進出</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/nasukawa-tenshin.html">那須川天心</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/hamamoto-yuta-cat.html">浜本&quot;キャット&quot;雄大</a></span></td><td class="winner">那須川天心</td><td class="finish">2R 1:58 KO（飛び膝蹴り）<span class="bout-note">KICK ワンナイトトーナメント 準決勝 57.0kg契約 3分3R ／ ※那須川がワンナイトトーナメント決勝進出</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/ishiwatari-shintaro.html">石渡伸太郎</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/otsuka-takafumi.html">大塚隆史</a></span></td><td class="winner">石渡伸太郎</td><td class="finish">3R終了 判定0-3<span class="bout-note">バンタム級トーナメント 準決勝 5分3R ／ ※石渡がバンタム級トーナメント決勝進出</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/horiguchi-kyoji.html">堀口恭司</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kape-manel.html">マネル・ケイプ</a></span></td><td class="winner">堀口恭司</td><td class="finish">3R 4:27 肩固め<span class="bout-note">バンタム級トーナメント 準決勝 5分3R ／ ※堀口がバンタム級トーナメント決勝進出</span></td></tr>
             </tbody>
   </table>
 </article>

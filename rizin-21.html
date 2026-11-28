@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2020年2月22日（土）</dd>
     <dt>開催地</dt><dd>静岡県浜松市</dd>
-    <dt>会場</dt><dd>浜松アリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/hamamatsu-arena.html">浜松アリーナ</a></dd>
     <dt>開始時刻</dt><dd>14:00</dd>
     <dt>試合数</dt><dd>全13試合</dd>
     <dt>入場者数</dt><dd>6,832人（主催者発表）</dd>
@@ -306,19 +317,19 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.21 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">10</td><td><span class="winner">朝倉未来</span><span class="vs">vs</span><span class="loser">ダニエル・サラス</span></td><td class="winner">朝倉未来</td><td class="finish">2R 2:34 KO（グラウンドパンチ）<span class="bout-note">MMAルール 68.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">ビクター・ヘンリー</span><span class="vs">vs</span><span class="loser">金原正徳</span></td><td class="winner">ビクター・ヘンリー</td><td class="finish">2R 0:45 TKO（レフェリーストップ：グラウンドパンチ）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">ロッキー・マルティネス</span><span class="vs">vs</span><span class="loser">関根“シュレック”秀樹</span></td><td class="winner">ロッキー・マルティネス</td><td class="finish">1R 4:04 TKO（レフェリーストップ：グラウンドパンチ）<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">マルコス・ヨシオ・ソウザ</span><span class="vs">vs</span><span class="loser">ファルコン・ネト</span></td><td class="winner">マルコス・ヨシオ・ソウザ</td><td class="finish">1R 1:27 TKO（レフェリーストップ：グラウンドパンチ）<span class="bout-note">MMAルール 79.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">金太郎</span><span class="vs">vs</span><span class="loser">加藤ケンジ</span></td><td class="winner">金太郎</td><td class="finish">1R 4:21 リアネイキッドチョーク<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">ホベルト・サトシ・ソウザ</span><span class="vs">vs</span><span class="loser">チーム中井</span></td><td class="winner">ホベルト・サトシ・ソウザ</td><td class="finish">8:04（10分の試合時間内にソウザがチーム中井の五人から1本取れるかという特別ルール）<span class="bout-note">柔術エキシビジョン イリミネーションマッチ 10分</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">井上直樹</span><span class="vs">vs</span><span class="loser">トレント・ガーダム</span></td><td class="winner">井上直樹</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">ヴガール・ケラモフ</span><span class="vs">vs</span><span class="loser">カイル・アグォン</span></td><td class="winner">ヴガール・ケラモフ</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">実方宏介</span><span class="vs">vs</span><span class="loser">酒井リョウ</span></td><td class="winner">実方宏介</td><td class="finish">1R 1:28 KO（右フック）<span class="bout-note">キックボクシングルール 120.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">竹内賢一</span><span class="vs">vs</span><span class="loser">直哉</span></td><td class="winner">竹内賢一</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 57.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">ヘンリー・セハス</span><span class="vs">vs</span><span class="loser">SEIDO</span></td><td class="winner">ヘンリー・セハス</td><td class="finish">3R終了 判定3-0 メインカード<span class="bout-note">オープニングファイト キックボクシングルール 60.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">憂也</span><span class="vs">vs</span><span class="loser">康輝</span></td><td class="winner">憂也</td><td class="finish">1R 2:30 KO（パンチ連打）<span class="bout-note">オープニングファイト キックボクシングルール 70.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">1</td><td>戸塚昌司<span class="vs">vs</span>大澤匡弘</td><td>ドロー</td><td class="finish">3R終了 判定1-0（ドロー）<span class="bout-note">オープニングファイト キックボクシングルール 59.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/asakura-mikuru.html">朝倉未来</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/salas-daniel.html">ダニエル・サラス</a></span></td><td class="winner">朝倉未来</td><td class="finish">2R 2:34 KO（グラウンドパンチ）<span class="bout-note">MMAルール 68.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/henry-victor.html">ビクター・ヘンリー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kanehara-masanori.html">金原正徳</a></span></td><td class="winner">ビクター・ヘンリー</td><td class="finish">2R 0:45 TKO（レフェリーストップ：グラウンドパンチ）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/martinez-roque.html">ロッキー・マルティネス</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sekine-hideki-shrek.html">関根“シュレック”秀樹</a></span></td><td class="winner">ロッキー・マルティネス</td><td class="finish">1R 4:04 TKO（レフェリーストップ：グラウンドパンチ）<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/souza-marcos-yoshio.html">マルコス・ヨシオ・ソウザ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/neto-farukon.html">ファルコン・ネト</a></span></td><td class="winner">マルコス・ヨシオ・ソウザ</td><td class="finish">1R 1:27 TKO（レフェリーストップ：グラウンドパンチ）<span class="bout-note">MMAルール 79.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/kintaro.html">金太郎</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kato-kenji.html">加藤ケンジ</a></span></td><td class="winner">金太郎</td><td class="finish">1R 4:21 リアネイキッドチョーク<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/souza-roberto-satoshi.html">ホベルト・サトシ・ソウザ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/team-nakai.html">チーム中井</a></span></td><td class="winner">ホベルト・サトシ・ソウザ</td><td class="finish">8:04（10分の試合時間内にソウザがチーム中井の五人から1本取れるかという特別ルール）<span class="bout-note">柔術エキシビジョン イリミネーションマッチ 10分</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/inoue-naoki.html">井上直樹</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/girdham-trent.html">トレント・ガーダム</a></span></td><td class="winner">井上直樹</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/karamov-vugar.html">ヴガール・ケラモフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/aguon-kyle.html">カイル・アグォン</a></span></td><td class="winner">ヴガール・ケラモフ</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/jitsukata-kousuke.html">実方宏介</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sakai-ryo.html">酒井リョウ</a></span></td><td class="winner">実方宏介</td><td class="finish">1R 1:28 KO（右フック）<span class="bout-note">キックボクシングルール 120.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/takeuchi-kenichi.html">竹内賢一</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/naoya-2.html">直哉</a></span></td><td class="winner">竹内賢一</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 57.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/cejas-henrry.html">ヘンリー・セハス</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/seido.html">SEIDO</a></span></td><td class="winner">ヘンリー・セハス</td><td class="finish">3R終了 判定3-0 メインカード<span class="bout-note">オープニングファイト キックボクシングルール 60.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/yuya.html">憂也</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kouki.html">康輝</a></span></td><td class="winner">憂也</td><td class="finish">1R 2:30 KO（パンチ連打）<span class="bout-note">オープニングファイト キックボクシングルール 70.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">1</td><td><a href="fighters/tozuka-masaji.html">戸塚昌司</a><span class="vs">vs</span><a href="fighters/ozawa-masahiro.html">大澤匡弘</a></td><td>ドロー</td><td class="finish">3R終了 判定1-0（ドロー）<span class="bout-note">オープニングファイト キックボクシングルール 59.0kg契約ワンマッチ 3分3R</span></td></tr>
             </tbody>
   </table>
 </article>

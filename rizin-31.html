@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2021年10月24日（日）</dd>
     <dt>開催地</dt><dd>神奈川県横浜市</dd>
-    <dt>会場</dt><dd>ぴあアリーナMM</dd>
+    <dt>会場</dt><dd><a href="venues/pia-arena-mm.html">ぴあアリーナMM</a></dd>
     <dt>開始時刻</dt><dd>14:00</dd>
     <dt>試合数</dt><dd>全11試合</dd>
     <dt>入場者数</dt><dd>4,866人（主催者発表）</dd>
@@ -306,17 +317,17 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.31 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">11</td><td><span class="winner">牛久絢太郎</span><span class="vs">vs</span><span class="loser">斎藤裕</span></td><td class="winner">牛久絢太郎</td><td class="finish">2R 4:26 TKO（膝蹴りによるドクターストップ）<span class="bout-note">RIZINフェザー級タイトルマッチ ／ MMAルール 66.0kg契約ワンマッチ 5分3R ／ ※牛久が王座獲得に成功。第2代フェザー級王者となった。</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">大島沙緒里</span><span class="vs">vs</span><span class="loser">浅倉カンナ</span></td><td class="winner">大島沙緒里</td><td class="finish">3R終了 判定1-2<span class="bout-note">女子MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">スダリオ剛</span><span class="vs">vs</span><span class="loser">SAINT</span></td><td class="winner">スダリオ剛</td><td class="finish">1R 1:51 KO（スタンドパンチ）<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">金原正徳</span><span class="vs">vs</span><span class="loser">芦田崇宏</span></td><td class="winner">金原正徳</td><td class="finish">2R 1:18 TKO（右ストレート→パウンド）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">アキラ</span><span class="vs">vs</span><span class="loser">阿部大治</span></td><td class="winner">アキラ</td><td class="finish">2R 4:34 ノースサウスチョーク<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">中村大介</span><span class="vs">vs</span><span class="loser">新居すぐる</span></td><td class="winner">中村大介</td><td class="finish">1R 2:16 腕ひしぎ十字固め<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">白川陸斗</span><span class="vs">vs</span><span class="loser">山本琢也</span></td><td class="winner">白川陸斗</td><td class="finish">1R 3:48 KO（サッカーボールキック）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">吉成名高</span><span class="vs">vs</span><span class="loser">石川直樹</span></td><td class="winner">吉成名高</td><td class="finish">1R 2:30 TKO（3ノックダウン）<span class="bout-note">キックボクシングルール 53.5kg契約ワンマッチ 3分3R 肘あり</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">伊藤裕樹</span><span class="vs">vs</span><span class="loser">中村優作</span></td><td class="winner">伊藤裕樹</td><td class="finish">1R 4:52 TKO（左フック→パウンド)<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">伊藤盛一郎</span><span class="vs">vs</span><span class="loser">橋本薫汰</span></td><td class="winner">伊藤盛一郎</td><td class="finish">2R 4:07 リアネイキッドチョーク<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">奥脇竜哉</span><span class="vs">vs</span><span class="loser">老沼隆斗</span></td><td class="winner">奥脇竜哉</td><td class="finish">3R終了 判定2-0<span class="bout-note">キックボクシングルール 51.0kg契約ワンマッチ 3分3R 肘あり</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/ushiku-juntaro.html">牛久絢太郎</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/saito-yutaka.html">斎藤裕</a></span></td><td class="winner">牛久絢太郎</td><td class="finish">2R 4:26 TKO（膝蹴りによるドクターストップ）<span class="bout-note">RIZINフェザー級タイトルマッチ ／ MMAルール 66.0kg契約ワンマッチ 5分3R ／ ※牛久が王座獲得に成功。第2代フェザー級王者となった。</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/oshima-saori.html">大島沙緒里</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/asakura-kanna.html">浅倉カンナ</a></span></td><td class="winner">大島沙緒里</td><td class="finish">3R終了 判定1-2<span class="bout-note">女子MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/sudario-tsuyoshi.html">スダリオ剛</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/saint.html">SAINT</a></span></td><td class="winner">スダリオ剛</td><td class="finish">1R 1:51 KO（スタンドパンチ）<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/kanehara-masanori.html">金原正徳</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/ashida-takahiro.html">芦田崇宏</a></span></td><td class="winner">金原正徳</td><td class="finish">2R 1:18 TKO（右ストレート→パウンド）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/akira.html">アキラ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/abe-daichi.html">阿部大治</a></span></td><td class="winner">アキラ</td><td class="finish">2R 4:34 ノースサウスチョーク<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/nakamura-daisuke.html">中村大介</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/nii-suguru.html">新居すぐる</a></span></td><td class="winner">中村大介</td><td class="finish">1R 2:16 腕ひしぎ十字固め<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/shirakawa-rikuto.html">白川陸斗</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yamamoto-takuya.html">山本琢也</a></span></td><td class="winner">白川陸斗</td><td class="finish">1R 3:48 KO（サッカーボールキック）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/yoshinari-nadaka.html">吉成名高</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/ishikawa-naoki.html">石川直樹</a></span></td><td class="winner">吉成名高</td><td class="finish">1R 2:30 TKO（3ノックダウン）<span class="bout-note">キックボクシングルール 53.5kg契約ワンマッチ 3分3R 肘あり</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/ito-yuki.html">伊藤裕樹</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/nakamura-yusaku.html">中村優作</a></span></td><td class="winner">伊藤裕樹</td><td class="finish">1R 4:52 TKO（左フック→パウンド)<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/ito-seiichiro.html">伊藤盛一郎</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/hashimoto-kunta.html">橋本薫汰</a></span></td><td class="winner">伊藤盛一郎</td><td class="finish">2R 4:07 リアネイキッドチョーク<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/okuwaki-ryuya.html">奥脇竜哉</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/oinuma-ryuto.html">老沼隆斗</a></span></td><td class="winner">奥脇竜哉</td><td class="finish">3R終了 判定2-0<span class="bout-note">キックボクシングルール 51.0kg契約ワンマッチ 3分3R 肘あり</span></td></tr>
             </tbody>
   </table>
 </article>

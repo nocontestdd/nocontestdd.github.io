@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2020年12月31日（木）</dd>
     <dt>開催地</dt><dd>埼玉県さいたま市</dd>
-    <dt>会場</dt><dd>さいたまスーパーアリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/saitama-super-arena.html">さいたまスーパーアリーナ</a></dd>
     <dt>開始時刻</dt><dd>14:00</dd>
     <dt>試合数</dt><dd>全16試合</dd>
     <dt>入場者数</dt><dd>9,978人（主催者発表）</dd>
@@ -306,21 +317,21 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.26 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">15</td><td><span class="winner">堀口恭司</span><span class="vs">vs</span><span class="loser">朝倉海</span></td><td class="winner">堀口恭司</td><td class="finish">1R 2:48 TKO（右フック→パウンド)<span class="bout-note">RIZINバンタム級タイトルマッチ ／ MMAルール 61.0kg契約 5分3R 肘あり ／ ※堀口が王座獲得に成功。第4代バンタム級王者となった。</span></td></tr>
-              <tr><td class="no">14</td><td><span class="winner">那須川天心</span><span class="vs">vs</span><span class="loser">クマンドーイ・ペットジャルーンウィット</span></td><td class="winner">那須川天心</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシング特別ルール 57.0kg契約 3分3R</span></td></tr>
-              <tr><td class="no">13</td><td><span class="winner">朝倉未来</span><span class="vs">vs</span><span class="loser">弥益ドミネーター聡志</span></td><td class="winner">朝倉未来</td><td class="finish">1R 4:20 KO（左ハイキック→パウンド）<span class="bout-note">MMAルール 68.0kg契約 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">12</td><td><span class="winner">五味隆典</span><span class="vs">vs</span><span class="loser">皇治</span></td><td class="winner">五味隆典</td><td class="finish">3R終了 判定2-0<span class="bout-note">RIZINスタンディングバウト特別ルール 3分3R</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">浜崎朱加</span><span class="vs">vs</span><span class="loser">山本美憂</span></td><td class="winner">浜崎朱加</td><td class="finish">1R 1:42 ネックシザース<span class="bout-note">RIZIN女子スーパーアトム級タイトルマッチ（第3代王者決定戦） ／ MMAルール 49.0kg契約 5分3R ／ ※浜崎が王座獲得に成功。第3代女子スーパーアトム級王者となった。</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">井上直樹</span><span class="vs">vs</span><span class="loser">元谷友貴</span></td><td class="winner">井上直樹</td><td class="finish">1R 3:00 リアネイキッドチョーク<span class="bout-note">MMAルール 61.0kg契約 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">クレベル・コイケ</span><span class="vs">vs</span><span class="loser">カイル・アグォン</span></td><td class="winner">クレベル・コイケ</td><td class="finish">1R 4:22 ダースチョーク<span class="bout-note">MMAルール 67.0kg契約 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">萩原京平</span><span class="vs">vs</span><span class="loser">平本蓮</span></td><td class="winner">萩原京平</td><td class="finish">2R 1:29 TKO（コーナーストップ：グラウンドパンチ）<span class="bout-note">MMAルール 68.0kg契約 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">所英男</span><span class="vs">vs</span><span class="loser">太田忍</span></td><td class="winner">所英男</td><td class="finish">2R 2:24 アームバー<span class="bout-note">MMAルール 61.0kg契約 5分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">吉成名高</span><span class="vs">vs</span><span class="loser">ペットマライ・ペットジャルーンウィット</span></td><td class="winner">吉成名高</td><td class="finish">1R 2:20 TKO（3ノックダウン）<span class="bout-note">キックボクシングルール 50.0kg契約 3分3R 肘あり</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">佐々木憂流迦</span><span class="vs">vs</span><span class="loser">瀧澤謙太</span></td><td class="winner">佐々木憂流迦</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 61.0kg契約 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">浅倉カンナ</span><span class="vs">vs</span><span class="loser">あい</span></td><td class="winner">浅倉カンナ</td><td class="finish">3R終了 判定3-0<span class="bout-note">女子MMAルール 49.0kg契約 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">シバター</span><span class="vs">vs</span><span class="loser">HIROYA[注 4]</span></td><td class="winner">シバター</td><td class="finish">2R 0:38 アームバー<span class="bout-note">MIXルール 3分2R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">倉本一真</span><span class="vs">vs</span><span class="loser">中原太陽</span></td><td class="winner">倉本一真</td><td class="finish">1R 2:12 TKO（サッカーボールキック）<span class="bout-note">MMAルール 63.0kg契約 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">スダリオ剛</span><span class="vs">vs</span><span class="loser">ミノワマン</span></td><td class="winner">スダリオ剛</td><td class="finish">1R 3:19 TKO（右カーフキック→パウンド)<span class="bout-note">MMAルール 120.0kg契約 5分3R</span></td></tr>
+              <tr><td class="no">15</td><td><span class="winner"><a href="fighters/horiguchi-kyoji.html">堀口恭司</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/asakura-kai.html">朝倉海</a></span></td><td class="winner">堀口恭司</td><td class="finish">1R 2:48 TKO（右フック→パウンド)<span class="bout-note">RIZINバンタム級タイトルマッチ ／ MMAルール 61.0kg契約 5分3R 肘あり ／ ※堀口が王座獲得に成功。第4代バンタム級王者となった。</span></td></tr>
+              <tr><td class="no">14</td><td><span class="winner"><a href="fighters/nasukawa-tenshin.html">那須川天心</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/phetjaroenvit-kumandoi.html">クマンドーイ・ペットジャルーンウィット</a></span></td><td class="winner">那須川天心</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシング特別ルール 57.0kg契約 3分3R</span></td></tr>
+              <tr><td class="no">13</td><td><span class="winner"><a href="fighters/asakura-mikuru.html">朝倉未来</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/satoshidominatoryamasu.html">弥益ドミネーター聡志</a></span></td><td class="winner">朝倉未来</td><td class="finish">1R 4:20 KO（左ハイキック→パウンド）<span class="bout-note">MMAルール 68.0kg契約 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/gomi-takanori.html">五味隆典</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kouzi.html">皇治</a></span></td><td class="winner">五味隆典</td><td class="finish">3R終了 判定2-0<span class="bout-note">RIZINスタンディングバウト特別ルール 3分3R</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/hamasaki-ayaka.html">浜崎朱加</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yamamoto-miyuu.html">山本美憂</a></span></td><td class="winner">浜崎朱加</td><td class="finish">1R 1:42 ネックシザース<span class="bout-note">RIZIN女子スーパーアトム級タイトルマッチ（第3代王者決定戦） ／ MMAルール 49.0kg契約 5分3R ／ ※浜崎が王座獲得に成功。第3代女子スーパーアトム級王者となった。</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/inoue-naoki.html">井上直樹</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/motoya-yuki.html">元谷友貴</a></span></td><td class="winner">井上直樹</td><td class="finish">1R 3:00 リアネイキッドチョーク<span class="bout-note">MMAルール 61.0kg契約 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/koike-kleber.html">クレベル・コイケ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/aguon-kyle.html">カイル・アグォン</a></span></td><td class="winner">クレベル・コイケ</td><td class="finish">1R 4:22 ダースチョーク<span class="bout-note">MMAルール 67.0kg契約 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/hagiwara-kyohei.html">萩原京平</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/hiramoto-ren.html">平本蓮</a></span></td><td class="winner">萩原京平</td><td class="finish">2R 1:29 TKO（コーナーストップ：グラウンドパンチ）<span class="bout-note">MMAルール 68.0kg契約 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/tokoro-hideo.html">所英男</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/ota-shinobu.html">太田忍</a></span></td><td class="winner">所英男</td><td class="finish">2R 2:24 アームバー<span class="bout-note">MMAルール 61.0kg契約 5分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/yoshinari-nadaka.html">吉成名高</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/phetjaroenvit-petmalai.html">ペットマライ・ペットジャルーンウィット</a></span></td><td class="winner">吉成名高</td><td class="finish">1R 2:20 TKO（3ノックダウン）<span class="bout-note">キックボクシングルール 50.0kg契約 3分3R 肘あり</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/sasaki-ulka.html">佐々木憂流迦</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/takizawa-kenta.html">瀧澤謙太</a></span></td><td class="winner">佐々木憂流迦</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 61.0kg契約 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/asakura-kanna.html">浅倉カンナ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/ai.html">あい</a></span></td><td class="winner">浅倉カンナ</td><td class="finish">3R終了 判定3-0<span class="bout-note">女子MMAルール 49.0kg契約 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/shibatar.html">シバター</a></span><span class="vs">vs</span><span class="loser">HIROYA[注 4]</span></td><td class="winner">シバター</td><td class="finish">2R 0:38 アームバー<span class="bout-note">MIXルール 3分2R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/kuramoto-kazuma.html">倉本一真</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/nakahara-taiyo.html">中原太陽</a></span></td><td class="winner">倉本一真</td><td class="finish">1R 2:12 TKO（サッカーボールキック）<span class="bout-note">MMAルール 63.0kg契約 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/sudario-tsuyoshi.html">スダリオ剛</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/minowaman.html">ミノワマン</a></span></td><td class="winner">スダリオ剛</td><td class="finish">1R 3:19 TKO（右カーフキック→パウンド)<span class="bout-note">MMAルール 120.0kg契約 5分3R</span></td></tr>
             </tbody>
   </table>
 </article>

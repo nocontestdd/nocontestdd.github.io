@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2019年10月12日（土）</dd>
     <dt>開催地</dt><dd>大阪府大阪市浪速区</dd>
-    <dt>会場</dt><dd>大阪府立体育会館</dd>
+    <dt>会場</dt><dd><a href="venues/osaka-prefectural-gymnasium.html">大阪府立体育会館</a></dd>
     <dt>開始時刻</dt><dd>14:00</dd>
     <dt>試合数</dt><dd>全13試合</dd>
     <dt>入場者数</dt><dd>5,098人（主催者発表）</dd>
@@ -306,19 +317,19 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.19 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">13</td><td><span class="winner">イリー・プロハースカ</span><span class="vs">vs</span><span class="loser">ファビオ・マルドナド</span></td><td class="winner">イリー・プロハースカ</td><td class="finish">1R 1:49 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 100kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">12</td><td><span class="winner">朝倉海</span><span class="vs">vs</span><span class="loser">佐々木憂流迦</span></td><td class="winner">朝倉海</td><td class="finish">1R 0:54 TKO（レフェリーストップ：顎の骨折)<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">ハム・ソヒ</span><span class="vs">vs</span><span class="loser">山本美憂</span></td><td class="winner">ハム・ソヒ</td><td class="finish">2R 4:42 TKO（グラウンドパンチ）<span class="bout-note">女子MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">RENA</span><span class="vs">vs</span><span class="loser">アレキサンドラ・アルヴァーレ</span></td><td class="winner">RENA</td><td class="finish">1R 0:20 KO（スタンドパンチ）<span class="bout-note">女子MMAルール 51.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">ジョニー・ケース</span><span class="vs">vs</span><span class="loser">ホベルト・サトシ・ソウザ</span></td><td class="winner">ジョニー・ケース</td><td class="finish">1R 1:15 TKO（レフェリーストップ）<span class="bout-note">RIZIN FIGHTING WORLD GP 2019 LIGHT WEIGHT TOUNAMENT 1回戦 第4試合 5分3R ／ ※ケースがトーナメント準決勝進出。</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">パトリッキー・&quot;ピットブル&quot;・フレイレ</span><span class="vs">vs</span><span class="loser">川尻達也</span></td><td class="winner">パトリッキー・&quot;ピットブル&quot;・フレイレ</td><td class="finish">1R 1:10 TKO（グラウンドパンチ）<span class="bout-note">RIZIN FIGHTING WORLD GP 2019 LIGHT WEIGHT TOUNAMENT 1回戦 第3試合 5分3R ／ ※フレイレがトーナメント準決勝進出。</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">ルイス・グスタボ</span><span class="vs">vs</span><span class="loser">上迫博仁</span></td><td class="winner">ルイス・グスタボ</td><td class="finish">1R 3:55 TKO（レフェリーストップ）<span class="bout-note">RIZIN FIGHTING WORLD GP 2019 LIGHT WEIGHT TOUNAMENT 1回戦 第2試合 5分3R ／ ※グスタボがトーナメント準決勝進出。</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">トフィック・ムサエフ</span><span class="vs">vs</span><span class="loser">ダミアン・ブラウン</span></td><td class="winner">トフィック・ムサエフ</td><td class="finish">1R 4:14 TKO（グラウンドパンチ）<span class="bout-note">RIZIN FIGHTING WORLD GP 2019 LIGHT WEIGHT TOUNAMENT 1回戦 第1試合 5分3R ／ ※ムサエフがトーナメント準決勝進出。</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">中村K太郎</span><span class="vs">vs</span><span class="loser">マルコス・ヨシオ・ソウザ</span></td><td class="winner">中村K太郎</td><td class="finish">1R 1:18 TKO（コーナーストップ）<span class="bout-note">MMAルール 77.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">白鳥大珠</span><span class="vs">vs</span><span class="loser">大雅</span></td><td class="winner">白鳥大珠</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 62.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">小西拓槙</span><span class="vs">vs</span><span class="loser">HIROYA</span></td><td class="winner">小西拓槙</td><td class="finish">1R 1:20 TKO（飛び膝蹴り）<span class="bout-note">キックボクシングルール 77.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">シビサイ頌真</span><span class="vs">vs</span><span class="loser">キム・チャンヒ</span></td><td class="winner">シビサイ頌真</td><td class="finish">1R 1:09 キムラロック<span class="bout-note">MMAルール 無差別級ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">植山征紀</span><span class="vs">vs</span><span class="loser">梅井泰成</span></td><td class="winner">植山征紀</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 56.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">13</td><td><span class="winner"><a href="fighters/prochazka-jiri.html">イリー・プロハースカ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/maldonado-fabio.html">ファビオ・マルドナド</a></span></td><td class="winner">イリー・プロハースカ</td><td class="finish">1R 1:49 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 100kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/asakura-kai.html">朝倉海</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sasaki-ulka.html">佐々木憂流迦</a></span></td><td class="winner">朝倉海</td><td class="finish">1R 0:54 TKO（レフェリーストップ：顎の骨折)<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/ham-seo-hee.html">ハム・ソヒ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yamamoto-miyuu.html">山本美憂</a></span></td><td class="winner">ハム・ソヒ</td><td class="finish">2R 4:42 TKO（グラウンドパンチ）<span class="bout-note">女子MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/rena.html">RENA</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/alvare-alexandra.html">アレキサンドラ・アルヴァーレ</a></span></td><td class="winner">RENA</td><td class="finish">1R 0:20 KO（スタンドパンチ）<span class="bout-note">女子MMAルール 51.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/case-johnny.html">ジョニー・ケース</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/souza-roberto-satoshi.html">ホベルト・サトシ・ソウザ</a></span></td><td class="winner">ジョニー・ケース</td><td class="finish">1R 1:15 TKO（レフェリーストップ）<span class="bout-note">RIZIN FIGHTING WORLD GP 2019 LIGHT WEIGHT TOUNAMENT 1回戦 第4試合 5分3R ／ ※ケースがトーナメント準決勝進出。</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/freire-patricky-pitbull.html">パトリッキー・&quot;ピットブル&quot;・フレイレ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kawajiri-tatsuya.html">川尻達也</a></span></td><td class="winner">パトリッキー・&quot;ピットブル&quot;・フレイレ</td><td class="finish">1R 1:10 TKO（グラウンドパンチ）<span class="bout-note">RIZIN FIGHTING WORLD GP 2019 LIGHT WEIGHT TOUNAMENT 1回戦 第3試合 5分3R ／ ※フレイレがトーナメント準決勝進出。</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/gustavo-luiz.html">ルイス・グスタボ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/uesako-hiroto.html">上迫博仁</a></span></td><td class="winner">ルイス・グスタボ</td><td class="finish">1R 3:55 TKO（レフェリーストップ）<span class="bout-note">RIZIN FIGHTING WORLD GP 2019 LIGHT WEIGHT TOUNAMENT 1回戦 第2試合 5分3R ／ ※グスタボがトーナメント準決勝進出。</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/musayev-tofiq.html">トフィック・ムサエフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/brown-damien.html">ダミアン・ブラウン</a></span></td><td class="winner">トフィック・ムサエフ</td><td class="finish">1R 4:14 TKO（グラウンドパンチ）<span class="bout-note">RIZIN FIGHTING WORLD GP 2019 LIGHT WEIGHT TOUNAMENT 1回戦 第1試合 5分3R ／ ※ムサエフがトーナメント準決勝進出。</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/nakamura-k-taro.html">中村K太郎</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/souza-marcos-yoshio.html">マルコス・ヨシオ・ソウザ</a></span></td><td class="winner">中村K太郎</td><td class="finish">1R 1:18 TKO（コーナーストップ）<span class="bout-note">MMAルール 77.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/shiratori-taiju.html">白鳥大珠</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/taiga.html">大雅</a></span></td><td class="winner">白鳥大珠</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 62.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/konishi-takuma.html">小西拓槙</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/hiroya-2.html">HIROYA</a></span></td><td class="winner">小西拓槙</td><td class="finish">1R 1:20 TKO（飛び膝蹴り）<span class="bout-note">キックボクシングルール 77.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/shibisai-shoma.html">シビサイ頌真</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kim-chang-hee.html">キム・チャンヒ</a></span></td><td class="winner">シビサイ頌真</td><td class="finish">1R 1:09 キムラロック<span class="bout-note">MMAルール 無差別級ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/ueyama-seiki.html">植山征紀</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/umei-taisei.html">梅井泰成</a></span></td><td class="winner">植山征紀</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 56.0kg契約ワンマッチ 3分3R</span></td></tr>
             </tbody>
   </table>
 </article>

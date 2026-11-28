@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2016年12月29日（木）</dd>
     <dt>開催地</dt><dd>埼玉県さいたま市</dd>
-    <dt>会場</dt><dd>さいたまスーパーアリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/saitama-super-arena.html">さいたまスーパーアリーナ</a></dd>
     <dt>開始時刻</dt><dd>15:00</dd>
     <dt>試合数</dt><dd>全13試合</dd>
     <dt>入場者数</dt><dd>16,642人</dd>
@@ -306,19 +317,19 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.3 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント 2nd ROUND 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">13</td><td><span class="winner">ミルコ・クロコップ</span><span class="vs">vs</span><span class="loser">キング・モー</span></td><td class="winner">ミルコ・クロコップ</td><td class="finish">2R 1:41 TKO（左アッパー連打→パウンド）<span class="bout-note">無差別級トーナメント 2回戦 5分2R ／ ※ミルコがトーナメント準決勝進出</span></td></tr>
-              <tr><td class="no">12</td><td><span class="winner">バルト</span><span class="vs">vs</span><span class="loser">高阪剛</span></td><td class="winner">バルト</td><td class="finish">3R終了 判定3-0<span class="bout-note">無差別級トーナメント 2回戦 5分2R ／ ※バルトがトーナメント準決勝進出</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">アミール・アリアックバリ</span><span class="vs">vs</span><span class="loser">ヒース・ヒーリング</span></td><td class="winner">アミール・アリアックバリ</td><td class="finish">3R終了 判定3-0<span class="bout-note">無差別級トーナメント 2回戦 5分2R ／ ※アリアックバリがトーナメント準決勝進出</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">ワレンティン・モルダフスキー</span><span class="vs">vs</span><span class="loser">シモン・バヨル</span></td><td class="winner">ワレンティン・モルダフスキー</td><td class="finish">3R終了 判定3-0<span class="bout-note">無差別級トーナメント 2回戦 5分2R ／ ※モルダフスキーがトーナメント準決勝進出</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">中井りん</span><span class="vs">vs</span><span class="loser">村田夏南子</span></td><td class="winner">中井りん</td><td class="finish">3R 1:16 リアネイキッドチョーク<span class="bout-note">女子MMA特別ルール 57.15kg契約ワンマッチ（肘あり） 5分3R</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">那須川天心</span><span class="vs">vs</span><span class="loser">ニキータ・サプン</span></td><td class="winner">那須川天心</td><td class="finish">1R 2:47 KO（パウンド）<span class="bout-note">MMA特別ルール 56.7kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">宮田和幸</span><span class="vs">vs</span><span class="loser">アンディ・サワー</span></td><td class="winner">宮田和幸</td><td class="finish">1R 4:39 腕ひしぎ十字固め<span class="bout-note">MMAルール 70.3kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">元谷友貴</span><span class="vs">vs</span><span class="loser">アラン・ナシメント</span></td><td class="winner">元谷友貴</td><td class="finish">3R終了 判定2-1<span class="bout-note">MMAルール 60.0kg契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">和田竜光</span><span class="vs">vs</span><span class="loser">カイ・カラ＝フランス</span></td><td class="winner">和田竜光</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 56.7kg契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">矢地祐介</span><span class="vs">vs</span><span class="loser">マリオ・シスムンド</span></td><td class="winner">矢地祐介</td><td class="finish">1R 0:19 KO（左跳び膝蹴り→パウンド）<span class="bout-note">MMAルール 68.0kg契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">アリーシャ・ガルシア</span><span class="vs">vs</span><span class="loser">浅倉カンナ</span></td><td class="winner">アリーシャ・ガルシア</td><td class="finish">3R終了 判定0-3<span class="bout-note">女子MMAルール 48.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">ワジム・ネムコフ</span><span class="vs">vs</span><span class="loser">アリソン・ヴィセンテ</span></td><td class="winner">ワジム・ネムコフ</td><td class="finish">1R 0:55 KO（パウンド）<span class="bout-note">無差別級トーナメント リザーブマッチ 5分2R ／ ※ネムコフがリザーブ権獲得</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">北岡悟</span><span class="vs">vs</span><span class="loser">ダロン・クルックシャンク</span></td><td class="winner">北岡悟</td><td class="finish">1R 8:19 フロントチョーク<span class="bout-note">MMAルール 70.3kg契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">13</td><td><span class="winner"><a href="fighters/cop-mirko-cro.html">ミルコ・クロコップ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/mo-king.html">キング・モー</a></span></td><td class="winner">ミルコ・クロコップ</td><td class="finish">2R 1:41 TKO（左アッパー連打→パウンド）<span class="bout-note">無差別級トーナメント 2回戦 5分2R ／ ※ミルコがトーナメント準決勝進出</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/baruto.html">バルト</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kosaka-tsuyoshi.html">高阪剛</a></span></td><td class="winner">バルト</td><td class="finish">3R終了 判定3-0<span class="bout-note">無差別級トーナメント 2回戦 5分2R ／ ※バルトがトーナメント準決勝進出</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/aliakbari-amir.html">アミール・アリアックバリ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/herring-heath.html">ヒース・ヒーリング</a></span></td><td class="winner">アミール・アリアックバリ</td><td class="finish">3R終了 判定3-0<span class="bout-note">無差別級トーナメント 2回戦 5分2R ／ ※アリアックバリがトーナメント準決勝進出</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/moldavsky-valentin.html">ワレンティン・モルダフスキー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/bajor-szymon.html">シモン・バヨル</a></span></td><td class="winner">ワレンティン・モルダフスキー</td><td class="finish">3R終了 判定3-0<span class="bout-note">無差別級トーナメント 2回戦 5分2R ／ ※モルダフスキーがトーナメント準決勝進出</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/nakai-rin.html">中井りん</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/murata-kanako.html">村田夏南子</a></span></td><td class="winner">中井りん</td><td class="finish">3R 1:16 リアネイキッドチョーク<span class="bout-note">女子MMA特別ルール 57.15kg契約ワンマッチ（肘あり） 5分3R</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/nasukawa-tenshin.html">那須川天心</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sapun-nikita.html">ニキータ・サプン</a></span></td><td class="winner">那須川天心</td><td class="finish">1R 2:47 KO（パウンド）<span class="bout-note">MMA特別ルール 56.7kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/miyata-kazuyuki.html">宮田和幸</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/souwer-andy.html">アンディ・サワー</a></span></td><td class="winner">宮田和幸</td><td class="finish">1R 4:39 腕ひしぎ十字固め<span class="bout-note">MMAルール 70.3kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/motoya-yuki.html">元谷友貴</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/nascimento-allan.html">アラン・ナシメント</a></span></td><td class="winner">元谷友貴</td><td class="finish">3R終了 判定2-1<span class="bout-note">MMAルール 60.0kg契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/wada-tatsumitsu.html">和田竜光</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/furansu-kai-kara.html">カイ・カラ＝フランス</a></span></td><td class="winner">和田竜光</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 56.7kg契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/yachi-yusuke.html">矢地祐介</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sismundo-mario.html">マリオ・シスムンド</a></span></td><td class="winner">矢地祐介</td><td class="finish">1R 0:19 KO（左跳び膝蹴り→パウンド）<span class="bout-note">MMAルール 68.0kg契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/garcia-alyssa.html">アリーシャ・ガルシア</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/asakura-kanna.html">浅倉カンナ</a></span></td><td class="winner">アリーシャ・ガルシア</td><td class="finish">3R終了 判定0-3<span class="bout-note">女子MMAルール 48.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/nemkov-vadim.html">ワジム・ネムコフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/vicente-alison.html">アリソン・ヴィセンテ</a></span></td><td class="winner">ワジム・ネムコフ</td><td class="finish">1R 0:55 KO（パウンド）<span class="bout-note">無差別級トーナメント リザーブマッチ 5分2R ／ ※ネムコフがリザーブ権獲得</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/kitaoka-satoru.html">北岡悟</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/cruickshank-daron.html">ダロン・クルックシャンク</a></span></td><td class="winner">北岡悟</td><td class="finish">1R 8:19 フロントチョーク<span class="bout-note">MMAルール 70.3kg契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
             </tbody>
   </table>
 </article>

@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2016年12月31日（土）</dd>
     <dt>開催地</dt><dd>埼玉県さいたま市</dd>
-    <dt>会場</dt><dd>さいたまスーパーアリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/saitama-super-arena.html">さいたまスーパーアリーナ</a></dd>
     <dt>開始時刻</dt><dd>15:00</dd>
     <dt>試合数</dt><dd>全11試合</dd>
     <dt>入場者数</dt><dd>19,357人</dd>
@@ -306,17 +317,17 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.4 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント FINAL ROUND 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">11</td><td><span class="winner">ミルコ・クロコップ</span><span class="vs">vs</span><span class="loser">アミール・アリアックバリ</span></td><td class="winner">ミルコ・クロコップ</td><td class="finish">1R 2:02 KO（左フック→パウンド）<span class="bout-note">無差別級トーナメント 決勝 5分3R ／ ※ミルコがトーナメント優勝</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">クロン・グレイシー</span><span class="vs">vs</span><span class="loser">川尻達也</span></td><td class="winner">クロン・グレイシー</td><td class="finish">2R 2:04 リアネイキッドチョーク<span class="bout-note">MMA特別ルール 65.8kg契約ワンマッチ 1R10分/2・3R5分</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">所英男</span><span class="vs">vs</span><span class="loser">山本アーセン</span></td><td class="winner">所英男</td><td class="finish">1R 1:19 腕ひしぎ十字固め<span class="bout-note">MMAルール 62.0kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">RENA</span><span class="vs">vs</span><span class="loser">ハンナ・タイソン</span></td><td class="winner">RENA</td><td class="finish">3R 2:47 KO（左三日月蹴り）<span class="bout-note">女子MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">アンディ・ウィン</span><span class="vs">vs</span><span class="loser">山本美憂</span></td><td class="winner">アンディ・ウィン</td><td class="finish">1R 4:42 TKO（腕ひしぎ十字固め）<span class="bout-note">女子MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">才賀紀左衛門</span><span class="vs">vs</span><span class="loser">ディラン・ウエスト</span></td><td class="winner">才賀紀左衛門</td><td class="finish">1R 2:03 TKO（左フック）<span class="bout-note">MMAルール 58.0kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">ギャビ・ガルシア</span><span class="vs">vs</span><span class="loser">堀田祐美子[注 1]</span></td><td class="winner">ギャビ・ガルシア</td><td class="finish">1R 0:41 TKO（パウンド）<span class="bout-note">女子MMAルール 無差別級ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">桜井&quot;マッハ&quot;速人</span><span class="vs">vs</span><span class="loser">坂田亘</span></td><td class="winner">桜井&quot;マッハ&quot;速人</td><td class="finish">2R 2:37 TKO（マウントパンチ）<span class="bout-note">MMAルール 82.0kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">アミール・アリアックバリ</span><span class="vs">vs</span><span class="loser">ワレンティン・モルダフスキー</span></td><td class="winner">アミール・アリアックバリ</td><td class="finish">3R終了 判定2-1<span class="bout-note">無差別級トーナメント 準決勝 5分2R ／ ※アリアックバリがトーナメント決勝進出</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">ミルコ・クロコップ</span><span class="vs">vs</span><span class="loser">バルト</span></td><td class="winner">ミルコ・クロコップ</td><td class="finish">1R 0:49 KO（ボディへの左膝蹴り）<span class="bout-note">無差別級トーナメント 準決勝 5分2R ／ ※ミルコがトーナメント決勝進出</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">那須川天心</span><span class="vs">vs</span><span class="loser">カウイカ・オリージョ</span></td><td class="winner">那須川天心</td><td class="finish">2R 0:37 アームトライアングルチョーク（ニンジャチョーク）<span class="bout-note">MMA特別ルール 56.7kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/cop-mirko-cro.html">ミルコ・クロコップ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/aliakbari-amir.html">アミール・アリアックバリ</a></span></td><td class="winner">ミルコ・クロコップ</td><td class="finish">1R 2:02 KO（左フック→パウンド）<span class="bout-note">無差別級トーナメント 決勝 5分3R ／ ※ミルコがトーナメント優勝</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/gracie-kron.html">クロン・グレイシー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kawajiri-tatsuya.html">川尻達也</a></span></td><td class="winner">クロン・グレイシー</td><td class="finish">2R 2:04 リアネイキッドチョーク<span class="bout-note">MMA特別ルール 65.8kg契約ワンマッチ 1R10分/2・3R5分</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/tokoro-hideo.html">所英男</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yamamoto-erson.html">山本アーセン</a></span></td><td class="winner">所英男</td><td class="finish">1R 1:19 腕ひしぎ十字固め<span class="bout-note">MMAルール 62.0kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/rena.html">RENA</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/gujwan-hanna-tyson.html">ハンナ・タイソン</a></span></td><td class="winner">RENA</td><td class="finish">3R 2:47 KO（左三日月蹴り）<span class="bout-note">女子MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/nguyen-andy.html">アンディ・ウィン</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yamamoto-miyuu.html">山本美憂</a></span></td><td class="winner">アンディ・ウィン</td><td class="finish">1R 4:42 TKO（腕ひしぎ十字固め）<span class="bout-note">女子MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/saiga-kizaemon.html">才賀紀左衛門</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/west-dillin.html">ディラン・ウエスト</a></span></td><td class="winner">才賀紀左衛門</td><td class="finish">1R 2:03 TKO（左フック）<span class="bout-note">MMAルール 58.0kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/garcia-gabi.html">ギャビ・ガルシア</a></span><span class="vs">vs</span><span class="loser">堀田祐美子[注 1]</span></td><td class="winner">ギャビ・ガルシア</td><td class="finish">1R 0:41 TKO（パウンド）<span class="bout-note">女子MMAルール 無差別級ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/sakurai-hayato-mach.html">桜井&quot;マッハ&quot;速人</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sakata-wataru.html">坂田亘</a></span></td><td class="winner">桜井&quot;マッハ&quot;速人</td><td class="finish">2R 2:37 TKO（マウントパンチ）<span class="bout-note">MMAルール 82.0kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/aliakbari-amir.html">アミール・アリアックバリ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/moldavsky-valentin.html">ワレンティン・モルダフスキー</a></span></td><td class="winner">アミール・アリアックバリ</td><td class="finish">3R終了 判定2-1<span class="bout-note">無差別級トーナメント 準決勝 5分2R ／ ※アリアックバリがトーナメント決勝進出</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/cop-mirko-cro.html">ミルコ・クロコップ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/baruto.html">バルト</a></span></td><td class="winner">ミルコ・クロコップ</td><td class="finish">1R 0:49 KO（ボディへの左膝蹴り）<span class="bout-note">無差別級トーナメント 準決勝 5分2R ／ ※ミルコがトーナメント決勝進出</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/nasukawa-tenshin.html">那須川天心</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/oligo-kawika.html">カウイカ・オリージョ</a></span></td><td class="winner">那須川天心</td><td class="finish">2R 0:37 アームトライアングルチョーク（ニンジャチョーク）<span class="bout-note">MMA特別ルール 56.7kg契約ワンマッチ 3分3R</span></td></tr>
             </tbody>
   </table>
 </article>

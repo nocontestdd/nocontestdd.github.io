@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2019年7月28日（日）</dd>
     <dt>開催地</dt><dd>埼玉県さいたま市</dd>
-    <dt>会場</dt><dd>さいたまスーパーアリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/saitama-super-arena.html">さいたまスーパーアリーナ</a></dd>
     <dt>開始時刻</dt><dd>14:00</dd>
     <dt>試合数</dt><dd>全12試合</dd>
     <dt>入場者数</dt><dd>16,930人（主催者発表）</dd>
@@ -306,18 +317,18 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.17 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">12</td><td><span class="winner">朝倉未来</span><span class="vs">vs</span><span class="loser">矢地祐介</span></td><td class="winner">朝倉未来</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 70.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">石渡伸太郎</span><span class="vs">vs</span><span class="loser">佐々木憂流迦</span></td><td class="winner">石渡伸太郎</td><td class="finish">2R 3:58 ノースサウスチョーク<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">扇久保博正</span><span class="vs">vs</span><span class="loser">元谷友貴</span></td><td class="winner">扇久保博正</td><td class="finish">3R終了 判定1-2<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">イヴァン・シュトルコフ</span><span class="vs">vs</span><span class="loser">キム・フン</span></td><td class="winner">イヴァン・シュトルコフ</td><td class="finish">2R 4:10 TKO（グラウンドでの肘）<span class="bout-note">MMAルール 93.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">大雅</span><span class="vs">vs</span><span class="loser">町田光</span></td><td class="winner">大雅</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 62.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">ジョニー・ケース</span><span class="vs">vs</span><span class="loser">北岡悟</span></td><td class="winner">ジョニー・ケース</td><td class="finish">1R終了時 TKO（コーナーストップ）<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">川尻達也</span><span class="vs">vs</span><span class="loser">アリ・アブドゥルカリコフ</span></td><td class="winner">川尻達也</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">ホベルト・サトシ・ソウザ</span><span class="vs">vs</span><span class="loser">廣田瑞人</span></td><td class="winner">ホベルト・サトシ・ソウザ</td><td class="finish">1R 3:05 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">ジェイク・ヒューン</span><span class="vs">vs</span><span class="loser">ビタリー・シュメトフ</span></td><td class="winner">ジェイク・ヒューン</td><td class="finish">3R 2:19 TKO（ドクターストップ）<span class="bout-note">MMAルール 93.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">ハム・ソヒ</span><span class="vs">vs</span><span class="loser">前澤智</span></td><td class="winner">ハム・ソヒ</td><td class="finish">1R 3:14 TKO（グラウンドキック）<span class="bout-note">女子MMAルール 49.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">ステファニー・エッガー</span><span class="vs">vs</span><span class="loser">KINGレイナ</span></td><td class="winner">ステファニー・エッガー</td><td class="finish">3R終了 判定0-3<span class="bout-note">女子MMAルール 63.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">Hideki</span><span class="vs">vs</span><span class="loser">渡部太基</span></td><td class="winner">Hideki</td><td class="finish">3R終了 判定0-2<span class="bout-note">キックボクシングルール 67.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/asakura-mikuru.html">朝倉未来</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yachi-yusuke.html">矢地祐介</a></span></td><td class="winner">朝倉未来</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 70.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/ishiwatari-shintaro.html">石渡伸太郎</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sasaki-ulka.html">佐々木憂流迦</a></span></td><td class="winner">石渡伸太郎</td><td class="finish">2R 3:58 ノースサウスチョーク<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/ougikubo-hiromasa.html">扇久保博正</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/motoya-yuki.html">元谷友貴</a></span></td><td class="winner">扇久保博正</td><td class="finish">3R終了 判定1-2<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/shtyrkov-ivan.html">イヴァン・シュトルコフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kim-hoon.html">キム・フン</a></span></td><td class="winner">イヴァン・シュトルコフ</td><td class="finish">2R 4:10 TKO（グラウンドでの肘）<span class="bout-note">MMAルール 93.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/taiga.html">大雅</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/machida-hikaru.html">町田光</a></span></td><td class="winner">大雅</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 62.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/case-johnny.html">ジョニー・ケース</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kitaoka-satoru.html">北岡悟</a></span></td><td class="winner">ジョニー・ケース</td><td class="finish">1R終了時 TKO（コーナーストップ）<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/kawajiri-tatsuya.html">川尻達也</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/abdulkhalikov-ali.html">アリ・アブドゥルカリコフ</a></span></td><td class="winner">川尻達也</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/souza-roberto-satoshi.html">ホベルト・サトシ・ソウザ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/hirota-mizuto.html">廣田瑞人</a></span></td><td class="winner">ホベルト・サトシ・ソウザ</td><td class="finish">1R 3:05 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/heun-jake.html">ジェイク・ヒューン</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/shemetov-vitaly.html">ビタリー・シュメトフ</a></span></td><td class="winner">ジェイク・ヒューン</td><td class="finish">3R 2:19 TKO（ドクターストップ）<span class="bout-note">MMAルール 93.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/ham-seo-hee.html">ハム・ソヒ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/maesawa-tomo.html">前澤智</a></span></td><td class="winner">ハム・ソヒ</td><td class="finish">1R 3:14 TKO（グラウンドキック）<span class="bout-note">女子MMAルール 49.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/egger-stephanie.html">ステファニー・エッガー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/reina-king.html">KINGレイナ</a></span></td><td class="winner">ステファニー・エッガー</td><td class="finish">3R終了 判定0-3<span class="bout-note">女子MMAルール 63.0kg契約ワンマッチ 5分3R 肘あり</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/hideki.html">Hideki</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/watabe-daiki.html">渡部太基</a></span></td><td class="winner">Hideki</td><td class="finish">3R終了 判定0-2<span class="bout-note">キックボクシングルール 67.0kg契約ワンマッチ 3分3R</span></td></tr>
             </tbody>
   </table>
 </article>

@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2017年12月29日（金）</dd>
     <dt>開催地</dt><dd>埼玉県さいたま市</dd>
-    <dt>会場</dt><dd>さいたまスーパーアリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/saitama-super-arena.html">さいたまスーパーアリーナ</a></dd>
     <dt>開始時刻</dt><dd>15:00</dd>
     <dt>試合数</dt><dd>全11試合</dd>
     <dt>入場者数</dt><dd>15,539人（主催者発表）</dd>
@@ -306,18 +317,18 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN.8 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント 2nd ROUND 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">12</td><td><span class="winner">堀口恭司</span><span class="vs">vs</span><span class="loser">ガブリエル・オリベイラ</span></td><td class="winner">堀口恭司</td><td class="finish">1R 4:30 TKO（レフェリーストップ）<span class="bout-note">バンタム級トーナメント 2回戦 第2試合 5分3R ／ ※堀口がトーナメント準決勝進出</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">マネル・ケイプ</span><span class="vs">vs</span><span class="loser">イアン・マッコール</span></td><td class="winner">マネル・ケイプ</td><td class="finish">1R 1:46 TKO（レフェリーストップ）<span class="bout-note">バンタム級トーナメント 2回戦 第1試合 5分3R ／ ※ケイプがトーナメント準決勝進出</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">石渡伸太郎</span><span class="vs">vs</span><span class="loser">ケビン・ペッシ</span></td><td class="winner">石渡伸太郎</td><td class="finish">1R 4:31 KO（右フック）<span class="bout-note">バンタム級トーナメント 2回戦 第4試合 5分3R ／ ※石渡がトーナメント準決勝進出</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">大塚隆史</span><span class="vs">vs</span><span class="loser">カリッド・タハ</span></td><td class="winner">大塚隆史</td><td class="finish">3R 2:23 フロントネックロック<span class="bout-note">バンタム級トーナメント 2回戦 第3試合 5分3R ／ ※大塚がトーナメント準決勝進出</span></td></tr>
-              <tr><td class="no">8</td><td>ギャビ・ガルシア<span class="vs">vs</span>神取忍</td><td>勝者なし</td><td class="finish">ギャビの計量オーバーのため試合中止<span class="bout-note">女子MMAルール 95.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">イリー・プロハースカ</span><span class="vs">vs</span><span class="loser">カール・アルブレックソン</span></td><td class="winner">イリー・プロハースカ</td><td class="finish">1R 9:57 TKO（レフェリーストップ）<span class="bout-note">MMAルール 93.0kg契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">シンディ・ダンドーワ</span><span class="vs">vs</span><span class="loser">KINGレイナ</span></td><td class="winner">シンディ・ダンドーワ</td><td class="finish">3R終了 判定1-2<span class="bout-note">女子MMAルール 70.0kg契約ワンマッチ（肘あり）5分3R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">高谷裕之</span><span class="vs">vs</span><span class="loser">バータル・アズジャブハラン</span></td><td class="winner">高谷裕之</td><td class="finish">2R終了 判定3-0<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">ムン・ジェフン</span><span class="vs">vs</span><span class="loser">アンソニー・バーチャック</span></td><td class="winner">ムン・ジェフン</td><td class="finish">3R終了 判定1-2<span class="bout-note">バンタム級トーナメント リザーブマッチ 5分3R ／ ※ジェフンがリザーブ権獲得</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">朝倉海</span><span class="vs">vs</span><span class="loser">才賀紀左衛門</span></td><td class="winner">朝倉海</td><td class="finish">2R 2:39 TKO（レフェリーストップ）<span class="bout-note">MMAルール 63.0kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">渡辺華奈</span><span class="vs">vs</span><span class="loser">杉山しずか</span></td><td class="winner">渡辺華奈</td><td class="finish">3R終了 判定0-3<span class="bout-note">女子MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">ストラッサー起一</span><span class="vs">vs</span><span class="loser">北岡悟</span></td><td class="winner">ストラッサー起一</td><td class="finish">2R終了 判定0-3<span class="bout-note">MMAルール 75.0kg契約ワンマッチ（肘あり）1R10分/2R5分</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/horiguchi-kyoji.html">堀口恭司</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/oliveira-gabriel.html">ガブリエル・オリベイラ</a></span></td><td class="winner">堀口恭司</td><td class="finish">1R 4:30 TKO（レフェリーストップ）<span class="bout-note">バンタム級トーナメント 2回戦 第2試合 5分3R ／ ※堀口がトーナメント準決勝進出</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/kape-manel.html">マネル・ケイプ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/mccall-ian.html">イアン・マッコール</a></span></td><td class="winner">マネル・ケイプ</td><td class="finish">1R 1:46 TKO（レフェリーストップ）<span class="bout-note">バンタム級トーナメント 2回戦 第1試合 5分3R ／ ※ケイプがトーナメント準決勝進出</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/ishiwatari-shintaro.html">石渡伸太郎</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/petshi-kevin.html">ケビン・ペッシ</a></span></td><td class="winner">石渡伸太郎</td><td class="finish">1R 4:31 KO（右フック）<span class="bout-note">バンタム級トーナメント 2回戦 第4試合 5分3R ／ ※石渡がトーナメント準決勝進出</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/otsuka-takafumi.html">大塚隆史</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/taha-khalid.html">カリッド・タハ</a></span></td><td class="winner">大塚隆史</td><td class="finish">3R 2:23 フロントネックロック<span class="bout-note">バンタム級トーナメント 2回戦 第3試合 5分3R ／ ※大塚がトーナメント準決勝進出</span></td></tr>
+              <tr><td class="no">8</td><td><a href="fighters/garcia-gabi.html">ギャビ・ガルシア</a><span class="vs">vs</span>神取忍</td><td>勝者なし</td><td class="finish">ギャビの計量オーバーのため試合中止<span class="bout-note">女子MMAルール 95.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/prochazka-jiri.html">イリー・プロハースカ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/albrektsson-karl.html">カール・アルブレックソン</a></span></td><td class="winner">イリー・プロハースカ</td><td class="finish">1R 9:57 TKO（レフェリーストップ）<span class="bout-note">MMAルール 93.0kg契約ワンマッチ（肘あり） 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/dandois-cindy.html">シンディ・ダンドーワ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/reina-king.html">KINGレイナ</a></span></td><td class="winner">シンディ・ダンドーワ</td><td class="finish">3R終了 判定1-2<span class="bout-note">女子MMAルール 70.0kg契約ワンマッチ（肘あり）5分3R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/takaya-hiroyuki.html">高谷裕之</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/azjavkhlan-baatar.html">バータル・アズジャブハラン</a></span></td><td class="winner">高谷裕之</td><td class="finish">2R終了 判定3-0<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/moon-jae-hoon.html">ムン・ジェフン</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/birchak-anthony.html">アンソニー・バーチャック</a></span></td><td class="winner">ムン・ジェフン</td><td class="finish">3R終了 判定1-2<span class="bout-note">バンタム級トーナメント リザーブマッチ 5分3R ／ ※ジェフンがリザーブ権獲得</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/asakura-kai.html">朝倉海</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/saiga-kizaemon.html">才賀紀左衛門</a></span></td><td class="winner">朝倉海</td><td class="finish">2R 2:39 TKO（レフェリーストップ）<span class="bout-note">MMAルール 63.0kg契約ワンマッチ 1R10分/2R5分</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/watanabe-kana.html">渡辺華奈</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sugiyama-shizuka.html">杉山しずか</a></span></td><td class="winner">渡辺華奈</td><td class="finish">3R終了 判定0-3<span class="bout-note">女子MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/kiichi-strasser.html">ストラッサー起一</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kitaoka-satoru.html">北岡悟</a></span></td><td class="winner">ストラッサー起一</td><td class="finish">2R終了 判定0-3<span class="bout-note">MMAルール 75.0kg契約ワンマッチ（肘あり）1R10分/2R5分</span></td></tr>
             </tbody>
   </table>
 </article>

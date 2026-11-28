@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 <style>
 table.index3{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5;}
@@ -302,6 +313,32 @@ table.history thead th{font-size:12.5px;color:#6E6E73;font-weight:600;border-bot
 table.history a{color:#0066CC;text-decoration:none;}
 table.history a:hover{text-decoration:underline;}
 .res-w{font-weight:700;}
+.res-l{font-weight:700;color:#6E6E73;}
+table.history tr.lose{background:#F5F5F7;}
+table.cal{border-collapse:collapse;width:100%;table-layout:fixed;font-size:12px;line-height:1.45;margin:0 0 26px;}
+table.cal th,table.cal td{border:1px solid #E8E8ED;padding:5px 6px;vertical-align:top;text-align:left;}
+table.cal thead th{font-size:11px;color:#6E6E73;font-weight:600;background:#F5F5F7;}
+table.cal td{height:70px;}
+table.cal .d{font-weight:700;font-size:12.5px;}
+table.cal a{color:#0066CC;text-decoration:none;display:block;margin-top:2px;}
+table.cal a:hover{text-decoration:underline;}
+table.cal td.empty{background:#FAFAFA;}
+.yr-sec{display:none;}
+.yr-sec.on{display:block;}
+table.cal .future-ev{display:block;margin-top:2px;color:#6E6E73;font-weight:600;}
+.venue-links{margin:0 0 18px;font-size:14.5px;line-height:1.9;}
+.venue-links a{color:#0066CC;text-decoration:none;}
+.venue-links a:hover{text-decoration:underline;}
+.lodging-list{margin:0 0 18px;padding-left:20px;font-size:14.5px;line-height:1.9;}
+.lodging-list a{color:#0066CC;text-decoration:none;}
+.lodging-list a:hover{text-decoration:underline;}
+.search-results{margin:14px 0 8px;}
+.search-results a{display:block;padding:10px 12px;border-bottom:1px solid #E8E8ED;color:#1D1D1F;text-decoration:none;}
+.search-results a:hover{background:#F5F5F7;}
+.search-results .kind{font-size:11.5px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-right:8px;white-space:nowrap;}
+.search-results .sub{color:#6E6E73;font-size:12.5px;margin-left:8px;}
+.prov{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-left:6px;white-space:nowrap;}
+.champ{font-weight:700;color:#1D1D1F;}
 .rule-tag{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:1px 8px;margin-left:6px;white-space:nowrap;}
 .lb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;}
 .lb-card{background:#F5F5F7;border-radius:14px;padding:16px 18px;}
@@ -360,13 +397,13 @@ table.lb td.name{font-weight:600;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="../index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="../venues.html">会場</a>
           <a href="../fighters.html" class="current" aria-current="page">選手</a>
           <a href="../rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="../calendar.html">カレンダー</a>
           <a href="../index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
-        <a href="#searchBox" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
+        <a href="../search.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
       </div>
     </header>
 <main class="wrap">
@@ -387,7 +424,7 @@ table.lb td.name{font-weight:600;}
 <tr><th>Instagram</th><td><a href="https://www.instagram.com/tenshin.nasukawa/" target="_blank" rel="noopener">tenshin.nasukawa</a></td></tr>
 <tr><th>YouTube</th><td><a href="https://www.youtube.com/channel/UCjANqq_LsXC-OHugv8yAUtg" target="_blank" rel="noopener">那須川天心チャンネル</a></td></tr>
 </table>
-<h2>パフォーマンス（MMA）</h2><div class="stat-grid"><div class="stat-card"><div class="k">MMA試合数</div><div class="v">4</div><div class="s">4勝0敗</div></div><div class="stat-card"><div class="k">勝率</div><div class="v">100.0%</div><div class="s">勝÷（勝＋敗）</div></div><div class="stat-card"><div class="k">総試合時間</div><div class="v">22:31</div><div class="s">集計対象4試合の平均 5:38</div></div><div class="stat-card"><div class="k">最速勝利</div><div class="v">1:07</div><div class="s">RIZIN.5 RIZIN 2017 in YOKOHAMA -SAKURA- vs フランシスコ・ギリオッティ</div></div><div class="stat-card"><div class="k">1Rフィニッシュ勝ち</div><div class="v">2</div><div class="s">KO・TKO／一本</div></div><div class="stat-card"><div class="k">フィニッシュ率（勝ち）</div><div class="v">75.0%</div><div class="s">フィニッシュ勝ち3／全4勝</div></div></div><div class="donuts"><div class="donut-card"><svg width="104" height="104" viewBox="0 0 104 104" role="img" aria-hidden="true"><circle cx="52" cy="52" r="40" fill="none" stroke="#1D1D1F" stroke-width="13" stroke-dasharray="123.7 127.7" stroke-dashoffset="-0.0" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#6E6E73" stroke-width="13" stroke-dasharray="60.8 190.5" stroke-dashoffset="-125.7" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#D2D2D7" stroke-width="13" stroke-dasharray="60.8 190.5" stroke-dashoffset="-188.5" transform="rotate(-90 52 52)"/></svg><div><h3>勝ち方内訳（全4勝）</h3><div class="donut-legend"><div><span class="sw" style="background:#1D1D1F"></span>KO・TKO 2（50.0%）</div><div><span class="sw" style="background:#6E6E73"></span>一本 1（25.0%）</div><div><span class="sw" style="background:#D2D2D7"></span>判定 1（25.0%）</div></div></div></div></div><table class="rate-t">
+<h2>パフォーマンス（MMA）</h2><p class="def-note">MMA成績： 4試合 4勝0敗（この欄はMMAルールの試合のみが対象です。冒頭の通算 17試合 14勝1敗2分 はキックボクシング等を含む全ルール合計のため、MMA以外の試合がある選手は数値が異なります）</p><div class="stat-grid"><div class="stat-card"><div class="k">MMA試合数</div><div class="v">4</div><div class="s">4勝0敗</div></div><div class="stat-card"><div class="k">勝率</div><div class="v">100.0%</div><div class="s">勝÷（勝＋敗）</div></div><div class="stat-card"><div class="k">総試合時間</div><div class="v">22:31</div><div class="s">集計対象4試合の平均 5:38</div></div><div class="stat-card"><div class="k">最速勝利</div><div class="v">1:07</div><div class="s">RIZIN.5 RIZIN 2017 in YOKOHAMA -SAKURA- vs フランシスコ・ギリオッティ</div></div><div class="stat-card"><div class="k">1Rフィニッシュ勝ち</div><div class="v">2</div><div class="s">KO・TKO／一本</div></div><div class="stat-card"><div class="k">フィニッシュ率（勝ち）</div><div class="v">75.0%</div><div class="s">フィニッシュ勝ち3／全4勝</div></div></div><div class="donuts"><div class="donut-card"><svg width="104" height="104" viewBox="0 0 104 104" role="img" aria-hidden="true"><circle cx="52" cy="52" r="40" fill="none" stroke="#1D1D1F" stroke-width="13" stroke-dasharray="123.7 127.7" stroke-dashoffset="-0.0" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#3F3F44" stroke-width="13" stroke-dasharray="60.8 190.5" stroke-dashoffset="-125.7" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#6E6E73" stroke-width="13" stroke-dasharray="60.8 190.5" stroke-dashoffset="-188.5" transform="rotate(-90 52 52)"/></svg><div><h3>勝敗内訳（MMA全4試合）</h3><div class="donut-legend"><div><span class="sw" style="background:#1D1D1F"></span>KO・TKO勝ち 2（50.0%）</div><div><span class="sw" style="background:#3F3F44"></span>一本勝ち 1（25.0%）</div><div><span class="sw" style="background:#6E6E73"></span>判定勝ち 1（25.0%）</div></div></div></div></div><table class="rate-t">
 <tr><th></th><th>KO・TKO</th><th>一本</th><th>判定</th><th>フィニッシュ計</th></tr>
 <tr><th>勝ち（全4勝中）</th><td>2（50.0%）</td><td>1（25.0%）</td><td>1（25.0%）</td><td>3（75.0%）</td></tr>
 <tr><th>負け（全0敗中）</th><td>0（―）</td><td>0（―）</td><td>0（―）</td><td>0（―）</td></tr>
@@ -397,23 +434,23 @@ table.lb td.name{font-weight:600;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2021.12.31</td><td><a href="../rizin-33.html">RIZIN.33</a><span class="rule-tag">キック</span></td><td class="opp"><a href="gomi-takanori.html">五味隆典</a></td><td><span class="res-w">引分</span></td><td>2R終了 判定ドロー <a href="https://youtu.be/4t-CjBAZwwk?si=8_E_isfn8mK1UluA" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2021.06.13</td><td><a href="../rizin-28.html">RIZIN.28</a><span class="rule-tag">キック</span></td><td class="opp">大﨑孔稀、HIROYA、所英男</td><td><span class="res-w">引分</span></td><td>時間切れ引き分け</td></tr>
-<tr><td class="num">2020.12.31</td><td><a href="../rizin-26.html">RIZIN.26</a><span class="rule-tag">キック</span></td><td class="opp"><a href="phetjaroenvit-kumandoi.html">クマンドーイ・ペットジャルーンウィット</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/WpfDNCEis1k?si=ONzQiMHKywbXZACS" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2020.09.27</td><td><a href="../rizin-24.html">RIZIN.24</a><span class="rule-tag">キック</span></td><td class="opp"><a href="kouzi.html">皇治</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/sGE-_tUJkY4?si=XVlcQuifi2vn1u6X" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2019.12.31</td><td><a href="../rizin-20.html">RIZIN.20</a><span class="rule-tag">キック</span></td><td class="opp"><a href="ebata-rui.html">江幡塁</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:46 TKO（3ノックダウン） <a href="https://youtu.be/r3n_o8dBn5I?si=TsOFNu8wxGs1CnTZ" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2019.06.02</td><td><a href="../rizin-16.html">RIZIN.16</a><span class="rule-tag">キック</span></td><td class="opp"><a href="blanco-martin.html">マーティン・ブランコ</a></td><td><span class="res-w">勝ち</span></td><td>2R 2:19 KO（左膝蹴り） <a href="https://youtu.be/slWpz88OMok?si=hdDkAULYeyw89XUq" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2019.04.21</td><td><a href="../rizin-15.html">RIZIN.15</a><span class="rule-tag">キック</span></td><td class="opp"><a href="biagtan-fritz.html">フリッツ・ビアグタン</a></td><td><span class="res-w">勝ち</span></td><td>3R 1:24 TKO（レフェリーストップ） <a href="https://youtu.be/GcIcX4GI0Uc?si=JzqQtTPnAQoCmrZc" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2018.12.31</td><td><a href="../rizin-14.html">RIZIN.14</a><span class="rule-tag">エキシビジョン</span></td><td class="opp"><a href="junia-furoido-meiwezaa.html">フロイド・メイウェザー・ジュニア</a></td><td><span class="res-w">負け</span></td><td>1R 2:19 タオル投入 <a href="https://youtu.be/tsWdXE2jWPc?si=d1_JdQiOKVf8HfkG" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2018.09.30</td><td><a href="../rizin-13.html">RIZIN.13</a><span class="rule-tag">キック</span></td><td class="opp"><a href="horiguchi-kyoji.html">堀口恭司</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/KspXkAV1Bjw?si=TgaY2GQf0vwgJ_eF" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2018.05.06</td><td><a href="../rizin-10.html">RIZIN.10</a><span class="rule-tag">キック</span></td><td class="opp"><a href="nakamura-yusaku.html">中村優作</a></td><td><span class="res-w">勝ち</span></td><td>2R 1:42 TKO（3ノックダウン） <a href="https://youtu.be/8_wIJU6pyVg?si=ugkcKxj9snF1_KWK" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2017.12.31</td><td><a href="../rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a><span class="rule-tag">キック</span></td><td class="opp"><a href="hamamoto-yuta-cat.html">浜本“キャット”雄大</a></td><td><span class="res-w">勝ち</span></td><td>2R 1:58 KO（飛び膝蹴り） <a href="https://youtu.be/Lz9N8MutJSI?si=al16IDOaNOBrXAoh" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2017.12.31</td><td><a href="../rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a><span class="rule-tag">キック</span></td><td class="opp"><a href="fujita-yamato.html">藤田大和</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:27 TKO（3ノックダウン） <a href="https://youtu.be/lLWc331v3U0?si=gtUyxotq5MZdiNwl" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2017.10.15</td><td><a href="../rizin-7-rizin-fighting-world-grand-prix-2017-1st-round.html">RIZIN.7 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント＆女子スーパーアトム級トーナメント 1st ROUND -秋の陣-</a></td><td class="opp"><a href="fujita-yamato.html">藤田大和</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/vUxTbC1At-k?si=BrBSEQKULoa0I0IM" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2017.07.30</td><td><a href="../rizin-6-rizin-fighting-world-grand-prix-2017-1st-round.html">RIZIN.6 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント 1st ROUND -夏の陣-</a><span class="rule-tag">キック</span></td><td class="opp"><a href="saiga-kizaemon.html">才賀紀左衛門</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:36 KO（左ストレート） <a href="https://youtu.be/vf1XoIlsp6s?si=vdOieHQM2mbXrRN7" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2017.04.16</td><td><a href="../rizin-5-rizin-2017-in-yokohama-sakura.html">RIZIN.5 RIZIN 2017 in YOKOHAMA -SAKURA-</a></td><td class="opp"><a href="giriotti-furanshisuko.html">フランシスコ・ギリオッティ</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:07 TKO（レフェリーストップ） <a href="https://youtu.be/vUxTbC1At-k?si=uP0MXV-wv8_pa0Y2" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2016.12.31</td><td><a href="../rizin-4-rizin-fighting-world-grand-prix-2016-final-round.html">RIZIN.4 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント FINAL ROUND</a></td><td class="opp"><a href="oligo-kawika.html">カウイカ・オリージョ</a></td><td><span class="res-w">勝ち</span></td><td>2R 0:37 アームトライアングルチョーク（ニンジャチョーク） <a href="https://youtu.be/Se6N7dHr_7c?si=Tb8n4AbjQUQrhnXc" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2016.12.29</td><td><a href="../rizin-3-rizin-fighting-world-grand-prix-2016-2nd-round.html">RIZIN.3 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント 2nd ROUND</a></td><td class="opp"><a href="sapun-nikita.html">ニキータ・サプン</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:47 KO（パウンド） <a href="https://youtu.be/gEpVSHgg50o?si=mDkKcuIcaCBAQ78P" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.12.31</td><td><a href="../rizin-33.html">RIZIN.33</a><span class="rule-tag">キック</span></td><td class="opp"><a href="gomi-takanori.html">五味隆典</a></td><td><span class="res-w">Draw</span></td><td>2R終了 判定ドロー <a href="https://youtu.be/4t-CjBAZwwk?si=8_E_isfn8mK1UluA" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2021.06.13</td><td><a href="../rizin-28.html">RIZIN.28</a><span class="rule-tag">キック</span></td><td class="opp">大﨑孔稀、HIROYA、所英男</td><td><span class="res-w">Draw</span></td><td>時間切れ引き分け</td></tr>
+<tr><td class="num">2020.12.31</td><td><a href="../rizin-26.html">RIZIN.26</a><span class="rule-tag">キック</span></td><td class="opp"><a href="phetjaroenvit-kumandoi.html">クマンドーイ・ペットジャルーンウィット</a></td><td><span class="res-w">Win</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/WpfDNCEis1k?si=ONzQiMHKywbXZACS" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2020.09.27</td><td><a href="../rizin-24.html">RIZIN.24</a><span class="rule-tag">キック</span></td><td class="opp"><a href="kouzi.html">皇治</a></td><td><span class="res-w">Win</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/sGE-_tUJkY4?si=XVlcQuifi2vn1u6X" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2019.12.31</td><td><a href="../rizin-20.html">RIZIN.20</a><span class="rule-tag">キック</span></td><td class="opp"><a href="ebata-rui.html">江幡塁</a></td><td><span class="res-w">Win</span></td><td>1R 2:46 TKO（3ノックダウン） <a href="https://youtu.be/r3n_o8dBn5I?si=TsOFNu8wxGs1CnTZ" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2019.06.02</td><td><a href="../rizin-16.html">RIZIN.16</a><span class="rule-tag">キック</span></td><td class="opp"><a href="blanco-martin.html">マーティン・ブランコ</a></td><td><span class="res-w">Win</span></td><td>2R 2:19 KO（左膝蹴り） <a href="https://youtu.be/slWpz88OMok?si=hdDkAULYeyw89XUq" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2019.04.21</td><td><a href="../rizin-15.html">RIZIN.15</a><span class="rule-tag">キック</span></td><td class="opp"><a href="biagtan-fritz.html">フリッツ・ビアグタン</a></td><td><span class="res-w">Win</span></td><td>3R 1:24 TKO（レフェリーストップ） <a href="https://youtu.be/GcIcX4GI0Uc?si=JzqQtTPnAQoCmrZc" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr class="lose"><td class="num">2018.12.31</td><td><a href="../rizin-14.html">RIZIN.14</a><span class="rule-tag">エキシビジョン</span></td><td class="opp"><a href="junia-furoido-meiwezaa.html">フロイド・メイウェザー・ジュニア</a></td><td><span class="res-l">Lose</span></td><td>1R 2:19 タオル投入 <a href="https://youtu.be/tsWdXE2jWPc?si=d1_JdQiOKVf8HfkG" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2018.09.30</td><td><a href="../rizin-13.html">RIZIN.13</a><span class="rule-tag">キック</span></td><td class="opp"><a href="horiguchi-kyoji.html">堀口恭司</a></td><td><span class="res-w">Win</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/KspXkAV1Bjw?si=TgaY2GQf0vwgJ_eF" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2018.05.06</td><td><a href="../rizin-10.html">RIZIN.10</a><span class="rule-tag">キック</span></td><td class="opp"><a href="nakamura-yusaku.html">中村優作</a></td><td><span class="res-w">Win</span></td><td>2R 1:42 TKO（3ノックダウン） <a href="https://youtu.be/8_wIJU6pyVg?si=ugkcKxj9snF1_KWK" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2017.12.31</td><td><a href="../rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a><span class="rule-tag">キック</span></td><td class="opp"><a href="fujita-yamato.html">藤田大和</a></td><td><span class="res-w">Win</span></td><td>1R 1:27 TKO（3ノックダウン） <a href="https://youtu.be/lLWc331v3U0?si=gtUyxotq5MZdiNwl" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2017.12.31</td><td><a href="../rizin-9-rizin-fighting-world-grand-prix-2017-final-round.html">RIZIN.9 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント&amp;女子スーパーアトム級トーナメント Final ROUND</a><span class="rule-tag">キック</span></td><td class="opp"><a href="hamamoto-yuta-cat.html">浜本“キャット”雄大</a></td><td><span class="res-w">Win</span></td><td>2R 1:58 KO（飛び膝蹴り） <a href="https://youtu.be/Lz9N8MutJSI?si=al16IDOaNOBrXAoh" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2017.10.15</td><td><a href="../rizin-7-rizin-fighting-world-grand-prix-2017-1st-round.html">RIZIN.7 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント＆女子スーパーアトム級トーナメント 1st ROUND -秋の陣-</a></td><td class="opp"><a href="fujita-yamato.html">藤田大和</a></td><td><span class="res-w">Win</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/vUxTbC1At-k?si=BrBSEQKULoa0I0IM" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2017.07.30</td><td><a href="../rizin-6-rizin-fighting-world-grand-prix-2017-1st-round.html">RIZIN.6 RIZIN FIGHTING WORLD GRAND-PRIX 2017 バンタム級トーナメント 1st ROUND -夏の陣-</a><span class="rule-tag">キック</span></td><td class="opp"><a href="saiga-kizaemon.html">才賀紀左衛門</a></td><td><span class="res-w">Win</span></td><td>1R 1:36 KO（左ストレート） <a href="https://youtu.be/vf1XoIlsp6s?si=vdOieHQM2mbXrRN7" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2017.04.16</td><td><a href="../rizin-5-rizin-2017-in-yokohama-sakura.html">RIZIN.5 RIZIN 2017 in YOKOHAMA -SAKURA-</a></td><td class="opp"><a href="giriotti-furanshisuko.html">フランシスコ・ギリオッティ</a></td><td><span class="res-w">Win</span></td><td>1R 1:07 TKO（レフェリーストップ） <a href="https://youtu.be/vUxTbC1At-k?si=uP0MXV-wv8_pa0Y2" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2016.12.31</td><td><a href="../rizin-4-rizin-fighting-world-grand-prix-2016-final-round.html">RIZIN.4 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント FINAL ROUND</a></td><td class="opp"><a href="oligo-kawika.html">カウイカ・オリージョ</a></td><td><span class="res-w">Win</span></td><td>2R 0:37 アームトライアングルチョーク（ニンジャチョーク） <a href="https://youtu.be/Se6N7dHr_7c?si=Tb8n4AbjQUQrhnXc" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2016.12.29</td><td><a href="../rizin-3-rizin-fighting-world-grand-prix-2016-2nd-round.html">RIZIN.3 RIZIN FIGHTING WORLD GRAND-PRIX 2016 無差別級トーナメント 2nd ROUND</a></td><td class="opp"><a href="sapun-nikita.html">ニキータ・サプン</a></td><td><span class="res-w">Win</span></td><td>1R 2:47 KO（パウンド） <a href="https://youtu.be/gEpVSHgg50o?si=mDkKcuIcaCBAQ78P" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
 </tbody>
 </table>
 </div>

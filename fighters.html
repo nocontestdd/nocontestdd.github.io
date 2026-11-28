@@ -323,6 +323,20 @@ table.cal .d{font-weight:700;font-size:12.5px;}
 table.cal a{color:#0066CC;text-decoration:none;display:block;margin-top:2px;}
 table.cal a:hover{text-decoration:underline;}
 table.cal td.empty{background:#FAFAFA;}
+.yr-sec{display:none;}
+.yr-sec.on{display:block;}
+table.cal .future-ev{display:block;margin-top:2px;color:#6E6E73;font-weight:600;}
+.venue-links{margin:0 0 18px;font-size:14.5px;line-height:1.9;}
+.venue-links a{color:#0066CC;text-decoration:none;}
+.venue-links a:hover{text-decoration:underline;}
+.lodging-list{margin:0 0 18px;padding-left:20px;font-size:14.5px;line-height:1.9;}
+.lodging-list a{color:#0066CC;text-decoration:none;}
+.lodging-list a:hover{text-decoration:underline;}
+.search-results{margin:14px 0 8px;}
+.search-results a{display:block;padding:10px 12px;border-bottom:1px solid #E8E8ED;color:#1D1D1F;text-decoration:none;}
+.search-results a:hover{background:#F5F5F7;}
+.search-results .kind{font-size:11.5px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-right:8px;white-space:nowrap;}
+.search-results .sub{color:#6E6E73;font-size:12.5px;margin-left:8px;}
 .prov{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-left:6px;white-space:nowrap;}
 .champ{font-weight:700;color:#1D1D1F;}
 .rule-tag{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:1px 8px;margin-left:6px;white-space:nowrap;}
@@ -389,7 +403,7 @@ table.lb td.name{font-weight:600;}
           <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
-        <a href="#searchBox" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
+        <a href="search.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
       </div>
     </header>
 <main class="wrap">
@@ -1272,14 +1286,6 @@ Fight Center メキシコ"><td class="name"><a href="fighters/orozco-saray.html"
     });
     countEl.textContent = q ? '「' + q + '」で ' + shown + '人が見つかりました。' : '全' + total + '人を表示しています。';
   });
-  var navSearch = document.querySelector('.nav-search');
-  if(navSearch){
-    navSearch.addEventListener('click', function(e){
-      e.preventDefault();
-      document.getElementById('searchBox').scrollIntoView({behavior:'smooth', block:'center'});
-      setTimeout(function(){ searchEl.focus({preventScroll:true}); }, 350);
-    });
-  }
 })();
 </script>
 </body>

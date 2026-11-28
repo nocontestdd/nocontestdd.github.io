@@ -298,7 +298,7 @@ a.typo-cap{text-decoration:none;color:inherit;}
           <a href="calendar.html">カレンダー</a>
           <a href="#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
-        <a href="#searchBox" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
+        <a href="search.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
       </div>
     </header>
 <main class="wrap">
@@ -2489,14 +2489,6 @@ a.typo-cap{text-decoration:none;color:inherit;}
     btn.addEventListener('click', function(){ cat = btn.getAttribute('data-filter'); apply(); });
   });
   searchEl.addEventListener('input', function(){ q = searchEl.value.trim(); apply(); });
-  var navSearch = document.querySelector('.nav-search');
-  if(navSearch){
-    navSearch.addEventListener('click', function(e){
-      e.preventDefault();
-      document.getElementById('searchBox').scrollIntoView({behavior:'smooth', block:'center'});
-      setTimeout(function(){ searchEl.focus({preventScroll:true}); }, 350);
-    });
-  }
   document.querySelectorAll('.merch-card').forEach(function(card){
     var garmentPaths = card.querySelectorAll('.garment path');
     var titleEl = card.querySelector('.m-title');

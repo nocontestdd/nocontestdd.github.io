@@ -323,6 +323,20 @@ table.cal .d{font-weight:700;font-size:12.5px;}
 table.cal a{color:#0066CC;text-decoration:none;display:block;margin-top:2px;}
 table.cal a:hover{text-decoration:underline;}
 table.cal td.empty{background:#FAFAFA;}
+.yr-sec{display:none;}
+.yr-sec.on{display:block;}
+table.cal .future-ev{display:block;margin-top:2px;color:#6E6E73;font-weight:600;}
+.venue-links{margin:0 0 18px;font-size:14.5px;line-height:1.9;}
+.venue-links a{color:#0066CC;text-decoration:none;}
+.venue-links a:hover{text-decoration:underline;}
+.lodging-list{margin:0 0 18px;padding-left:20px;font-size:14.5px;line-height:1.9;}
+.lodging-list a{color:#0066CC;text-decoration:none;}
+.lodging-list a:hover{text-decoration:underline;}
+.search-results{margin:14px 0 8px;}
+.search-results a{display:block;padding:10px 12px;border-bottom:1px solid #E8E8ED;color:#1D1D1F;text-decoration:none;}
+.search-results a:hover{background:#F5F5F7;}
+.search-results .kind{font-size:11.5px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-right:8px;white-space:nowrap;}
+.search-results .sub{color:#6E6E73;font-size:12.5px;margin-left:8px;}
 .prov{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-left:6px;white-space:nowrap;}
 .champ{font-weight:700;color:#1D1D1F;}
 .rule-tag{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:1px 8px;margin-left:6px;white-space:nowrap;}
@@ -389,7 +403,7 @@ table.lb td.name{font-weight:600;}
           <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
-        </nav>
+        <a href="search.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
       </div>
     </header>
 <main class="wrap">
@@ -400,9 +414,9 @@ table.lb td.name{font-weight:600;}
 <h2>率ランキング</h2>
 <p class="sub">対象はMMA5試合以上の選手です。</p>
 <div class="board-links"><a class="board-link" href="rankings/win-rate.html"><span class="t">勝率</span><span class="d" style="display:block;">勝ち数 ÷（勝ち＋負け）。引き分け・無効試合は除く</span></a><a class="board-link" href="rankings/finish-rate.html"><span class="t">フィニッシュ率</span><span class="d" style="display:block;">勝利のうちKO・一本で決めた割合</span></a><a class="board-link" href="rankings/ko-rate.html"><span class="t">KO率</span><span class="d" style="display:block;">勝利のうちKO・TKOで決めた割合</span></a><a class="board-link" href="rankings/sub-rate.html"><span class="t">一本率</span><span class="d" style="display:block;">勝利のうち一本で決めた割合</span></a><a class="board-link" href="rankings/avg-time.html"><span class="t">平均試合時間の短さ</span><span class="d" style="display:block;">1試合あたりの平均時間（時間の分かる試合のみ）。短いほど上位</span></a></div>
-<h2>階級別ランキング（強さ）</h2>
-<p class="sub">修正Eloレーティングによる階級別の強さランキングです。各階級の最新タイトルマッチ勝者をチャンピオン（C）として最上段に固定し、その下にレーティング順で1位から並べます。対象はその階級で直近18か月以内に試合のある選手で、対象階級で3試合未満の選手は「暫定」と表示します。</p>
-<div class="board-links"><a class="board-link" href="rankings/strength-super-atomweight.html"><span class="t">スーパーアトム級</span><span class="d" style="display:block;">チャンピオン： 伊澤星花</span></a><a class="board-link" href="rankings/strength-strawweight.html"><span class="t">ストロー級</span><span class="d" style="display:block;">チャンピオン： ―</span></a><a class="board-link" href="rankings/strength-flyweight.html"><span class="t">フライ級</span><span class="d" style="display:block;">チャンピオン： トニー・ララミー</span></a><a class="board-link" href="rankings/strength-bantamweight.html"><span class="t">バンタム級</span><span class="d" style="display:block;">チャンピオン： ダニー・サバテロ</span></a><a class="board-link" href="rankings/strength-featherweight.html"><span class="t">フェザー級</span><span class="d" style="display:block;">チャンピオン： ラジャブアリ・シェイドゥラエフ</span></a><a class="board-link" href="rankings/strength-lightweight.html"><span class="t">ライト級</span><span class="d" style="display:block;">チャンピオン： ルイス・グスタボ</span></a><a class="board-link" href="rankings/strength-welterweight.html"><span class="t">ウェルター級</span><span class="d" style="display:block;">チャンピオン： ―</span></a><a class="board-link" href="rankings/strength-light-heavyweight.html"><span class="t">ライトヘビー級</span><span class="d" style="display:block;">チャンピオン： イリー・プロハースカ</span></a><a class="board-link" href="rankings/strength-heavyweight.html"><span class="t">ヘビー級</span><span class="d" style="display:block;">チャンピオン： ―</span></a></div>
+<h2>階級別ランキング</h2>
+<p class="sub">修正Eloレーティングによる階級別の強さランキングです。各階級の最新タイトルマッチ勝者をチャンピオン（C）として最上段に固定し、その下にレーティング順で1位から並べます。対象はその階級で直近18か月以内に試合のある選手で、対象階級で3試合未満の選手は「暫定」と表示します。ランク入りには、その階級で3試合以上戦った選手への勝利が必要です（実績のない選手は「圏外」として表の下に参考表示します）。また、過去1年以内に直接対決で勝った相手より下には順位付けしません。</p>
+<div class="board-links"><a class="board-link" href="rankings/strength-super-atomweight.html"><span class="t">スーパーアトム級</span><span class="d" style="display:block;">チャンピオン： 伊澤星花</span></a><a class="board-link" href="rankings/strength-flyweight.html"><span class="t">フライ級</span><span class="d" style="display:block;">チャンピオン： トニー・ララミー</span></a><a class="board-link" href="rankings/strength-bantamweight.html"><span class="t">バンタム級</span><span class="d" style="display:block;">チャンピオン： ダニー・サバテロ</span></a><a class="board-link" href="rankings/strength-featherweight.html"><span class="t">フェザー級</span><span class="d" style="display:block;">チャンピオン： ラジャブアリ・シェイドゥラエフ</span></a><a class="board-link" href="rankings/strength-lightweight.html"><span class="t">ライト級</span><span class="d" style="display:block;">チャンピオン： ルイス・グスタボ</span></a><a class="board-link" href="rankings/strength-welterweight.html"><span class="t">ウェルター級</span><span class="d" style="display:block;">チャンピオン： ―</span></a><a class="board-link" href="rankings/strength-light-heavyweight.html"><span class="t">ライトヘビー級</span><span class="d" style="display:block;">チャンピオン： イリー・プロハースカ</span></a><a class="board-link" href="rankings/strength-heavyweight.html"><span class="t">ヘビー級</span><span class="d" style="display:block;">チャンピオン： ―</span></a></div>
 <h2>パウンド・フォー・パウンド</h2>
 <p class="sub">準備中です。</p>
 <p class="note">性別は試合データの「女子」表記から、階級はタイトルマッチの明記を優先し、契約体重から判定しています（階級リミット＋2.0kgまでのキャッチウェイトはその階級として集計）。試合時間は、フィニッシュ試合は実際の終了時間、判定試合は規定時間満了として集計しています（規定形式の読み取れる試合のみ）。</p>

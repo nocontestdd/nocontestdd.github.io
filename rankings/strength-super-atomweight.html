@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light" />
-<title>スーパーアトム級ランキング（強さ） | no contest data design</title>
+<title>スーパーアトム級ランキング | no contest data design</title>
 <link rel="icon" type="image/png" href="../favicon.png" />
 <style>
       :root{
@@ -323,6 +323,20 @@ table.cal .d{font-weight:700;font-size:12.5px;}
 table.cal a{color:#0066CC;text-decoration:none;display:block;margin-top:2px;}
 table.cal a:hover{text-decoration:underline;}
 table.cal td.empty{background:#FAFAFA;}
+.yr-sec{display:none;}
+.yr-sec.on{display:block;}
+table.cal .future-ev{display:block;margin-top:2px;color:#6E6E73;font-weight:600;}
+.venue-links{margin:0 0 18px;font-size:14.5px;line-height:1.9;}
+.venue-links a{color:#0066CC;text-decoration:none;}
+.venue-links a:hover{text-decoration:underline;}
+.lodging-list{margin:0 0 18px;padding-left:20px;font-size:14.5px;line-height:1.9;}
+.lodging-list a{color:#0066CC;text-decoration:none;}
+.lodging-list a:hover{text-decoration:underline;}
+.search-results{margin:14px 0 8px;}
+.search-results a{display:block;padding:10px 12px;border-bottom:1px solid #E8E8ED;color:#1D1D1F;text-decoration:none;}
+.search-results a:hover{background:#F5F5F7;}
+.search-results .kind{font-size:11.5px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-right:8px;white-space:nowrap;}
+.search-results .sub{color:#6E6E73;font-size:12.5px;margin-left:8px;}
 .prov{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-left:6px;white-space:nowrap;}
 .champ{font-weight:700;color:#1D1D1F;}
 .rule-tag{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:1px 8px;margin-left:6px;white-space:nowrap;}
@@ -389,14 +403,15 @@ table.lb td.name{font-weight:600;}
           <a href="../calendar.html">カレンダー</a>
           <a href="../index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
-        </nav>
+        <a href="../search.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
       </div>
     </header>
 <main class="wrap">
 <p><a class="back" href="../rankings.html">‹ ランキング一覧へ戻る</a></p>
-<h1>スーパーアトム級 ランキング（強さ）</h1>
-<p class="lead">修正Eloレーティング（初期値1500）によるスーパーアトム級の強さランキングです。KO・一本勝ちにはボーナス、タイトルマッチには重み付けをし、期間が空いた選手のレーティングは時間とともに1500へ減衰します。対象はその階級で直近18か月以内に試合のある選手で、3試合未満は「暫定」です。チャンピオン（C）は各階級の最新タイトルマッチ勝者で、レーティングに関わらず最上段に表示します。</p>
-<table class="lb"><thead><tr><th>順位</th><th>選手</th><th>レーティング</th><th>内訳</th></tr></thead><tbody><tr><td class="num champ">C</td><td class="name"><a href="../fighters/izawa-seika.html">伊澤星花</a></td><td class="num"></td><td>RIZIN 師走の超強者祭りで王座獲得</td></tr><tr><td class="num">1</td><td class="name"><a href="../fighters/oshima-saori.html">大島沙緒里</a></td><td class="num">1569.6</td><td>対象6試合／最終試合 2026.07.18</td></tr><tr><td class="num">2</td><td class="name"><a href="../fighters/kuziutina-natalia.html">ナターシャ・クジュティナ</a><span class="prov">暫定</span></td><td class="num">1562.6</td><td>対象2試合／最終試合 2026.09.10</td></tr><tr><td class="num">3</td><td class="name"><a href="../fighters/park-si-woo.html">パク・シウ</a></td><td class="num">1557.1</td><td>対象5試合／最終試合 2026.07.18</td></tr><tr><td class="num">4</td><td class="name"><a href="../fighters/rena.html">RENA</a></td><td class="num">1517.1</td><td>対象19試合／最終試合 2026.09.10</td></tr><tr><td class="num">5</td><td class="name"><a href="../fighters/hamasaki-ayaka.html">浜崎朱加</a></td><td class="num">1512.9</td><td>対象15試合／最終試合 2026.04.12</td></tr><tr><td class="num">6</td><td class="name"><a href="../fighters/suda-moeri.html">須田萌里</a><span class="prov">暫定</span></td><td class="num">1496.9</td><td>対象2試合／最終試合 2026.07.18</td></tr><tr><td class="num">7</td><td class="name"><a href="../fighters/ji-lee-ye.html">イ・イェジ</a><span class="prov">暫定</span></td><td class="num">1474.9</td><td>対象1試合／最終試合 2026.07.18</td></tr><tr><td class="num">8</td><td class="name"><a href="../fighters/lotus-kate.html">ケイト・ロータス</a><span class="prov">暫定</span></td><td class="num">1462.2</td><td>対象2試合／最終試合 2026.03.07</td></tr></tbody></table>
+<h1>スーパーアトム級 ランキング</h1>
+<p class="lead">修正Eloレーティング（初期値1500）によるスーパーアトム級の強さランキングです。KO・一本勝ちにはボーナス、タイトルマッチには重み付けをし、期間が空いた選手のレーティングは時間とともに1500へ減衰します。対象はその階級で直近18か月以内に試合のある選手で、3試合未満は「暫定」です。チャンピオン（C）は各階級の最新タイトルマッチ勝者で、レーティングに関わらず最上段に表示します。ランク入りには、その階級で3試合以上戦った選手への勝利が必要です。また、過去1年以内に直接対決で勝った相手より下には順位付けしません。</p>
+<table class="lb"><thead><tr><th>順位</th><th>選手</th><th>レーティング</th><th>内訳</th></tr></thead><tbody><tr><td class="num champ">C</td><td class="name"><a href="../fighters/izawa-seika.html">伊澤星花</a></td><td class="num"></td><td>RIZIN 師走の超強者祭りで王座獲得</td></tr><tr><td class="num">1</td><td class="name"><a href="../fighters/oshima-saori.html">大島沙緒里</a></td><td class="num">1570.9</td><td>対象6試合／最終試合 2026.07.18</td></tr><tr><td class="num">2</td><td class="name"><a href="../fighters/kuziutina-natalia.html">ナターシャ・クジュティナ</a><span class="prov">暫定</span></td><td class="num">1563.1</td><td>対象2試合／最終試合 2026.09.10</td></tr><tr><td class="num">3</td><td class="name"><a href="../fighters/park-si-woo.html">パク・シウ</a></td><td class="num">1557.6</td><td>対象5試合／最終試合 2026.07.18</td></tr><tr><td class="num">4</td><td class="name"><a href="../fighters/rena.html">RENA</a></td><td class="num">1518.1</td><td>対象19試合／最終試合 2026.09.10</td></tr><tr><td class="num">5</td><td class="name"><a href="../fighters/hamasaki-ayaka.html">浜崎朱加</a></td><td class="num">1517.7</td><td>対象16試合／最終試合 2026.04.12</td></tr></tbody></table>
+<h2>圏外（参考）</h2><p class="sub">対象期間内に試合はあるものの、その階級で3試合以上戦った選手への勝利がまだないため、ランキングには入れていない選手です。レーティング順に参考表示します。</p><table class="lb"><thead><tr><th>順位</th><th>選手</th><th>レーティング</th><th>内訳</th></tr></thead><tbody><tr><td class="num">―</td><td class="name"><a href="../fighters/suda-moeri.html">須田萌里</a><span class="prov">暫定</span></td><td class="num">1496.9</td><td>対象2試合／最終試合 2026.07.18</td></tr><tr><td class="num">―</td><td class="name"><a href="../fighters/shin-yu-jin.html">シン・ユジン</a><span class="prov">暫定</span></td><td class="num">1485.6</td><td>対象1試合／最終試合 2025.07.27</td></tr><tr><td class="num">―</td><td class="name"><a href="../fighters/ji-lee-ye.html">イ・イェジ</a><span class="prov">暫定</span></td><td class="num">1475.0</td><td>対象1試合／最終試合 2026.07.18</td></tr><tr><td class="num">―</td><td class="name"><a href="../fighters/lotus-kate.html">ケイト・ロータス</a><span class="prov">暫定</span></td><td class="num">1462.3</td><td>対象2試合／最終試合 2026.03.07</td></tr></tbody></table>
 </main>
 <footer class="site">
       <div class="wrap">

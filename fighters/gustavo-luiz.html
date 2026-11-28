@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 <style>
 table.index3{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5;}
@@ -302,6 +313,18 @@ table.history thead th{font-size:12.5px;color:#6E6E73;font-weight:600;border-bot
 table.history a{color:#0066CC;text-decoration:none;}
 table.history a:hover{text-decoration:underline;}
 .res-w{font-weight:700;}
+.res-l{font-weight:700;color:#6E6E73;}
+table.history tr.lose{background:#F5F5F7;}
+table.cal{border-collapse:collapse;width:100%;table-layout:fixed;font-size:12px;line-height:1.45;margin:0 0 26px;}
+table.cal th,table.cal td{border:1px solid #E8E8ED;padding:5px 6px;vertical-align:top;text-align:left;}
+table.cal thead th{font-size:11px;color:#6E6E73;font-weight:600;background:#F5F5F7;}
+table.cal td{height:70px;}
+table.cal .d{font-weight:700;font-size:12.5px;}
+table.cal a{color:#0066CC;text-decoration:none;display:block;margin-top:2px;}
+table.cal a:hover{text-decoration:underline;}
+table.cal td.empty{background:#FAFAFA;}
+.prov{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-left:6px;white-space:nowrap;}
+.champ{font-weight:700;color:#1D1D1F;}
 .rule-tag{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:1px 8px;margin-left:6px;white-space:nowrap;}
 .lb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;}
 .lb-card{background:#F5F5F7;border-radius:14px;padding:16px 18px;}
@@ -360,10 +383,10 @@ table.lb td.name{font-weight:600;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="../index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="../venues.html">会場</a>
           <a href="../fighters.html" class="current" aria-current="page">選手</a>
           <a href="../rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="../calendar.html">カレンダー</a>
           <a href="../index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="#searchBox" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -387,7 +410,7 @@ table.lb td.name{font-weight:600;}
 <tr><th>Instagram</th><td><a href="https://www.instagram.com/luiz_killer/" target="_blank" rel="noopener">luiz_killer</a></td></tr>
 <tr><th>YouTube</th><td class="none">―</td></tr>
 </table>
-<h2>パフォーマンス（MMA）</h2><div class="stat-grid"><div class="stat-card"><div class="k">MMA試合数</div><div class="v">12</div><div class="s">8勝4敗</div></div><div class="stat-card"><div class="k">勝率</div><div class="v">66.7%</div><div class="s">勝÷（勝＋敗）</div></div><div class="stat-card"><div class="k">総試合時間</div><div class="v">90:34</div><div class="s">集計対象12試合の平均 7:33</div></div><div class="stat-card"><div class="k">最速勝利</div><div class="v">1:24</div><div class="s">RIZIN.38 vs 大原樹理</div></div><div class="stat-card"><div class="k">1Rフィニッシュ勝ち</div><div class="v">3</div><div class="s">KO・TKO／一本</div></div><div class="stat-card"><div class="k">フィニッシュ率（勝ち）</div><div class="v">75.0%</div><div class="s">フィニッシュ勝ち6／全8勝</div></div></div><div class="donuts"><div class="donut-card"><svg width="104" height="104" viewBox="0 0 104 104" role="img" aria-hidden="true"><circle cx="52" cy="52" r="40" fill="none" stroke="#1D1D1F" stroke-width="13" stroke-dasharray="186.5 64.8" stroke-dashoffset="-0.0" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#D2D2D7" stroke-width="13" stroke-dasharray="60.8 190.5" stroke-dashoffset="-188.5" transform="rotate(-90 52 52)"/></svg><div><h3>勝ち方内訳（全8勝）</h3><div class="donut-legend"><div><span class="sw" style="background:#1D1D1F"></span>KO・TKO 6（75.0%）</div><div><span class="sw" style="background:#D2D2D7"></span>判定 2（25.0%）</div></div></div></div><div class="donut-card"><svg width="104" height="104" viewBox="0 0 104 104" role="img" aria-hidden="true"><circle cx="52" cy="52" r="40" fill="none" stroke="#1D1D1F" stroke-width="13" stroke-dasharray="123.7 127.7" stroke-dashoffset="-0.0" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#D2D2D7" stroke-width="13" stroke-dasharray="123.7 127.7" stroke-dashoffset="-125.7" transform="rotate(-90 52 52)"/></svg><div><h3>負け方内訳（全4敗）</h3><div class="donut-legend"><div><span class="sw" style="background:#1D1D1F"></span>KO・TKO 2（50.0%）</div><div><span class="sw" style="background:#D2D2D7"></span>判定 2（50.0%）</div></div></div></div></div><table class="rate-t">
+<h2>パフォーマンス（MMA）</h2><p class="def-note">MMA成績： 12試合 8勝4敗（この欄はMMAルールの試合のみが対象です。冒頭の通算 12試合 8勝4敗 はキックボクシング等を含む全ルール合計のため、MMA以外の試合がある選手は数値が異なります）</p><div class="stat-grid"><div class="stat-card"><div class="k">MMA試合数</div><div class="v">12</div><div class="s">8勝4敗</div></div><div class="stat-card"><div class="k">勝率</div><div class="v">66.7%</div><div class="s">勝÷（勝＋敗）</div></div><div class="stat-card"><div class="k">総試合時間</div><div class="v">90:34</div><div class="s">集計対象12試合の平均 7:33</div></div><div class="stat-card"><div class="k">最速勝利</div><div class="v">1:24</div><div class="s">RIZIN.38 vs 大原樹理</div></div><div class="stat-card"><div class="k">1Rフィニッシュ勝ち</div><div class="v">3</div><div class="s">KO・TKO／一本</div></div><div class="stat-card"><div class="k">フィニッシュ率（勝ち）</div><div class="v">75.0%</div><div class="s">フィニッシュ勝ち6／全8勝</div></div></div><div class="donuts"><div class="donut-card"><svg width="104" height="104" viewBox="0 0 104 104" role="img" aria-hidden="true"><circle cx="52" cy="52" r="40" fill="none" stroke="#1D1D1F" stroke-width="13" stroke-dasharray="123.7 127.7" stroke-dashoffset="-0.0" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#6E6E73" stroke-width="13" stroke-dasharray="39.9 211.4" stroke-dashoffset="-125.7" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#9A9AA0" stroke-width="13" stroke-dasharray="39.9 211.4" stroke-dashoffset="-167.6" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#D2D2D7" stroke-width="13" stroke-dasharray="39.9 211.4" stroke-dashoffset="-209.4" transform="rotate(-90 52 52)"/></svg><div><h3>勝敗内訳（MMA全12試合）</h3><div class="donut-legend"><div><span class="sw" style="background:#1D1D1F"></span>KO・TKO勝ち 6（50.0%）</div><div><span class="sw" style="background:#6E6E73"></span>判定勝ち 2（16.7%）</div><div><span class="sw" style="background:#9A9AA0"></span>KO・TKO負け 2（16.7%）</div><div><span class="sw" style="background:#D2D2D7"></span>判定負け 2（16.7%）</div></div></div></div></div><table class="rate-t">
 <tr><th></th><th>KO・TKO</th><th>一本</th><th>判定</th><th>フィニッシュ計</th></tr>
 <tr><th>勝ち（全8勝中）</th><td>6（75.0%）</td><td>0（0.0%）</td><td>2（25.0%）</td><td>6（75.0%）</td></tr>
 <tr><th>負け（全4敗中）</th><td>2（50.0%）</td><td>0（0.0%）</td><td>2（50.0%）</td><td>2（50.0%）</td></tr>
@@ -397,18 +420,18 @@ table.lb td.name{font-weight:600;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2026.05.10</td><td><a href="../rizin-53.html">RIZIN.53</a></td><td class="opp"><a href="nozimov-ilkhom.html">イルホム・ノジモフ</a></td><td><span class="res-w">勝ち</span></td><td>1R 2:08 TKO（右フック→パウンド） <a href="https://youtu.be/AZeVe_xWqYs?si=fH_kk6SFtML_F3zP" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2026.03.07</td><td><a href="../rizin-52.html">RIZIN.52</a></td><td class="opp"><a href="sakuraba-taisei.html">桜庭大世</a></td><td><span class="res-w">勝ち</span></td><td>2R 1:32 KO（右フック） <a href="https://youtu.be/2uj7vHH87Wc?si=Ipir2l_Aa1y24yHf" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2025.03.30</td><td><a href="../rizin-50.html">RIZIN.50</a></td><td class="opp"><a href="nomura-shunta.html">野村駿太</a></td><td><span class="res-w">負け</span></td><td>3R 2:27 テクニカル判定0-3 <a href="https://youtu.be/QCcraDiitOs?si=5JuJ3y17oXP1ct65" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.09.29</td><td><a href="../rizin-48.html">RIZIN.48</a></td><td class="opp"><a href="souza-roberto-satoshi.html">ホベルト・サトシ・ソウザ</a></td><td><span class="res-w">負け</span></td><td>1R 0:21 TKO（左ストレート→パウンド） <a href="https://youtu.be/ypWLbk1Fw9I?si=9kEJBJMuL-tvcbIF" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2024.02.24</td><td><a href="../rizin-landmark-8.html">RIZIN LANDMARK 8</a></td><td class="opp"><a href="horie-yoshinori.html">堀江圭功</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/5EUKwf9UbSo?si=2sswm4HaSIZjfFbw" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2023.04.29</td><td><a href="../rizin-landmark-5.html">RIZIN LANDMARK 5</a></td><td class="opp"><a href="takeda-koji.html">武田光司</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定1-2 <a href="https://youtu.be/kPFOKk5w1uA?si=b5pElk2-PgGhUfQh" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2022.09.25</td><td><a href="../rizin-38.html">RIZIN.38</a></td><td class="opp"><a href="ohara-juri.html">大原樹理</a></td><td><span class="res-w">勝ち</span></td><td>1R 1:24 TKO （グラウンドパンチ）</td></tr>
-<tr><td class="num">2022.04.16</td><td><a href="../rizin-trigger-3rd.html">RIZIN TRIGGER 3rd</a></td><td class="opp"><a href="yachi-yusuke.html">矢地祐介</a></td><td><span class="res-w">勝ち</span></td><td>2R 3:14 TKO（グラウンドパンチ）</td></tr>
-<tr><td class="num">2019.12.31</td><td><a href="../rizin-20.html">RIZIN.20</a></td><td class="opp"><a href="pitbull-patricky.html">パトリッキー・ピットブル</a></td><td><span class="res-w">負け</span></td><td>1R 0:28 TKO（サッカーボールキック） <a href="https://youtu.be/gYPwmwcyeUY?si=dmRCyueQ1Hemh2c2" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2019.10.12</td><td><a href="../rizin-19.html">RIZIN.19</a></td><td class="opp"><a href="uesako-hiroto.html">上迫博仁</a></td><td><span class="res-w">勝ち</span></td><td>1R 3:55 TKO（レフェリーストップ） <a href="https://youtu.be/ZZ_mXyZqwDE?si=Kjf0kimSDx33-Czb" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2019.04.21</td><td><a href="../rizin-15.html">RIZIN.15</a></td><td class="opp"><a href="asakura-mikuru.html">朝倉未来</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/5FaO0n-WMSE?si=Ob3jkyYBG2ob1MZu" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2018.08.12</td><td><a href="../rizin-12.html">RIZIN.12</a></td><td class="opp"><a href="yachi-yusuke.html">矢地祐介</a></td><td><span class="res-w">勝ち</span></td><td>2R 2:32 KO (右フック) <a href="https://youtu.be/swsByn1HNf0?si=nxynSLYBxzlG6kB9" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2026.05.10</td><td><a href="../rizin-53.html">RIZIN.53</a></td><td class="opp"><a href="nozimov-ilkhom.html">イルホム・ノジモフ</a></td><td><span class="res-w">Win</span></td><td>1R 2:08 TKO（右フック→パウンド） <a href="https://youtu.be/AZeVe_xWqYs?si=fH_kk6SFtML_F3zP" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2026.03.07</td><td><a href="../rizin-52.html">RIZIN.52</a></td><td class="opp"><a href="sakuraba-taisei.html">桜庭大世</a></td><td><span class="res-w">Win</span></td><td>2R 1:32 KO（右フック） <a href="https://youtu.be/2uj7vHH87Wc?si=Ipir2l_Aa1y24yHf" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr class="lose"><td class="num">2025.03.30</td><td><a href="../rizin-50.html">RIZIN.50</a></td><td class="opp"><a href="nomura-shunta.html">野村駿太</a></td><td><span class="res-l">Lose</span></td><td>3R 2:27 テクニカル判定0-3 <a href="https://youtu.be/QCcraDiitOs?si=5JuJ3y17oXP1ct65" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr class="lose"><td class="num">2024.09.29</td><td><a href="../rizin-48.html">RIZIN.48</a></td><td class="opp"><a href="souza-roberto-satoshi.html">ホベルト・サトシ・ソウザ</a></td><td><span class="res-l">Lose</span></td><td>1R 0:21 TKO（左ストレート→パウンド） <a href="https://youtu.be/ypWLbk1Fw9I?si=9kEJBJMuL-tvcbIF" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2024.02.24</td><td><a href="../rizin-landmark-8.html">RIZIN LANDMARK 8</a></td><td class="opp"><a href="horie-yoshinori.html">堀江圭功</a></td><td><span class="res-w">Win</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/5EUKwf9UbSo?si=2sswm4HaSIZjfFbw" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2023.04.29</td><td><a href="../rizin-landmark-5.html">RIZIN LANDMARK 5</a></td><td class="opp"><a href="takeda-koji.html">武田光司</a></td><td><span class="res-w">Win</span></td><td>3R終了 判定1-2 <a href="https://youtu.be/kPFOKk5w1uA?si=b5pElk2-PgGhUfQh" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.09.25</td><td><a href="../rizin-38.html">RIZIN.38</a></td><td class="opp"><a href="ohara-juri.html">大原樹理</a></td><td><span class="res-w">Win</span></td><td>1R 1:24 TKO （グラウンドパンチ）</td></tr>
+<tr><td class="num">2022.04.16</td><td><a href="../rizin-trigger-3rd.html">RIZIN TRIGGER 3rd</a></td><td class="opp"><a href="yachi-yusuke.html">矢地祐介</a></td><td><span class="res-w">Win</span></td><td>2R 3:14 TKO（グラウンドパンチ）</td></tr>
+<tr class="lose"><td class="num">2019.12.31</td><td><a href="../rizin-20.html">RIZIN.20</a></td><td class="opp"><a href="pitbull-patricky.html">パトリッキー・ピットブル</a></td><td><span class="res-l">Lose</span></td><td>1R 0:28 TKO（サッカーボールキック） <a href="https://youtu.be/gYPwmwcyeUY?si=dmRCyueQ1Hemh2c2" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2019.10.12</td><td><a href="../rizin-19.html">RIZIN.19</a></td><td class="opp"><a href="uesako-hiroto.html">上迫博仁</a></td><td><span class="res-w">Win</span></td><td>1R 3:55 TKO（レフェリーストップ） <a href="https://youtu.be/ZZ_mXyZqwDE?si=Kjf0kimSDx33-Czb" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr class="lose"><td class="num">2019.04.21</td><td><a href="../rizin-15.html">RIZIN.15</a></td><td class="opp"><a href="asakura-mikuru.html">朝倉未来</a></td><td><span class="res-l">Lose</span></td><td>3R終了 判定3-0 <a href="https://youtu.be/5FaO0n-WMSE?si=Ob3jkyYBG2ob1MZu" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2018.08.12</td><td><a href="../rizin-12.html">RIZIN.12</a></td><td class="opp"><a href="yachi-yusuke.html">矢地祐介</a></td><td><span class="res-w">Win</span></td><td>2R 2:32 KO (右フック) <a href="https://youtu.be/swsByn1HNf0?si=nxynSLYBxzlG6kB9" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
 </tbody>
 </table>
 </div>

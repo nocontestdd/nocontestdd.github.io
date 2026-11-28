@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 <style>
 table.index3{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5;}
@@ -302,6 +313,32 @@ table.history thead th{font-size:12.5px;color:#6E6E73;font-weight:600;border-bot
 table.history a{color:#0066CC;text-decoration:none;}
 table.history a:hover{text-decoration:underline;}
 .res-w{font-weight:700;}
+.res-l{font-weight:700;color:#6E6E73;}
+table.history tr.lose{background:#F5F5F7;}
+table.cal{border-collapse:collapse;width:100%;table-layout:fixed;font-size:12px;line-height:1.45;margin:0 0 26px;}
+table.cal th,table.cal td{border:1px solid #E8E8ED;padding:5px 6px;vertical-align:top;text-align:left;}
+table.cal thead th{font-size:11px;color:#6E6E73;font-weight:600;background:#F5F5F7;}
+table.cal td{height:70px;}
+table.cal .d{font-weight:700;font-size:12.5px;}
+table.cal a{color:#0066CC;text-decoration:none;display:block;margin-top:2px;}
+table.cal a:hover{text-decoration:underline;}
+table.cal td.empty{background:#FAFAFA;}
+.yr-sec{display:none;}
+.yr-sec.on{display:block;}
+table.cal .future-ev{display:block;margin-top:2px;color:#6E6E73;font-weight:600;}
+.venue-links{margin:0 0 18px;font-size:14.5px;line-height:1.9;}
+.venue-links a{color:#0066CC;text-decoration:none;}
+.venue-links a:hover{text-decoration:underline;}
+.lodging-list{margin:0 0 18px;padding-left:20px;font-size:14.5px;line-height:1.9;}
+.lodging-list a{color:#0066CC;text-decoration:none;}
+.lodging-list a:hover{text-decoration:underline;}
+.search-results{margin:14px 0 8px;}
+.search-results a{display:block;padding:10px 12px;border-bottom:1px solid #E8E8ED;color:#1D1D1F;text-decoration:none;}
+.search-results a:hover{background:#F5F5F7;}
+.search-results .kind{font-size:11.5px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-right:8px;white-space:nowrap;}
+.search-results .sub{color:#6E6E73;font-size:12.5px;margin-left:8px;}
+.prov{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-left:6px;white-space:nowrap;}
+.champ{font-weight:700;color:#1D1D1F;}
 .rule-tag{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:1px 8px;margin-left:6px;white-space:nowrap;}
 .lb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;}
 .lb-card{background:#F5F5F7;border-radius:14px;padding:16px 18px;}
@@ -360,13 +397,13 @@ table.lb td.name{font-weight:600;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="../index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="../venues.html">会場</a>
           <a href="../fighters.html" class="current" aria-current="page">選手</a>
           <a href="../rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="../calendar.html">カレンダー</a>
           <a href="../index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
-        <a href="#searchBox" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
+        <a href="../search.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
       </div>
     </header>
 <main class="wrap">
@@ -387,7 +424,7 @@ table.lb td.name{font-weight:600;}
 <tr><th>Instagram</th><td class="none">―</td></tr>
 <tr><th>YouTube</th><td class="none">―</td></tr>
 </table>
-<h2>パフォーマンス（MMA）</h2><div class="stat-grid"><div class="stat-card"><div class="k">MMA試合数</div><div class="v">8</div><div class="s">3勝5敗</div></div><div class="stat-card"><div class="k">勝率</div><div class="v">37.5%</div><div class="s">勝÷（勝＋敗）</div></div><div class="stat-card"><div class="k">総試合時間</div><div class="v">99:14</div><div class="s">集計対象8試合の平均 12:24</div></div><div class="stat-card"><div class="k">最速勝利</div><div class="v">0:35</div><div class="s">RIZIN TRIGGER 2nd vs 新居すぐる</div></div><div class="stat-card"><div class="k">1Rフィニッシュ勝ち</div><div class="v">1</div><div class="s">KO・TKO／一本</div></div><div class="stat-card"><div class="k">フィニッシュ率（勝ち）</div><div class="v">33.3%</div><div class="s">フィニッシュ勝ち1／全3勝</div></div></div><div class="donuts"><div class="donut-card"><svg width="104" height="104" viewBox="0 0 104 104" role="img" aria-hidden="true"><circle cx="52" cy="52" r="40" fill="none" stroke="#1D1D1F" stroke-width="13" stroke-dasharray="81.8 169.6" stroke-dashoffset="-0.0" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#D2D2D7" stroke-width="13" stroke-dasharray="165.6 85.8" stroke-dashoffset="-83.8" transform="rotate(-90 52 52)"/></svg><div><h3>勝ち方内訳（全3勝）</h3><div class="donut-legend"><div><span class="sw" style="background:#1D1D1F"></span>KO・TKO 1（33.3%）</div><div><span class="sw" style="background:#D2D2D7"></span>判定 2（66.7%）</div></div></div></div><div class="donut-card"><svg width="104" height="104" viewBox="0 0 104 104" role="img" aria-hidden="true"><circle cx="52" cy="52" r="40" fill="none" stroke="#1D1D1F" stroke-width="13" stroke-dasharray="48.3 203.1" stroke-dashoffset="-0.0" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#D2D2D7" stroke-width="13" stroke-dasharray="199.1 52.3" stroke-dashoffset="-50.3" transform="rotate(-90 52 52)"/></svg><div><h3>負け方内訳（全5敗）</h3><div class="donut-legend"><div><span class="sw" style="background:#1D1D1F"></span>KO・TKO 1（20.0%）</div><div><span class="sw" style="background:#D2D2D7"></span>判定 4（80.0%）</div></div></div></div></div><table class="rate-t">
+<h2>パフォーマンス（MMA）</h2><p class="def-note">MMA成績： 8試合 3勝5敗（この欄はMMAルールの試合のみが対象です。冒頭の通算 8試合 3勝5敗 はキックボクシング等を含む全ルール合計のため、MMA以外の試合がある選手は数値が異なります）</p><div class="stat-grid"><div class="stat-card"><div class="k">MMA試合数</div><div class="v">8</div><div class="s">3勝5敗</div></div><div class="stat-card"><div class="k">勝率</div><div class="v">37.5%</div><div class="s">勝÷（勝＋敗）</div></div><div class="stat-card"><div class="k">総試合時間</div><div class="v">99:14</div><div class="s">集計対象8試合の平均 12:24</div></div><div class="stat-card"><div class="k">最速勝利</div><div class="v">0:35</div><div class="s">RIZIN TRIGGER 2nd vs 新居すぐる</div></div><div class="stat-card"><div class="k">1Rフィニッシュ勝ち</div><div class="v">1</div><div class="s">KO・TKO／一本</div></div><div class="stat-card"><div class="k">フィニッシュ率（勝ち）</div><div class="v">33.3%</div><div class="s">フィニッシュ勝ち1／全3勝</div></div></div><div class="donuts"><div class="donut-card"><svg width="104" height="104" viewBox="0 0 104 104" role="img" aria-hidden="true"><circle cx="52" cy="52" r="40" fill="none" stroke="#1D1D1F" stroke-width="13" stroke-dasharray="29.4 221.9" stroke-dashoffset="-0.0" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#6E6E73" stroke-width="13" stroke-dasharray="60.8 190.5" stroke-dashoffset="-31.4" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#9A9AA0" stroke-width="13" stroke-dasharray="29.4 221.9" stroke-dashoffset="-94.2" transform="rotate(-90 52 52)"/><circle cx="52" cy="52" r="40" fill="none" stroke="#D2D2D7" stroke-width="13" stroke-dasharray="123.7 127.7" stroke-dashoffset="-125.7" transform="rotate(-90 52 52)"/></svg><div><h3>勝敗内訳（MMA全8試合）</h3><div class="donut-legend"><div><span class="sw" style="background:#1D1D1F"></span>KO・TKO勝ち 1（12.5%）</div><div><span class="sw" style="background:#6E6E73"></span>判定勝ち 2（25.0%）</div><div><span class="sw" style="background:#9A9AA0"></span>KO・TKO負け 1（12.5%）</div><div><span class="sw" style="background:#D2D2D7"></span>判定負け 4（50.0%）</div></div></div></div></div><table class="rate-t">
 <tr><th></th><th>KO・TKO</th><th>一本</th><th>判定</th><th>フィニッシュ計</th></tr>
 <tr><th>勝ち（全3勝中）</th><td>1（33.3%）</td><td>0（0.0%）</td><td>2（66.7%）</td><td>1（33.3%）</td></tr>
 <tr><th>負け（全5敗中）</th><td>1（20.0%）</td><td>0（0.0%）</td><td>4（80.0%）</td><td>1（20.0%）</td></tr>
@@ -397,14 +434,14 @@ table.lb td.name{font-weight:600;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2025.06.14</td><td><a href="../rizin-landmark-11-in-sapporo.html">RIZIN LANDMARK 11 in SAPPRO</a></td><td class="opp"><a href="suzuki-hiroaki.html">鈴木博昭</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定0-3</td></tr>
-<tr><td class="num">2024.04.29</td><td><a href="../rizin-46.html">RIZIN.46</a></td><td class="opp"><a href="nozimov-ilkhom.html">イルホム・ノジモフ</a></td><td><span class="res-w">負け</span></td><td>2R 3:39 TKO（グラウンドパンチ）</td></tr>
-<tr><td class="num">2023.04.29</td><td><a href="../rizin-landmark-5.html">RIZIN LANDMARK 5</a></td><td class="opp"><a href="kanehara-masanori.html">金原正徳</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2022.07.31</td><td><a href="../rizin-37.html">RIZIN.37</a></td><td class="opp"><a href="karamov-vugar.html">ヴガール・ケラモフ</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0</td></tr>
-<tr><td class="num">2022.07.02</td><td><a href="../rizin-36.html">RIZIN.36</a></td><td class="opp"><a href="aguon-kyle.html">カイル・アグォン</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定0-3</td></tr>
-<tr><td class="num">2022.03.20</td><td><a href="../rizin-34.html">RIZIN.34</a></td><td class="opp"><a href="nakamura-daisuke.html">中村大介</a></td><td><span class="res-w">勝ち</span></td><td>3R終了 判定1-2 <a href="https://youtu.be/Yc0Nr3sPlwQ?si=dux3vkw_GHQc9c-Z" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
-<tr><td class="num">2022.02.23</td><td><a href="../rizin-trigger-2nd.html">RIZIN TRIGGER 2nd</a></td><td class="opp"><a href="nii-suguru.html">新居すぐる</a></td><td><span class="res-w">勝ち</span></td><td>1R 0:35 TKO（グラウンドパンチ）</td></tr>
-<tr><td class="num">2021.11.28</td><td><a href="../rizin-trigger-1st.html">RIZIN TRIGGER 1st</a></td><td class="opp"><a href="suzuki-chihiro.html">鈴木千裕</a></td><td><span class="res-w">負け</span></td><td>3R終了 判定3-0</td></tr>
+<tr class="lose"><td class="num">2025.06.14</td><td><a href="../rizin-landmark-11-in-sapporo.html">RIZIN LANDMARK 11 in SAPPRO</a></td><td class="opp"><a href="suzuki-hiroaki.html">鈴木博昭</a></td><td><span class="res-l">Lose</span></td><td>3R終了 判定0-3</td></tr>
+<tr class="lose"><td class="num">2024.04.29</td><td><a href="../rizin-46.html">RIZIN.46</a></td><td class="opp"><a href="nozimov-ilkhom.html">イルホム・ノジモフ</a></td><td><span class="res-l">Lose</span></td><td>2R 3:39 TKO（グラウンドパンチ）</td></tr>
+<tr class="lose"><td class="num">2023.04.29</td><td><a href="../rizin-landmark-5.html">RIZIN LANDMARK 5</a></td><td class="opp"><a href="kanehara-masanori.html">金原正徳</a></td><td><span class="res-l">Lose</span></td><td>3R終了 判定3-0</td></tr>
+<tr class="lose"><td class="num">2022.07.31</td><td><a href="../rizin-37.html">RIZIN.37</a></td><td class="opp"><a href="karamov-vugar.html">ヴガール・ケラモフ</a></td><td><span class="res-l">Lose</span></td><td>3R終了 判定3-0</td></tr>
+<tr><td class="num">2022.07.02</td><td><a href="../rizin-36.html">RIZIN.36</a></td><td class="opp"><a href="aguon-kyle.html">カイル・アグォン</a></td><td><span class="res-w">Win</span></td><td>3R終了 判定0-3</td></tr>
+<tr><td class="num">2022.03.20</td><td><a href="../rizin-34.html">RIZIN.34</a></td><td class="opp"><a href="nakamura-daisuke.html">中村大介</a></td><td><span class="res-w">Win</span></td><td>3R終了 判定1-2 <a href="https://youtu.be/Yc0Nr3sPlwQ?si=dux3vkw_GHQc9c-Z" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr><td class="num">2022.02.23</td><td><a href="../rizin-trigger-2nd.html">RIZIN TRIGGER 2nd</a></td><td class="opp"><a href="nii-suguru.html">新居すぐる</a></td><td><span class="res-w">Win</span></td><td>1R 0:35 TKO（グラウンドパンチ）</td></tr>
+<tr class="lose"><td class="num">2021.11.28</td><td><a href="../rizin-trigger-1st.html">RIZIN TRIGGER 1st</a></td><td class="opp"><a href="suzuki-chihiro.html">鈴木千裕</a></td><td><span class="res-l">Lose</span></td><td>3R終了 判定3-0</td></tr>
 </tbody>
 </table>
 </div>

@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2022年9月25日（日）</dd>
     <dt>開催地</dt><dd>埼玉県さいたま市</dd>
-    <dt>会場</dt><dd>さいたまスーパーアリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/saitama-super-arena.html">さいたまスーパーアリーナ</a></dd>
     <dt>開始時刻</dt><dd>12:00</dd>
     <dt>試合数</dt><dd>全4試合</dd>
     <dt>入場者数</dt><dd>23,105人（主催者発表）</dd>
@@ -306,10 +317,10 @@ header.site .header-in{gap:12px;}
     <caption>超RIZIN 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">4</td><td><span class="winner">フロイド・メイウェザー・ジュニア</span><span class="vs">vs</span><span class="loser">朝倉未来</span></td><td class="winner">フロイド・メイウェザー・ジュニア</td><td class="finish">2R 3:15 TKO (レフェリーストップ)<span class="bout-note">スタンディングバウトルール 3分3R(無差別級) ／ ※非公式戦のため両者の戦績には影響しない。</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">皇治</span><span class="vs">vs</span><span class="loser">ジジ</span></td><td class="winner">皇治</td><td class="finish">3R 0:50 TKO (レフェリーストップ)<span class="bout-note">スタンディングバウトルール 3分3R(無差別級) ／ ※非公式戦のため両者の戦績には影響しない。</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">吉成名高</span><span class="vs">vs</span><span class="loser">バンダサック・ソー・トラクンペット</span></td><td class="winner">吉成名高</td><td class="finish">1R 2:24 TKO (レフェリーストップ)<span class="bout-note">キックボクシングルール 53.0kg契約ワンマッチ 3分3R （肘あり）</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">三浦孝太</span><span class="vs">vs</span><span class="loser">ブンチュアイ・ポーンスーンヌーン</span></td><td class="winner">三浦孝太</td><td class="finish">1R 1:54 アームバー<span class="bout-note">MMA特別ルール 66.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/junia-furoido-meiwezaa.html">フロイド・メイウェザー・ジュニア</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/asakura-mikuru.html">朝倉未来</a></span></td><td class="winner">フロイド・メイウェザー・ジュニア</td><td class="finish">2R 3:15 TKO (レフェリーストップ)<span class="bout-note">スタンディングバウトルール 3分3R(無差別級) ／ ※非公式戦のため両者の戦績には影響しない。</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/kouzi.html">皇治</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/jizzy.html">ジジ</a></span></td><td class="winner">皇治</td><td class="finish">3R 0:50 TKO (レフェリーストップ)<span class="bout-note">スタンディングバウトルール 3分3R(無差別級) ／ ※非公式戦のため両者の戦績には影響しない。</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/yoshinari-nadaka.html">吉成名高</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/trakunpet-bandasak-so.html">バンダサック・ソー・トラクンペット</a></span></td><td class="winner">吉成名高</td><td class="finish">1R 2:24 TKO (レフェリーストップ)<span class="bout-note">キックボクシングルール 53.0kg契約ワンマッチ 3分3R （肘あり）</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/miura-kota.html">三浦孝太</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/phonsungnoen-bunchuai.html">ブンチュアイ・ポーンスーンヌーン</a></span></td><td class="winner">三浦孝太</td><td class="finish">1R 1:54 アームバー<span class="bout-note">MMA特別ルール 66.0kg契約ワンマッチ 3分3R</span></td></tr>
             </tbody>
   </table>
 </article>

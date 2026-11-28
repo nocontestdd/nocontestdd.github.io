@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2023年11月4日（土）</dd>
     <dt>開催地</dt><dd>バクー</dd>
-    <dt>会場</dt><dd>ナショナル・ジムナスティックス・アリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/national-gymnastics-arena-baku.html">ナショナル・ジムナスティックス・アリーナ</a></dd>
     <dt>開始時刻</dt><dd>17:00</dd>
     <dt>試合数</dt><dd>全10試合</dd>
     <dt>入場者数</dt><dd>未公表</dd>
@@ -306,16 +317,16 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN LANDMARK 7 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">10</td><td><span class="winner">鈴木千裕</span><span class="vs">vs</span><span class="loser">ヴガール・ケラモフ</span></td><td class="winner">鈴木千裕</td><td class="finish">1R 1:28 KO（グラウンドパンチ）[11]<span class="bout-note">RIZINフェザー級タイトルマッチ ／ MMAルール 66.0kg契約 5分3R ／ ※鈴木が王座獲得に成功。第5代フェザー級王者となった。</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">トフィック・ムサエフ</span><span class="vs">vs</span><span class="loser">武田光司</span></td><td class="winner">トフィック・ムサエフ</td><td class="finish">3R 2:03 TKO（レフェリーストップ：グラウンドパンチ）[10]<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">アリ・アブドゥルカリコフ</span><span class="vs">vs</span><span class="loser">ナリマン・アバソフ</span></td><td class="winner">アリ・アブドゥルカリコフ</td><td class="finish">3R終了 判定0-3[9]<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">メイマン・マメドフ</span><span class="vs">vs</span><span class="loser">フェリット・ギョクテペ</span></td><td class="winner">メイマン・マメドフ</td><td class="finish">3R終了 判定3-0[8]<span class="bout-note">MMAルール 60.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">キム・ギョンピョ</span><span class="vs">vs</span><span class="loser">トゥラル・ラギモフ</span></td><td class="winner">キム・ギョンピョ</td><td class="finish">1R 0:21 KO（グラウンドパンチ）[7]<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">アナスタシア・スヴェッキスカ</span><span class="vs">vs</span><span class="loser">ファリダ・アブドゥエバ</span></td><td class="winner">アナスタシア・スヴェッキスカ</td><td class="finish">2R 4:20 アームバー[6]<span class="bout-note">MMAルール 51.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">イルホム・ノジモフ</span><span class="vs">vs</span><span class="loser">ホアレス・ディア</span></td><td class="winner">イルホム・ノジモフ</td><td class="finish">3R終了 判定0-3[5]<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">ヴラディスラヴ・ルドニエフ</span><span class="vs">vs</span><span class="loser">イリヤール・アスカノフ</span></td><td class="winner">ヴラディスラヴ・ルドニエフ</td><td class="finish">3R終了 判定0-3[4]<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">(国) ショータ・ベトレミドゥゼ</span><span class="vs">vs</span><span class="loser">クエンティン・ドミンゴス</span></td><td class="winner">(国) ショータ・ベトレミドゥゼ</td><td class="finish">1R 5:00 TKO（負傷による試合続行不能のためレフェリーストップ）[3]<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">ハサン・メジエフ</span><span class="vs">vs</span><span class="loser">コンスタンティン・メルクロフ</span></td><td class="winner">ハサン・メジエフ</td><td class="finish">1R 2:32 リアネイキッドチョーク[2]<span class="bout-note">MMAルール 93.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/suzuki-chihiro.html">鈴木千裕</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/karamov-vugar.html">ヴガール・ケラモフ</a></span></td><td class="winner">鈴木千裕</td><td class="finish">1R 1:28 KO（グラウンドパンチ）[11]<span class="bout-note">RIZINフェザー級タイトルマッチ ／ MMAルール 66.0kg契約 5分3R ／ ※鈴木が王座獲得に成功。第5代フェザー級王者となった。</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/musayev-tofiq.html">トフィック・ムサエフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/takeda-koji.html">武田光司</a></span></td><td class="winner">トフィック・ムサエフ</td><td class="finish">3R 2:03 TKO（レフェリーストップ：グラウンドパンチ）[10]<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/abdulkhalikov-ali.html">アリ・アブドゥルカリコフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/abbasov-nariman.html">ナリマン・アバソフ</a></span></td><td class="winner">アリ・アブドゥルカリコフ</td><td class="finish">3R終了 判定0-3[9]<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/mamedov-mehman.html">メイマン・マメドフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/goktepe-ferit.html">フェリット・ギョクテペ</a></span></td><td class="winner">メイマン・マメドフ</td><td class="finish">3R終了 判定3-0[8]<span class="bout-note">MMAルール 60.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/kim-kyung-pyo.html">キム・ギョンピョ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/ragimov-tural.html">トゥラル・ラギモフ</a></span></td><td class="winner">キム・ギョンピョ</td><td class="finish">1R 0:21 KO（グラウンドパンチ）[7]<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/svetkivska-anastasiya.html">アナスタシア・スヴェッキスカ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/abdueva-farida.html">ファリダ・アブドゥエバ</a></span></td><td class="winner">アナスタシア・スヴェッキスカ</td><td class="finish">2R 4:20 アームバー[6]<span class="bout-note">MMAルール 51.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/nozimov-ilkhom.html">イルホム・ノジモフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/dea-jaures.html">ホアレス・ディア</a></span></td><td class="winner">イルホム・ノジモフ</td><td class="finish">3R終了 判定0-3[5]<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/rudniev-vladislav.html">ヴラディスラヴ・ルドニエフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/askhanov-iliyar.html">イリヤール・アスカノフ</a></span></td><td class="winner">ヴラディスラヴ・ルドニエフ</td><td class="finish">3R終了 判定0-3[4]<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/betlemidze-shota.html">(国) ショータ・ベトレミドゥゼ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/domingos-quentin.html">クエンティン・ドミンゴス</a></span></td><td class="winner">(国) ショータ・ベトレミドゥゼ</td><td class="finish">1R 5:00 TKO（負傷による試合続行不能のためレフェリーストップ）[3]<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/mezhiev-hasan.html">ハサン・メジエフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/merkulov-konstantin.html">コンスタンティン・メルクロフ</a></span></td><td class="winner">ハサン・メジエフ</td><td class="finish">1R 2:32 リアネイキッドチョーク[2]<span class="bout-note">MMAルール 93.0kg契約ワンマッチ 5分3R</span></td></tr>
             </tbody>
   </table>
 </article>

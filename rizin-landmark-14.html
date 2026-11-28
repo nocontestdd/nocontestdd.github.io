@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2026年6月6日（土）</dd>
     <dt>開催地</dt><dd>宮城県仙台市</dd>
-    <dt>会場</dt><dd>ゼビオアリーナ仙台</dd>
+    <dt>会場</dt><dd><a href="venues/xebio-arena-sendai.html">ゼビオアリーナ仙台</a></dd>
     <dt>開始時刻</dt><dd>15:00</dd>
     <dt>試合数</dt><dd>全12試合</dd>
     <dt>入場者数</dt><dd>4,564人</dd>
@@ -306,18 +317,18 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN LANDMARK 14 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">8</td><td><span class="winner">神龍誠</span><span class="vs">vs</span><span class="loser">扇久保博正</span></td><td class="winner">神龍誠</td><td class="finish">3R終了 判定0-3 (27-30、27-30、28-29)<span class="bout-note">RIZINフライ級タイトルマッチ ／ MMAルール 57.0kg契約 5分3R ／ ※神龍が第3代王座獲得に成功。</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">トニー・ララミー</span><span class="vs">vs</span><span class="loser">元谷友貴</span></td><td class="winner">トニー・ララミー</td><td class="finish">3R終了 判定0-3 (26-30、26-30、25-30)<span class="bout-note">MMAルール 59.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">貴賢神</span><span class="vs">vs</span><span class="loser">酒井リョウ</span></td><td class="winner">貴賢神</td><td class="finish">1R 1:16 TKO（右ストレート→パウンド）<span class="bout-note">MMAルール 121.2kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">“ブラックパンサー”ベイノア</span><span class="vs">vs</span><span class="loser">芳賀ビラル海</span></td><td class="winner">“ブラックパンサー”ベイノア</td><td class="finish">2R 0:10 KO（左ハイキック）<span class="bout-note">MMAルール 71.1kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">矢地祐介</span><span class="vs">vs</span><span class="loser">ISAO</span></td><td class="winner">矢地祐介</td><td class="finish">3R終了 判定3-0 (29-28、29-28、29-28)<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">冨澤大智</span><span class="vs">vs</span><span class="loser">加藤瑠偉</span></td><td class="winner">冨澤大智</td><td class="finish">1R 4:37 TKO（グラウンドでの肘打ち）<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">直樹</span><span class="vs">vs</span><span class="loser">黒井海成</span></td><td class="winner">直樹</td><td class="finish">1R 3:37 TKO（左膝蹴り→パウンド）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">井上聖矢</span><span class="vs">vs</span><span class="loser">赤田功輝</span></td><td class="winner">井上聖矢</td><td class="finish">3R 0:28 TKO（左フック→パウンド）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">颯斗</span><span class="vs">vs</span><span class="loser">湯浅帝蓮</span></td><td class="winner">颯斗</td><td class="finish">2R終了 判定2-1 (20-18、20-18、19-19 (マスト：湯浅))<span class="bout-note">MMA特別ルール 57.0kg契約ワンマッチ 5分2R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">齋藤紘也</span><span class="vs">vs</span><span class="loser">TAaaaCHAN</span></td><td class="winner">齋藤紘也</td><td class="finish">1R 1:25 TKO (3ノックダウン)<span class="bout-note">キックボクシングルール 67.5kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">内田晶</span><span class="vs">vs</span><span class="loser">赤平大治</span></td><td class="winner">内田晶</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 56.5kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">岩城悠介</span><span class="vs">vs</span><span class="loser">中泉翔</span></td><td class="winner">岩城悠介</td><td class="finish">3R 0:47 KO (飛び膝蹴り)<span class="bout-note">キックボクシングルール 62.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/shinryu-makoto.html">神龍誠</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/ougikubo-hiromasa.html">扇久保博正</a></span></td><td class="winner">神龍誠</td><td class="finish">3R終了 判定0-3 (27-30、27-30、28-29)<span class="bout-note">RIZINフライ級タイトルマッチ ／ MMAルール 57.0kg契約 5分3R ／ ※神龍が第3代王座獲得に成功。</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/laramie-tony.html">トニー・ララミー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/motoya-yuki.html">元谷友貴</a></span></td><td class="winner">トニー・ララミー</td><td class="finish">3R終了 判定0-3 (26-30、26-30、25-30)<span class="bout-note">MMAルール 59.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/takakenshin.html">貴賢神</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sakai-ryo.html">酒井リョウ</a></span></td><td class="winner">貴賢神</td><td class="finish">1R 1:16 TKO（右ストレート→パウンド）<span class="bout-note">MMAルール 121.2kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/blackpantherbeynoah.html">“ブラックパンサー”ベイノア</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/haga-bilal-kai.html">芳賀ビラル海</a></span></td><td class="winner">“ブラックパンサー”ベイノア</td><td class="finish">2R 0:10 KO（左ハイキック）<span class="bout-note">MMAルール 71.1kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/yachi-yusuke.html">矢地祐介</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/isao.html">ISAO</a></span></td><td class="winner">矢地祐介</td><td class="finish">3R終了 判定3-0 (29-28、29-28、29-28)<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/tomizawa-daichi.html">冨澤大智</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kato-rui.html">加藤瑠偉</a></span></td><td class="winner">冨澤大智</td><td class="finish">1R 4:37 TKO（グラウンドでの肘打ち）<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/naoki.html">直樹</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kuroi-kaisei.html">黒井海成</a></span></td><td class="winner">直樹</td><td class="finish">1R 3:37 TKO（左膝蹴り→パウンド）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/inoue-seiya.html">井上聖矢</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/akada-koki.html">赤田功輝</a></span></td><td class="winner">井上聖矢</td><td class="finish">3R 0:28 TKO（左フック→パウンド）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/hayato.html">颯斗</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yuasa-taylan.html">湯浅帝蓮</a></span></td><td class="winner">颯斗</td><td class="finish">2R終了 判定2-1 (20-18、20-18、19-19 (マスト：湯浅))<span class="bout-note">MMA特別ルール 57.0kg契約ワンマッチ 5分2R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/saito-koya.html">齋藤紘也</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/taaaachan.html">TAaaaCHAN</a></span></td><td class="winner">齋藤紘也</td><td class="finish">1R 1:25 TKO (3ノックダウン)<span class="bout-note">キックボクシングルール 67.5kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/uchida-sho.html">内田晶</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/akahira-daichi.html">赤平大治</a></span></td><td class="winner">内田晶</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 56.5kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/iwaki-yusuke.html">岩城悠介</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/nakaizumi-sho.html">中泉翔</a></span></td><td class="winner">岩城悠介</td><td class="finish">3R 0:47 KO (飛び膝蹴り)<span class="bout-note">キックボクシングルール 62.0kg契約ワンマッチ 3分3R</span></td></tr>
             </tbody>
   </table>
 </article>

@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2023年4月29日（土）</dd>
     <dt>開催地</dt><dd>東京都渋谷区</dd>
-    <dt>会場</dt><dd>国立代々木競技場第一体育館</dd>
+    <dt>会場</dt><dd><a href="venues/yoyogi-national-gymnasium.html">国立代々木競技場第一体育館</a></dd>
     <dt>開始時刻</dt><dd>16:00</dd>
     <dt>試合数</dt><dd>全9試合</dd>
     <dt>入場者数</dt><dd>13,837人（主催者発表）</dd>
@@ -306,15 +317,15 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN LANDMARK 5 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">9</td><td><span class="winner">朝倉未来</span><span class="vs">vs</span><span class="loser">牛久絢太郎</span></td><td class="winner">朝倉未来</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">斎藤裕</span><span class="vs">vs</span><span class="loser">平本蓮</span></td><td class="winner">斎藤裕</td><td class="finish">3R終了 判定2-1<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">太田忍</span><span class="vs">vs</span><span class="loser">倉本一真</span></td><td class="winner">太田忍</td><td class="finish">1R 0:27 KO（右フック）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">ルイス・グスタボ</span><span class="vs">vs</span><span class="loser">武田光司</span></td><td class="winner">ルイス・グスタボ</td><td class="finish">3R終了 判定1-2<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">浅倉カンナ</span><span class="vs">vs</span><span class="loser">V.V Mei</span></td><td class="winner">浅倉カンナ</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">クレア・ロペス</span><span class="vs">vs</span><span class="loser">RENA</span></td><td class="winner">クレア・ロペス</td><td class="finish">3R 4:21 膝十字固め<span class="bout-note">MMAルール 51.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">スダリオ剛</span><span class="vs">vs</span><span class="loser">ロッキー・マルティネス（英語版）</span></td><td class="winner">スダリオ剛</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">金原正徳</span><span class="vs">vs</span><span class="loser">山本空良</span></td><td class="winner">金原正徳</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">アリ・アブドゥルカリコフ</span><span class="vs">vs</span><span class="loser">雑賀“ヤン坊”達也</span></td><td class="winner">アリ・アブドゥルカリコフ</td><td class="finish">1R 3:30 KO（右フック）<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/asakura-mikuru.html">朝倉未来</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/ushiku-juntaro.html">牛久絢太郎</a></span></td><td class="winner">朝倉未来</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/saito-yutaka.html">斎藤裕</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/hiramoto-ren.html">平本蓮</a></span></td><td class="winner">斎藤裕</td><td class="finish">3R終了 判定2-1<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/ota-shinobu.html">太田忍</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kuramoto-kazuma.html">倉本一真</a></span></td><td class="winner">太田忍</td><td class="finish">1R 0:27 KO（右フック）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/gustavo-luiz.html">ルイス・グスタボ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/takeda-koji.html">武田光司</a></span></td><td class="winner">ルイス・グスタボ</td><td class="finish">3R終了 判定1-2<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/asakura-kanna.html">浅倉カンナ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/mei-vv.html">V.V Mei</a></span></td><td class="winner">浅倉カンナ</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/lopez-claire.html">クレア・ロペス</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/rena.html">RENA</a></span></td><td class="winner">クレア・ロペス</td><td class="finish">3R 4:21 膝十字固め<span class="bout-note">MMAルール 51.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/sudario-tsuyoshi.html">スダリオ剛</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/martinez-roque.html">ロッキー・マルティネス（英語版）</a></span></td><td class="winner">スダリオ剛</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/kanehara-masanori.html">金原正徳</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yamamoto-sora.html">山本空良</a></span></td><td class="winner">金原正徳</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/abdulkhalikov-ali.html">アリ・アブドゥルカリコフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/tatsuyayanbosaika.html">雑賀“ヤン坊”達也</a></span></td><td class="winner">アリ・アブドゥルカリコフ</td><td class="finish">1R 3:30 KO（右フック）<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
             </tbody>
   </table>
 </article>

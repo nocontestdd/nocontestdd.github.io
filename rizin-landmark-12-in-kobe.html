@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2025年11月3日（月）</dd>
     <dt>開催地</dt><dd>兵庫県神戸市</dd>
-    <dt>会場</dt><dd>GLION ARENA KOBE</dd>
+    <dt>会場</dt><dd><a href="venues/glion-arena-kobe.html">GLION ARENA KOBE</a></dd>
     <dt>開始時刻</dt><dd>13:00</dd>
     <dt>試合数</dt><dd>全19試合</dd>
     <dt>入場者数</dt><dd>10,420人</dd>
@@ -306,24 +317,24 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN LANDMARK 12 in KOBE 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">13</td><td><span class="winner">秋元強真</span><span class="vs">vs</span><span class="loser">萩原京平</span></td><td class="winner">秋元強真</td><td class="finish">2R 3:52 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">12</td><td><span class="winner">伊澤星花</span><span class="vs">vs</span><span class="loser">大島沙緒里</span></td><td class="winner">伊澤星花</td><td class="finish">3R終了 判定3-0<span class="bout-note">RIZIN女子スーパーアトム級タイトルマッチ ／ MMAルール 49.0kg契約 5分3R ／ ※伊澤が2度目の王座防衛に成功。</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">摩嶋一整</span><span class="vs">vs</span><span class="loser">木村柊也</span></td><td class="winner">摩嶋一整</td><td class="finish">2R 2:54 リアネイキッドチョーク<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">ケイト・ロータス</span><span class="vs">vs</span><span class="loser">イ・ボミ</span></td><td class="winner">ケイト・ロータス</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 50.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">桜庭大世</span><span class="vs">vs</span><span class="loser">宇佐美正パトリック</span></td><td class="winner">桜庭大世</td><td class="finish">3R 1:33 膝十字固め<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">後藤丈治</span><span class="vs">vs</span><span class="loser">中島太一</span></td><td class="winner">後藤丈治</td><td class="finish">1R 1:49 KO（左フック）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">貴賢神</span><span class="vs">vs</span><span class="loser">MAX吉田</span></td><td class="winner">貴賢神</td><td class="finish">1R 1:10 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">金太郎</span><span class="vs">vs</span><span class="loser">リ・ユンフォン</span></td><td class="winner">金太郎</td><td class="finish">1R 1:34 ヒールフック<span class="bout-note">MMAルール 62.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">ヌルハン・ズマガジー</span><span class="vs">vs</span><span class="loser">雑賀“ヤン坊”達也</span></td><td class="winner">ヌルハン・ズマガジー</td><td class="finish">1R 1:00 ダースチョーク<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">鹿志村仁之介</span><span class="vs">vs</span><span class="loser">安井飛馬</span></td><td class="winner">鹿志村仁之介</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">キ・ウォンビン</span><span class="vs">vs</span><span class="loser">キャプテン☆アフリカ</span></td><td class="winner">キ・ウォンビン</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">トニー・ララミー</span><span class="vs">vs</span><span class="loser">山内渉</span></td><td class="winner">トニー・ララミー</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R ／ ※山内が前日計量で規定体重を0.3kgオーバーしたため、ララミーが勝利した場合のみ公式記録となり、山内にレッドカード提示によるペナルティ（50％減点）が与えられた状態から試合が行われた。</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">KING陸斗</span><span class="vs">vs</span><span class="loser">水野夢斗</span></td><td class="winner">KING陸斗</td><td class="finish">1R 2:05 TKO（3ノックダウン）<span class="bout-note">キックボクシングルール 51.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">NOEL</span><span class="vs">vs</span><span class="loser">海咲イルカ</span></td><td class="winner">NOEL</td><td class="finish">2R 2:46 腕ひしぎ十字固め<span class="bout-note">MMAルール 49.0kg契約ワンマッチ 5分2R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">赤平大治</span><span class="vs">vs</span><span class="loser">翔磨</span></td><td class="winner">赤平大治</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 57.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">宮川日向</span><span class="vs">vs</span><span class="loser">MG眞介</span></td><td class="winner">宮川日向</td><td class="finish">1R 1:52 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分2R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">林眞平</span><span class="vs">vs</span><span class="loser">元氣</span></td><td class="winner">林眞平</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 63.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">伊藤菜の花</span><span class="vs">vs</span><span class="loser">みいちゃんレンジャージム</span></td><td class="winner">伊藤菜の花</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 51.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">13</td><td><span class="winner"><a href="fighters/akimoto-kyoma.html">秋元強真</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/hagiwara-kyohei.html">萩原京平</a></span></td><td class="winner">秋元強真</td><td class="finish">2R 3:52 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/izawa-seika.html">伊澤星花</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/oshima-saori.html">大島沙緒里</a></span></td><td class="winner">伊澤星花</td><td class="finish">3R終了 判定3-0<span class="bout-note">RIZIN女子スーパーアトム級タイトルマッチ ／ MMAルール 49.0kg契約 5分3R ／ ※伊澤が2度目の王座防衛に成功。</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/majima-kazumasa.html">摩嶋一整</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kimura-shuya.html">木村柊也</a></span></td><td class="winner">摩嶋一整</td><td class="finish">2R 2:54 リアネイキッドチョーク<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/lotus-kate.html">ケイト・ロータス</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/lee-bomi.html">イ・ボミ</a></span></td><td class="winner">ケイト・ロータス</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 50.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/sakuraba-taisei.html">桜庭大世</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/usami-sho-patrick.html">宇佐美正パトリック</a></span></td><td class="winner">桜庭大世</td><td class="finish">3R 1:33 膝十字固め<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/goto-joji.html">後藤丈治</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/nakajima-taichi.html">中島太一</a></span></td><td class="winner">後藤丈治</td><td class="finish">1R 1:49 KO（左フック）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/takakenshin.html">貴賢神</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yoshida-max.html">MAX吉田</a></span></td><td class="winner">貴賢神</td><td class="finish">1R 1:10 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/kintaro.html">金太郎</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/li-yunfeng.html">リ・ユンフォン</a></span></td><td class="winner">金太郎</td><td class="finish">1R 1:34 ヒールフック<span class="bout-note">MMAルール 62.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/zhumagazy-nurkhan.html">ヌルハン・ズマガジー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/tatsuyayanbosaika.html">雑賀“ヤン坊”達也</a></span></td><td class="winner">ヌルハン・ズマガジー</td><td class="finish">1R 1:00 ダースチョーク<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/kashimura-jinnosuke.html">鹿志村仁之介</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yasui-hyuma.html">安井飛馬</a></span></td><td class="winner">鹿志村仁之介</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/ki-won-bin.html">キ・ウォンビン</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/africa-captain.html">キャプテン☆アフリカ</a></span></td><td class="winner">キ・ウォンビン</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/laramie-tony.html">トニー・ララミー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yamauchi-wataru.html">山内渉</a></span></td><td class="winner">トニー・ララミー</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R ／ ※山内が前日計量で規定体重を0.3kgオーバーしたため、ララミーが勝利した場合のみ公式記録となり、山内にレッドカード提示によるペナルティ（50％減点）が与えられた状態から試合が行われた。</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/rikuto-king.html">KING陸斗</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/mizuno-yumeto.html">水野夢斗</a></span></td><td class="winner">KING陸斗</td><td class="finish">1R 2:05 TKO（3ノックダウン）<span class="bout-note">キックボクシングルール 51.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/noel.html">NOEL</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/iruka-umisaki.html">海咲イルカ</a></span></td><td class="winner">NOEL</td><td class="finish">2R 2:46 腕ひしぎ十字固め<span class="bout-note">MMAルール 49.0kg契約ワンマッチ 5分2R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/akahira-daichi.html">赤平大治</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/shoma.html">翔磨</a></span></td><td class="winner">赤平大治</td><td class="finish">3R終了 判定3-0<span class="bout-note">キックボクシングルール 57.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/miyagawa-hyuga.html">宮川日向</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/shinsuke-mg.html">MG眞介</a></span></td><td class="winner">宮川日向</td><td class="finish">1R 1:52 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分2R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/hayashi-shinpei.html">林眞平</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/motoki.html">元氣</a></span></td><td class="winner">林眞平</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 63.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/ito-nanoka.html">伊藤菜の花</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/rangergym-miichan.html">みいちゃんレンジャージム</a></span></td><td class="winner">伊藤菜の花</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 51.0kg契約ワンマッチ 3分3R</span></td></tr>
             </tbody>
   </table>
 </article>

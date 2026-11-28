@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2015年12月31日（木）</dd>
     <dt>開催地</dt><dd>埼玉県さいたま市</dd>
-    <dt>会場</dt><dd>さいたまスーパーアリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/saitama-super-arena.html">さいたまスーパーアリーナ</a></dd>
     <dt>開始時刻</dt><dd>15:00</dd>
     <dt>試合数</dt><dd>全13試合</dd>
     <dt>入場者数</dt><dd>18,365人</dd>
@@ -306,19 +317,19 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN FIGHTING WORLD GRAND-PRIX 2015 IZAの舞 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">13</td><td><span class="winner">キング・モー</span><span class="vs">vs</span><span class="loser">イリー・プロハースカ</span></td><td class="winner">キング・モー</td><td class="finish">1R 5:09 KO（右フック）<span class="bout-note">ヘビー級トーナメント 決勝 1R10分/2R5分 ／ ※モーがトーナメント優勝</span></td></tr>
-              <tr><td class="no">12</td><td><span class="winner">エメリヤーエンコ・ヒョードル</span><span class="vs">vs</span><span class="loser">シング・心・ジャディブ</span></td><td class="winner">エメリヤーエンコ・ヒョードル</td><td class="finish">1R 3:03 TKO（マウントパンチ）<span class="bout-note">MMAルール 無差別級ワンマッチ 1R10分/2･3R5分</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">クロン・グレイシー</span><span class="vs">vs</span><span class="loser">山本アーセン</span></td><td class="winner">クロン・グレイシー</td><td class="finish">1R 4:57 三角絞め<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 1R10分/2･3R5分</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">アンディ・サワー</span><span class="vs">vs</span><span class="loser">長島☆自演乙☆雄一郎</span></td><td class="winner">アンディ・サワー</td><td class="finish">1R 5:29 KO（スタンドパンチ連打）<span class="bout-note">MMAルール 72.0kg契約ワンマッチ 1R10分/2･3R5分</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">バルト</span><span class="vs">vs</span><span class="loser">ピーター・アーツ[注 3]</span></td><td class="winner">バルト</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 無差別級ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">ボブ・サップ</span><span class="vs">vs</span><span class="loser">曙</span></td><td class="winner">ボブ・サップ</td><td class="finish">2R 0:47 負傷判定0-3（20-18、20-18、20-18）<span class="bout-note">SBルール 無差別級ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">ギャビ・ガルシア</span><span class="vs">vs</span><span class="loser">レイディー・タパ</span></td><td class="winner">ギャビ・ガルシア</td><td class="finish">1R 2:36 TKO（バックブロー→パウンド）<span class="bout-note">女子MMAルール 無差別級ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">武尊</span><span class="vs">vs</span><span class="loser">ヤン・ミン</span></td><td class="winner">武尊</td><td class="finish">2R 3:00 KO（右ストレート）<span class="bout-note">K-1ルール 57.0kg契約ワンマッチ 3分3R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">キム・スーチョル</span><span class="vs">vs</span><span class="loser">マイケ・リニャーレス</span></td><td class="winner">キム・スーチョル</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 61.3kg契約ワンマッチ 1R10分/2･3R5分</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">ブレナン・ワード</span><span class="vs">vs</span><span class="loser">長谷川賢</span></td><td class="winner">ブレナン・ワード</td><td class="finish">2R 1:54 リアネイキッドチョーク<span class="bout-note">MMAルール 81.0kg契約ワンマッチ 1R10分/2･3R5分</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">イリー・プロハースカ</span><span class="vs">vs</span><span class="loser">ワジム・ネムコフ</span></td><td class="winner">イリー・プロハースカ</td><td class="finish">1R終了時 TKO（棄権）<span class="bout-note">ヘビー級トーナメント 準決勝 1R10分/2R5分 ／ ※プロハースカがトーナメント決勝進出</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">キング・モー</span><span class="vs">vs</span><span class="loser">テオドラス・オークストリス</span></td><td class="winner">キング・モー</td><td class="finish">2R終了 判定5-0<span class="bout-note">ヘビー級トーナメント 準決勝 1R10分/2R5分 ／ ※モーがトーナメント決勝進出</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">RENA</span><span class="vs">vs</span><span class="loser">イリアーナ・ヴァレンティーノ</span></td><td class="winner">RENA</td><td class="finish">2R 3:31 アームバー<span class="bout-note">女子MMAルール 51.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">13</td><td><span class="winner"><a href="fighters/mo-king.html">キング・モー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/prochazka-jiri.html">イリー・プロハースカ</a></span></td><td class="winner">キング・モー</td><td class="finish">1R 5:09 KO（右フック）<span class="bout-note">ヘビー級トーナメント 決勝 1R10分/2R5分 ／ ※モーがトーナメント優勝</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/emelianenko-fedor.html">エメリヤーエンコ・ヒョードル</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/jaideep-singh-quotheartquot.html">シング・心・ジャディブ</a></span></td><td class="winner">エメリヤーエンコ・ヒョードル</td><td class="finish">1R 3:03 TKO（マウントパンチ）<span class="bout-note">MMAルール 無差別級ワンマッチ 1R10分/2･3R5分</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/gracie-kron.html">クロン・グレイシー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yamamoto-erson.html">山本アーセン</a></span></td><td class="winner">クロン・グレイシー</td><td class="finish">1R 4:57 三角絞め<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 1R10分/2･3R5分</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/souwer-andy.html">アンディ・サワー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/nagashima-yuichiro.html">長島☆自演乙☆雄一郎</a></span></td><td class="winner">アンディ・サワー</td><td class="finish">1R 5:29 KO（スタンドパンチ連打）<span class="bout-note">MMAルール 72.0kg契約ワンマッチ 1R10分/2･3R5分</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/baruto.html">バルト</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/aerts-peter.html">ピーター・アーツ[注 3]</a></span></td><td class="winner">バルト</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 無差別級ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/sapp-bob.html">ボブ・サップ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/akebono.html">曙</a></span></td><td class="winner">ボブ・サップ</td><td class="finish">2R 0:47 負傷判定0-3（20-18、20-18、20-18）<span class="bout-note">SBルール 無差別級ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/garcia-gabi.html">ギャビ・ガルシア</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/tapa-leid.html">レイディー・タパ</a></span></td><td class="winner">ギャビ・ガルシア</td><td class="finish">1R 2:36 TKO（バックブロー→パウンド）<span class="bout-note">女子MMAルール 無差別級ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/takeru.html">武尊</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/ming-yang.html">ヤン・ミン</a></span></td><td class="winner">武尊</td><td class="finish">2R 3:00 KO（右ストレート）<span class="bout-note">K-1ルール 57.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/kim-soo-chul.html">キム・スーチョル</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/linhares-maike.html">マイケ・リニャーレス</a></span></td><td class="winner">キム・スーチョル</td><td class="finish">3R終了 判定3-0<span class="bout-note">MMAルール 61.3kg契約ワンマッチ 1R10分/2･3R5分</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/ward-brennan.html">ブレナン・ワード</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/hasegawa-ken.html">長谷川賢</a></span></td><td class="winner">ブレナン・ワード</td><td class="finish">2R 1:54 リアネイキッドチョーク<span class="bout-note">MMAルール 81.0kg契約ワンマッチ 1R10分/2･3R5分</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/prochazka-jiri.html">イリー・プロハースカ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/nemkov-vadim.html">ワジム・ネムコフ</a></span></td><td class="winner">イリー・プロハースカ</td><td class="finish">1R終了時 TKO（棄権）<span class="bout-note">ヘビー級トーナメント 準決勝 1R10分/2R5分 ／ ※プロハースカがトーナメント決勝進出</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/mo-king.html">キング・モー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/aukstuolis-teodoras.html">テオドラス・オークストリス</a></span></td><td class="winner">キング・モー</td><td class="finish">2R終了 判定5-0<span class="bout-note">ヘビー級トーナメント 準決勝 1R10分/2R5分 ／ ※モーがトーナメント決勝進出</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/rena.html">RENA</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/valentino-jleana.html">イリアーナ・ヴァレンティーノ</a></span></td><td class="winner">RENA</td><td class="finish">2R 3:31 アームバー<span class="bout-note">女子MMAルール 51.0kg契約ワンマッチ 5分3R</span></td></tr>
             </tbody>
   </table>
 </article>

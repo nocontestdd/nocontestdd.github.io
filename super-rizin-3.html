@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2024年7月28日（日）</dd>
     <dt>開催地</dt><dd>埼玉県さいたま市</dd>
-    <dt>会場</dt><dd>さいたまスーパーアリーナ</dd>
+    <dt>会場</dt><dd><a href="venues/saitama-super-arena.html">さいたまスーパーアリーナ</a></dd>
     <dt>開始時刻</dt><dd>14:00</dd>
     <dt>試合数</dt><dd>全11試合</dd>
     <dt>入場者数</dt><dd>48,117人</dd>
@@ -307,16 +318,16 @@ header.site .header-in{gap:12px;}
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
               <tr><td class="no">11</td><td></td><td>—</td><td class="finish">× 日本 朝倉未来vs. 日本 平本蓮 ○ 1R 2:18 TKO（左ストレート→パウンド）<span class="bout-note">MMA特別ルール 66.0kg契約 5分5R ／ ※ 平本がLMS（ラストマンスタンディング）ベルトを獲得。</span></td></tr>
-              <tr><td class="no">10</td><td>マニー・パッキャオ<span class="vs">vs</span>安保瑠輝也</td><td>ドロー</td><td class="finish">3分3R終了 判定なし ドロー<span class="bout-note">スタンディングバウト特別ルール 69.0kg契約 3分3R</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">久保優太</span><span class="vs">vs</span><span class="loser">斎藤裕</span></td><td class="winner">久保優太</td><td class="finish">2R 4:19 KO（三日月蹴り）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">扇久保博正</span><span class="vs">vs</span><span class="loser">神龍誠</span></td><td class="winner">扇久保博正</td><td class="finish">5分3R終了 判定3-0<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">所英男</span><span class="vs">vs</span><span class="loser">ヒロヤ</span></td><td class="winner">所英男</td><td class="finish">1R 3:20 TKO（右ストレート→パウンド）<span class="bout-note">MMAルール 59.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">芦澤竜誠</span><span class="vs">vs</span><span class="loser">皇治</span></td><td class="winner">芦澤竜誠</td><td class="finish">5分3R終了 判定3-0<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">ジョン・ドッドソン</span><span class="vs">vs</span><span class="loser">征矢貴</span></td><td class="winner">ジョン・ドッドソン</td><td class="finish">2分5R終了 判定3-0<span class="bout-note">ベア・ナックル ルール 57.2kg契約ワンマッチ 2分5R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">RENA</span><span class="vs">vs</span><span class="loser">ケイト・ロータス</span></td><td class="winner">RENA</td><td class="finish">2R 4:18 TKO（スタンドパンチ連打）<span class="bout-note">MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">YA-MAN</span><span class="vs">vs</span><span class="loser">鈴木博昭</span></td><td class="winner">YA-MAN</td><td class="finish">1R 3:28 KO（左フック）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">タイ・エマリー</span><span class="vs">vs</span><span class="loser">チャリーサ・シガーラ</span></td><td class="winner">タイ・エマリー</td><td class="finish">1R 0:37 TKO（右フック）<span class="bout-note">ベア・ナックル ルール 57.2kg契約ワンマッチ 2分5R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">摩嶋一整</span><span class="vs">vs</span><span class="loser">新居すぐる</span></td><td class="winner">摩嶋一整</td><td class="finish">2R 3:11 リアネイキッドチョーク<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">10</td><td><a href="fighters/pacquiao-manny.html">マニー・パッキャオ</a><span class="vs">vs</span><a href="fighters/anpo-rukiya.html">安保瑠輝也</a></td><td>ドロー</td><td class="finish">3分3R終了 判定なし ドロー<span class="bout-note">スタンディングバウト特別ルール 69.0kg契約 3分3R</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/kubo-yuta.html">久保優太</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/saito-yutaka.html">斎藤裕</a></span></td><td class="winner">久保優太</td><td class="finish">2R 4:19 KO（三日月蹴り）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/ougikubo-hiromasa.html">扇久保博正</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/shinryu-makoto.html">神龍誠</a></span></td><td class="winner">扇久保博正</td><td class="finish">5分3R終了 判定3-0<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/tokoro-hideo.html">所英男</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/hiroya.html">ヒロヤ</a></span></td><td class="winner">所英男</td><td class="finish">1R 3:20 TKO（右ストレート→パウンド）<span class="bout-note">MMAルール 59.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/ashizawa-ryusei.html">芦澤竜誠</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kouzi.html">皇治</a></span></td><td class="winner">芦澤竜誠</td><td class="finish">5分3R終了 判定3-0<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/dodson-john.html">ジョン・ドッドソン</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/soya-takaki.html">征矢貴</a></span></td><td class="winner">ジョン・ドッドソン</td><td class="finish">2分5R終了 判定3-0<span class="bout-note">ベア・ナックル ルール 57.2kg契約ワンマッチ 2分5R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/rena.html">RENA</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/lotus-kate.html">ケイト・ロータス</a></span></td><td class="winner">RENA</td><td class="finish">2R 4:18 TKO（スタンドパンチ連打）<span class="bout-note">MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/man-ya.html">YA-MAN</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/suzuki-hiroaki.html">鈴木博昭</a></span></td><td class="winner">YA-MAN</td><td class="finish">1R 3:28 KO（左フック）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/emery-tai.html">タイ・エマリー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sigala-charisa.html">チャリーサ・シガーラ</a></span></td><td class="winner">タイ・エマリー</td><td class="finish">1R 0:37 TKO（右フック）<span class="bout-note">ベア・ナックル ルール 57.2kg契約ワンマッチ 2分5R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/majima-kazumasa.html">摩嶋一整</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/nii-suguru.html">新居すぐる</a></span></td><td class="winner">摩嶋一整</td><td class="finish">2R 3:11 リアネイキッドチョーク<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
             </tbody>
   </table>
 </article>

@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 </head>
 <body>
@@ -281,10 +292,10 @@ header.site .header-in{gap:12px;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="venues.html">会場</a>
           <a href="fighters.html">選手</a>
           <a href="rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="calendar.html">カレンダー</a>
           <a href="index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
         <a href="index.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
@@ -297,7 +308,7 @@ header.site .header-in{gap:12px;}
   <div class="result-overview"><dl>
     <dt>開催日</dt><dd>2024年11月17日（日）</dd>
     <dt>開催地</dt><dd>愛知県名古屋市</dd>
-    <dt>会場</dt><dd>名古屋市国際展示場（ポートメッセなごや）</dd>
+    <dt>会場</dt><dd><a href="venues/port-messe-nagoya.html">名古屋市国際展示場（ポートメッセなごや）</a></dd>
     <dt>開始時刻</dt><dd>13:00</dd>
     <dt>試合数</dt><dd>全15試合</dd>
     <dt>入場者数</dt><dd>7,918人</dd>
@@ -306,22 +317,22 @@ header.site .header-in{gap:12px;}
     <caption>RIZIN LANDMARK 10 勝敗表（試合順）</caption>
     <thead><tr><th class="no" scope="col">No.</th><th scope="col">対戦カード</th><th scope="col">勝者</th><th scope="col">決着</th></tr></thead>
     <tbody>
-              <tr><td class="no">12</td><td><span class="winner">ヴガール・ケラモフ</span><span class="vs">vs</span><span class="loser">摩嶋一整</span></td><td class="winner">ヴガール・ケラモフ</td><td class="finish">1R 0:32 TKO（右フック→グラウンドでの肘打ち）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">11</td><td><span class="winner">浜崎朱加</span><span class="vs">vs</span><span class="loser">シン・ユリ</span></td><td class="winner">浜崎朱加</td><td class="finish">2R 1:15 アームロック<span class="bout-note">MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">10</td><td><span class="winner">芦澤竜誠</span><span class="vs">vs</span><span class="loser">昇侍</span></td><td class="winner">芦澤竜誠</td><td class="finish">2R 1:05 TKO（ボディへの膝蹴り→パンチ連打）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">9</td><td><span class="winner">スダリオ剛</span><span class="vs">vs</span><span class="loser">加藤久輝</span></td><td class="winner">スダリオ剛</td><td class="finish">3R 1:12 TKO（ドクターストップ:カットによる出血）<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">8</td><td><span class="winner">秋元強真</span><span class="vs">vs</span><span class="loser">鈴木博昭</span></td><td class="winner">秋元強真</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">7</td><td><span class="winner">キム・ギョンピョ</span><span class="vs">vs</span><span class="loser">倉本大悟</span></td><td class="winner">キム・ギョンピョ</td><td class="finish">1R 3:59 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">6</td><td><span class="winner">伊藤裕樹</span><span class="vs">vs</span><span class="loser">イ・ジョンヒョン</span></td><td class="winner">伊藤裕樹</td><td class="finish">3R 2:59 TKO（グラウンドでの肘打ち）<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">5</td><td><span class="winner">ヒロヤ</span><span class="vs">vs</span><span class="loser">柴田&quot;MONKEY&quot;有哉</span></td><td class="winner">ヒロヤ</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">トニー・ララミー</span><span class="vs">vs</span><span class="loser">村元友太郎</span></td><td class="winner">トニー・ララミー</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">マゲラム・ガサンザデ</span><span class="vs">vs</span><span class="loser">白川ダーク陸斗</span></td><td class="winner">マゲラム・ガサンザデ</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">アラン“ヒロ”ヤマニハ</span><span class="vs">vs</span><span class="loser">山本聖悟</span></td><td class="winner">アラン“ヒロ”ヤマニハ</td><td class="finish">2R 3:07 リアネイキッドチョーク<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">アリベク・ガジャマトフ</span><span class="vs">vs</span><span class="loser">北方大地</span></td><td class="winner">アリベク・ガジャマトフ</td><td class="finish">1R 3:20 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
-              <tr><td class="no">4</td><td><span class="winner">窪田泰斗</span><span class="vs">vs</span><span class="loser">日比野&quot;エビ中&quot;純也</span></td><td class="winner">窪田泰斗</td><td class="finish">2R 0:26 TKO（右フック→パウンド）<span class="bout-note">MMA特別ルール 61.0kg契約ワンマッチ 5分2R</span></td></tr>
-              <tr><td class="no">3</td><td><span class="winner">稲田将</span><span class="vs">vs</span><span class="loser">佐々木克義</span></td><td class="winner">稲田将</td><td class="finish">1R 1:38 アームバー<span class="bout-note">MMA特別ルール 120.0kg契約ワンマッチ 5分2R</span></td></tr>
-              <tr><td class="no">2</td><td><span class="winner">平松翔</span><span class="vs">vs</span><span class="loser">TATSUMI</span></td><td class="winner">平松翔</td><td class="finish">2R 2:53 TKO（ドクターストップ:カットによる出血）<span class="bout-note">MMA特別ルール 66.0kg契約ワンマッチ 5分2R</span></td></tr>
-              <tr><td class="no">1</td><td><span class="winner">JIN</span><span class="vs">vs</span><span class="loser">としぞう</span></td><td class="winner">JIN</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 55.0kg契約ワンマッチ 3分3R</span></td></tr>
+              <tr><td class="no">12</td><td><span class="winner"><a href="fighters/karamov-vugar.html">ヴガール・ケラモフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/majima-kazumasa.html">摩嶋一整</a></span></td><td class="winner">ヴガール・ケラモフ</td><td class="finish">1R 0:32 TKO（右フック→グラウンドでの肘打ち）<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">11</td><td><span class="winner"><a href="fighters/hamasaki-ayaka.html">浜崎朱加</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/shim-yu-ri.html">シン・ユリ</a></span></td><td class="winner">浜崎朱加</td><td class="finish">2R 1:15 アームロック<span class="bout-note">MMAルール 49.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">10</td><td><span class="winner"><a href="fighters/ashizawa-ryusei.html">芦澤竜誠</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/shoji.html">昇侍</a></span></td><td class="winner">芦澤竜誠</td><td class="finish">2R 1:05 TKO（ボディへの膝蹴り→パンチ連打）<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">9</td><td><span class="winner"><a href="fighters/sudario-tsuyoshi.html">スダリオ剛</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kato-hisaki.html">加藤久輝</a></span></td><td class="winner">スダリオ剛</td><td class="finish">3R 1:12 TKO（ドクターストップ:カットによる出血）<span class="bout-note">MMAルール 120.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">8</td><td><span class="winner"><a href="fighters/akimoto-kyoma.html">秋元強真</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/suzuki-hiroaki.html">鈴木博昭</a></span></td><td class="winner">秋元強真</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 66.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">7</td><td><span class="winner"><a href="fighters/kim-kyung-pyo.html">キム・ギョンピョ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kuramot-daigo.html">倉本大悟</a></span></td><td class="winner">キム・ギョンピョ</td><td class="finish">1R 3:59 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 71.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">6</td><td><span class="winner"><a href="fighters/ito-yuki.html">伊藤裕樹</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/lee-jung-hyun.html">イ・ジョンヒョン</a></span></td><td class="winner">伊藤裕樹</td><td class="finish">3R 2:59 TKO（グラウンドでの肘打ち）<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">5</td><td><span class="winner"><a href="fighters/hiroya.html">ヒロヤ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yuyamonkeyshibata.html">柴田&quot;MONKEY&quot;有哉</a></span></td><td class="winner">ヒロヤ</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/laramie-tony.html">トニー・ララミー</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/muramoto-yutaro.html">村元友太郎</a></span></td><td class="winner">トニー・ララミー</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/gasanzade-magerram.html">マゲラム・ガサンザデ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/shirakawa-rikuto-2.html">白川ダーク陸斗</a></span></td><td class="winner">マゲラム・ガサンザデ</td><td class="finish">3R終了 判定0-3<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/alanhiroyamaniha.html">アラン“ヒロ”ヤマニハ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/yamamoto-seigo.html">山本聖悟</a></span></td><td class="winner">アラン“ヒロ”ヤマニハ</td><td class="finish">2R 3:07 リアネイキッドチョーク<span class="bout-note">MMAルール 61.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/gadzhammatov-alibek.html">アリベク・ガジャマトフ</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/kitakata-daichi.html">北方大地</a></span></td><td class="winner">アリベク・ガジャマトフ</td><td class="finish">1R 3:20 TKO（グラウンドパンチ）<span class="bout-note">MMAルール 57.0kg契約ワンマッチ 5分3R</span></td></tr>
+              <tr><td class="no">4</td><td><span class="winner"><a href="fighters/kubota-taito.html">窪田泰斗</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/hibino-junya-ebichu.html">日比野&quot;エビ中&quot;純也</a></span></td><td class="winner">窪田泰斗</td><td class="finish">2R 0:26 TKO（右フック→パウンド）<span class="bout-note">MMA特別ルール 61.0kg契約ワンマッチ 5分2R</span></td></tr>
+              <tr><td class="no">3</td><td><span class="winner"><a href="fighters/inada-masashi.html">稲田将</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/sasaki-katsuyoshi.html">佐々木克義</a></span></td><td class="winner">稲田将</td><td class="finish">1R 1:38 アームバー<span class="bout-note">MMA特別ルール 120.0kg契約ワンマッチ 5分2R</span></td></tr>
+              <tr><td class="no">2</td><td><span class="winner"><a href="fighters/hiramatsu-sho.html">平松翔</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/tatsumi.html">TATSUMI</a></span></td><td class="winner">平松翔</td><td class="finish">2R 2:53 TKO（ドクターストップ:カットによる出血）<span class="bout-note">MMA特別ルール 66.0kg契約ワンマッチ 5分2R</span></td></tr>
+              <tr><td class="no">1</td><td><span class="winner"><a href="fighters/jin.html">JIN</a></span><span class="vs">vs</span><span class="loser"><a href="fighters/toshizou.html">としぞう</a></span></td><td class="winner">JIN</td><td class="finish">3R終了 判定0-3<span class="bout-note">キックボクシングルール 55.0kg契約ワンマッチ 3分3R</span></td></tr>
             </tbody>
   </table>
 </article>

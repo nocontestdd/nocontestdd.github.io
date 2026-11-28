@@ -268,6 +268,17 @@ header.site .header-in{gap:12px;}
 .merch-card .merch-price{font-size:14px;margin:0 0 14px;}
 .merch-buy{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 22px;border-radius:980px;border:1px solid #0071E3;background:#0071E3;color:#FFFFFF;font-size:14.5px;font-family:inherit;cursor:pointer;}
 .merch-buy:disabled{background:#FFFFFF;color:#86868B;border-color:#D2D2D7;cursor:default;}
+/* --- fixes 2026-11-28 --- */
+table.bouts td a{color:#0066CC;text-decoration:none;}
+table.bouts td a:hover{text-decoration:underline;}
+.result-overview dd a{color:#0066CC;text-decoration:none;}
+.result-overview dd a:hover{text-decoration:underline;}
+.event-notes{margin:28px 0 8px;background:#F5F5F7;border-radius:14px;padding:16px 18px;}
+.event-notes h3{font-size:14px;margin:0 0 8px;font-weight:700;}
+.event-notes ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7;color:#1D1D1F;}
+.tp-name a{color:inherit;text-decoration:none;}
+a.typo-cap{text-decoration:none;color:inherit;}
+.tp-bout a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
 </style>
 <style>
 table.index3{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5;}
@@ -302,6 +313,32 @@ table.history thead th{font-size:12.5px;color:#6E6E73;font-weight:600;border-bot
 table.history a{color:#0066CC;text-decoration:none;}
 table.history a:hover{text-decoration:underline;}
 .res-w{font-weight:700;}
+.res-l{font-weight:700;color:#6E6E73;}
+table.history tr.lose{background:#F5F5F7;}
+table.cal{border-collapse:collapse;width:100%;table-layout:fixed;font-size:12px;line-height:1.45;margin:0 0 26px;}
+table.cal th,table.cal td{border:1px solid #E8E8ED;padding:5px 6px;vertical-align:top;text-align:left;}
+table.cal thead th{font-size:11px;color:#6E6E73;font-weight:600;background:#F5F5F7;}
+table.cal td{height:70px;}
+table.cal .d{font-weight:700;font-size:12.5px;}
+table.cal a{color:#0066CC;text-decoration:none;display:block;margin-top:2px;}
+table.cal a:hover{text-decoration:underline;}
+table.cal td.empty{background:#FAFAFA;}
+.yr-sec{display:none;}
+.yr-sec.on{display:block;}
+table.cal .future-ev{display:block;margin-top:2px;color:#6E6E73;font-weight:600;}
+.venue-links{margin:0 0 18px;font-size:14.5px;line-height:1.9;}
+.venue-links a{color:#0066CC;text-decoration:none;}
+.venue-links a:hover{text-decoration:underline;}
+.lodging-list{margin:0 0 18px;padding-left:20px;font-size:14.5px;line-height:1.9;}
+.lodging-list a{color:#0066CC;text-decoration:none;}
+.lodging-list a:hover{text-decoration:underline;}
+.search-results{margin:14px 0 8px;}
+.search-results a{display:block;padding:10px 12px;border-bottom:1px solid #E8E8ED;color:#1D1D1F;text-decoration:none;}
+.search-results a:hover{background:#F5F5F7;}
+.search-results .kind{font-size:11.5px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-right:8px;white-space:nowrap;}
+.search-results .sub{color:#6E6E73;font-size:12.5px;margin-left:8px;}
+.prov{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:0 7px;margin-left:6px;white-space:nowrap;}
+.champ{font-weight:700;color:#1D1D1F;}
 .rule-tag{display:inline-block;font-size:11px;color:#6E6E73;border:1px solid #D2D2D7;border-radius:980px;padding:1px 8px;margin-left:6px;white-space:nowrap;}
 .lb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;}
 .lb-card{background:#F5F5F7;border-radius:14px;padding:16px 18px;}
@@ -360,13 +397,13 @@ table.lb td.name{font-weight:600;}
         </div>
         <nav class="main" aria-label="メインナビゲーション">
           <a href="../index.html">大会一覧</a>
-          <a href="#">会場</a>
+          <a href="../venues.html">会場</a>
           <a href="../fighters.html" class="current" aria-current="page">選手</a>
           <a href="../rankings.html">ランキング</a>
-          <a href="#">カレンダー</a>
+          <a href="../calendar.html">カレンダー</a>
           <a href="../index.html#merch">グッズ</a>
           <a href="#" class="next-event">次回大会</a>
-        <a href="#searchBox" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
+        <a href="../search.html" class="nav-search" aria-label="検索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg></a></nav>
       </div>
     </header>
 <main class="wrap">
@@ -387,7 +424,7 @@ table.lb td.name{font-weight:600;}
 <tr><th>Instagram</th><td><a href="https://www.instagram.com/rui_katou2002/" target="_blank" rel="noopener">rui_katou2002</a></td></tr>
 <tr><th>YouTube</th><td class="none">―</td></tr>
 </table>
-<h2>パフォーマンス（MMA）</h2><div class="stat-grid"><div class="stat-card"><div class="k">MMA試合数</div><div class="v">1</div><div class="s">0勝1敗</div></div><div class="stat-card"><div class="k">勝率</div><div class="v">0.0%</div><div class="s">勝÷（勝＋敗）</div></div><div class="stat-card"><div class="k">総試合時間</div><div class="v">4:37</div><div class="s">集計対象1試合の平均 4:37</div></div><div class="stat-card"><div class="k">1Rフィニッシュ勝ち</div><div class="v">0</div><div class="s">KO・TKO／一本</div></div><div class="stat-card"><div class="k">フィニッシュ率（勝ち）</div><div class="v">―</div><div class="s">フィニッシュ勝ち0／全0勝</div></div></div><div class="donuts"><div class="donut-card"><svg width="104" height="104" viewBox="0 0 104 104" role="img" aria-hidden="true"><circle cx="52" cy="52" r="40" fill="none" stroke="#1D1D1F" stroke-width="13" stroke-dasharray="249.3 2.0" stroke-dashoffset="-0.0" transform="rotate(-90 52 52)"/></svg><div><h3>負け方内訳（全1敗）</h3><div class="donut-legend"><div><span class="sw" style="background:#1D1D1F"></span>KO・TKO 1（100.0%）</div></div></div></div></div><table class="rate-t">
+<h2>パフォーマンス（MMA）</h2><p class="def-note">MMA成績： 1試合 0勝1敗（この欄はMMAルールの試合のみが対象です。冒頭の通算 1試合 0勝1敗 はキックボクシング等を含む全ルール合計のため、MMA以外の試合がある選手は数値が異なります）</p><div class="stat-grid"><div class="stat-card"><div class="k">MMA試合数</div><div class="v">1</div><div class="s">0勝1敗</div></div><div class="stat-card"><div class="k">勝率</div><div class="v">0.0%</div><div class="s">勝÷（勝＋敗）</div></div><div class="stat-card"><div class="k">総試合時間</div><div class="v">4:37</div><div class="s">集計対象1試合の平均 4:37</div></div><div class="stat-card"><div class="k">1Rフィニッシュ勝ち</div><div class="v">0</div><div class="s">KO・TKO／一本</div></div><div class="stat-card"><div class="k">フィニッシュ率（勝ち）</div><div class="v">―</div><div class="s">フィニッシュ勝ち0／全0勝</div></div></div><div class="donuts"><div class="donut-card"><svg width="104" height="104" viewBox="0 0 104 104" role="img" aria-hidden="true"><circle cx="52" cy="52" r="40" fill="none" stroke="#9A9AA0" stroke-width="13" stroke-dasharray="249.3 2.0" stroke-dashoffset="-0.0" transform="rotate(-90 52 52)"/></svg><div><h3>勝敗内訳（MMA全1試合）</h3><div class="donut-legend"><div><span class="sw" style="background:#9A9AA0"></span>KO・TKO負け 1（100.0%）</div></div></div></div></div><table class="rate-t">
 <tr><th></th><th>KO・TKO</th><th>一本</th><th>判定</th><th>フィニッシュ計</th></tr>
 <tr><th>勝ち（全0勝中）</th><td>0（―）</td><td>0（―）</td><td>0（―）</td><td>0（―）</td></tr>
 <tr><th>負け（全1敗中）</th><td>1（100.0%）</td><td>0（0.0%）</td><td>0（0.0%）</td><td>1（100.0%）</td></tr>
@@ -397,7 +434,7 @@ table.lb td.name{font-weight:600;}
 <table class="history">
 <thead><tr><th>日付</th><th>大会</th><th>対戦相手</th><th>結果</th><th>決着</th></tr></thead>
 <tbody>
-<tr><td class="num">2026.06.06</td><td><a href="../rizin-landmark-14.html">RIZIN LANDMARK 14</a></td><td class="opp"><a href="tomizawa-daichi.html">冨澤大智</a></td><td><span class="res-w">負け</span></td><td>1R 4:37 TKO（グラウンドでの肘打ち） <a href="https://youtu.be/nFEYJkb8UR4?si=qsd_M_Nz4difeL6S" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
+<tr class="lose"><td class="num">2026.06.06</td><td><a href="../rizin-landmark-14.html">RIZIN LANDMARK 14</a></td><td class="opp"><a href="tomizawa-daichi.html">冨澤大智</a></td><td><span class="res-l">Lose</span></td><td>1R 4:37 TKO（グラウンドでの肘打ち） <a href="https://youtu.be/nFEYJkb8UR4?si=qsd_M_Nz4difeL6S" target="_blank" rel="noopener">Full Fight ▶</a></td></tr>
 </tbody>
 </table>
 </div>
